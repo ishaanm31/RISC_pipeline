@@ -1,0 +1,697 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/simulation/modelsim
+Ealu
+Z1 w1669799422
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 12
+R0
+Z5 8D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/ALU.vhd
+Z6 FD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/ALU.vhd
+l0
+L5 1
+VzffPA:U@z_9<jTG@CE5`M1
+!s100 1LV``=KiA;1XK20oB[hZ41
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1669824064
+!i10b 1
+Z9 !s108 1669824064.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/ALU.vhd|
+Z11 !s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/ALU.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehave
+R2
+R3
+R4
+DEx4 work 3 alu 0 22 zffPA:U@z_9<jTG@CE5`M1
+!i122 12
+l77
+L15 99
+VaA^^iie5mN?P7>V<nPca60
+!s100 hV`X]C]iaHX3GTQR;YYZ;2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Edatapath
+Z14 w1669823875
+R2
+R3
+R4
+!i122 13
+R0
+Z15 8D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl
+Z16 FD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl
+l0
+L5 1
+VP6l[O8E];CEHXD>1ggl1M2
+!s100 GJ_hA3?=gSX=<TPTO`J@33
+R7
+31
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-93|-work|work|D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl|
+Z18 !s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 8 datapath 0 22 P6l[O8E];CEHXD>1ggl1M2
+!i122 13
+l183
+L33 208
+VizlW0_nJBm1olY9<JBz?c1
+!s100 W?QZLChWPc2THYSW4bSkV2
+R7
+31
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Edff_en
+R1
+R3
+R4
+!i122 11
+R0
+Z19 8D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/dff_en.vhd
+Z20 FD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/dff_en.vhd
+l0
+L3 1
+VS@FnW7bH9P2HbV3;ZXCmI3
+!s100 l9gC@LIoi_n83HaDMd>o93
+R7
+31
+R8
+!i10b 1
+R9
+Z21 !s90 -reportprogress|300|-93|-work|work|D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/dff_en.vhd|
+Z22 !s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/dff_en.vhd|
+!i113 1
+R12
+R13
+Abehave
+R3
+R4
+DEx4 work 6 dff_en 0 22 S@FnW7bH9P2HbV3;ZXCmI3
+!i122 11
+l16
+L13 19
+VkecbAB3SBD0^jzm5YEo6J1
+!s100 _jKBL9M[ElY>901m5?]kT3
+R7
+31
+R8
+!i10b 1
+R9
+R21
+R22
+!i113 1
+R12
+R13
+Efsm
+Z23 w1669824043
+R2
+R3
+R4
+!i122 14
+R0
+Z24 8D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd
+Z25 FD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd
+l0
+L5 1
+VNcYLJ5U8?<z]H@bJ7Q`JR1
+!s100 KJHY<<d5g4dT?h:>IFP2L0
+R7
+31
+R8
+!i10b 1
+R9
+Z26 !s90 -reportprogress|300|-93|-work|work|D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd|
+Z27 !s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd|
+!i113 1
+R12
+R13
+Abehave
+R2
+R3
+R4
+DEx4 work 3 fsm 0 22 NcYLJ5U8?<z]H@bJ7Q`JR1
+!i122 14
+l33
+L25 344
+V[:ebYLc@kV[1?7IHkd[1Q3
+!s100 W?<`Bdm:lAnQ]<`Do5G<:0
+R7
+31
+R8
+!i10b 1
+R9
+R26
+R27
+!i113 1
+R12
+R13
+Eiitb_cpu
+Z28 w1669823876
+R2
+R3
+R4
+!i122 15
+R0
+Z29 8D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/IITB_CPU.vhd
+Z30 FD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/IITB_CPU.vhd
+l0
+L5 1
+VgWB;G1^V]2GI=GGld<B700
+!s100 W8Y<bn:=fEANiJU@<QQ7Q0
+R7
+31
+R8
+!i10b 1
+R9
+Z31 !s90 -reportprogress|300|-93|-work|work|D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/IITB_CPU.vhd|
+!s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/IITB_CPU.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+R4
+DEx4 work 8 iitb_cpu 0 22 gWB;G1^V]2GI=GGld<B700
+!i122 15
+l91
+L15 130
+VYTSEk5;OV2e@bOYT<2Y=h1
+!s100 CmD;8Jz:ESi2kN85mYfZ@3
+R7
+31
+R8
+!i10b 1
+R9
+R31
+Z32 !s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/IITB_CPU.vhd|
+!i113 1
+R12
+R13
+Ememory
+Z33 w1669822591
+R2
+R3
+R4
+!i122 10
+R0
+Z34 8D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Memory.vhd
+Z35 FD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Memory.vhd
+l0
+L5 1
+V09Y9Y^iO8WB7>kF@iZ:>C1
+!s100 cnRYX=F]L7@CE4_d32H3U1
+R7
+31
+R8
+!i10b 1
+R9
+Z36 !s90 -reportprogress|300|-93|-work|work|D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Memory.vhd|
+Z37 !s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Memory.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 6 memory 0 22 09Y9Y^iO8WB7>kF@iZ:>C1
+!i122 10
+l19
+L15 27
+V1URGn_bWFHnC6Lfd949`k2
+!s100 lXL4`of5YMZE9J8HfD3Fz2
+R7
+31
+R8
+!i10b 1
+R9
+R36
+R37
+!i113 1
+R12
+R13
+Emux16_2x1
+R1
+R2
+R3
+R4
+!i122 7
+R0
+Z38 8D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_2x1.vhd
+Z39 FD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_2x1.vhd
+l0
+L4 1
+VTB=3g4HKPzGZ5SF:SKXjX2
+!s100 =Pg7@AgI^A=cHCO2`aUnm3
+R7
+31
+Z40 !s110 1669824063
+!i10b 1
+Z41 !s108 1669824063.000000
+Z42 !s90 -reportprogress|300|-93|-work|work|D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_2x1.vhd|
+Z43 !s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_2x1.vhd|
+!i113 1
+R12
+R13
+Adataflow
+R2
+R3
+R4
+DEx4 work 9 mux16_2x1 0 22 TB=3g4HKPzGZ5SF:SKXjX2
+!i122 7
+l11
+L10 14
+V6Um0]=QgXzleHJjmIzo4g0
+!s100 1O7I5cn<:MVBHI[^X=Q6W0
+R7
+31
+R40
+!i10b 1
+R41
+R42
+R43
+!i113 1
+R12
+R13
+Emux16_4x1
+R1
+R2
+R3
+R4
+!i122 6
+R0
+Z44 8D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_4x1.vhd
+Z45 FD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_4x1.vhd
+l0
+L4 1
+VIJgA;^`XegWCTCHTS<>E22
+!s100 PKWFk_40AAE@MTon[k8ED2
+R7
+31
+R40
+!i10b 1
+R41
+Z46 !s90 -reportprogress|300|-93|-work|work|D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_4x1.vhd|
+Z47 !s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_4x1.vhd|
+!i113 1
+R12
+R13
+Adataflow
+R2
+R3
+R4
+DEx4 work 9 mux16_4x1 0 22 IJgA;^`XegWCTCHTS<>E22
+!i122 6
+l13
+Z48 L12 18
+Vo9X4RRliOcn:m4c42mN9J2
+!s100 RWTk0Q7MA1:Bbn3i5NKPg0
+R7
+31
+R40
+!i10b 1
+R41
+R46
+R47
+!i113 1
+R12
+R13
+Emux16_8x1
+R1
+R2
+R3
+R4
+!i122 0
+R0
+Z49 8D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_8x1.vhd
+Z50 FD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_8x1.vhd
+l0
+L5 1
+V]b]AK`jTz<K6O1clL0A`82
+!s100 j^1`OlH=PJHBFz_8KT6GL0
+R7
+31
+Z51 !s110 1669824062
+!i10b 1
+Z52 !s108 1669824062.000000
+Z53 !s90 -reportprogress|300|-93|-work|work|D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_8x1.vhd|
+Z54 !s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_8x1.vhd|
+!i113 1
+R12
+R13
+Adataflow
+R2
+R3
+R4
+DEx4 work 9 mux16_8x1 0 22 ]b]AK`jTz<K6O1clL0A`82
+!i122 0
+l18
+L17 26
+VbTnk0Oco4@o=T>JSk6@4a2
+!s100 e8EU:INOW3^RLG66R5GWa2
+R7
+31
+R51
+!i10b 1
+R52
+R53
+R54
+!i113 1
+R12
+R13
+Emux3_4x1
+R1
+R2
+R3
+R4
+!i122 9
+R0
+Z55 8D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux3_2x1.vhd
+Z56 FD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux3_2x1.vhd
+l0
+L4 1
+VmjUCim]IlZKFiMYTUD?5n2
+!s100 faN6;;dOJ62bgm6X]b_080
+R7
+31
+R8
+!i10b 1
+R9
+Z57 !s90 -reportprogress|300|-93|-work|work|D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux3_2x1.vhd|
+Z58 !s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux3_2x1.vhd|
+!i113 1
+R12
+R13
+Adataflow1
+R2
+R3
+R4
+DEx4 work 8 mux3_4x1 0 22 mjUCim]IlZKFiMYTUD?5n2
+!i122 9
+l13
+R48
+VT3PC8h^XV_hIdocFX0G;?0
+!s100 dz:@M[>CU58k`9kk1R8VN3
+R7
+31
+R8
+!i10b 1
+R9
+R57
+R58
+!i113 1
+R12
+R13
+Emux3_8x1
+R1
+R2
+R3
+R4
+!i122 8
+R0
+Z59 8D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux3_8x1.vhd
+Z60 FD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux3_8x1.vhd
+l0
+L4 1
+VGCNid?Ac`]CGWQIbmf@[Z0
+!s100 R]S>M3F?=F<ONV3[b91>:2
+R7
+31
+R8
+!i10b 1
+R41
+Z61 !s90 -reportprogress|300|-93|-work|work|D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux3_8x1.vhd|
+Z62 !s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux3_8x1.vhd|
+!i113 1
+R12
+R13
+Adataflow
+R2
+R3
+R4
+DEx4 work 8 mux3_8x1 0 22 GCNid?Ac`]CGWQIbmf@[Z0
+!i122 8
+l17
+L16 27
+VJ=2EhM[VA>H<9;KgJZPVe0
+!s100 RGJ`Zj9i5F;KYgg?A578C2
+R7
+31
+R8
+!i10b 1
+R41
+R61
+R62
+!i113 1
+R12
+R13
+Eregister_16bit
+R1
+R2
+R3
+R4
+!i122 5
+R0
+Z63 8D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_16bit.vhd
+Z64 FD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_16bit.vhd
+l0
+L5 1
+VXR:<iM=D`Q9k3jdd9VShW1
+!s100 R80AB<[K6bIUYGWNze_Cb1
+R7
+31
+R40
+!i10b 1
+R41
+Z65 !s90 -reportprogress|300|-93|-work|work|D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_16bit.vhd|
+Z66 !s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_16bit.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 14 register_16bit 0 22 XR:<iM=D`Q9k3jdd9VShW1
+!i122 5
+l13
+L11 20
+V=MV3?WLcYgUna=?67Gf<E2
+!s100 @zR?HQ8JA^_2e?HPTbAAn3
+R7
+31
+R40
+!i10b 1
+R41
+R65
+R66
+!i113 1
+R12
+R13
+Eregister_file
+Z67 w1669817925
+R2
+R3
+R4
+!i122 4
+R0
+Z68 8D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_file.vhd
+Z69 FD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_file.vhd
+l0
+L5 1
+V;V;DZDf7<R^;I3VidEcaU1
+!s100 ^^lVM1RXXU5R1l]O[E;>g2
+R7
+31
+R40
+!i10b 1
+R41
+Z70 !s90 -reportprogress|300|-93|-work|work|D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_file.vhd|
+Z71 !s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_file.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 13 register_file 0 22 ;V;DZDf7<R^;I3VidEcaU1
+!i122 4
+l17
+L13 27
+V<dnX@cT0YckcH9M1IVCiV1
+!s100 c9:]9B;4HhTcnH`YZjcW01
+R7
+31
+R40
+!i10b 1
+R41
+R70
+R71
+!i113 1
+R12
+R13
+Ese10
+R1
+R2
+R3
+R4
+!i122 2
+R0
+Z72 8D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/SE10.vhd
+Z73 FD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/SE10.vhd
+l0
+L4 1
+V?BobD5;=:<iQAKi:k5k[53
+!s100 3EC7YP?=?AEJ;k]NKGgI:0
+R7
+31
+R40
+!i10b 1
+R41
+Z74 !s90 -reportprogress|300|-93|-work|work|D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/SE10.vhd|
+Z75 !s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/SE10.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 4 se10 0 22 ?BobD5;=:<iQAKi:k5k[53
+!i122 2
+l10
+L9 8
+VW_LR3Lz8<2hMWLU_ZQEbY3
+!s100 zko8P:jz44Xl>FV8Fe`7b2
+R7
+31
+R40
+!i10b 1
+R41
+R74
+R75
+!i113 1
+R12
+R13
+Ese7
+R1
+R2
+R3
+R4
+!i122 3
+R0
+Z76 8D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/SE7.vhd
+Z77 FD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/SE7.vhd
+l0
+L5 1
+V]6`e`;5Q[F_Eda9a=Pbl[3
+!s100 ;VBd0TKHQe2mB0o@MEl[W1
+R7
+31
+R40
+!i10b 1
+R41
+Z78 !s90 -reportprogress|300|-93|-work|work|D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/SE7.vhd|
+Z79 !s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/SE7.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 3 se7 0 22 ]6`e`;5Q[F_Eda9a=Pbl[3
+!i122 3
+l11
+Z80 L10 8
+V[92@=hEE3N4Gi1jiT3Dzo1
+!s100 o6H92A2AXXAWJ=7PTbE_z3
+R7
+31
+R40
+!i10b 1
+R41
+R78
+R79
+!i113 1
+R12
+R13
+Eshifter7
+R1
+R2
+R3
+R4
+!i122 1
+R0
+Z81 8D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Shifter7.vhd
+Z82 FD:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Shifter7.vhd
+l0
+L5 1
+VYh2ZMg]ZNXz80o3gMknE02
+!s100 QfGfQG^U<TOUBfl?JgP3]2
+R7
+31
+R51
+!i10b 1
+R52
+Z83 !s90 -reportprogress|300|-93|-work|work|D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Shifter7.vhd|
+Z84 !s107 D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Shifter7.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 8 shifter7 0 22 Yh2ZMg]ZNXz80o3gMknE02
+!i122 1
+l11
+R80
+VWU^3oHc`1nISaVJ76O2Qm2
+!s100 gQo?clKDf2>NDZ=6ea7l<3
+R7
+31
+R51
+!i10b 1
+R52
+R83
+R84
+!i113 1
+R12
+R13

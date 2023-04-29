@@ -1,0 +1,18 @@
+
+State Machine - |IITB_proc|fsm_rr:fsm_rr_ins|fsm_state_symbol
+Name fsm_state_symbol.S2 fsm_state_symbol.S0 fsm_state_symbol.S1 
+fsm_state_symbol.S1 0 0 0 
+fsm_state_symbol.S0 0 1 1 
+fsm_state_symbol.S2 1 0 1 
+
+State Machine - |IITB_proc|fsm_id:fsm_id_ins|fsm_state_symbol
+Name fsm_state_symbol.S2 fsm_state_symbol.S0 fsm_state_symbol.S1 
+fsm_state_symbol.S1 0 0 0 
+fsm_state_symbol.S0 0 1 1 
+fsm_state_symbol.S2 1 0 1 
+
+State Machine - |IITB_proc|fsm_if:fsm_if_ins|fsm_state_symbol
+Name fsm_state_symbol.S0 fsm_state_symbol.S1 fsm_state_symbol.reset 
+fsm_state_symbol.reset 0 0 0 
+fsm_state_symbol.S1 0 1 1 
+fsm_state_symbol.S0 1 0 1 
