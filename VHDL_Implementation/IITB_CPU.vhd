@@ -13,29 +13,6 @@ entity IITB_CPU is
 end entity;
 
 architecture arch of IITB_CPU is
---Initiating FSM and Datapaths
-    component FSM is
-        port(clock, reset, 
-            --OutPuts from the Datapath
-            Z_flag, C_flag :in std_logic;
-            T2_out :in std_logic_vector(15 downto 0);
-            loop_count:in std_logic_vector(15 downto 0);
-
-            --Inputs to the Datapath
-            alu_sel:out std_logic_vector(1 downto 0);    
-            A1_sel : out std_logic_vector(1 downto 0);
-            A3_sel : out std_logic_vector(2 downto 0);
-            D3_sel : out std_logic_vector(2 downto 0);
-            Reg_file_EN, mem_WR_Internal: out std_logic;
-            C_ctrl, Z_ctrl: out std_logic;
-            T1_WR,T2_WR,T3_WR,T4_WR,loop_count_WR: out std_logic;
-            ALU_A_sel: out std_logic_vector(2 downto 0);
-            ALU_B_sel, Mem_Add_Sel, Mem_In_Sel: out std_logic_vector(1 downto 0);
-            T3_sel,T4_sel: out std_logic;
-            loop_sel:out std_logic;
-            instruc:in std_logic_vector(15 downto 0)
-            );
-    end component;
 
     component Datapath is
         port(
@@ -89,30 +66,6 @@ architecture arch of IITB_CPU is
         signal S_loop_sel:std_logic;
         
 begin
-    My_FSM: FSM port map(
-        clock=>clock, reset=>reset, 
-        --OutPuts from the Datapath
-        Z_flag=> S_Z_flag, C_flag =>S_C_flag,
-        T2_out=>S_T2_out,
-        loop_count=>S_loop_count ,
-        loop_sel=>S_loop_sel,
-        --Inputs to the Datapath
-        alu_sel=>S_alu_sel,   
-        A1_sel => S_A1_sel,
-        A3_sel =>S_A3_sel,
-        D3_sel =>S_D3_sel,
-        Reg_file_EN => S_Reg_file_EN, mem_WR_Internal=> S_mem_WR_Internal,
-        C_ctrl=> S_C_ctrl, Z_ctrl=>S_Z_ctrl,
-        T1_WR=> S_T1_WR,T2_WR=> S_T2_WR ,
-        T3_WR => S_T3_WR,T4_WR => S_T4_WR,
-        loop_count_WR=> S_loop_count_WR,
-        ALU_A_sel=> S_ALU_A_sel,
-        ALU_B_sel=> S_ALU_B_sel,
-        T3_sel=>S_T3_sel ,T4_sel=>S_T4_sel , Mem_Add_Sel=> S_Mem_Add_Sel, Mem_In_Sel=>S_Mem_In_Sel,
-        instruc=>S_instruc
-    );
-
-    
     My_Datapath: Datapath port map(
         clock=>clock, reset=>reset, 
         --OutPuts from the Datapath
