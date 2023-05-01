@@ -40,6 +40,7 @@ if(PC(15 downto 12) = "0000")
     z_modify <= '1';
     rf_wr <= '1';
     Alu_sel <= "000"; //add ka 000
+    PCr <= '1';
     i_out := i_in
     history_bit_out <= history_bit_in;
     memwr <= '0';
@@ -52,6 +53,7 @@ else if(PC(15 downto 12) = "0001")
     rf_wr <= '1';
     Alu_sel(1 downto 0) <= "00"; //add ka 000
     Alu_sel(2) <= PC(2)
+    PCr <= '1';
     i_out := i_in
     history_bit_out <= history_bit_in;
     memwr <= '0';
@@ -79,6 +81,7 @@ else if(PC(15 downto 12) = "0011" or PC(15 downto 12) = "0100")
     end if
     z_modify <= PC(14)
     rf_wr <= '1';
+    PCr <= '1';
     i_out := i_in
     history_bit_out <= history_bit_in;
     memwr <= '0';
@@ -86,16 +89,16 @@ else if(PC(15 downto 12) = "0011" or PC(15 downto 12) = "0100")
     imm_mux <= '1';  
 
 else if(PC(15 downto 12) = "0101")
-	 Imm_out <= Imm6_out;
     rf_wr <= '0';
+    PCr <= '1';
     i_out := i_in
     history_bit_out <= history_bit_in;
     memwr <= '1';
     imm_mux <= '1'; 
 
-else if(PC(15 downto 12) = "0111")
-	 Imm_out <= Imm9_out;
+else if(PC(15 downto 12) = "0101" or PC(15 downto 12) = "0111")
     rf_wr <= '0';
+    PCr <= '1';
     i_out := i_in
     history_bit_out <= history_bit_in;
     memwr <= '1';
@@ -103,24 +106,33 @@ else if(PC(15 downto 12) = "0111")
 
 else if(PC(15 downto 12) = "0110")
     rf_wr <= '1';
+    PCr <= '1';
     i_out := i_in
     history_bit_out <= history_bit_in;
     mem_mux <= '1';
     imm_mux <= '1';
 
 else if(PC(15 downto 12) = "1000" or PC(15 downto 12) = "1001" PC(15 downto 12) = "1010")
-	 Imm_out <= Imm6_out;
     rf_wr <= '1';
+    PCr <= '1';
     ALU_sel <= "010" //sub ka 010
     i_out := i_in
     history_bit_out <= history_bit_in;
     mem_mux <= '0';
     imm_mux <= '1';
 
+else if(PC(15 downto 12) = "1000" or PC(15 downto 12) = "1001" PC(15 downto 12) = "1010")
+    rf_wr <= '1';
+    PCr <= '1';
+    ALU_sel <= "010" //sub ka 010
+    i_out := i_in
+    history_bit_out <= history_bit_in;
+    mem_mux <= '0';
+    imm_mux <= '1';
 
 else if(PC(15 downto 12) = "1100")
-	 Imm_out <= Imm9_out;
     rf_wr <= '1';
+    PCr <= '1';
     i_out := i_in
     history_bit_out <= history_bit_in;
     imm_mux <= '0';
@@ -128,15 +140,10 @@ else if(PC(15 downto 12) = "1100")
 else if(PC(15 downto 12) = "1101")
     rf_wr <= '1';
     Alu_sel <= "000"; //add ka 000
+    PCr <= '1';
     i_out := i_in
     history_bit_out <= history_bit_in;
     memwr <= '0';
     mem_mux <= '0';
     imm_mux <= '1';
 
-else if(PC(15 downto 12) = "1111")
-    rf_wr <= '1';
-    i_out := i_in
-    history_bit_out <= history_bit_in;
-    mem_mux <= '0';
-    imm_mux <= '1'; 
