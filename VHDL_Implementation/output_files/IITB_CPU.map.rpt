@@ -1,5 +1,5 @@
-Analysis & Elaboration report for IITB_CPU
-Wed Nov 30 21:30:52 2022
+Analysis & Synthesis report for IITB_CPU
+Tue May 02 00:47:54 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,19 +7,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Source assignments for FSM:My_FSM
-  5. Analysis & Elaboration Settings
-  6. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_4x1:Mem_In_Mux_Internal"
-  7. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_4x1:Mem_Add_Mux_Internal"
-  8. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux"
-  9. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux"
- 10. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_8x1:D3_Mux"
- 11. Port Connectivity Checks: "Datapath:My_Datapath|Mux3_8x1:A3_Mux"
- 12. Port Connectivity Checks: "Datapath:My_Datapath|Mux3_4x1:A1_Mux"
- 13. Port Connectivity Checks: "Datapath:My_Datapath|Mux16_2x1:Loop_Mux"
- 14. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
 
 
 
@@ -44,12 +35,12 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                   ;
+; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Wed Nov 30 21:30:52 2022       ;
+; Analysis & Synthesis Status        ; Failed - Tue May 02 00:47:54 2023           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_CPU                                    ;
-; Top-level Entity Name              ; IITB_CPU                                    ;
+; Top-level Entity Name              ; Instr_decode                                ;
 ; Family                             ; MAX 10                                      ;
 ; Total logic elements               ; N/A until Partition Merge                   ;
 ;     Total combinational functions  ; N/A until Partition Merge                   ;
@@ -65,38 +56,13 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+---------------------------------------------------+
-; Source assignments for FSM:My_FSM                 ;
-+--------------------------+---------+------+-------+
-; Assignment               ; Value   ; From ; To    ;
-+--------------------------+---------+------+-------+
-; STATE_MACHINE_PROCESSING ; ONE_HOT ; -    ; State ;
-+--------------------------+---------+------+-------+
-
-
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
+; Analysis & Synthesis Settings                                                                              ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M25SAE144C8G     ;                    ;
-; Top-level entity name                                            ; IITB_CPU           ; IITB_CPU           ;
+; Top-level entity name                                            ; Instr_decode       ; IITB_CPU           ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -176,184 +142,64 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+--------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:My_Datapath|Mux16_4x1:Mem_In_Mux_Internal" ;
-+------+-------+----------+------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                              ;
-+------+-------+----------+------------------------------------------------------+
-; a3   ; Input ; Info     ; Stuck at GND                                         ;
-+------+-------+----------+------------------------------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:My_Datapath|Mux16_4x1:Mem_Add_Mux_Internal" ;
-+------+-------+----------+-------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                               ;
-+------+-------+----------+-------------------------------------------------------+
-; a3   ; Input ; Info     ; Stuck at GND                                          ;
-+------+-------+----------+-------------------------------------------------------+
-
-
-+----------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux" ;
-+-----------+-------+----------+---------------------------------------+
-; Port      ; Type  ; Severity ; Details                               ;
-+-----------+-------+----------+---------------------------------------+
-; a2[15..1] ; Input ; Info     ; Stuck at GND                          ;
-; a2[0]     ; Input ; Info     ; Stuck at VCC                          ;
-+-----------+-------+----------+---------------------------------------+
-
-
-+----------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:My_Datapath|Mux16_8x1:ALU_A_Mux" ;
-+------+-------+----------+--------------------------------------------+
-; Port ; Type  ; Severity ; Details                                    ;
-+------+-------+----------+--------------------------------------------+
-; a5   ; Input ; Info     ; Stuck at GND                               ;
-; a6   ; Input ; Info     ; Stuck at GND                               ;
-; a7   ; Input ; Info     ; Stuck at GND                               ;
-+------+-------+----------+--------------------------------------------+
-
-
-+-------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:My_Datapath|Mux16_8x1:D3_Mux" ;
-+------+-------+----------+-----------------------------------------+
-; Port ; Type  ; Severity ; Details                                 ;
-+------+-------+----------+-----------------------------------------+
-; a7   ; Input ; Info     ; Stuck at GND                            ;
-+------+-------+----------+-----------------------------------------+
-
-
-+------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:My_Datapath|Mux3_8x1:A3_Mux" ;
-+------+-------+----------+----------------------------------------+
-; Port ; Type  ; Severity ; Details                                ;
-+------+-------+----------+----------------------------------------+
-; a4   ; Input ; Info     ; Stuck at VCC                           ;
-; a5   ; Input ; Info     ; Stuck at VCC                           ;
-; a6   ; Input ; Info     ; Stuck at VCC                           ;
-; a7   ; Input ; Info     ; Stuck at VCC                           ;
-+------+-------+----------+----------------------------------------+
-
-
-+------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:My_Datapath|Mux3_4x1:A1_Mux" ;
-+------+-------+----------+----------------------------------------+
-; Port ; Type  ; Severity ; Details                                ;
-+------+-------+----------+----------------------------------------+
-; a1   ; Input ; Info     ; Stuck at VCC                           ;
-; a3   ; Input ; Info     ; Stuck at GND                           ;
-+------+-------+----------+----------------------------------------+
-
-
-+---------------------------------------------------------------------+
-; Port Connectivity Checks: "Datapath:My_Datapath|Mux16_2x1:Loop_Mux" ;
-+------+-------+----------+-------------------------------------------+
-; Port ; Type  ; Severity ; Details                                   ;
-+------+-------+----------+-------------------------------------------+
-; a1   ; Input ; Info     ; Stuck at GND                              ;
-+------+-------+----------+-------------------------------------------+
-
-
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 30 21:30:43 2022
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU --analysis_and_elaboration
+    Info: Processing started: Tue May 02 00:47:45 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file mux16_8x1.vhd
-    Info (12022): Found design unit 1: Mux16_8x1-Dataflow File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_8x1.vhd Line: 17
-    Info (12023): Found entity 1: Mux16_8x1 File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_8x1.vhd Line: 5
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file id_adder.vhd
+    Info (12022): Found design unit 1: adder-behave File: C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_adder.vhd Line: 12
+    Info (12023): Found entity 1: adder File: C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_adder.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file shifter7.vhd
-    Info (12022): Found design unit 1: Shifter7-struct File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Shifter7.vhd Line: 10
-    Info (12023): Found entity 1: Shifter7 File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Shifter7.vhd Line: 5
+    Info (12022): Found design unit 1: Shifter7-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Shifter7.vhd Line: 10
+    Info (12023): Found entity 1: Shifter7 File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Shifter7.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file se10.vhd
-    Info (12022): Found design unit 1: SE10-struct File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/SE10.vhd Line: 9
-    Info (12023): Found entity 1: SE10 File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/SE10.vhd Line: 4
+    Info (12022): Found design unit 1: SE10-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/SE10.vhd Line: 9
+    Info (12023): Found entity 1: SE10 File: C:/SEM4/RISC_pipeline/VHDL_Implementation/SE10.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file se7.vhd
-    Info (12022): Found design unit 1: SE7-struct File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/SE7.vhd Line: 10
-    Info (12023): Found entity 1: SE7 File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/SE7.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file register_file.vhd
-    Info (12022): Found design unit 1: Register_File-struct File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_file.vhd Line: 13
-    Info (12023): Found entity 1: Register_file File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_file.vhd Line: 5
+    Info (12022): Found design unit 1: SE7-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/SE7.vhd Line: 10
+    Info (12023): Found entity 1: SE7 File: C:/SEM4/RISC_pipeline/VHDL_Implementation/SE7.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_16bit.vhd
-    Info (12022): Found design unit 1: Register_16bit-struct File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_16bit.vhd Line: 11
-    Info (12023): Found entity 1: Register_16bit File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_16bit.vhd Line: 5
+    Info (12022): Found design unit 1: Register_16bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd Line: 11
+    Info (12023): Found entity 1: Register_16bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_3bit.vhd
-    Info (12022): Found design unit 1: Register_3bit-struct File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_3bit.vhd Line: 10
-    Info (12023): Found entity 1: Register_3bit File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_3bit.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file mux16_4x1.vhd
-    Info (12022): Found design unit 1: Mux16_4x1-Dataflow File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_4x1.vhd Line: 12
-    Info (12023): Found entity 1: Mux16_4x1 File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_4x1.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file mux16_2x1.vhd
-    Info (12022): Found design unit 1: Mux16_2x1-Dataflow File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_2x1.vhd Line: 10
-    Info (12023): Found entity 1: Mux16_2x1 File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux16_2x1.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file mux3_8x1.vhd
-    Info (12022): Found design unit 1: Mux3_8x1-Dataflow File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux3_8x1.vhd Line: 16
-    Info (12023): Found entity 1: Mux3_8x1 File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux3_8x1.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file mux3_2x1.vhd
-    Info (12022): Found design unit 1: Mux3_4x1-Dataflow1 File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux3_2x1.vhd Line: 12
-    Info (12023): Found entity 1: Mux3_4x1 File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Mux3_2x1.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file memory.vhd
-    Info (12022): Found design unit 1: Memory-struct File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Memory.vhd Line: 15
-    Info (12023): Found entity 1: Memory File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Memory.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file dff_en.vhd
-    Info (12022): Found design unit 1: dff_en-behave File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/dff_en.vhd Line: 13
-    Info (12023): Found entity 1: dff_en File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/dff_en.vhd Line: 3
-Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: ALU-behave File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/ALU.vhd Line: 15
-    Info (12023): Found entity 1: ALU File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/ALU.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhdl
-    Info (12022): Found design unit 1: Datapath-Struct File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl Line: 33
-    Info (12023): Found entity 1: Datapath File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file fsm.vhd
-    Info (12022): Found design unit 1: FSM-behave File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd Line: 25
-    Info (12023): Found entity 1: FSM File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file iitb_cpu.vhd
-    Info (12022): Found design unit 1: IITB_CPU-arch File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/IITB_CPU.vhd Line: 15
-    Info (12023): Found entity 1: IITB_CPU File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/IITB_CPU.vhd Line: 5
-Info (12127): Elaborating entity "IITB_CPU" for the top level hierarchy
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:My_FSM" File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/IITB_CPU.vhd Line: 92
-Warning (10492): VHDL Process Statement warning at FSM.vhd(64): signal "instruc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd Line: 64
-Warning (10492): VHDL Process Statement warning at FSM.vhd(65): signal "T2_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd Line: 65
-Warning (10492): VHDL Process Statement warning at FSM.vhd(66): signal "T2_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd Line: 66
-Warning (10492): VHDL Process Statement warning at FSM.vhd(68): signal "T2_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd Line: 68
-Warning (10492): VHDL Process Statement warning at FSM.vhd(68): signal "C_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd Line: 68
-Warning (10492): VHDL Process Statement warning at FSM.vhd(68): signal "Z_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd Line: 68
-Warning (10492): VHDL Process Statement warning at FSM.vhd(92): signal "Flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd Line: 92
-Warning (10492): VHDL Process Statement warning at FSM.vhd(100): signal "Flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd Line: 100
-Warning (10492): VHDL Process Statement warning at FSM.vhd(234): signal "Z_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd Line: 234
-Warning (10492): VHDL Process Statement warning at FSM.vhd(268): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd Line: 268
-Warning (10492): VHDL Process Statement warning at FSM.vhd(273): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd Line: 273
-Warning (10492): VHDL Process Statement warning at FSM.vhd(326): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd Line: 326
-Warning (10492): VHDL Process Statement warning at FSM.vhd(331): signal "loop_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/FSM.vhd Line: 331
-Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:My_Datapath" File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/IITB_CPU.vhd Line: 116
-Info (12128): Elaborating entity "Register_16bit" for hierarchy "Datapath:My_Datapath|Register_16bit:T1" File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl Line: 185
-Info (12128): Elaborating entity "Mux16_2x1" for hierarchy "Datapath:My_Datapath|Mux16_2x1:Loop_Mux" File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl Line: 191
-Info (12128): Elaborating entity "Register_file" for hierarchy "Datapath:My_Datapath|Register_file:Reg_File" File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl Line: 197
-Warning (10492): VHDL Process Statement warning at Register_file.vhd(34): signal "Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_file.vhd Line: 34
-Warning (10492): VHDL Process Statement warning at Register_file.vhd(35): signal "Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_file.vhd Line: 35
-Warning (10492): VHDL Process Statement warning at Register_file.vhd(36): signal "Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Register_file.vhd Line: 36
-Info (12128): Elaborating entity "Mux3_4x1" for hierarchy "Datapath:My_Datapath|Mux3_4x1:A1_Mux" File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl Line: 203
-Info (12128): Elaborating entity "Mux3_8x1" for hierarchy "Datapath:My_Datapath|Mux3_8x1:A3_Mux" File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl Line: 208
-Info (12128): Elaborating entity "Mux16_8x1" for hierarchy "Datapath:My_Datapath|Mux16_8x1:D3_Mux" File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl Line: 214
-Info (12128): Elaborating entity "SE7" for hierarchy "Datapath:My_Datapath|SE7:T2_SE7" File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl Line: 217
-Info (12128): Elaborating entity "SE10" for hierarchy "Datapath:My_Datapath|SE10:T2_SE10" File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl Line: 218
-Info (12128): Elaborating entity "Shifter7" for hierarchy "Datapath:My_Datapath|Shifter7:T2_shift" File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl Line: 219
-Info (12128): Elaborating entity "ALU" for hierarchy "Datapath:My_Datapath|ALU:alu1" File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl Line: 221
-Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(40): object "sum" assigned a value but never read File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/ALU.vhd Line: 40
-Info (12128): Elaborating entity "Mux16_4x1" for hierarchy "Datapath:My_Datapath|Mux16_4x1:ALU_B_Mux" File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl Line: 226
-Info (12128): Elaborating entity "dff_en" for hierarchy "Datapath:My_Datapath|dff_en:carry_dff" File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl Line: 228
-Info (12128): Elaborating entity "Memory" for hierarchy "Datapath:My_Datapath|Memory:mem" File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Datapath.vhdl Line: 231
-Warning (10492): VHDL Process Statement warning at Memory.vhd(37): signal "Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/github/IITB_CPU_final/Final_Project/VHDL_Implementation/Memory.vhd Line: 37
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4779 megabytes
-    Info: Processing ended: Wed Nov 30 21:30:52 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+    Info (12022): Found design unit 1: Register_3bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd Line: 10
+    Info (12023): Found entity 1: Register_3bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file register_1bit.vhd
+    Info (12022): Found design unit 1: Register_1bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd Line: 10
+    Info (12023): Found entity 1: Register_1bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file instr_decode.vhd
+    Info (12022): Found design unit 1: instr_decode-instr_decode_arch File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 22
+    Info (12023): Found entity 1: instr_decode File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file register_2bits.vhd
+    Info (12022): Found design unit 1: Register_2bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd Line: 11
+    Info (12023): Found entity 1: Register_2bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd Line: 5
+Error (10482): VHDL error at Instr_decode.vhd(88): object "PC" is used but not declared File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 88
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 4768 megabytes
+    Error: Processing ended: Tue May 02 00:47:54 2023
+    Error: Elapsed time: 00:00:09
+    Error: Total CPU time (on all processors): 00:00:10
 
 
