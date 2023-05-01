@@ -9,12 +9,12 @@ port(
     RegA_in, RegB_in, RegC_in : in std_logic_vector(2 downto 0);
     Imm_in,PC_in: in std_logic_vector(15 downto 0);
     Rf_wr_in, history_bit_in, c_modify_in, z_modify_in, mem_wr_in mem_mux_in, imm_mux_in : in std_logic
-    Alu_sel_in : in std_logic_vector(1 downto 0);
+    Alu_sel_in, mera_mux_int : in std_logic_vector(1 downto 0);
     i_in : in integer;
     RegA_out, RegB_out, RegC_out : in std_logic_vector(2 downto 0);
-    Imm_out, PC_out : in std_logic_vector(15 downto 0);
-    Rf_wr_out, history_bit_out, c_modify_out, z_modify_out, mem_wr_out mem_mux_out, imm_mux_out: in std_logic
-    Alu_sel_out : in std_logic_vector(1 downto 0);
+    Imm_out, PC_out : out std_logic_vector(15 downto 0);
+    Rf_wr_out, history_bit_out, c_modify_out, z_modify_out, mem_wr_out mem_mux_out, imm_mux_out: out std_logic
+    Alu_sel_out,mera_mux_out : out std_logic_vector(1 downto 0);
     i_out : out integer;
 
     cancelin: in std_logic;
@@ -69,6 +69,7 @@ architecture IDRR_reg_arch of IDRR_reg is
     end component Register_4bit;
     
 begin
+mera_mux : Register_2 bit port map(mera_mux_in,clk,WR_EN,mera_mux_out)
 register_a : Register_3bit port map(RegA_in,clk,WR_EN,RegA_out);
 register_b : Register_3bit port map(RegB_in,clk,WR_EN,RegB_out);
 register_c : Register_3bit port map(RegC_in,clk,WR_EN,RegC_out);

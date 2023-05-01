@@ -15,6 +15,7 @@ entity instr_decode is
         PC_BP : out std_logic_vector(15 downto 0);
         LM_SM_hazard : out std_logic;
         counter_out : out std_logic_vector(2 downto 0);
+		mera_mux : out std_logic_vector(1 downto 0);
 		  clk: in std_logic
     );
 end entity;
@@ -42,8 +43,14 @@ architecture instr_decode_arch of instr_decode is
 						 BranchedPC: out std_logic_vector(15 downto 0)
 				);
 		end component;
-
-
+	component Mux16_4x1 is
+    port(A0: in std_logic_vector(15 downto 0);
+         A1: in std_logic_vector(15 downto 0);
+         A2: in std_logic_vector(15 downto 0);
+         A3: in std_logic_vector(15 downto 0);
+         sel: in std_logic_vector(1 downto 0);
+         F: out std_logic_vector(15 downto 0));
+	end component;
 
 
 		signal Imm6_out,Imm9_out : std_logic_vector(15 downto 0) := "0000000000000000";
@@ -60,7 +67,7 @@ architecture instr_decode_arch of instr_decode is
 		instr : process(clk)
 		
 			begin 
-			
+			mera_mux <= "00";
 			Last2 <= Instruction(1 downto 0);
 			opcode <= Instruction(15 downto 12);
 			Ra <= Instruction(11 downto 9);
@@ -81,6 +88,7 @@ architecture instr_decode_arch of instr_decode is
 				 imm_mux <= '1';
  -----------ADD ke baki saare-----------------------
 			elsif(Instruction(15 downto 12) = "0001") then
+				mera_mux <= Instruction(1 downto 0);
 				 c_modify <= '1';
 				 z_modify <= '1';
 				 rf_wr <= '1';
@@ -91,6 +99,7 @@ architecture instr_decode_arch of instr_decode is
 				 imm_mux <= '0';
 
 			elsif(Instruction(15 downto 12) = "0010") then
+				mera_mux <= Instruction(1 downto 0);
 				 c_modify <= '1';
 				 z_modify <= '1';
 				 rf_wr <= '1';
@@ -292,9 +301,9 @@ architecture instr_decode_arch of instr_decode is
 					  opcode <= "0101";
 					  RegB <= Instruction(12 downto 9);
 					  RegA <= "010";
-					  if(Instruction(7) = '1') then
+					
 							count := count + 1;
-					  end if;
+				
 				 end if;
 				case count is
 					when 0 =>

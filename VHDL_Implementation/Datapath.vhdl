@@ -211,6 +211,24 @@ architecture Struct of Datapath is
             );
     end component;
 
+    component Branch_Predictor is
+        port (
+            PC_IF, PC_Branched:  in std_logic_vector(15 downto 0 );
+            Z_Flag, C_Flag,History_bit_EX:in std_logic;
+            index_EX: in integer;
+            clk: in std_logic;
+        
+            Instruc_op_ID,Instruc_op_EX, Instruc_op_RR, PC_ID, 
+            PC_New_ID, PC_EX, PC_New_EX, PC_RR: in std_logic_vector(15 downto 0 );
+            History_bit_ID,History_bit_EX: in std_logic;
+        
+            JAL_Haz, JRI_Haz, JLR_Haz, BEQ_Haz, BLT_Haz, BLE_Haz: out std_logic;
+            PC_New: out std_logic_vector(15 downto 0);
+            LUT_index_op:out integer;
+            History_bit_op: out std_logic;
+        );
+    end component;
+
     --Signals required for IF
     signal Intruc, PCplus2, PC : std_logic_vector(15 downto 0);
     
@@ -227,12 +245,46 @@ architecture Struct of Datapath is
     signal mem_WR: std_logic;
 
     --Signals for WB
+
+    --Signals for Branch Predictor
+
+        signal PC_IF, PC_Branched: std_logic_vector(15 downto 0 );
+        signal Z_Flag, C_Flag,History_bit_EX : std_logic;
+        signal index_EX: integer;
+    
+        signal Instruc_op_ID,Instruc_op_EX, Instruc_op_RR, PC_ID, 
+        PC_New_ID, PC_EX, PC_New_EX, PC_RR: std_logic_vector(15 downto 0 );
+        signal History_bit_ID,History_bit_EX: std_logic;
+    
+        signal JAL_Haz, JRI_Haz, JLR_Haz, BEQ_Haz, BLT_Haz, BLE_Haz:  std_logic;
+        signal PC_New:  std_logic_vector(15 downto 0);
+        signal LUT_index_op: integer;
+        signal History_bit_op: std_logic;
     
 begin
+------------------IF----------------------------
     MyROM: ROM port map( Mem_Add => PC , Mem_Data_Out=>Instruc);
     IF_add: ID_adder port map(PC,"0000000000000010",PCplus2);
 
     IF_RR_Pipepline_Reg : IF_RR port map();
-
+-------------------------------------------------------------------------
+    --------------------branch predictor-----------
+    BP: Branch_Predictor port (
+        PC_IF=>PCplus2, PC_Branched=>PC_Branched,
+        Z_Flag=>ZFlag, C_Flag=>CFlag,History_bit_EX=>History_bit_EX,
+        index_EX=>index_EX,
+        clk=>clock,    
+        Instruc_op_ID=>Instruc_op_ID ,Instruc_op_EX=>Instruc_op_EX, 
+        Instruc_op_RR=>Instruc_op_RR, PC_ID=>PC_ID, 
+        PC_New_ID=>PC_New_ID, PC_EX=>PC_EX, PC_New_EX=>PC_New_EX, PC_RR=>PC_RR,
+        History_bit_ID=>History_bit_ID,History_bit_EX=>History_bit_EX,
+    
+        JAL_Haz=>JAL_Haz, JRI_Haz=>JRI_Haz, JLR_Haz=>JLR_Haz, BEQ_Haz=>BEQ_Haz,
+        BLT_Haz=>BLT_Haz, BLE_Haz=>BLE_Haz,
+        PC_New=>PC_New,
+        LUT_index_op=>LUT_index_op,
+        History_bit_op=>History_bit_op
+    );
+    ---------------------------------------------
 end Struct;
     
