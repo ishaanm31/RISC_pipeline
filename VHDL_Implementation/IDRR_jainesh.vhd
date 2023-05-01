@@ -7,6 +7,7 @@ port(
     clk: in std_logic;
     WR_EN: in std_logic;
     RegA_in, RegB_in, RegC_in : in std_logic_vector(2 downto 0);
+<<<<<<< Updated upstream
     Imm_in,PC_in: in std_logic_vector(15 downto 0);
     Rf_wr_in, history_bit_in, c_modify_in, z_modify_in, mem_wr_in mem_mux_in, imm_mux_in : in std_logic
     Alu_sel_in : in std_logic_vector(1 downto 0);
@@ -15,6 +16,16 @@ port(
     Imm_out, PC_out : in std_logic_vector(15 downto 0);
     Rf_wr_out, history_bit_out, c_modify_out, z_modify_out, mem_wr_out mem_mux_out, imm_mux_out: in std_logic
     Alu_sel_out : in std_logic_vector(1 downto 0);
+=======
+    Imm_6_in, Imm_9_in : in std_logic_vector(15 downto 0);
+    Rf_wr_in, PCr_in, history_bit_in, c_modify_in, z_modify_in, mem_wr_in mem_mux_in, imm_mux_in : in std_logic
+    Alu_sel_in : in std_logic_vector(2 downto 0);
+    i_in : in integer;
+    RegA_out, RegB_out, RegC_out : in std_logic_vector(2 downto 0);
+    Imm_6_out, Imm_9_out : in std_logic_vector(15 downto 0);
+    Rf_wr_out, PCr_out, history_bit_out, c_modify_out, z_modify_out, mem_wr_out mem_mux_out, imm_mux_out: in std_logic
+    Alu_sel_out : in std_logic_vector(2 downto 0);
+>>>>>>> Stashed changes
     i_out : out integer;
 
     cancelin: in std_logic;
@@ -64,7 +75,7 @@ register_c : Register_3bit port map(RegC_in,clk,WR_EN,RegC_out);
 Imm_ : Register_16bit port map(Imm_in,clk,WR_EN,Imm_out);
 PCC : Register_16bit port map(PC_in,clk,WR_EN,PC_out);
 Rf_wr : Register_1bit port map(Rf_wr_in,clk, WR_EN, Rf_wr_out);
-Alu_sel : Register_2bit port map(Alu_sel_in,clk, WR_EN, Alu_sel_out);
+Alu_sel : Register_3bit port map(Alu_sel_in,clk, WR_EN, Alu_sel_out);
 Rf_wr : Register_1bit port map(Rf_wr_in,clk, WR_EN, Rf_wr_out);
 i : Register_int port map(i_in,clk, WR_EN, i_out);
 Rf_wr : Register_1bit port map(Rf_wr_in,clk, WR_EN, Rf_wr_out);
