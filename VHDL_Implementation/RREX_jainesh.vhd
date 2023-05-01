@@ -23,6 +23,9 @@ port(
     Rf_wr_out, c_modify_out, z_modify_out,history_bit_out, mem_wr_out, mem_mux_out : out std_logic;
     ALU_sel_out : out std_logic_vector(1 downto 0);
     i_out : out integer;
+
+    cancelin:in std_logic;
+    cancelout: out std_logic;
 );
 end entity;
 architecture RREX_reg_arch of RREX_reg is
@@ -72,6 +75,7 @@ z_modify: Register_1bit port map(z_modify_in,clk,WR_EN,z_modify_out);
 mem_wr : Register_1bit port map(mem_wr_in,clk,WR_EN,mem_wr_out);
 mem_mux : Register_1bit port map(mem_mux_in,clk,WR_EN,mem_mux_out);
 i : Register_int port map(i_in,clk,WR_EN,i_out);
-history_bit port map(history_bit_in,clk,WR_EN,history_bit_out);
+history_bit: Register_1bit port map(history_bit_in,clk,WR_EN,history_bit_out);
+Canc : Register_1bit port map(cancelin,clk, WR_EN, cancelout);
 
 end RREX_reg_arch;

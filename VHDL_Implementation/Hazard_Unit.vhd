@@ -2,30 +2,14 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 -- write the Flipflops packege declaration
-entity Branch_Predictor is
+entity Hazard_Unit is
 port (
-    PC_IF, PC_Branched:  in std_logic_vector(15 downto 0 );
-    Z_Flag, C_Flag,History_bit_EX:in std_logic;
-    index_EX: in integer;
-    clk: in std_logic;
-
-    Instruc_op_ID,Instruc_op_EX, Instruc_op_RR, PC_ID, 
-    PC_New_ID, PC_EX, PC_New_EX, PC_RR: in std_logic_vector(15 downto 0 );
-    History_bit_ID,History_bit_EX: in std_logic;
-
-    JAL_Haz, JRI_Haz, JLR_Haz, BEQ_Haz, BLT_Haz, BLE_Haz: out std_logic;
-    PC_New: out std_logic_vector(15 downto 0);
-    LUT_index_op:out integer;
-    History_bit_op: out std_logic;
+    RR_RF_WR, RR_Mem_WR,RR_C_Modify, RR_Z_Modify, Branch:out std_logic;
+    Cancel:out std_logic;
 );
-end entity Branch_Predictor;
+end entity Hazard_Unit;
 
-architecture struct of Branch_Predictor is
-    type PC_arr   is array (0 to 63) of std_logic_vector(15 downto 0);
-    type history  is array (0 to 63) of std_logic;
-    type BTA      is array (0 to 63) of std_logic_vector(15 downto 0);
-    signal i : integer := 0;
-    signal PC_PredictedIF:=std_logic_vector(15 downto 0);
+architecture struct of Hazard_Unit is
 begin
 
 Lookup_Search : process(PC_IF)
