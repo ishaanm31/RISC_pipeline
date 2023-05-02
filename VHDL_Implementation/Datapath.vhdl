@@ -233,10 +233,16 @@ architecture Struct of Datapath is
     signal Intruc, PCplus2, PC : std_logic_vector(15 downto 0);
     
     --Signals for ID:
-    signal intruc_ID: std_logic_vector(3 downto 0);
-    signal PC_ID : std_logic_vector(15 downto 0);
-    signal index_ID :integer;
-    signal History_bit_ID: std_logic;
+    PC_in : in std_logic_vector(15 downto 0);
+    Instruction : in std_logic_vector(15 downto 0);
+    out_RegA,out_RegB,out_RegC ,out_Alu_sel : out std_logic_vector(2 downto 0);
+    out_Imm_out : out std_logic_vector(15 downto 0);
+    out_rf_wr, out_c_modify, out_z_modify, out_mem_wr, out_mem_mux, out_imm_mux : out std_logic;
+    out_opcode : out std_logic_vector(3 downto 0);
+    out_Last2: out std_logic_vector(1 downto 0);
+    PC_BP : out std_logic_vector(15 downto 0);
+    out_LM_SM_hazard : out std_logic;
+    out_mera_mux : out std_logic_vector(1 downto 0);
     --Signals for RR.
 
     --Signals for EX
