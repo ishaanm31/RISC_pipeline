@@ -5,9 +5,7 @@ use ieee.numeric_std.all;
 entity Forwarding_Unit is
 port (
     RegC_EX,RegC_Mem,RegC_WB,RegA_RR, RegB_RR: in std_logic_vector(2 downto 0);
-    RF_WR_EX, RF_WR_Mem, RF_WR_WB:in std_logic;
-    ID_RR_OpCode: in std_logic_vector(3 downto 0);
-    
+    RF_WR_EX, RF_WR_Mem, RF_WR_WB:in std_logic;    
     MuxA,MuxB: out std_logic_vector(1 downto 0)
 );
 end entity Forwarding_Unit;
@@ -19,28 +17,23 @@ begin
 forwarding : process(RegC_EX,RegC_Mem,RegC_WB,RegA_RR, RegB_RR,ID_RR_OpCode)
     begin
     --Only for            ADD                      NAND
-        if((ID_RR_OpCode="0001") or (ID_RR_OpCode="0010"))
-            if((RegA_RR=RegC_EX)and (RF_WR_EX="1"))
-                MuxA<="01";
-            else if((RegA_RR=RegC_Mem) and (RF_WR_Mem="1"))
-                MuxA<="10";
-            else if((RegA_RR=RegC_WB) and (RF_WR_WB="1"))
-                MuxA<="11";
-            else
-                MuxA<="00";
-            end if
-
-            if((RegB_RR=RegC_EX) and (RF_WR_EX="1"))
-                MuxB<="01";
-            else if((RegB_RR=RegC_Mem) and (RF_WR_Mem="1"))
-                MuxB<="10";
-            else if((RegB_RR=RegC_WB) and (RF_WR_WB="1"))
-                MuxB<="11";
-            else 
-                MuxB<="00";
-            end if
+        if((RegA_RR=RegC_EX)and (RF_WR_EX="1"))
+            MuxA<="01";
+        else if((RegA_RR=RegC_Mem) and (RF_WR_Mem="1"))
+            MuxA<="10";
+        else if((RegA_RR=RegC_WB) and (RF_WR_WB="1"))
+            MuxA<="11";
         else
             MuxA<="00";
+        end if
+
+        if((RegB_RR=RegC_EX) and (RF_WR_EX="1"))
+            MuxB<="01";
+        else if((RegB_RR=RegC_Mem) and (RF_WR_Mem="1"))
+            MuxB<="10";
+        else if((RegB_RR=RegC_WB) and (RF_WR_WB="1"))
+            MuxB<="11";
+        else 
             MuxB<="00";
         end if
     end process

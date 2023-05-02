@@ -5,16 +5,14 @@ use ieee.numeric_std.all;
 entity IF_ID is
 port (
     Instruc_in,PC_in: in std_logic_vector(15 downto 0 );
-    LUT_index_in:in integer;
-    History_bit_in: in std_logic;
+    CN_in: in std_logic;
 
     clk: in std_logic;
     WR_EN: in std_logic;
-    cancelin: in std_logic;
-    cancelout:out std_logic;
-    Instruc_op,PC_op: out std_logic_vector(15 downto 0 );
-    LUT_index_op:out integer;
-    History_bit_op: out std_logic
+
+    
+    CN_out:out std_logic;
+    Instruc_op,PC_op: out std_logic_vector(15 downto 0 )
 );
 end entity IF_ID;
 
@@ -50,13 +48,8 @@ begin
 ----------------------Register of 16 bits----------------------------------------------
 Instruction: Register_16bit port map(Instruc_in,clk,WR_EN,Instruc_op);
 PC         : Register_16bit port map(PC_in,clk,WR_EN,PC_op);
-
-----------------------For passing index of LUT-----------------------------------------
-Int        : Register_int port map(LUT_index_in,clk,WR_EN,LUT_index_op);
-
-----------------------Register of 1 bits---------------------------
-His        : Register_1bit port map(History_bit_in,clk,WR_EN,History_bit_op);
-Canc       : Register_1bit port map(cancelin,clk,WR_EN,cancelout);
+------------------------------------------
+Canc       : Register_1bit port map(CN_in,clk,WR_EN,CN_out);
 
 
 end struct;

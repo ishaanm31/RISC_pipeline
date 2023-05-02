@@ -59,63 +59,92 @@ architecture Struct of Datapath is
 
     --5.IDRR
     component IDRR_reg is
-        port(
+        port (
             clk: in std_logic;
             WR_EN: in std_logic;
-            RegA_in, RegB_in, RegC_in : in std_logic_vector(2 downto 0);
-            Imm_in,PC_in: in std_logic_vector(15 downto 0);
-            Rf_wr_in, history_bit_in, c_modify_in, z_modify_in, mem_wr_in, mem_mux_in, imm_mux_in : in std_logic;
-            Alu_sel_in, mera_mux_in : in std_logic_vector(1 downto 0);
-            i_in : in integer;
-            RegA_out, RegB_out, RegC_out : out std_logic_vector(2 downto 0);
-            Imm_out, PC_out : out std_logic_vector(15 downto 0);
-            Rf_wr_out, history_bit_out, c_modify_out, z_modify_out, mem_wr_out, mem_mux_out, imm_mux_out: out std_logic;
-            Alu_sel_out,mera_mux_out : out std_logic_vector(1 downto 0);
-            i_out : out integer;
-        
-            cancelin: in std_logic;
-            cancelout: out std_logic;
-            
-            OpCode_in:in std_logic_vector(3 downto 0);
-            OpCode_out: out std_logic_vector(3 downto 0);
-        
-            Last2_in : in std_logic_vector(1 downto 0);
-            Last2_out : out std_logic_vector(1 downto 0)
-        );
-    end component;
+            OP_in: in std_logic_vector(3 downto 0);
+            RS1_in: in std_logic_vector(2 downto 0);
+            RS2_in: in std_logic_vector(2 downto 0);
+            RD_in: in std_logic_vector(2 downto 0);
+            RF_wr_in: in std_logic;
+            ALU_sel_in: in std_logic_vector(1 downto 0);
+            Carry_sel_in: in std_logic;
+            C_modified_in: in std_logic;
+            Z_modified_in: in std_logic;
+            Mem_wr_in: in std_logic;
+            Imm_in: in std_logic_vector(15 downto 0);
+            PC_in: in std_logic_vector(15 downto 0);
+            D3_MUX_in: in std_logic_vector(1 downto 0);
+            CPL_in: in std_logic;
+            CN_in: in std_logic;
+            WB_MUX_in: in std_logic;
+            CZ_in: in std_logic_vector(1 downto 0);
+            ALU3_MUX_in: in std_logic;
+            OP_out: out std_logic_vector(3 downto 0);
+            RS1_out: out std_logic_vector(2 downto 0);
+            RS2_out: out std_logic_vector(2 downto 0);
+            RD_out: out std_logic_vector(2 downto 0);
+            RF_wr_out: out std_logic;
+            ALU_sel_out: out std_logic_vector(1 downto 0);
+            Carry_sel_out: out std_logic;
+            C_modified_out: out std_logic;
+            Z_modified_out: out std_logic;
+            Mem_wr_out: out std_logic;
+            Imm_out: out std_logic_vector(15 downto 0);
+            PC_out: out std_logic_vector(15 downto 0);
+            D3_MUX_out: out std_logic_vector(1 downto 0);
+            CPL_out: out std_logic;
+            CN_out: out std_logic;
+            WB_MUX_out: out std_logic;
+            CZ_out: out std_logic_vector(1 downto 0);
+            ALU3_MUX_out: out std_logic
+        end component;
 
     --6. RREX
     component RREX_reg is
         port(
             clk: in std_logic;
             WR_EN: in std_logic;
-            Alu1_A_in : in std_logic_vector(15 downto 0);
-            Alu1_B_in : in std_logic_vector(15 downto 0);
-            Rf_D2_in : in std_logic_vector(15 downto 0);
-            PC_in : in std_logic_vector(15 downto 0);
-            Imm9_in : in std_logic_vector(15 downto 0);
-            RegC_in : in std_logic_vector(2 downto 0);
-            Rf_wr_in, c_modify_in, z_modify_in,history_bit_in, mem_wr_in, mem_mux_in : in std_logic;
-            ALU_sel_in : in std_logic_vector(1 downto 0);
-            i_in : in integer;
-            Alu1_A_out : out std_logic_vector(15 downto 0);
-            Alu1_B_out : out std_logic_vector(15 downto 0);
-            Rf_D2_out : out std_logic_vector(15 downto 0);
-            PC_out : out std_logic_vector(15 downto 0);
-            Imm9_out : out std_logic_vector(15 downto 0);
-            RegC_out : out std_logic_vector(2 downto 0);
-            Rf_wr_out, c_modify_out, z_modify_out,history_bit_out, mem_wr_out, mem_mux_out : out std_logic;
-            ALU_sel_out : out std_logic_vector(1 downto 0);
-            i_out : out integer;
-        
-            cancelin:in std_logic;
-            cancelout: out std_logic;
-        
-            OpCode_in:in std_logic_vector(3 downto 0);
-            OpCode_out: out std_logic_vector(3 downto 0);
-            
-            Last2_in : in std_logic_vector(1 downto 0);
-            Last2_out : out std_logic_vector(1 downto 0)
+            OP_in: in std_logic_vector(3 downto 0);
+            RS1_in: in std_logic_vector(2 downto 0);
+            RS2_in: in std_logic_vector(2 downto 0);
+            RD_in: in std_logic_vector(2 downto 0);
+            RF_D1_in: in std_logic_vector(15 downto 0);
+            RF_D2_in: in std_logic_vector( 15 downto 0);
+            RF_wr_in: in std_logic;
+            ALU_sel_in: in std_logic_vector(1 downto 0);
+            Carry_sel_in: in std_logic;
+            C_modified_in: in std_logic;
+            Z_modified_in: in std_logic;
+            Mem_wr_in: in std_logic;
+            Imm_in: in std_logic_vector(15 downto 0);
+            PC_in: in std_logic_vector(15 downto 0);
+            D3_MUX_in: in std_logic_vector(1 downto 0);
+            CPL_in: in std_logic;
+            CN_in: in std_logic;
+            WB_MUX_in: in std_logic;
+            CZ_in: in std_logic_vector(1 downto 0);
+            ALU3_MUX_in: in std_logic;
+            OP_out: out std_logic_vector(3 downto 0);
+            RS1_out: out std_logic_vector(2 downto 0);
+            RS2_out: out std_logic_vector(2 downto 0);
+            RD_out: out std_logic_vector(2 downto 0);
+            RF_D1_out: out std_logic_vector(15 downto 0);
+            RF_D2_out: out std_logic_vector( 15 downto 0);
+            RF_wr_out: out std_logic;
+            ALU_sel_out: out std_logic_vector(1 downto 0);
+            Carry_sel_out: out std_logic;
+            C_modified_out: out std_logic;
+            Z_modified_out: out std_logic;
+            Mem_wr_out: out std_logic;
+            Imm_out: out std_logic_vector(15 downto 0);
+            PC_out: out std_logic_vector(15 downto 0);
+            D3_MUX_out: out std_logic_vector(1 downto 0);
+            CPL_out: out std_logic;
+            CN_out: out std_logic;
+            WB_MUX_out: out std_logic;
+            CZ_out: out std_logic_vector(1 downto 0);
+            ALU3_MUX_out: out std_logic
             );
         end component;
     --7. EX_MEM
@@ -123,19 +152,50 @@ architecture Struct of Datapath is
         port (
             clk: in std_logic;
             WR_EN: in std_logic;
-            Alu1_C_in : in std_logic_vector(15 downto 0);
-            Rf_D2_in : in std_logic_vector(15 downto 0);
-            RegC_in : in std_logic_vector(2 donwto 0);
-            Rf_wr_in,mem_wr_in,mem_mux_in : in std_logic;
-            Alu1_C_out : out std_logic_vector(15 downto 0);
-            Rf_D2_out : out std_logic_vector(15 downto 0);
-            RegC_out : out std_logic_vector(2 downto 0);
-            Rf_wr_out,mem_wr_out,mem_mux_out : out std_logic;
-        
-            cancelin:in std_logic;
-            cancelout: out std_logic;
-            OpCode_in:in std_logic_vector(3 downto 0);
-            OpCode_out: out std_logic_vector(3 downto 0);
+            OP_in: in std_logic_vector(3 downto 0);
+            RS1_in: in std_logic_vector(2 downto 0);
+            RS2_in: in std_logic_vector(2 downto 0);
+            RD_in: in std_logic_vector(2 downto 0);
+            RF_D1_in: in std_logic_vector(15 downto 0);
+            RF_D2_in: in std_logic_vector( 15 downto 0);
+            RF_wr_in: in std_logic;
+            ALU_sel_in: in std_logic_vector(1 downto 0);
+            Carry_sel_in: in std_logic;
+            C_modified_in: in std_logic;
+            Z_modified_in: in std_logic;
+            Mem_wr_in: in std_logic;
+            Imm_in: in std_logic_vector(15 downto 0);
+            PC_in: in std_logic_vector(15 downto 0);
+            D3_MUX_in: in std_logic_vector(1 downto 0);
+            CPL_in: in std_logic;
+            CN_in: in std_logic;
+            ALU1_C_in: in std_logic_vector(15 downto 0);
+            ALU3_C_in: in std_logic_vector(15 downto 0);
+            WB_MUX_in: in std_logic;
+            CZ_in: in std_logic_vector(1 downto 0);
+            ALU3_MUX_in: in std_logic;
+            OP_out: out std_logic_vector(3 downto 0);
+            RS1_out: out std_logic_vector(2 downto 0);
+            RS2_out: out std_logic_vector(2 downto 0);
+            RD_out: out std_logic_vector(2 downto 0);
+            RF_D1_out: out std_logic_vector(15 downto 0);
+            RF_D2_out: out std_logic_vector( 15 downto 0);
+            RF_wr_out: out std_logic;
+            ALU_sel_out: out std_logic_vector(1 downto 0);
+            Carry_sel_out: out std_logic;
+            C_modified_out: out std_logic;
+            Z_modified_out: out std_logic;
+            Mem_wr_out: out std_logic;
+            Imm_out: out std_logic_vector(15 downto 0);
+            PC_out: out std_logic_vector(15 downto 0);
+            D3_MUX_out: out std_logic_vector(1 downto 0);
+            CPL_out: out std_logic;
+            CN_out: out std_logic;
+            ALU1_C_out: out std_logic_vector(15 downto 0);
+            ALU3_C_out: out std_logic_vector(15 downto 0);
+            WB_MUX_out: out std_logic;
+            CZ_out: out std_logic_vector(1 downto 0);
+            ALU3_MUX_out: out std_logic
         
         );
     end component;
@@ -145,21 +205,26 @@ architecture Struct of Datapath is
         port (
             clk: in std_logic;
             WR_EN: in std_logic;
-            Rf_D2_in : in std_logic_vector(15 downto 0);
-            RegC_in : in std_logic_vector(2 downto 0);
-            Rf_wr_in : in std_logic;
-            RegA_in : in std_logic_vector(15 downto 0);
-            RegB_in : in std_logic_vector(15 downto 0);
-            Rf_D2_out : out std_logic_vector(15 downto 0);
-            RegC_out : out std_logic_vector(2 downto 0);
-            Rf_wr_out : out std_logic;
-            RegA_out : out std_logic_vector(15 downto 0);
-            RegB_out : out std_logic_vector(15 downto 0);
-        
-            cancelin:in std_logic;
-            cancelout: out std_logic;
-            OpCode_in:in std_logic_vector(3 downto 0);
-            OpCode_out: out std_logic_vector(3 downto 0);
+            OP_in: in std_logic_vector(3 downto 0);
+            RS1_in: in std_logic_vector(2 downto 0);
+            RS2_in: in std_logic_vector(2 downto 0);
+            RD_in: in std_logic_vector(2 downto 0);
+            RF_wr_in,CN_in: in std_logic;
+            Data_out_WB_in: in std_logic_vector(15 downto 0);
+            Imm_in: in std_logic_vector(15 downto 0);
+            PC_in: in std_logic_vector(15 downto 0);
+            D3_MUX_in: in std_logic_vector(1 downto 0);
+            ALU3_C_in: in std_logic_vector(15 downto 0);
+            OP_out: out std_logic_vector(3 downto 0);
+            RS1_out: out std_logic_vector(2 downto 0);
+            RS2_out: out std_logic_vector(2 downto 0);
+            RD_out: out std_logic_vector(2 downto 0);
+            RF_wr_out,CN_out: out std_logic;
+            Data_out_WB_out: out std_logic_vector(15 downto 0);
+            Imm_out: out std_logic_vector(15 downto 0);
+            PC_out: out std_logic_vector(15 downto 0);
+            D3_MUX_out: out std_logic_vector(1 downto 0);
+            ALU3_C_out: out std_logic_vector(15 downto 0)
         );
     end component;
     --9. Register_File

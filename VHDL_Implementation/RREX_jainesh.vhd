@@ -3,10 +3,11 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 entity RREX_reg is
 port(
-    clk: in std_logic;
-    WR_EN: in std_logic;
-    Alu1_A_in : in std_logic_vector(15 downto 0);
-    Alu1_B_in : in std_logic_vector(15 downto 0);
+    clk: in std_logic;WR_EN: in std_logic;
+
+    RF_D1_in,RF_D2_in : in std_logic_vector(15 downto 0);
+    RF_D1_out ,RF_D2_out: out std_logic_vector(15 downto 0);
+    
     Rf_D2_in : in std_logic_vector(15 downto 0);
     PC_in : in std_logic_vector(15 downto 0);
     Imm9_in : in std_logic_vector(15 downto 0);
@@ -14,8 +15,8 @@ port(
     Rf_wr_in, c_modify_in, z_modify_in,history_bit_in, mem_wr_in, mem_mux_in : in std_logic;
     ALU_sel_in, mera_mux_in : in std_logic_vector(1 downto 0);
     i_in : in integer;
-    Alu1_A_out : out std_logic_vector(15 downto 0);
-    Alu1_B_out : out std_logic_vector(15 downto 0);
+    
+     : out std_logic_vector(15 downto 0);
     Rf_D2_out : out std_logic_vector(15 downto 0);
     PC_out : out std_logic_vector(15 downto 0);
     Imm9_out : out std_logic_vector(15 downto 0);
@@ -76,8 +77,8 @@ architecture RREX_reg_arch of RREX_reg is
     
 begin
 mera_mux : Register_2bit port map(mera_mux_in,clk,WR_EN,mera_mux_out);
-Alu1_A : Register_16bit port map(Alu1_A_in,clk,WR_EN,Alu1_A_out);
-Alu1_B : Register_16bit port map(Alu1_B_in,clk,WR_EN,Alu1_B_out);
+Alu1_A : Register_16bit port map(RF_D1_in,clk,WR_EN,RF_D1_out);
+Alu1_B : Register_16bit port map(RF_D2_in,clk,WR_EN,RF_D2_out);
 Rf_D2 : Register_16bit port map(Rf_D2_in,clk,WR_EN,Rf_D2_out);
 PC :  Register_16bit port map(PC_in,clk,WR_EN,PC_out);
 RegC: Register_3bit port map(RegC_in,clk,WR_EN,RegC_out);
