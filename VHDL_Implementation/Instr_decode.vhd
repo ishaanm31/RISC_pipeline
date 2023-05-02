@@ -121,7 +121,6 @@ end component adder;
 
 			elsif(Instruction(15 downto 12) = "0010") then
 				mera_mux := Instruction(1 downto 0);
-				 c_modify := '1';
 				 z_modify := '1';
 				 rf_wr := '1';
 				 Alu_sel(1 downto 0) := "01"; --nand_ka 001
@@ -130,7 +129,7 @@ end component adder;
 				 mem_mux := '0';
 				 imm_mux := '0';
 
-			elsif(Instruction(15 downto 12) = "0011" or Instruction(15 downto 12) = "0100") then
+			elsif((Instruction(15 downto 12) = "0011") or (Instruction(15 downto 12) = "0100")) then
 				 z_modify := Instruction(14);
 				 rf_wr := '1';
 				 mem_wr := '0';
@@ -385,7 +384,7 @@ end component adder;
 						Imm_out:= Imm9_out;
 					end case;
 
-			elsif(Instruction(15 downto 12) = "1000" or Instruction(15 downto 12) = "1001" or Instruction(15 downto 12) = "1010") then
+			elsif((Instruction(15 downto 12) = "1000") or (Instruction(15 downto 12) = "1001") or (Instruction(15 downto 12) = "1010")) then
 				Imm_out := Imm6_out;
 				 rf_wr := '1';
 				 ALU_sel := "010"; --sub ka 010

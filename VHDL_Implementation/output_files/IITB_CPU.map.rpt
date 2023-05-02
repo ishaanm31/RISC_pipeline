@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IITB_CPU
-Wed May 03 00:09:15 2023
+Wed May 03 00:49:19 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -47,7 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 03 00:09:15 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 03 00:49:19 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_CPU                                    ;
 ; Top-level Entity Name              ; instr_decode                                ;
@@ -158,28 +158,28 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 16          ;
-; Maximum allowed            ; 12          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 12          ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                   ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
-; Register_4bit.vhd                ; yes             ; User VHDL File  ; C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd ;         ;
-; ID_adder.vhd                     ; yes             ; User VHDL File  ; C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ID_adder.vhd      ;         ;
-; SE10.vhd                         ; yes             ; User VHDL File  ; C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/SE10.vhd          ;         ;
-; SE7.vhd                          ; yes             ; User VHDL File  ; C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/SE7.vhd           ;         ;
-; Instr_decode.vhd                 ; yes             ; User VHDL File  ; C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd  ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                       ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
+; Register_4bit.vhd                ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd ;         ;
+; ID_adder.vhd                     ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_adder.vhd      ;         ;
+; SE10.vhd                         ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/SE10.vhd          ;         ;
+; SE7.vhd                          ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/SE7.vhd           ;         ;
+; Instr_decode.vhd                 ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd  ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------+
@@ -323,53 +323,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 03 00:09:01 2023
+    Info: Processing started: Wed May 03 00:49:09 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file register_4bit.vhd
-    Info (12022): Found design unit 1: Register_4bit-struct File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd Line: 10
-    Info (12023): Found entity 1: Register_4bit File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd Line: 4
+    Info (12022): Found design unit 1: Register_4bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd Line: 10
+    Info (12023): Found entity 1: Register_4bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file id_adder.vhd
-    Info (12022): Found design unit 1: adder-behave File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ID_adder.vhd Line: 12
-    Info (12023): Found entity 1: adder File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ID_adder.vhd Line: 5
+    Info (12022): Found design unit 1: adder-behave File: C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_adder.vhd Line: 12
+    Info (12023): Found entity 1: adder File: C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_adder.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file shifter7.vhd
-    Info (12022): Found design unit 1: Shifter7-struct File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Shifter7.vhd Line: 10
-    Info (12023): Found entity 1: Shifter7 File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Shifter7.vhd Line: 5
+    Info (12022): Found design unit 1: Shifter7-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Shifter7.vhd Line: 10
+    Info (12023): Found entity 1: Shifter7 File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Shifter7.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file se10.vhd
-    Info (12022): Found design unit 1: SE10-struct File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/SE10.vhd Line: 9
-    Info (12023): Found entity 1: SE10 File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/SE10.vhd Line: 4
+    Info (12022): Found design unit 1: SE10-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/SE10.vhd Line: 9
+    Info (12023): Found entity 1: SE10 File: C:/SEM4/RISC_pipeline/VHDL_Implementation/SE10.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file se7.vhd
-    Info (12022): Found design unit 1: SE7-struct File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/SE7.vhd Line: 10
-    Info (12023): Found entity 1: SE7 File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/SE7.vhd Line: 5
+    Info (12022): Found design unit 1: SE7-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/SE7.vhd Line: 10
+    Info (12023): Found entity 1: SE7 File: C:/SEM4/RISC_pipeline/VHDL_Implementation/SE7.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_16bit.vhd
-    Info (12022): Found design unit 1: Register_16bit-struct File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd Line: 11
-    Info (12023): Found entity 1: Register_16bit File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd Line: 5
+    Info (12022): Found design unit 1: Register_16bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd Line: 11
+    Info (12023): Found entity 1: Register_16bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_3bit.vhd
-    Info (12022): Found design unit 1: Register_3bit-struct File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd Line: 10
-    Info (12023): Found entity 1: Register_3bit File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd Line: 4
+    Info (12022): Found design unit 1: Register_3bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd Line: 10
+    Info (12023): Found entity 1: Register_3bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file register_1bit.vhd
-    Info (12022): Found design unit 1: Register_1bit-struct File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd Line: 10
-    Info (12023): Found entity 1: Register_1bit File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd Line: 4
+    Info (12022): Found design unit 1: Register_1bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd Line: 10
+    Info (12023): Found entity 1: Register_1bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file instr_decode.vhd
-    Info (12022): Found design unit 1: instr_decode-instr_decode_arch File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 22
-    Info (12023): Found entity 1: instr_decode File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 5
+    Info (12022): Found design unit 1: instr_decode-instr_decode_arch File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 22
+    Info (12023): Found entity 1: instr_decode File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_2bits.vhd
-    Info (12022): Found design unit 1: Register_2bit-struct File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd Line: 11
-    Info (12023): Found entity 1: Register_2bit File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd Line: 5
+    Info (12022): Found design unit 1: Register_2bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd Line: 11
+    Info (12023): Found entity 1: Register_2bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd Line: 5
 Info (12127): Elaborating entity "Instr_decode" for the top level hierarchy
-Info (12128): Elaborating entity "SE10" for hierarchy "SE10:Sign_6" File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 67
-Info (12128): Elaborating entity "SE7" for hierarchy "SE7:Sign_9" File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 68
-Info (12128): Elaborating entity "adder" for hierarchy "adder:ad" File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 69
-Info (12128): Elaborating entity "Register_4bit" for hierarchy "Register_4bit:counter" File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 70
+Info (12128): Elaborating entity "SE10" for hierarchy "SE10:Sign_6" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 67
+Info (12128): Elaborating entity "SE7" for hierarchy "SE7:Sign_9" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 68
+Info (12128): Elaborating entity "adder" for hierarchy "adder:ad" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 69
+Info (12128): Elaborating entity "Register_4bit" for hierarchy "Register_4bit:counter" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 70
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "out_Imm_out[9]" is stuck at GND File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
-    Warning (13410): Pin "out_Imm_out[10]" is stuck at GND File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
-    Warning (13410): Pin "out_Imm_out[11]" is stuck at GND File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
-    Warning (13410): Pin "out_Imm_out[12]" is stuck at GND File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
-    Warning (13410): Pin "out_Imm_out[13]" is stuck at GND File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
-    Warning (13410): Pin "out_Imm_out[14]" is stuck at GND File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
-    Warning (13410): Pin "out_Imm_out[15]" is stuck at GND File: C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
+    Warning (13410): Pin "out_Imm_out[9]" is stuck at GND File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
+    Warning (13410): Pin "out_Imm_out[10]" is stuck at GND File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
+    Warning (13410): Pin "out_Imm_out[11]" is stuck at GND File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
+    Warning (13410): Pin "out_Imm_out[12]" is stuck at GND File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
+    Warning (13410): Pin "out_Imm_out[13]" is stuck at GND File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
+    Warning (13410): Pin "out_Imm_out[14]" is stuck at GND File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
+    Warning (13410): Pin "out_Imm_out[15]" is stuck at GND File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -378,9 +378,9 @@ Info (21057): Implemented 158 device resources after synthesis - the final resou
     Info (21059): Implemented 59 output pins
     Info (21061): Implemented 66 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4845 megabytes
-    Info: Processing ended: Wed May 03 00:09:15 2023
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 4860 megabytes
+    Info: Processing ended: Wed May 03 00:49:19 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:11
 
 
