@@ -64,13 +64,13 @@ architecture Struct of Datapath is
             WR_EN: in std_logic;
             RegA_in, RegB_in, RegC_in : in std_logic_vector(2 downto 0);
             Imm_in,PC_in: in std_logic_vector(15 downto 0);
-            Rf_wr_in, history_bit_in, c_modify_in, z_modify_in, mem_wr_in mem_mux_in, imm_mux_in : in std_logic
-            Alu_sel_in : in std_logic_vector(1 downto 0);
+            Rf_wr_in, history_bit_in, c_modify_in, z_modify_in, mem_wr_in, mem_mux_in, imm_mux_in : in std_logic;
+            Alu_sel_in, mera_mux_in : in std_logic_vector(1 downto 0);
             i_in : in integer;
-            RegA_out, RegB_out, RegC_out : in std_logic_vector(2 downto 0);
-            Imm_out, PC_out : in std_logic_vector(15 downto 0);
-            Rf_wr_out, history_bit_out, c_modify_out, z_modify_out, mem_wr_out mem_mux_out, imm_mux_out: in std_logic
-            Alu_sel_out : in std_logic_vector(1 downto 0);
+            RegA_out, RegB_out, RegC_out : out std_logic_vector(2 downto 0);
+            Imm_out, PC_out : out std_logic_vector(15 downto 0);
+            Rf_wr_out, history_bit_out, c_modify_out, z_modify_out, mem_wr_out, mem_mux_out, imm_mux_out: out std_logic;
+            Alu_sel_out,mera_mux_out : out std_logic_vector(1 downto 0);
             i_out : out integer;
         
             cancelin: in std_logic;
@@ -214,21 +214,21 @@ architecture Struct of Datapath is
     component Branch_Predictor is
         port (
             PC_IF, PC_Branched:  in std_logic_vector(15 downto 0 );
-            Z_Flag, C_Flag,History_bit_EX:in std_logic;
+            Z_Flag, C_Flag:in std_logic;
             index_EX: in integer;
             clk: in std_logic;
         
             Instruc_op_ID,Instruc_op_EX, Instruc_op_RR, PC_ID, 
-            PC_New_ID, PC_EX, PC_New_EX, PC_RR: in std_logic_vector(15 downto 0 );
-            History_bit_ID,History_bit_EX: in std_logic;
+            PC_New_ID, PC_EX, PC_New_EX, PC_RR, PC_New_RR: in std_logic_vector(15 downto 0 );
+            History_bit_ID,History_bit_EX, History_bit_RR: in std_logic;
         
             JAL_Haz, JRI_Haz, JLR_Haz, BEQ_Haz, BLT_Haz, BLE_Haz: out std_logic;
             PC_New: out std_logic_vector(15 downto 0);
             LUT_index_op:out integer;
-            History_bit_op: out std_logic;
+            History_bit_op: out std_logic
         );
-    end component;
-
+    end component Branch_Predictor;
+    
     --Signals required for IF
     signal Intruc, PCplus2, PC : std_logic_vector(15 downto 0);
     
@@ -240,7 +240,7 @@ architecture Struct of Datapath is
     --Signals for RR.
 
     --Signals for EX
-
+    signal 
 
     --Signals for MEM:
     signal mem_add,mem_add_internal,mem_in_internal,mem_out,mem_in : std_logic_vector(15 downto 0);
@@ -306,6 +306,12 @@ begin
         History_bit_op=>History_bit_op
     );
     ---------------------------------------------------------
-    
+
+
+
+
+
+------------------Execution component----------------------------
+ALU1 : ALU port map()
 end Struct;
     
