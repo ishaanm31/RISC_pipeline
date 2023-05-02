@@ -56,9 +56,24 @@ architecture Struct of Datapath is
             History_bit_op: out std_logic
         );
     end component;
-
+    -----Instruction Decode
+    component instr_decode is
+        port
+        (
+            Inst : in std_logic_vector(15 downto 0);
+            PC_in: in std_logic_vector(15 downto 0);
+            RS1,RS2,RD : out std_logic_vector(2 downto 0);
+            ALU_sel,D3_MUX,CZ,ALU3_MUX : out std_logic_vector(1 downto 0);
+            Imm : out std_logic_vector(15 downto 0);
+            RF_wr, C_modified, Z_modified, Mem_wr,Carry_sel,CPL,WB_MUX: out std_logic;
+            OP : out std_logic_vector(3 downto 0);
+            PC_ID : out std_logic_vector(15 downto 0);
+            LM_SM_hazard : out std_logic;
+            clk: in std_logic
+        );
+    end component;
     --5.IDRR
-    component IDRR_reg is
+    component IDRR is
         port (
             clk: in std_logic;
             WR_EN: in std_logic;
@@ -79,7 +94,7 @@ architecture Struct of Datapath is
             CN_in: in std_logic;
             WB_MUX_in: in std_logic;
             CZ_in: in std_logic_vector(1 downto 0);
-            ALU3_MUX_in: in std_logic;
+            ALU3_MUX_in: in std_logic_vector(1 downto 0);
             OP_out: out std_logic_vector(3 downto 0);
             RS1_out: out std_logic_vector(2 downto 0);
             RS2_out: out std_logic_vector(2 downto 0);
@@ -97,11 +112,11 @@ architecture Struct of Datapath is
             CN_out: out std_logic;
             WB_MUX_out: out std_logic;
             CZ_out: out std_logic_vector(1 downto 0);
-            ALU3_MUX_out: out std_logic
+            ALU3_MUX_out: out std_logic_vector(1 downto 0));
         end component;
 
     --6. RREX
-    component RREX_reg is
+    component RREX is
         port(
             clk: in std_logic;
             WR_EN: in std_logic;
@@ -124,7 +139,7 @@ architecture Struct of Datapath is
             CN_in: in std_logic;
             WB_MUX_in: in std_logic;
             CZ_in: in std_logic_vector(1 downto 0);
-            ALU3_MUX_in: in std_logic;
+            ALU3_MUX_in: in std_logic_vector(1 downto 0);
             OP_out: out std_logic_vector(3 downto 0);
             RS1_out: out std_logic_vector(2 downto 0);
             RS2_out: out std_logic_vector(2 downto 0);
@@ -144,7 +159,7 @@ architecture Struct of Datapath is
             CN_out: out std_logic;
             WB_MUX_out: out std_logic;
             CZ_out: out std_logic_vector(1 downto 0);
-            ALU3_MUX_out: out std_logic
+            ALU3_MUX_out: out std_logic_vector(1 downto 0)
             );
         end component;
     --7. EX_MEM
@@ -173,7 +188,7 @@ architecture Struct of Datapath is
             ALU3_C_in: in std_logic_vector(15 downto 0);
             WB_MUX_in: in std_logic;
             CZ_in: in std_logic_vector(1 downto 0);
-            ALU3_MUX_in: in std_logic;
+            ALU3_MUX_in: in std_logic_vector(1 downto 0);
             OP_out: out std_logic_vector(3 downto 0);
             RS1_out: out std_logic_vector(2 downto 0);
             RS2_out: out std_logic_vector(2 downto 0);
@@ -194,8 +209,7 @@ architecture Struct of Datapath is
             ALU1_C_out: out std_logic_vector(15 downto 0);
             ALU3_C_out: out std_logic_vector(15 downto 0);
             WB_MUX_out: out std_logic;
-            CZ_out: out std_logic_vector(1 downto 0);
-            ALU3_MUX_out: out std_logic
+            CZ_out: out std_logic_vector(1 downto 0)
         
         );
     end component;
@@ -276,42 +290,122 @@ architecture Struct of Datapath is
             );
     end component;
 
-    component Branch_Predictor is
+    component Haz_PC_controller is
         port (
-            PC_IF, PC_Branched:  in std_logic_vector(15 downto 0 );
-            Z_Flag, C_Flag:in std_logic;
-            index_EX: in integer;
-            clk: in std_logic;
+            PC_IF,PC_ID,PC_RR,PC_EX: in std_logic_vector(15 downto 0);
+            LMSM, H_JLR,H_JAL, H_BEX, LMSM_Haz: in std_logic;
         
-            Instruc_op_ID,Instruc_op_EX, Instruc_op_RR, PC_ID, 
-            PC_New_ID, PC_EX, PC_New_EX, PC_RR, PC_New_RR: in std_logic_vector(15 downto 0 );
-            History_bit_ID,History_bit_EX, History_bit_RR: in std_logic;
-        
-            JAL_Haz, JRI_Haz, JLR_Haz, BEQ_Haz, BLT_Haz, BLE_Haz: out std_logic;
             PC_New: out std_logic_vector(15 downto 0);
-            LUT_index_op:out integer;
-            History_bit_op: out std_logic
+            PC_WR,IF_ID_flush,ID_RR_flush,RR_EX_flush, IF_ID_WR,ID_RR_WR,RR_EX_WR, EX_MEM_WR, MEM_WB_WR : out std_logic
+            
         );
-    end component Branch_Predictor;
-    
-    --Signals required for IF
-    signal Intruc, PCplus2, PC : std_logic_vector(15 downto 0);
-    
-    --Signals for ID:
-    PC_in : in std_logic_vector(15 downto 0);
-    Instruction : in std_logic_vector(15 downto 0);
-    out_RegA,out_RegB,out_RegC ,out_Alu_sel : out std_logic_vector(2 downto 0);
-    out_Imm_out : out std_logic_vector(15 downto 0);
-    out_rf_wr, out_c_modify, out_z_modify, out_mem_wr, out_mem_mux, out_imm_mux : out std_logic;
-    out_opcode : out std_logic_vector(3 downto 0);
-    out_Last2: out std_logic_vector(1 downto 0);
-    PC_BP : out std_logic_vector(15 downto 0);
-    out_LM_SM_hazard : out std_logic;
-    out_mera_mux : out std_logic_vector(1 downto 0);
-    --Signals for RR.
+    end component Haz_PC_controller;
 
+    component Haz_JLR is
+        port (
+            Instruc_OPCode_RR:in std_logic_vector(3 downto 0);
+            Hist_RR: in std_logic;
+            H_JLR:out std_logic
+        );
+    end component Haz_JLR;
+
+    component Haz_JAL is
+        port (
+            Instruc_OPCode_ID:in std_logic_vector(3 downto 0);
+            Hist_ID: in std_logic;
+            H_Jal:out std_logic
+        );
+    end component Haz_JAL;
+
+    component Haz_BEX is
+        port (
+            Instruc_OPCode_EX:in std_logic_vector(3 downto 0);
+            Hist_EX: in std_logic;
+            ZFlag,CFlag:in std_logic;
+        
+            H_BEX:out std_logic;
+            HType:out std_logic_vector(1 downto 0)
+            --0->BEQ
+            --1->BLT
+            --2->BLE
+            --3->JRI
+        );
+    end component Haz_BEX;
+    ---Forwarding Unit
+    component Forwarding_Unit is
+        port (
+            RegC_EX,RegC_Mem,RegC_WB,RegA_RR, RegB_RR: in std_logic_vector(2 downto 0);
+            RF_WR_EX, RF_WR_Mem, RF_WR_WB:in std_logic;    
+            MuxA,MuxB: out std_logic_vector(1 downto 0)
+        );
+    end component Forwarding_Unit;
+    
+    --Signal cancelling
+    signal CN_IFID,CN_IDRR,CN_RREX,CN_EXMEM,CN_MEMWB : std_logic;
+    --WR_EN signals
+    signal WREN_IFID,WREN_IDRR,WREN_RREX,WREN_EXMEM,WREN_MEMWB : std_logic;
+
+    --Signals required for IF
+    signal Instruc, PC_IF : std_logic_vector(15 downto 0);
+    --Signals for ID:
+    signal PC_1 : std_logic_vector(15 downto 0);
+    signal Instruc_ID : std_logic_vector(15 downto 0);
+    signal CNpass1 : std_logic;
+    signal OP_ID: std_logic_vector(3 downto 0);
+    signal RS1_ID: std_logic_vector(2 downto 0);
+    signal RS2_ID: std_logic_vector(2 downto 0);
+    signal RD_ID: std_logic_vector(2 downto 0);
+    signal RF_wr_ID: std_logic;
+    signal ALU_sel_ID: std_logic_vector(1 downto 0);
+    signal Carry_sel_ID: std_logic;
+    signal C_modified_ID: std_logic;
+    signal Z_modified_ID: std_logic;
+    signal Mem_wr_ID: std_logic;
+    signal Imm_ID: std_logic_vector(15 downto 0);
+    signal PC_ID: std_logic_vector(15 downto 0);
+    signal D3_MUX_ID: std_logic_vector(1 downto 0);
+    signal CPL_ID: std_logic;
+    signal CN_ID: std_logic;
+    signal WB_MUX_ID: std_logic;
+    signal CZ_ID: std_logic_vector(1 downto 0);
+    signal ALU3_MUX_ID: std_logic_vector(1 downto 0);
+    -----Signals for RR
+    signal muxA,muxB : std_logic_vector(2 downto 0);
+    signal OP_RR: std_logic_vector(3 downto 0);
+    signal RS1_RR,RS2_RR:std_logic_vector(2 downto 0);
+    signal RD_RR: std_logic_vector(2 downto 0);
+    signal RF_wr_RR:std_logic;
+    signal ALU_sel_RR: std_logic_vector(1 downto 0);
+    signal Carry_sel_RR: std_logic;
+    signal C_modified_RR: std_logic;
+    signal Z_modified_RR: std_logic;
+    signal Mem_wr_RR: std_logic;
+    signal Imm_RR,rf_d1_RR,rf_d2_RR: std_logic_vector(15 downto 0);
+    signal PC_RR: std_logic_vector(15 downto 0);
+    signal D3_MUX_RR:  std_logic_vector(1 downto 0);
+    signal CPL_RR:  std_logic;
+    signal CN_Pass2,CN_RREX:  std_logic;
+    signal WB_MUX_RR:  std_logic;
+    signal CZ_RR: std_logic_vector(1 downto 0);
+    signal ALU3_MUX_RR:  std_logic(1 downto 0);  
     --Signals for EX
-    signal 
+    signal OP_EX: std_logic_vector(3 downto 0);
+    signal RS1_EX,RS2_EX:std_logic_vector(2 downto 0);
+    signal RD_EX: std_logic_vector(2 downto 0);
+    signal RF_wr_EX:std_logic;
+    signal ALU_sel_EX: std_logic_vector(1 downto 0);
+    signal Carry_sel_EX: std_logic;
+    signal C_modified_EX: std_logic;
+    signal Z_modified_EX: std_logic;
+    signal Mem_wr_EX: std_logic;
+    signal Imm_EX,rf_d1_EX,rf_d2_EX: std_logic_vector(15 downto 0);
+    signal PC_EX: std_logic_vector(15 downto 0);
+    signal D3_MUX_EX:  std_logic_vector(1 downto 0);
+    signal CPL_EX:  std_logic;
+    signal CN_EX:  std_logic;
+    signal WB_MUX_EX:  std_logic;
+    signal CZ_EX: std_logic_vector(1 downto 0);
+    signal ALU3_MUX_EX:  std_logic(1 downto 0);  
 
     --Signals for MEM:
     signal mem_add,mem_add_internal,mem_in_internal,mem_out,mem_in : std_logic_vector(15 downto 0);
@@ -321,7 +415,7 @@ architecture Struct of Datapath is
 
     --Signals for Branch Predictor
 
-        signal PC_IF, PC_Branched: std_logic_vector(15 downto 0 );
+        signal PC_IF: std_logic_vector(15 downto 0 );
         signal Z_Flag, C_Flag,History_bit_EX : std_logic;
         signal index_EX: integer;
     
@@ -339,45 +433,97 @@ architecture Struct of Datapath is
 
     --Cancel Signals for each stage
     signal cancel_IF, cancel_ID, cancel_RR, cancel_EX,cancel_MEM, cancel_WB:std_logic;
-    
+    --Signals with Haz and Branch Controller
+    signal PC_New: std_logic_vector(15 downto 0);
+    signal LMSM_Haz:std_logic;
 begin
 ------------------IF component----------------------------
-    MyROM: ROM port map( Mem_Add => PC , Mem_Data_Out=>Instruc);
-    IF_add: ID_adder port map(PC,"0000000000000010",PCplus2);
+    MyROM: ROM port map( Mem_Add => PC_New , Mem_Data_Out=>Instruc);
+    IF_add: ID_adder port map(PC_new,"0000000000000010",PC_IF);
 -------------- IF_ID Pipeline Register-------------------------------------------
     IF_ID_Pipepline_Reg : IF_ID port map(
-    Instruc_in=>Instruc,PC_in=> PCplus2,
-    LUT_index_in=>LUT_index_op,
-    History_bit_in=>History_bit_op,
-
-    clk=>clock,
-    WR_EN=>IF_ID_WR,
-    cancelin=>( not(JAL_Haz) and not(JRI_Haz) and not(JLR_Haz) and not() and not(BEQ_Haz) 
-                and not(BLT_Haz) and not(BLE_Haz)),
-    cancelout=>cancel_IF,
-    Instruc_op =>intruc_ID ,PC_op=PC_ID,
-    LUT_index_op=index_ID,
-    History_bit_op=>History_bit_ID);
--------------------------------------------------------------------------
-    --------------------branch predictor-----------
-    BP: Branch_Predictor port (
-        PC_IF=>PCplus2, PC_Branched=>PC_Branched,
-        Z_Flag=>ZFlag, C_Flag=>CFlag,History_bit_EX=>History_bit_EX,
-        index_EX=>index_EX,
-        clk=>clock,    
-        Instruc_op_ID=>Instruc_op_ID ,Instruc_op_EX=>Instruc_op_EX, 
-        Instruc_op_RR=>Instruc_op_RR, PC_ID=>PC_ID, 
-        PC_New_ID=>PC_New_ID, PC_EX=>PC_EX, PC_New_EX=>PC_New_EX, PC_RR=>PC_RR,
-        History_bit_ID=>History_bit_ID,History_bit_EX=>History_bit_EX,
-    
-        JAL_Haz=>JAL_Haz, JRI_Haz=>JRI_Haz, JLR_Haz=>JLR_Haz, BEQ_Haz=>BEQ_Haz,
-        BLT_Haz=>BLT_Haz, BLE_Haz=>BLE_Haz,
-        PC_New=>PC_New,
-        LUT_index_op=>LUT_index_op,
-        History_bit_op=>History_bit_op
+        Instruc_in<=Instruc,
+        PC_in<=PC_new,
+        clk<=clock,
+        WR_EN<=WREN_IFID,
+        CN_in<=CN_IFID,
+        CN_out<=CNpass1,
+        Instruc_op<=Instruc_ID,
+        PC_op<=PC_1
     );
-    ---------------------------------------------------------
+--------------------Instruc Decode-----------------------------------------------------
+    Jainesh_instruc:instr_decode port map
+    (
+        Inst<=Instruc_ID,
+        PC_in<=PC_1,
+        RS1<=RS1_ID,
+        RS2<=RS2_ID,
+        RD <=RD_ID ,
+        ALU_sel<=ALU_sel_ID ,
+        D3_MUX<= D3_MUX_ID,CZ<= CZ_ID,ALU3_MUX<=ALU3_MUX_ID ,
+        Imm <= Imm_ID,
+        RF_wr<=RF_wr_ID, C_modified<=C_modified_ID, Z_modified<=Z_modified_ID ,
+        Mem_wr<=Mem_wr_ID,Carry_sel<=Carry_sel_ID,CPL<=CPL_ID,WB_MUX<=WB_MUX_ID,
+        OP<=OP_ID,
+        PC_ID<= PC_ID,
+        LM_SM_hazard<=LMSM_Haz,
+        clk<=clock
+    );
 
+---------------------ID_RR_pipeline------------------
+ID_RR_pipeline : IDRR port map
+(
+    clk <= clock,
+    OP_in<=OP_ID,
+    RS1_in<=RS1_ID,
+    RS2_in<=RS2_ID,
+    RD_in<=RD_ID,
+    RF_wr_in<=RF_wr_ID,
+    ALU_sel_in <= ALU_sel_ID,
+    Carry_sel_in <=Carry_sel_ID,
+    C_modified_in <=C_modified_ID,
+    Z_modified_in <=Z_modified_ID,
+    Mem_wr_in<=Mem_wr_ID,
+    Imm_in<=Imm_ID,
+    PC_in<=PC_ID,
+    D3_MUX_in<=D3_MUX_ID,
+    CPL_in<=CPL_ID,
+    CN_in<=(CNpass1 or CN_IDRR),
+    WB_MUX_in<=WB_MUX_ID,
+    CZ_in<=CZ_ID,
+    OP_out <= OP_RR,
+    RS1_out<=RS1_RR,
+    RS2_out<=RS2_RR,
+    RD_out<=RD_RR,
+    RF_wr_out<=RF_wr_RR,
+    ALU_sel_out<=ALU_sel_RR,
+    Carry_sel_out<=Carry_sel_RR,
+    ALU3_MUX_out<=ALU3_MUX_ID,
+    C_modified_out<=C_modified_RR,
+    Z_modified_out<= Z_modified_RR,
+    Mem_wr_out<=Mem_wr_RR,
+    Imm_out<=Imm_RR,
+    PC_out <=PC_RR,
+    D3_MUX_out<=D3_MUX_RR,
+    CPL_out<=CPL_RR,
+    CN_out<=CNpass2,
+    WB_MUX_out<=WB_MUX_RR,
+    CZ_out<=CZ_RR,
+    ALU3_MUX_out<=ALU3_MUX_RR  
+);  
+---------------RR-------------
+RF : Regsiter_file port map(A1 <= RS1_RR,A2 <= RS2_RR,)
+
+
+
+--------------------branch predictor-----------
+--------------------------Forwarding Unit-------------------------------
+MovingFWD: Forwarding_Unit port map (
+        RegC_EX<=  ,RegC_Mem<=  ,RegC_WB<= ,RegA_RR, RegB_RR<=,
+        RF_WR_EX<= , RF_WR_Mem<=  , RF_WR_WB<=,    
+        MuxA<= ,MuxB<=
+    );
+end component Forwarding_Unit;
 
 
 

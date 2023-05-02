@@ -5,17 +5,16 @@ use ieee.numeric_std.all;
 entity Haz_JLR is
 port (
     Instruc_OPCode_RR:in std_logic_vector(3 downto 0);
-    Hist_RR: in std_logic;
     H_JLR:out std_logic
 );
 end entity Haz_JLR;
 
 architecture struct of Haz_JLR is
 begin
-    process(Instruc_OPCode_RR,Hist_RR)
+    process(Instruc_OPCode_RR)
 
         begin
-            if((Instruc_OPCode_RR="1101") and(Hist_RR='0')) then
+            if((Instruc_OPCode_RR="1101")) then
                 H_JLR<='1';
             else    
                 H_JLR<='0';

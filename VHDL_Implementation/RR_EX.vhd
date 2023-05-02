@@ -25,7 +25,7 @@ port (
     CN_in: in std_logic;
     WB_MUX_in: in std_logic;
     CZ_in: in std_logic_vector(1 downto 0);
-    ALU3_MUX_in: in std_logic;
+    ALU3_MUX_in: in std_logic_vector(1 downto 0);
     OP_out: out std_logic_vector(3 downto 0);
     RS1_out: out std_logic_vector(2 downto 0);
     RS2_out: out std_logic_vector(2 downto 0);
@@ -45,7 +45,7 @@ port (
     CN_out: out std_logic;
     WB_MUX_out: out std_logic;
     CZ_out: out std_logic_vector(1 downto 0);
-    ALU3_MUX_out: out std_logic
+    ALU3_MUX_out: out std_logic_vector(1 downto 0)
 );
 end entity;
 

@@ -16,7 +16,7 @@ port (
 );
 end entity IF_ID;
 
-architecture struct of IF_ID is
+architecture struct of IF_ID             is
 --------16 bit di Register---------------
     component Register_16bit is
         port (DataIn:in std_logic_vector(15 downto 0);

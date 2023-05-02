@@ -5,7 +5,6 @@ use ieee.numeric_std.all;
 entity Haz_BEX is
 port (
     Instruc_OPCode_EX:in std_logic_vector(3 downto 0);
-    Hist_EX: in std_logic;
     ZFlag,CFlag:in std_logic;
 
     H_BEX:out std_logic;
