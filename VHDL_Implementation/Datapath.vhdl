@@ -232,9 +232,11 @@ architecture Struct of Datapath is
     --Signals required for IF
     signal Intruc, PCplus2, PC : std_logic_vector(15 downto 0);
     
-    
     --Signals for ID:
-    
+    signal intruc_ID: std_logic_vector(3 downto 0);
+    signal PC_ID : std_logic_vector(15 downto 0);
+    signal index_ID :integer;
+    signal History_bit_ID: std_logic;
     --Signals for RR.
 
     --Signals for EX
@@ -260,13 +262,31 @@ architecture Struct of Datapath is
         signal PC_New:  std_logic_vector(15 downto 0);
         signal LUT_index_op: integer;
         signal History_bit_op: std_logic;
+
+    --All Write Enables----
+    signal IF_ID_WR,ID_RR_WR, RR_EX_WR, EX_MEM_WR, MEM_WB_WR: std_logic;
+
+    --Cancel Signals for each stage
+    signal cancel_IF, cancel_ID, cancel_RR, cancel_EX,cancel_MEM, cancel_WB:std_logic;
     
 begin
-------------------IF----------------------------
+------------------IF component----------------------------
     MyROM: ROM port map( Mem_Add => PC , Mem_Data_Out=>Instruc);
     IF_add: ID_adder port map(PC,"0000000000000010",PCplus2);
+-------------- IF_ID Pipeline Register-------------------------------------------
+    IF_ID_Pipepline_Reg : IF_ID port map(
+    Instruc_in=>Instruc,PC_in=> PCplus2,
+    LUT_index_in=>LUT_index_op,
+    History_bit_in=>History_bit_op,
 
-    IF_RR_Pipepline_Reg : IF_RR port map();
+    clk=>clock,
+    WR_EN=>IF_ID_WR,
+    cancelin=>( not(JAL_Haz) and not(JRI_Haz) and not(JLR_Haz) and not() and not(BEQ_Haz) 
+                and not(BLT_Haz) and not(BLE_Haz)),
+    cancelout=>cancel_IF,
+    Instruc_op =>intruc_ID ,PC_op=PC_ID,
+    LUT_index_op=index_ID,
+    History_bit_op=>History_bit_ID);
 -------------------------------------------------------------------------
     --------------------branch predictor-----------
     BP: Branch_Predictor port (
@@ -285,6 +305,7 @@ begin
         LUT_index_op=>LUT_index_op,
         History_bit_op=>History_bit_op
     );
-    ---------------------------------------------
+    ---------------------------------------------------------
+    
 end Struct;
     

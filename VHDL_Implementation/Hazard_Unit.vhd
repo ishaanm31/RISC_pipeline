@@ -2,14 +2,14 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 -- write the Flipflops packege declaration
-entity Hazard_Unit is
+entity Hazard_EX_Branch is
 port (
-    RR_RF_WR, RR_Mem_WR,RR_C_Modify, RR_Z_Modify, Branch:out std_logic;
+    HazEX:out std_logic;
     Cancel:out std_logic;
 );
-end entity Hazard_Unit;
+end entity Hazard_EX_Branch;
 
-architecture struct of Hazard_Unit is
+architecture struct of Hazard_EX_Branch is
 begin
 
 Lookup_Search : process(PC_IF)
