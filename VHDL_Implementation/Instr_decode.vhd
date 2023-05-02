@@ -30,6 +30,12 @@ architecture instr_decode_arch of instr_decode is
 		port (Raw: in std_logic_vector(5 downto 0 );
 			 Output:out std_logic_vector(15 downto 0):="0000000000000000");
 		end component SE10;
+		
+		component Register_4bit is
+		  port (DataIn:in std_logic_vector(3 downto 0);
+		  clock,Write_Enable:in std_logic;
+		  DataOut:out std_logic_vector(3 downto 0));
+		 end component Register_4bit;
 
 		component Register_3bit is
 			 port (DataIn:in std_logic_vector(2 downto 0);
@@ -54,7 +60,7 @@ end component adder;
 
 
 		signal Imm6_out,Imm9_out : std_logic_vector(15 downto 0) := "0000000000000000";
-		signal counter_in,counter_out : std_logic_vector(3 downto 0) := "0000";
+		signal counter_in,counter_out : std_logic_vector(3 downto 0);
 		
 	begin 
 
@@ -63,7 +69,7 @@ end component adder;
 		ad: adder port map(PC_in,Imm9_out,PC_BP);
 		counter: Register_4bit port map(counter_in,clk,'1',counter_out);
 		
-		instr : process(clk,Instruction,Imm6_out,Imm9_out,counter_in) 
+		instr : process(clk,Instruction,Imm6_out,Imm9_out,counter_out) 
 			variable RegA : std_logic_vector(2 downto 0);
 			variable RegB : std_logic_vector(2 downto 0);
 			variable RegC : std_logic_vector(2 downto 0);
@@ -90,6 +96,7 @@ end component adder;
 			Alu_sel := "000";
 			Imm_out := "0000000000000000";
 			LM_SM_hazard := '0';
+			counter_in<="0000";
 -----------------ADI--------------------------------
 			if(Instruction(15 downto 12) = "0000") then   
 				 Imm_out := Imm6_out;
