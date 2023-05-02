@@ -412,6 +412,8 @@ architecture Struct of Datapath is
     signal mem_WR: std_logic;
 
     --Signals for WB
+    signal Rd_WB:std_logic_vector(2 downto 0);
+    signal WB_Mux_data: std_logic_vector(15 downto 0);
 
     --Signals for Branch Predictor
 
@@ -434,7 +436,7 @@ architecture Struct of Datapath is
     --Cancel Signals for each stage
     signal cancel_IF, cancel_ID, cancel_RR, cancel_EX,cancel_MEM, cancel_WB:std_logic;
     --Signals with Haz and Branch Controller
-    signal PC_New: std_logic_vector(15 downto 0);
+    signal PC_New,PC_next: std_logic_vector(15 downto 0);
     signal LMSM_Haz:std_logic;
 begin
 ------------------IF component----------------------------
@@ -512,18 +514,27 @@ ID_RR_pipeline : IDRR port map
     ALU3_MUX_out<=ALU3_MUX_RR  
 );  
 ---------------RR-------------
-RF : Regsiter_file port map(A1 <= RS1_RR,A2 <= RS2_RR,)
+RF : Regsiter_file port map(A1<=RS1_RR, A2<=RS2_RR, A3<=Rd_WB,
+                            D3<=WB_Mux_data,
+                            RF_D_PC_WR<= PC_next,
+
+                            clock<=clock,Write_Enable <= ,PC_WR<= ,
+
+                            RF_D_PC_R<= PC_New,
+                            D1<=rf_d1_RR , D2<=rf_d2_RR);
+
+MuxA:
+MuxB:
 
 
 
 --------------------branch predictor-----------
 --------------------------Forwarding Unit-------------------------------
 MovingFWD: Forwarding_Unit port map (
-        RegC_EX<=  ,RegC_Mem<=  ,RegC_WB<= ,RegA_RR, RegB_RR<=,
+        RegC_EX<= ,RegC_Mem<=  ,RegC_WB<= ,RegA_RR<= , RegB_RR<= ,
         RF_WR_EX<= , RF_WR_Mem<=  , RF_WR_WB<=,    
         MuxA<= ,MuxB<=
     );
-end component Forwarding_Unit;
 
 
 
