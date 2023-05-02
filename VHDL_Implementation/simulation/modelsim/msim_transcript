@@ -11,22 +11,22 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:49:33 on May 03,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd 
+# Start time: 05:13:29 on May 03,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_4bit
 # -- Compiling architecture struct of Register_4bit
-# End time: 00:49:33 on May 03,2023, Elapsed time: 0:00:00
+# End time: 05:13:29 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_adder.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/ID_adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:49:33 on May 03,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_adder.vhd 
+# Start time: 05:13:29 on May 03,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/ID_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -35,48 +35,48 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity adder
 # -- Compiling architecture behave of adder
-# End time: 00:49:33 on May 03,2023, Elapsed time: 0:00:00
+# End time: 05:13:30 on May 03,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/SE10.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:49:33 on May 03,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/SE10.vhd 
+# Start time: 05:13:30 on May 03,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity SE10
 # -- Compiling architecture struct of SE10
-# End time: 00:49:33 on May 03,2023, Elapsed time: 0:00:00
+# End time: 05:13:30 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/SE7.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:49:33 on May 03,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/SE7.vhd 
+# Start time: 05:13:30 on May 03,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity SE7
 # -- Compiling architecture struct of SE7
-# End time: 00:49:33 on May 03,2023, Elapsed time: 0:00:00
+# End time: 05:13:30 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:49:33 on May 03,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd 
+# Start time: 05:13:30 on May 03,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity instr_decode
 # -- Compiling architecture instr_decode_arch of instr_decode
-# End time: 00:49:34 on May 03,2023, Elapsed time: 0:00:01
+# End time: 05:13:30 on May 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.instr_decode
 # vsim work.instr_decode 
-# Start time: 00:49:41 on May 03,2023
+# Start time: 05:14:06 on May 03,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -89,60 +89,52 @@ vsim work.instr_decode
 # Loading work.adder(behave)
 # Loading work.register_4bit(struct)
 add wave -position insertpoint  \
+sim:/instr_decode/Z_modified \
+sim:/instr_decode/WB_MUX \
+sim:/instr_decode/RS2 \
+sim:/instr_decode/RS1 \
+sim:/instr_decode/RF_wr \
+sim:/instr_decode/RD \
 sim:/instr_decode/PC_in \
+sim:/instr_decode/PC_ID \
+sim:/instr_decode/OP \
+sim:/instr_decode/Mem_wr \
+sim:/instr_decode/LM_SM_hazard \
 sim:/instr_decode/Instruction \
-sim:/instr_decode/out_RegA \
-sim:/instr_decode/out_RegB \
-sim:/instr_decode/out_RegC \
-sim:/instr_decode/out_Alu_sel \
-sim:/instr_decode/out_Imm_out \
-sim:/instr_decode/out_rf_wr \
-sim:/instr_decode/out_c_modify \
-sim:/instr_decode/out_z_modify \
-sim:/instr_decode/out_mem_wr \
-sim:/instr_decode/out_mem_mux \
-sim:/instr_decode/out_imm_mux \
-sim:/instr_decode/out_opcode \
-sim:/instr_decode/out_Last2 \
-sim:/instr_decode/PC_BP \
-sim:/instr_decode/out_LM_SM_hazard \
-sim:/instr_decode/out_mera_mux \
-sim:/instr_decode/clk \
-sim:/instr_decode/count \
-sim:/instr_decode/Imm6_out \
 sim:/instr_decode/Imm9_out \
+sim:/instr_decode/Imm6_out \
+sim:/instr_decode/Imm \
+sim:/instr_decode/D3_MUX \
+sim:/instr_decode/CZ \
+sim:/instr_decode/CPL \
+sim:/instr_decode/counter_out \
 sim:/instr_decode/counter_in \
-sim:/instr_decode/counter_out
+sim:/instr_decode/count \
+sim:/instr_decode/clk \
+sim:/instr_decode/Carry_sel \
+sim:/instr_decode/C_modified \
+sim:/instr_decode/ALU_sel \
+sim:/instr_decode/ALU3_MUX
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Harsh Raj  Hostname: LAPTOP-DQHRK4AS  ProcessID: 41980
-#           Attempting to use alternate WLF file "./wlftybmb6b".
+#           Attempting to use alternate WLF file "./wlft2sbjjr".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftybmb6b
-force -freeze sim:/instr_decode/clk 1 0, 0 {50 ps} -r 100
-force -freeze sim:/instr_decode/PC_in 0001001011100010 0
+#           Using alternate file: ./wlft2sbjjr
+# Can't move the Now cursor.
+force -freeze sim:/instr_decode/PC_in 0000000000000000 0
 force -freeze sim:/instr_decode/Instruction 0001001011100010 0
+force -freeze sim:/instr_decode/clk 1 0, 0 {50 ps} -r 100
 run
-run
-force -freeze sim:/instr_decode/Instruction 0010101110111000 0
-run
-force -freeze sim:/instr_decode/Instruction 011010000110000 0
-# Value length (15) does not equal array index length (16).
-# ** UI-Msg: (vsim-4011) Invalid force value: 011010000110000 0.
-# 
-run
-run
-run
-run
-force -freeze sim:/instr_decode/Instruction 0110101110111000 0
-force -freeze sim:/instr_decode/Instruction 011010000110000 0
-# Value length (15) does not equal array index length (16).
-# ** UI-Msg: (vsim-4011) Invalid force value: 011010000110000 0.
-# 
+# Break key hit
 run
 run
 run
 run
 run
 run
-# End time: 01:02:35 on May 03,2023, Elapsed time: 0:12:54
-# Errors: 0, Warnings: 2
+run
+run
+run
+run
+run
+run

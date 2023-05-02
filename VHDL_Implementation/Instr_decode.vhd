@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity instr_decode is
     port
     (
-        Inst : in std_logic_vector(15 downto 0);
+        Instruction : in std_logic_vector(15 downto 0);
 		PC_in: in std_logic_vector(15 downto 0);
         RS1,RS2,RD : out std_logic_vector(2 downto 0);
 		ALU_sel,D3_MUX,CZ,ALU3_MUX : out std_logic_vector(1 downto 0);
@@ -74,11 +74,11 @@ end component adder;
 		ad: adder port map(PC_in,Imm9_out,PC_ID);
 		counter: Register_4bit port map(counter_in,clk,'1',counter_out);
 		
-		Decode : process(clk,Inst,Imm6_out,Imm9_out,counter_out) 
+		Decode : process(clk,Instruction,Imm6_out,Imm9_out,counter_out) 
 		variable var_RS1 : std_logic_vector(2 downto 0);
 		variable var_RS2 : std_logic_vector(2 downto 0);
 		variable var_RD : std_logic_vector(2 downto 0);
-		variable var_ALU_sel,var_CZ,var_ALU3_MUX : std_logic_vector(1 downto 0);
+		variable var_ALU_sel,var_CZ,var_ALU3_MUX, var_D3_MUX : std_logic_vector(1 downto 0);
         variable var_Imm : std_logic_vector(15 downto 0);
     	variable var_RF_wr, var_C_modified, var_Z_modified, var_Mem_wr,var_Carry_sel,var_CPL,var_WB_MUX: std_logic;
         variable var_OP : std_logic_vector(3 downto 0);
@@ -86,6 +86,7 @@ end component adder;
 		  begin
 			var_RF_wr := '0';
 			var_CZ := "00";
+			var_D3_MUX := "00";
 			var_Carry_sel := '0';
 			var_CPL := '0';
 			var_WB_MUX := '0';
@@ -99,7 +100,7 @@ end component adder;
 			var_ALU_sel := "00";
 			var_Imm := "0000000000000000";
 			var_LM_SM_hazard := '0';
-			var_ALU3_MUX := '00';
+			var_ALU3_MUX := "00";
 			counter_in<="0000";
 -----------------ADI--------------------------------
 			if(Instruction(15 downto 12) = "0000") then   
@@ -114,7 +115,7 @@ end component adder;
 			elsif(Instruction(15 downto 12) = "0001") then
 				var_RF_wr := '1';
 				var_CZ := Instruction(1 downto 0);
-				var_Carry_sel := Instuction(0) and Instruction(1);
+				var_Carry_sel := Instruction(0) and Instruction(1);
 				var_CPL := Instruction(2);
 				var_C_modified := '1';
 				var_Z_modified := '1';
@@ -135,7 +136,7 @@ end component adder;
 				var_RD := Instruction(11 downto 9);
 				if ((Instruction(15 downto 12) = "0011")) then
 					var_Imm := Imm9_out;
-					var_A3_MUX := "01";
+					var_WB_MUX := '1';
 				else 
 					var_Imm := Imm6_out;
 				end if;
@@ -394,14 +395,14 @@ end component adder;
 				var_RF_wr := '1';
 				var_ALU3_MUX := "10";
 				var_RD := Instruction(11 downto 9);
-				var_A3_MUX := "11";
+				var_D3_MUX := "11";
 				
 
 			elsif(Instruction(15 downto 12) = "1101") then
 				var_RF_wr := '1';
 				var_ALU3_MUX := "10";
 				var_RD := Instruction(11 downto 9);
-				var_A3_MUX := "11";
+				var_D3_MUX := "11";
 
 			elsif(Instruction(15 downto 12) = "1111") then
 				null;
@@ -412,7 +413,10 @@ end component adder;
 			C_modified <= var_C_modified;
 			Z_modified <= var_Z_modified;
 			Mem_wr <= var_Mem_wr;
+			WB_MUX <= var_WB_MUX;
 			CZ <= var_CZ;
+			Carry_sel <= var_Carry_sel;
+			CPL <= var_CPL;
 			OP <= var_OP;
 			RS1 <= var_RS1;
 			RS2 <= var_RS2;
@@ -421,5 +425,6 @@ end component adder;
 			Imm <= var_Imm;
 			LM_SM_hazard <= var_LM_SM_hazard;
 			ALU3_MUX <= var_ALU3_MUX;
+			D3_MUX <= var_D3_MUX;
 			end process;
 end architecture;

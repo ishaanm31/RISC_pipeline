@@ -1,5 +1,5 @@
-Analysis & Synthesis report for IITB_CPU
-Wed May 03 00:49:19 2023
+Analysis & Elaboration report for IITB_CPU
+Wed May 03 05:13:17 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,20 +7,11 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Port Connectivity Checks: "Register_4bit:counter"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "Register_4bit:counter"
+  6. Analysis & Elaboration Messages
 
 
 
@@ -45,29 +36,45 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
+; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 03 00:49:19 2023       ;
+; Analysis & Elaboration Status      ; Successful - Wed May 03 05:13:17 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_CPU                                    ;
 ; Top-level Entity Name              ; instr_decode                                ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 66                                          ;
-;     Total combinational functions  ; 63                                          ;
-;     Dedicated logic registers      ; 6                                           ;
-; Total registers                    ; 6                                           ;
-; Total pins                         ; 92                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
+; Analysis & Elaboration Settings                                                                            ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -152,128 +159,6 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                       ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
-; Register_4bit.vhd                ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd ;         ;
-; ID_adder.vhd                     ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_adder.vhd      ;         ;
-; SE10.vhd                         ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/SE10.vhd          ;         ;
-; SE7.vhd                          ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/SE7.vhd           ;         ;
-; Instr_decode.vhd                 ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd  ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                         ;
-+---------------------------------------------+-----------------------+
-; Resource                                    ; Usage                 ;
-+---------------------------------------------+-----------------------+
-; Estimated Total logic elements              ; 66                    ;
-;                                             ;                       ;
-; Total combinational functions               ; 63                    ;
-; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 35                    ;
-;     -- 3 input functions                    ; 13                    ;
-;     -- <=2 input functions                  ; 15                    ;
-;                                             ;                       ;
-; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 48                    ;
-;     -- arithmetic mode                      ; 15                    ;
-;                                             ;                       ;
-; Total registers                             ; 6                     ;
-;     -- Dedicated logic registers            ; 6                     ;
-;     -- I/O registers                        ; 0                     ;
-;                                             ;                       ;
-; I/O pins                                    ; 92                    ;
-;                                             ;                       ;
-; Embedded Multiplier 9-bit elements          ; 0                     ;
-;                                             ;                       ;
-; Maximum fan-out node                        ; Instruction[14]~input ;
-; Maximum fan-out                             ; 19                    ;
-; Total fan-out                               ; 364                   ;
-; Average fan-out                             ; 1.44                  ;
-+---------------------------------------------+-----------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                  ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                 ; Entity Name   ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------+---------------+--------------+
-; |instr_decode              ; 63 (47)             ; 6 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 92   ; 0            ; 0          ; |instr_decode                       ; instr_decode  ; work         ;
-;    |Register_4bit:counter| ; 0 (0)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |instr_decode|Register_4bit:counter ; Register_4bit ; work         ;
-;    |adder:ad|              ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |instr_decode|adder:ad              ; adder         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------+---------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; Register_4bit:counter|Data[3]         ; Stuck at GND due to stuck port data_in ;
-; Register_4bit:counter|DataOut[3]      ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
-+---------------------------------------+----------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                        ;
-+-------------------------------+---------------------------+----------------------------------------+
-; Register name                 ; Reason for Removal        ; Registers Removed due to This Register ;
-+-------------------------------+---------------------------+----------------------------------------+
-; Register_4bit:counter|Data[3] ; Stuck at GND              ; Register_4bit:counter|DataOut[3]       ;
-;                               ; due to stuck port data_in ;                                        ;
-+-------------------------------+---------------------------+----------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 6     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |instr_decode|Alu_sel      ;
-; 16:1               ; 3 bits    ; 30 LEs        ; 3 LEs                ; 27 LEs                 ; No         ; |instr_decode|Imm_out      ;
-; 16:1               ; 3 bits    ; 30 LEs        ; 6 LEs                ; 24 LEs                 ; No         ; |instr_decode|Imm_out      ;
-; 16:1               ; 3 bits    ; 30 LEs        ; 3 LEs                ; 27 LEs                 ; No         ; |instr_decode|Imm_out      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
 +---------------------------------------------------+
 ; Port Connectivity Checks: "Register_4bit:counter" ;
 +--------------+-------+----------+-----------------+
@@ -284,103 +169,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+-------+----------+-----------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 92                          ;
-; cycloneiii_ff         ; 6                           ;
-;     plain             ; 6                           ;
-; cycloneiii_lcell_comb ; 64                          ;
-;     arith             ; 15                          ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 9                           ;
-;     normal            ; 49                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 35                          ;
-;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.08                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 03 00:49:09 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU
+    Info: Processing started: Wed May 03 05:13:07 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file register_4bit.vhd
-    Info (12022): Found design unit 1: Register_4bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd Line: 10
-    Info (12023): Found entity 1: Register_4bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd Line: 4
+    Info (12022): Found design unit 1: Register_4bit-struct File: D:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd Line: 10
+    Info (12023): Found entity 1: Register_4bit File: D:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file id_adder.vhd
-    Info (12022): Found design unit 1: adder-behave File: C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_adder.vhd Line: 12
-    Info (12023): Found entity 1: adder File: C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_adder.vhd Line: 5
+    Info (12022): Found design unit 1: adder-behave File: D:/github/RISC_pipeline/VHDL_Implementation/ID_adder.vhd Line: 12
+    Info (12023): Found entity 1: adder File: D:/github/RISC_pipeline/VHDL_Implementation/ID_adder.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file shifter7.vhd
-    Info (12022): Found design unit 1: Shifter7-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Shifter7.vhd Line: 10
-    Info (12023): Found entity 1: Shifter7 File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Shifter7.vhd Line: 5
+    Info (12022): Found design unit 1: Shifter7-struct File: D:/github/RISC_pipeline/VHDL_Implementation/Shifter7.vhd Line: 10
+    Info (12023): Found entity 1: Shifter7 File: D:/github/RISC_pipeline/VHDL_Implementation/Shifter7.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file se10.vhd
-    Info (12022): Found design unit 1: SE10-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/SE10.vhd Line: 9
-    Info (12023): Found entity 1: SE10 File: C:/SEM4/RISC_pipeline/VHDL_Implementation/SE10.vhd Line: 4
+    Info (12022): Found design unit 1: SE10-struct File: D:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd Line: 9
+    Info (12023): Found entity 1: SE10 File: D:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file se7.vhd
-    Info (12022): Found design unit 1: SE7-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/SE7.vhd Line: 10
-    Info (12023): Found entity 1: SE7 File: C:/SEM4/RISC_pipeline/VHDL_Implementation/SE7.vhd Line: 5
+    Info (12022): Found design unit 1: SE7-struct File: D:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd Line: 10
+    Info (12023): Found entity 1: SE7 File: D:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_16bit.vhd
-    Info (12022): Found design unit 1: Register_16bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd Line: 11
-    Info (12023): Found entity 1: Register_16bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd Line: 5
+    Info (12022): Found design unit 1: Register_16bit-struct File: D:/github/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd Line: 11
+    Info (12023): Found entity 1: Register_16bit File: D:/github/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_3bit.vhd
-    Info (12022): Found design unit 1: Register_3bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd Line: 10
-    Info (12023): Found entity 1: Register_3bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd Line: 4
+    Info (12022): Found design unit 1: Register_3bit-struct File: D:/github/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd Line: 10
+    Info (12023): Found entity 1: Register_3bit File: D:/github/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file register_1bit.vhd
-    Info (12022): Found design unit 1: Register_1bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd Line: 10
-    Info (12023): Found entity 1: Register_1bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd Line: 4
+    Info (12022): Found design unit 1: Register_1bit-struct File: D:/github/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd Line: 10
+    Info (12023): Found entity 1: Register_1bit File: D:/github/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file instr_decode.vhd
-    Info (12022): Found design unit 1: instr_decode-instr_decode_arch File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 22
-    Info (12023): Found entity 1: instr_decode File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 5
+    Info (12022): Found design unit 1: instr_decode-instr_decode_arch File: D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 21
+    Info (12023): Found entity 1: instr_decode File: D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_2bits.vhd
-    Info (12022): Found design unit 1: Register_2bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd Line: 11
-    Info (12023): Found entity 1: Register_2bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd Line: 5
+    Info (12022): Found design unit 1: Register_2bit-struct File: D:/github/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd Line: 11
+    Info (12023): Found entity 1: Register_2bit File: D:/github/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd Line: 5
 Info (12127): Elaborating entity "Instr_decode" for the top level hierarchy
-Info (12128): Elaborating entity "SE10" for hierarchy "SE10:Sign_6" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 67
-Info (12128): Elaborating entity "SE7" for hierarchy "SE7:Sign_9" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 68
-Info (12128): Elaborating entity "adder" for hierarchy "adder:ad" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 69
-Info (12128): Elaborating entity "Register_4bit" for hierarchy "Register_4bit:counter" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 70
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "out_Imm_out[9]" is stuck at GND File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
-    Warning (13410): Pin "out_Imm_out[10]" is stuck at GND File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
-    Warning (13410): Pin "out_Imm_out[11]" is stuck at GND File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
-    Warning (13410): Pin "out_Imm_out[12]" is stuck at GND File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
-    Warning (13410): Pin "out_Imm_out[13]" is stuck at GND File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
-    Warning (13410): Pin "out_Imm_out[14]" is stuck at GND File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
-    Warning (13410): Pin "out_Imm_out[15]" is stuck at GND File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 11
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 158 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 33 input pins
-    Info (21059): Implemented 59 output pins
-    Info (21061): Implemented 66 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4860 megabytes
-    Info: Processing ended: Wed May 03 00:49:19 2023
+Info (12128): Elaborating entity "SE10" for hierarchy "SE10:Sign_6" File: D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 72
+Info (12128): Elaborating entity "SE7" for hierarchy "SE7:Sign_9" File: D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 73
+Info (12128): Elaborating entity "adder" for hierarchy "adder:ad" File: D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 74
+Info (12128): Elaborating entity "Register_4bit" for hierarchy "Register_4bit:counter" File: D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 75
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4778 megabytes
+    Info: Processing ended: Wed May 03 05:13:17 2023
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Total CPU time (on all processors): 00:00:18
 
 
