@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity instr_decode is
     port
@@ -257,7 +258,7 @@ end component adder;
 						var_Imm:="0000000000000010";
 					when "0010"=>
 						var_Imm:="0000000000000100";
-					when "0011"=>
+					when "0011" =>
 						var_Imm:="0000000000000110";
 					when "0100"=>
 						var_Imm:="0000000000001000";
@@ -267,8 +268,8 @@ end component adder;
 						var_Imm:="0000000000001100";
 					when "0111" =>
 						var_Imm:="0000000000001110";
-					when others =>
-						var_Imm:=Imm9_out;
+					when others=>
+						var_Imm:= Imm9_out;
 					end case;
 						
 
@@ -387,13 +388,13 @@ end component adder;
 					end case;
 
 			elsif((Instruction(15 downto 12) = "1000") or (Instruction(15 downto 12) = "1001") or (Instruction(15 downto 12) = "1010")) then
-				var_Imm := Imm6_out;
+				var_Imm := Imm6_out + Imm6_out;
 				var_ALU3_MUX := "10";
 				var_ALU_sel := "01";
 			
 
 			elsif(Instruction(15 downto 12) = "1100") then
-				var_Imm := Imm9_out;
+				var_Imm := Imm9_out + Imm9_out;
 				var_RF_wr := '1';
 				var_ALU3_MUX := "10";
 				var_RD := Instruction(11 downto 9);
@@ -407,7 +408,7 @@ end component adder;
 				var_D3_MUX := "11";
 
 			elsif(Instruction(15 downto 12) = "1111") then
-				null;
+				var_Imm := Imm9_out + Imm9_out;
 				
 				 
 			end if;

@@ -11,7 +11,7 @@ Mem_Data_Out:out std_logic_vector(15 downto 0));
 end entity Memory;
 
 architecture struct of Memory is
-  type mem_word   is array (0 to 65536) of std_logic_vector(7 downto 0);
+  type mem_word   is array (0 to 65535) of std_logic_vector(7 downto 0);
 	signal Data : mem_word:=("01100111","11000000","00000000","01010000","01010100","11000010","00010110","11000001","10011101","00000000","00000000","00000000","00000000","00000001",others=>"00000000");
 
 begin
