@@ -17,7 +17,7 @@ write_process : process(clock)
  begin
  if (clock'event and (clock='1')) then
 	if(Write_Enable='1') then  
-	  Data(2 downto 0):= DataIn(2 downto 0);
+	  Data(1 downto 0):= DataIn(1 downto 0);
 	end if;
  end if;
 end process;
@@ -25,7 +25,7 @@ end process;
 read_process : process(clock)
 begin
 if (clock'event and (clock='1')) then
- DataOut(2 downto 0) <= Data(2 downto 0);
+ DataOut(1 downto 0) <= Data(1 downto 0);
 end if;
  ----------------------------------------------------------------------
 end process;

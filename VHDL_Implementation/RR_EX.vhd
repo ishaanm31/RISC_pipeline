@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 -- write the Flipflops packege declaration
-entity RR_EX is
+entity RREX is
 port (
     clk: in std_logic;
     WR_EN: in std_logic;
@@ -49,7 +49,7 @@ port (
 );
 end entity;
 
-architecture EXMEM_arch of RR_EX is
+architecture RREX_arch of RREX is
     component Register_16bit is
         port (DataIn:in std_logic_vector(15 downto 0);
 					clock,Write_Enable:in std_logic;
@@ -108,4 +108,4 @@ begin
     CN: Register_1bit port map(CN_in,clk,WR_EN,CN_out);
     WB_MUX: Register_1bit port map(WB_MUX_in,clk,WR_EN,WB_MUX_out);
     CZ2: Register_2bit port map(CZ_in,clk,WR_EN,CZ_out);
-end EXMEM_arch;
+end RREX_arch;

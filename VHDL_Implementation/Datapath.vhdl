@@ -60,7 +60,7 @@ architecture Struct of Datapath is
     component instr_decode is
         port
         (
-            Inst : in std_logic_vector(15 downto 0);
+            Instruction : in std_logic_vector(15 downto 0);
             PC_in: in std_logic_vector(15 downto 0);
             RS1,RS2,RD : out std_logic_vector(2 downto 0);
             ALU_sel,D3_MUX,CZ,ALU3_MUX : out std_logic_vector(1 downto 0);
@@ -480,7 +480,7 @@ begin
 --------------------Instruc Decode-----------------------------------------------------
     Jainesh_instruc:instr_decode port map
     (
-        Inst=>Instruc_ID,
+        Instruction=>Instruc_ID,
         PC_in=>PC_1,
         RS1=>RS1_ID,
         RS2=>RS2_ID,
@@ -652,7 +652,7 @@ EX_MEM_pipeline : EXMEM port map(
     --ALU3_MUX_out=>ALU3_MUX_MEM 
 );
 --------------MEM--------------------------
-RAM_MEM : Memory port map(Alu1C_MEM,rf_d1_MEM,clock,reset,(Mem_wr_MEM and (not(CN_MEM))),Data_out);
+RAM_MEM : Memory port map(Alu1C_MEM,rf_d1_MEM,clock,(Mem_wr_MEM and (not(CN_MEM))),Data_out);
 WB_MUX_MEM1 : Mux16_2x1 port map(Alu1C_MEM,Data_out,WB_MUX_MEM,Data_out_MEM);
 
 
@@ -685,7 +685,7 @@ MEM_WB_pipeline : MEMWB port map(
 );
 
 -----------WB--------------
-RF_WR_MUX : Mux16_4x1 port map(Data_out_WB,Imm,Alu3C_WB,PC+"0000000000000010",rf_d3);
+RF_WR_MUX : Mux16_4x1 port map(Data_out_WB,Imm_WB,Alu3C_WB,(PC_WB+"0000000000000010"),D3_MUX_WB,rf_d3);
 
 --------------------branch predictor-----------
 --------------------------Forwarding Unit-------------------------------

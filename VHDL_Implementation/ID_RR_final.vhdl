@@ -45,7 +45,7 @@ port (
 );
 end entity;
 
-architecture IDRR_arch of EXMEM is
+architecture IDRR_arch of IDRR is
     component Register_16bit is
         port (DataIn:in std_logic_vector(15 downto 0);
 					clock,Write_Enable:in std_logic;
