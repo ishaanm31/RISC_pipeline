@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity Haz_PC_controller is
 port (
     PC_IF,PC_ID,PC_RR,PC_EX: in std_logic_vector(15 downto 0);
-    LMSM, H_JLR,H_JAL, H_BEX, LMSM_Haz: in std_logic;
+    H_JLR,H_JAL, H_BEX, LMSM_Haz: in std_logic;
 
     PC_New: out std_logic_vector(15 downto 0);
     PC_WR,IF_ID_flush,ID_RR_flush,RR_EX_flush, IF_ID_WR,ID_RR_WR,RR_EX_WR, EX_MEM_WR, MEM_WB_WR : out std_logic

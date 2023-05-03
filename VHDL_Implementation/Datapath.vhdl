@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity Datapath is
 	port(
         --Inputs
@@ -277,7 +277,6 @@ architecture Struct of Datapath is
     component Memory is
         port (Mem_Add: in std_logic_vector(15 downto 0 );
         Mem_Data_In:in std_logic_vector(15 downto 0);
-        PC_Add:in std_logic_vector(15 downto 0);
         clock,Write_Enable:in std_logic;
         Mem_Data_Out:out std_logic_vector(15 downto 0));    
     end component Memory;
@@ -293,7 +292,7 @@ architecture Struct of Datapath is
     component Haz_PC_controller is
         port (
             PC_IF,PC_ID,PC_RR,PC_EX: in std_logic_vector(15 downto 0);
-            LMSM, H_JLR,H_JAL, H_BEX, LMSM_Haz: in std_logic;
+            H_JLR,H_JAL, H_BEX, LMSM_Haz: in std_logic;
         
             PC_New: out std_logic_vector(15 downto 0);
             PC_WR,IF_ID_flush,ID_RR_flush,RR_EX_flush, IF_ID_WR,ID_RR_WR,RR_EX_WR, EX_MEM_WR, MEM_WB_WR : out std_logic
@@ -304,7 +303,6 @@ architecture Struct of Datapath is
     component Haz_JLR is
         port (
             Instruc_OPCode_RR:in std_logic_vector(3 downto 0);
-            Hist_RR: in std_logic;
             H_JLR:out std_logic
         );
     end component Haz_JLR;
@@ -312,7 +310,6 @@ architecture Struct of Datapath is
     component Haz_JAL is
         port (
             Instruc_OPCode_ID:in std_logic_vector(3 downto 0);
-            Hist_ID: in std_logic;
             H_Jal:out std_logic
         );
     end component Haz_JAL;
@@ -320,7 +317,6 @@ architecture Struct of Datapath is
     component Haz_BEX is
         port (
             Instruc_OPCode_EX:in std_logic_vector(3 downto 0);
-            Hist_EX: in std_logic;
             ZFlag,CFlag:in std_logic;
         
             H_BEX:out std_logic;
@@ -341,7 +337,7 @@ architecture Struct of Datapath is
     end component Forwarding_Unit;
     
     --Signal cancelling
-    signal CN_IFID,CN_IDRR,CN_RREX,CN_EXMEM,CN_MEMWB : std_logic;
+    --signal CN_IFID,CN_IDRR,CN_RREX,CN_EXMEM,CN_MEMWB : std_logic;
     --WR_EN signals
     signal WREN_IFID,WREN_IDRR,WREN_RREX,WREN_EXMEM,WREN_MEMWB : std_logic;
 
@@ -380,8 +376,8 @@ architecture Struct of Datapath is
     signal C_modified_RR: std_logic;
     signal Z_modified_RR: std_logic;
     signal Mem_wr_RR: std_logic;
-    signal Imm_RR,rf_d1_RR,rf_d2_RR: std_logic_vector(15 downto 0);
-    signal PC_RR: std_logic_vector(15 downto 0);
+    signal Imm_RR,rf_d1_RR1,rf_d2_RR1,rf_d1_RR2,rf_d2_RR2: std_logic_vector(15 downto 0);
+    signal PC_RR1,PC_RR2: std_logic_vector(15 downto 0);
     signal D3_MUX_RR:  std_logic_vector(1 downto 0);
     signal CPL_RR:  std_logic;
     signal CN_Pass2,CN_RREX:  std_logic;
@@ -405,15 +401,52 @@ architecture Struct of Datapath is
     signal CN_EX:  std_logic;
     signal WB_MUX_EX:  std_logic;
     signal CZ_EX: std_logic_vector(1 downto 0);
-    signal ALU3_MUX_EX:  std_logic(1 downto 0);  
+    signal ALU3_MUX_EX:  std_logic(1 downto 0);
+    signal Alu1C_EX,Alu3C_EX : std_logic_vector(15 downto 0);
+    signal carry1,zero1,carry2,zero2 : std_logic;  
 
     --Signals for MEM:
-    signal mem_add,mem_add_internal,mem_in_internal,mem_out,mem_in : std_logic_vector(15 downto 0);
-    signal mem_WR: std_logic;
+    signal OP_MEM: std_logic_vector(3 downto 0);
+    signal RS1_MEM,RS2_MEM:std_logic_vector(2 downto 0);
+    signal RD_MEM: std_logic_vector(2 downto 0);
+    signal RF_wr_MEM:std_logic;
+    signal ALU_sel_MEM: std_logic_vector(1 downto 0);
+    signal Carry_sel_MEM: std_logic;
+    signal C_modified_MEM: std_logic;
+    signal Z_modified_MEM: std_logic;
+    signal Mem_wr_MEM: std_logic;
+    signal Imm_MEM,rf_d1_MEM,rf_d2_MEM: std_logic_vector(15 downto 0);
+    signal PC_MEM: std_logic_vector(15 downto 0);
+    signal D3_MUX_MEM:  std_logic_vector(1 downto 0);
+    signal CPL_MEM:  std_logic;
+    signal CN_MEM:  std_logic;
+    signal WB_MUX_MEM:  std_logic;
+    signal CZ_MEM: std_logic_vector(1 downto 0);
+    signal Alu1C_MEM,Alu3C_MEM : std_logic_vector(15 downto 0);
+    signal Data_out,Data_out_MEM : std_logic_vector(15 downto 0);
+
 
     --Signals for WB
-    signal Rd_WB:std_logic_vector(2 downto 0);
-    signal WB_Mux_data: std_logic_vector(15 downto 0);
+    signal OP_WB: std_logic_vector(3 downto 0);
+    signal RS1_WB,RS2_WB:std_logic_vector(2 downto 0);
+    signal RD_WB: std_logic_vector(2 downto 0);
+    signal RF_wr_WB:std_logic;
+    signal ALU_sel_WB: std_logic_vector(1 downto 0);
+    signal Carry_sel_WB: std_logic;
+    signal C_modified_WB: std_logic;
+    signal Z_modified_WB: std_logic;
+    signal WB_wr_WB: std_logic;
+    signal Imm_WB,rf_d1_WB,rf_d2_WB: std_logic_vector(15 downto 0);
+    signal PC_WB: std_logic_vector(15 downto 0);
+    signal D3_MUX_WB:  std_logic_vector(1 downto 0);
+    signal CPL_WB:  std_logic;
+    signal CN_WB:  std_logic;
+    signal WB_MUX_WB:  std_logic;
+    signal CZ_WB: std_logic_vector(1 downto 0);
+    signal Alu1C_WB,Alu3C_WB : std_logic_vector(15 downto 0);
+    signal Data_out_WB : std_logic_vector(15 downto 0);
+    signal D3 : std_logic_vector(15 downto 0);
+    signal rf_d3 : std_logic_vector(15 downto 0);
 
     --Signals for Branch Predictor
 
@@ -431,13 +464,16 @@ architecture Struct of Datapath is
         signal History_bit_op: std_logic;
 
     --All Write Enables----
-    signal IF_ID_WR,ID_RR_WR, RR_EX_WR, EX_MEM_WR, MEM_WB_WR: std_logic;
+    --signal IF_ID_WR,ID_RR_WR, RR_EX_WR, EX_MEM_WR, MEM_WB_WR: std_logic;
 
     --Cancel Signals for each stage
     signal cancel_IF, cancel_ID, cancel_RR, cancel_EX,cancel_MEM, cancel_WB:std_logic;
     --Signals with Haz and Branch Controller
     signal PC_New,PC_next: std_logic_vector(15 downto 0);
-    signal LMSM_Haz:std_logic;
+    signal LMSM_Haz,H_jal,H_jlr,H_bex,PC_WR:std_logic;
+    signal Fwd_Mux_selA,Fwd_Mux_selB, Htype:std_logic_vector(1 downto 0);
+
+    
 begin
 ------------------IF component----------------------------
     MyROM: ROM port map( Mem_Add => PC_New , Mem_Data_Out=>Instruc);
@@ -476,6 +512,7 @@ begin
 ID_RR_pipeline : IDRR port map
 (
     clk <= clock,
+    WR_EN : WREN_IDRR,
     OP_in<=OP_ID,
     RS1_in<=RS1_ID,
     RS2_in<=RS2_ID,
@@ -487,7 +524,7 @@ ID_RR_pipeline : IDRR port map
     Z_modified_in <=Z_modified_ID,
     Mem_wr_in<=Mem_wr_ID,
     Imm_in<=Imm_ID,
-    PC_in<=PC_ID,
+    PC_in<=PC_1,
     D3_MUX_in<=D3_MUX_ID,
     CPL_in<=CPL_ID,
     CN_in<=(CNpass1 or CN_IDRR),
@@ -500,46 +537,205 @@ ID_RR_pipeline : IDRR port map
     RF_wr_out<=RF_wr_RR,
     ALU_sel_out<=ALU_sel_RR,
     Carry_sel_out<=Carry_sel_RR,
-    ALU3_MUX_out<=ALU3_MUX_ID,
+    --ALU3_MUX_out<=ALU3_MUX_RR,
     C_modified_out<=C_modified_RR,
     Z_modified_out<= Z_modified_RR,
     Mem_wr_out<=Mem_wr_RR,
     Imm_out<=Imm_RR,
-    PC_out <=PC_RR,
+    PC_out <=PC_RR1,
     D3_MUX_out<=D3_MUX_RR,
     CPL_out<=CPL_RR,
     CN_out<=CNpass2,
     WB_MUX_out<=WB_MUX_RR,
-    CZ_out<=CZ_RR,
-    ALU3_MUX_out<=ALU3_MUX_RR  
+    CZ_out<=CZ_RR
+   -- ALU3_MUX_out<=ALU3_MUX_RR  
 );  
 ---------------RR-------------
-RF : Regsiter_file port map(A1<=RS1_RR, A2<=RS2_RR, A3<=Rd_WB,
-                            D3<=WB_Mux_data,
+RF : Regsiter_file port map(A1<=RS1_RR1, A2<=RS2_RR1, A3<=RD_WB,
+                            D3<=rf_d3,
                             RF_D_PC_WR<= PC_next,
 
-                            clock<=clock,Write_Enable <= ,PC_WR<= ,
+                            clock<=clock,Write_Enable <= (RF_wr_WB and(not(CN_WB))),PC_WR<= PC_WR ,
 
                             RF_D_PC_R<= PC_New,
-                            D1<=rf_d1_RR , D2<=rf_d2_RR);
+                            D1<=rf_d1_RR1 , D2<=rf_d2_RR1);
 
-MuxA:
-MuxB:
+MuxA: Mux16_4x1 port map(rf_d1_RR1,Alu1C_EX,Data_out_MEM,D3,Fwd_Mux_selA,rf_d1_RR2);
+MuxB: Mux16_4x1 port map(rf_d2_RR1,Alu1C_EX,Data_out_MEM,D3,Fwd_Mux_selB,rf_d2_RR2);
+Adder_RR : adder port map(PC_RR1,rf_d1_RR,PC_RR2);
+--------------RR_EX pipeline---------------
+RR_EX_pipeline : RR_EX port map(
+    clk <= clock,
+    WR_EN <= WREN_RREX,
+    OP_in<=OP_RR,
+    RS1_in<=RS1_RR,
+    RS2_in<=RS2_RR,
+    RD_in<=RD_RR,
+    RF_D1_in <= rf_d1_RR2,
+    RF_D2_in <= rf_d2_RR2,
+    RF_wr_in<=RF_wr_RR,
+    ALU_sel_in <= ALU_sel_RR,
+    Carry_sel_in <=Carry_sel_RR,
+    C_modified_in <=C_modified_RR,
+    Z_modified_in <=Z_modified_RR,
+    Mem_wr_in<=Mem_wr_RR,
+    Imm_in<=Imm_RR,
+    PC_in<=PC_RR,
+    D3_MUX_in<=D3_MUX_RR,
+    CPL_in<=CPL_RR,
+    CN_in<=(CNpass2 or CN_RREX),
+    WB_MUX_in<=WB_MUX_RR,
+    CZ_in<=CZ_RR,
+    OP_out <= OP_EX,
+    RS1_out<=RS1_EX,
+    RS2_out<=RS2_EX,
+    RD_out<=RD_EX,
+    RF_D1_out <= rf_d1_EX,
+    RF_D2_out <= rf_d2_EX,
+    RF_wr_out<=RF_wr_EX,
+    ALU_sel_out<=ALU_sel_EX,
+    Carry_sel_out<=Carry_sel_EX,
+    --ALU3_MUX_out<=ALU3_MUX_EX,
+    C_modified_out<=C_modified_EX,
+    Z_modified_out<= Z_modified_EX,
+    Mem_wr_out<=Mem_wr_EX,
+    Imm_out<=Imm_EX,
+    PC_out <=PC_EX,
+    D3_MUX_out<=D3_MUX_EX,
+    CPL_out<=CPL_EX,
+    CN_out<=CN_EX,
+    WB_MUX_out<=WB_MUX_EX,
+    CZ_out<=CZ_EX,
+    --ALU3_MUX_out<=ALU3_MUX_EX 
+);
+---------------Execution---------------------
+ALU1_EX : port map(ALU_sel_EX,rf_d1_EX,rf_d2_EX,carry2,Alu1C_EX,carry1,zero1);
+ALU3_EX : adder port map(rf_d1_EX,Imm_EX,ALU3C_EX);
+D_ff1 : dff_en port map(clock,reset,(C_modified_EX and (not(CN_EX))),carry1,carry2);
+D_ff2 : dff_en port map(clock,reset,(Z_modified_EXand and (not(CN_EX))),zero1,zero2);
+
+-----------------EX_MEM pipeline----------
+EX_MEM_pipeline : EXMEM port map(
+    clk <= clock,
+    WR_EN <= WREN_EXMEM,
+    OP_in<=OP_EX,
+    RS1_in<=RS1_EX,
+    RS2_in<=RS2_EX,
+    RD_in<=RD_EX,
+    RF_D1_in <= rf_d1_EX,
+    RF_D2_in <= rf_d2_EX,
+    RF_wr_in<=RF_wr_EX,
+    ALU_sel_in <= ALU_sel_EX,
+    Carry_sel_in <=Carry_sel_EX,
+    C_modified_in <=C_modified_EX,
+    Z_modified_in <=Z_modified_EX,
+    Mem_wr_in<=Mem_wr_EX,
+    Imm_in<=Imm_EX,
+    PC_in<=PC_EX,
+    D3_MUX_in<=D3_MUX_EX,
+    CPL_in<=CPL_EX,
+    CN_in<= CN_EX,
+    WB_MUX_in<=WB_MUX_EX,
+    CZ_in<=CZ_EX,
+    ALU1_C_in <= Alu1C_EX,
+    Alu3_C_in <= Alu3C_EX,
+    OP_out <= OP_MEM,
+    RS1_out<=RS1_MEM,
+    RS2_out<=RS2_MEM,
+    RD_out<=RD_MEM,
+    RF_D1_out <= rf_d1_MEM,
+    RF_D2_out <= rf_d2_MEM,
+    RF_wr_out<=RF_wr_MEM,
+    ALU_sel_out<=ALU_sel_MEM,
+    Carry_sel_out<=Carry_sel_MEM,
+    --ALU3_MUX_out<=ALU3_MUX_MEM,
+    C_modified_out<=C_modified_MEM,
+    Z_modified_out<= Z_modified_MEM,
+    Mem_wr_out<=Mem_wr_MEM,
+    Imm_out<=Imm_MEM,
+    PC_out <=PC_MEM,
+    D3_MUX_out<=D3_MUX_MEM,
+    CPL_out<=CPL_MEM,
+    CN_out<=CN_MEM,
+    WB_MUX_out<=WB_MUX_MEM,
+    CZ_out<=CZ_MEM,
+    ALU1_C_out <= Alu1C_MEM,
+    Alu3_C_out <= Alu3C_MEM
+    --ALU3_MUX_out<=ALU3_MUX_MEM 
+);
+--------------MEM--------------------------
+RAM_MEM : Memory port map(Alu1C_MEM,rf_d1_MEM,clock,reset,(Mem_wr_MEM and (not(CN_MEM))),Data_out);
+WB_MUX_MEM1 : Mux16_2x1 port map(Alu1C_MEM,Data_out,WB_MUX_MEM,Data_out_MEM);
 
 
+-----------MEM_WB pipeline-------------------------
+MEM_WB_pipeline : MEMWB port map(
+    clk <= clock,
+    WR_EN <= WREN_MEMWB,
+    OP_in<=OP_MEM,
+    RS1_in<=RS1_MEM,
+    RS2_in<=RS2_MEM,
+    RD_in<=RD_MEM,
+    RF_wr_in<=RF_wr_MEM,
+    Data_out_WB_in <= Data_out_MEM,
+    Imm_in<=Imm_MEM,
+    PC_in<=PC_MEM,
+    D3_MUX_in<=D3_MUX_MEM,
+    CN_in<= CN_MEM,
+    Alu3_C_in <= Alu3C_MEM,
+    OP_out <= OP_WB,
+    RS1_out<=RS1_WB,
+    RS2_out<=RS2_WB,
+    RD_out<=RD_WB,
+    RF_wr_out<=RF_wr_WB,
+    Data_out_WB_out <= Data_out_WB,
+    Imm_out<=Imm_WB,
+    PC_out <=PC_WB,
+    D3_MUX_out<=D3_MUX_WB,
+    CN_out<=CN_WB,
+    Alu3_C_out <= Alu3C_WB
+)
+
+-----------WB--------------
+RF_WR_MUX : Mux16_4x1 port map(Data_out_WB,Imm,Alu3C_WB,PC+"0000000000000010",rf_d3);
 
 --------------------branch predictor-----------
 --------------------------Forwarding Unit-------------------------------
 MovingFWD: Forwarding_Unit port map (
-        RegC_EX<= ,RegC_Mem<=  ,RegC_WB<= ,RegA_RR<= , RegB_RR<= ,
+        RegC_EX<= RD_EX ,RegC_Mem<=  ,RegC_WB<= ,RegA_RR<= , RegB_RR<= ,
         RF_WR_EX<= , RF_WR_Mem<=  , RF_WR_WB<=,    
-        MuxA<= ,MuxB<=
+        MuxA<=Fwd_Mux_selA ,MuxB<=Fwd_Mux_selB
     );
+----------------Hazard detection Units--------------------
 
+JLR: Haz_JLR port map (
+        Instruc_OPCode_RR<=OP_RR,
+        H_JLR<=H_jlr);
 
+Jal: Haz_JAL port map (
+        Instruc_OPCode_ID<=OP_ID,
+        H_Jal<=H_jal);
 
-
-------------------Execution component----------------------------
-ALU1 : ALU port map()
+BEX: Haz_BEX port map (
+        Instruc_OPCode_EX<=OP_EX,
+        ZFlag<=,CFlag<=,
+    
+        H_BEX<=H_bex,
+        HType<=Htype;
+        --0->BEQ
+        --1->BLT
+        --2->BLE
+        --3->JRI
+    );
+Branch_Pred:  Haz_PC_controller port map (
+        PC_IF<=PC_IF ,PC_ID <= PC_ID ,PC_RR<=PC_RR2 ,PC_EX<=ALU3C_EX ,
+        H_JLR<=H_jlr,H_JAL <= H_jal, H_BEX <=H_bex , LMSM_Haz<= LMSM_Haz,
+    
+        PC_New<=PC_Next ,
+        PC_WR<=PC_WR ,IF_ID_flush<=cancel_IF ,ID_RR_flush<=cancel_ID ,RR_EX_flush<=cancel_RR , 
+        IF_ID_WR<= WREN_IFID,ID_RR_WR<=WREN_IDRR ,RR_EX_WR<= WREN_RREX , EX_MEM_WR<= WREN_EXMEM , 
+        MEM_WB_WR <=WREN_MEMWB
+        
+    );
 end Struct;
     

@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Wed May 03 05:13:17 2023
+Analysis & Synthesis Status : Failed - Wed May 03 13:10:53 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : IITB_CPU
-Top-level Entity Name : instr_decode
+Top-level Entity Name : Datapath
 Family : MAX 10
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge

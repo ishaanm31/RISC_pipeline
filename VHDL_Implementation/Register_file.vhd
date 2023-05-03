@@ -29,8 +29,8 @@ write_process : process(A3,D3,clock)
   if (clock'event and (clock='1')) then
     if(Write_Enable='1') then  
       Data(To_integer(unsigned(A3)))<= D3;
-    if(PC_WR='1') then
-      Data(0)<= RF_D_PC_WR
+    elsif(PC_WR='1') then
+      Data(0)<= RF_D_PC_WR;
 	 end if;
   end if;
 end process;

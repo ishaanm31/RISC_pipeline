@@ -4,211 +4,223 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "out_RegA[0]",
+					"name" : "RS1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "out_RegA[1]",
+					"name" : "RS1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "out_RegA[2]",
+					"name" : "RS1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "out_RegB[0]",
+					"name" : "RS2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "out_RegB[1]",
+					"name" : "RS2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "out_RegB[2]",
+					"name" : "RS2[2]",
 					"strict" : false
 				},
 				{
-					"name" : "out_RegC[0]",
+					"name" : "RD[0]",
 					"strict" : false
 				},
 				{
-					"name" : "out_RegC[1]",
+					"name" : "RD[1]",
 					"strict" : false
 				},
 				{
-					"name" : "out_RegC[2]",
+					"name" : "RD[2]",
 					"strict" : false
 				},
 				{
-					"name" : "out_Alu_sel[0]",
+					"name" : "ALU_sel[0]",
 					"strict" : false
 				},
 				{
-					"name" : "out_Alu_sel[1]",
+					"name" : "ALU_sel[1]",
 					"strict" : false
 				},
 				{
-					"name" : "out_Alu_sel[2]",
+					"name" : "D3_MUX[0]",
 					"strict" : false
 				},
 				{
-					"name" : "out_Imm_out[0]",
+					"name" : "D3_MUX[1]",
 					"strict" : false
 				},
 				{
-					"name" : "out_Imm_out[1]",
+					"name" : "CZ[0]",
 					"strict" : false
 				},
 				{
-					"name" : "out_Imm_out[2]",
+					"name" : "CZ[1]",
 					"strict" : false
 				},
 				{
-					"name" : "out_Imm_out[3]",
+					"name" : "ALU3_MUX[0]",
 					"strict" : false
 				},
 				{
-					"name" : "out_Imm_out[4]",
+					"name" : "ALU3_MUX[1]",
 					"strict" : false
 				},
 				{
-					"name" : "out_Imm_out[5]",
+					"name" : "Imm[0]",
 					"strict" : false
 				},
 				{
-					"name" : "out_Imm_out[6]",
+					"name" : "Imm[1]",
 					"strict" : false
 				},
 				{
-					"name" : "out_Imm_out[7]",
+					"name" : "Imm[2]",
 					"strict" : false
 				},
 				{
-					"name" : "out_Imm_out[8]",
+					"name" : "Imm[3]",
 					"strict" : false
 				},
 				{
-					"name" : "out_rf_wr",
+					"name" : "Imm[4]",
 					"strict" : false
 				},
 				{
-					"name" : "out_c_modify",
+					"name" : "Imm[5]",
 					"strict" : false
 				},
 				{
-					"name" : "out_z_modify",
+					"name" : "Imm[6]",
 					"strict" : false
 				},
 				{
-					"name" : "out_mem_wr",
+					"name" : "Imm[7]",
 					"strict" : false
 				},
 				{
-					"name" : "out_mem_mux",
+					"name" : "Imm[8]",
 					"strict" : false
 				},
 				{
-					"name" : "out_imm_mux",
+					"name" : "RF_wr",
 					"strict" : false
 				},
 				{
-					"name" : "out_opcode[0]",
+					"name" : "C_modified",
 					"strict" : false
 				},
 				{
-					"name" : "out_opcode[1]",
+					"name" : "Z_modified",
 					"strict" : false
 				},
 				{
-					"name" : "out_opcode[2]",
+					"name" : "Mem_wr",
 					"strict" : false
 				},
 				{
-					"name" : "out_opcode[3]",
+					"name" : "Carry_sel",
 					"strict" : false
 				},
 				{
-					"name" : "out_Last2[0]",
+					"name" : "CPL",
 					"strict" : false
 				},
 				{
-					"name" : "out_Last2[1]",
+					"name" : "WB_MUX",
 					"strict" : false
 				},
 				{
-					"name" : "PC_BP[0]",
+					"name" : "OP[0]",
 					"strict" : false
 				},
 				{
-					"name" : "PC_BP[1]",
+					"name" : "OP[1]",
 					"strict" : false
 				},
 				{
-					"name" : "PC_BP[2]",
+					"name" : "OP[2]",
 					"strict" : false
 				},
 				{
-					"name" : "PC_BP[3]",
+					"name" : "OP[3]",
 					"strict" : false
 				},
 				{
-					"name" : "PC_BP[4]",
+					"name" : "PC_ID[0]",
 					"strict" : false
 				},
 				{
-					"name" : "PC_BP[5]",
+					"name" : "PC_ID[1]",
 					"strict" : false
 				},
 				{
-					"name" : "PC_BP[6]",
+					"name" : "PC_ID[2]",
 					"strict" : false
 				},
 				{
-					"name" : "PC_BP[7]",
+					"name" : "PC_ID[3]",
 					"strict" : false
 				},
 				{
-					"name" : "PC_BP[8]",
+					"name" : "PC_ID[4]",
 					"strict" : false
 				},
 				{
-					"name" : "PC_BP[9]",
+					"name" : "PC_ID[5]",
 					"strict" : false
 				},
 				{
-					"name" : "PC_BP[10]",
+					"name" : "PC_ID[6]",
 					"strict" : false
 				},
 				{
-					"name" : "PC_BP[11]",
+					"name" : "PC_ID[7]",
 					"strict" : false
 				},
 				{
-					"name" : "PC_BP[12]",
+					"name" : "PC_ID[8]",
 					"strict" : false
 				},
 				{
-					"name" : "PC_BP[13]",
+					"name" : "PC_ID[9]",
 					"strict" : false
 				},
 				{
-					"name" : "PC_BP[14]",
+					"name" : "PC_ID[10]",
 					"strict" : false
 				},
 				{
-					"name" : "PC_BP[15]",
+					"name" : "PC_ID[11]",
 					"strict" : false
 				},
 				{
-					"name" : "out_LM_SM_hazard",
+					"name" : "PC_ID[12]",
 					"strict" : false
 				},
 				{
-					"name" : "out_mera_mux[0]",
+					"name" : "PC_ID[13]",
 					"strict" : false
 				},
 				{
-					"name" : "out_mera_mux[1]",
+					"name" : "PC_ID[14]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_ID[15]",
+					"strict" : false
+				},
+				{
+					"name" : "LM_SM_hazard",
+					"strict" : false
+				},
+				{
+					"name" : "Instruction[6]",
 					"strict" : false
 				},
 				{
@@ -216,7 +228,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "Instruction[12]",
+					"name" : "Instruction[15]",
 					"strict" : false
 				},
 				{
@@ -228,19 +240,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "Instruction[15]",
-					"strict" : false
-				},
-				{
-					"name" : "Instruction[10]",
-					"strict" : false
-				},
-				{
-					"name" : "Instruction[11]",
-					"strict" : false
-				},
-				{
-					"name" : "Instruction[6]",
+					"name" : "Instruction[12]",
 					"strict" : false
 				},
 				{
@@ -248,7 +248,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "Instruction[10]",
+					"strict" : false
+				},
+				{
 					"name" : "Instruction[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Instruction[11]",
 					"strict" : false
 				},
 				{
@@ -264,15 +272,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "Instruction[2]",
-					"strict" : false
-				},
-				{
 					"name" : "Instruction[0]",
 					"strict" : false
 				},
 				{
 					"name" : "Instruction[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Instruction[2]",
 					"strict" : false
 				},
 				{

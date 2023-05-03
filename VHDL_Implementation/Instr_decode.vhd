@@ -147,6 +147,8 @@ end component adder;
 				var_RF_wr := '1';
 				var_Mem_wr := '1';
 				var_ALU3_MUX := "01";
+				var_RD:=Instruction(11 downto 9);
+				var_RS1:=Instruction(8 downto 6);
 
 
 			elsif(Instruction(15 downto 12) = "0110") then
@@ -157,8 +159,8 @@ end component adder;
 					  counter_in <= "0001";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0100";
-					  var_RS2 := Instruction(11 downto 9);
-					  var_RS1 := "111";
+					  var_RS1 := Instruction(11 downto 9);
+					  var_RD := "111";
 					  if(Instruction(0) = '1') then
 							var_RF_wr := '1';
 					  end if;
@@ -168,8 +170,8 @@ end component adder;
 					  counter_in <= "0010";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0100";
-					  var_RS2 := Instruction(11 downto 9);
-					  var_RS1 := "110";
+					  var_RS1 := Instruction(11 downto 9);
+					  var_RD := "110";
 					   if(Instruction(1) = '1') then
 							var_RF_wr := '1';
 					  end if;
@@ -179,8 +181,8 @@ end component adder;
 					  counter_in <= "0011";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0100";
-					  var_RS2 := Instruction(11 downto 9);
-					  var_RS1 := "101";
+					  var_RS1 := Instruction(11 downto 9);
+					  var_RD := "101";
 					   if(Instruction(2) = '1') then
 							var_RF_wr := '1';
 					  end if;
@@ -189,8 +191,8 @@ end component adder;
 					  counter_in <= "0100";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0100";
-					  var_RS2 := Instruction(11 downto 9);
-					  var_RS1 := "100";
+					  var_RS1 := Instruction(11 downto 9);
+					  var_RD := "100";
 					   if(Instruction(3) = '1') then
 							var_rf_wr := '1';
 					  end if;
@@ -200,8 +202,8 @@ end component adder;
 					  counter_in <= "0101";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0100";
-					  var_RS2 := Instruction(11 downto 9);
-					  var_RS1 := "011";
+					  var_RS1 := Instruction(11 downto 9);
+					  var_RD := "011";
 					   if(Instruction(4) = '1') then
 							var_RF_wr := '1';
 					  end if;
@@ -211,8 +213,8 @@ end component adder;
 					  counter_in <= "0110";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0100";
-					  var_RS2 := Instruction(11 downto 9);
-					  var_RS1 := "010";
+					  var_RS1 := Instruction(11 downto 9);
+					  var_RD := "010";
 					   if(Instruction(5) = '1') then
 							var_RF_wr := '1';
 					  end if;
@@ -222,8 +224,8 @@ end component adder;
 					  counter_in <= "0111";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0100";
-					  var_RS2 := Instruction(11 downto 9);
-					  var_RS1 := "001";
+					  var_RS1 := Instruction(11 downto 9);
+					  var_RD := "001";
 					   if(Instruction(6) = '1') then
 							var_RF_wr := '1';
 					  end if;
@@ -232,8 +234,8 @@ end component adder;
 					  counter_in <= "0000";
 					  var_LM_SM_hazard := '0';
 					  var_OP := "0100";
-					  var_RS2 := Instruction(11 downto 9);
-					  var_RS1 := "000";
+					  var_RS1 := Instruction(11 downto 9);
+					  var_RD := "000";
 					  if(Instruction(7) = '1') then
 							var_RF_wr := '1';
 					  end if;
@@ -278,8 +280,8 @@ end component adder;
 					  counter_in <= "0001";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0101";
-					  var_RS2 := Instruction(11 downto 9);
-					  var_RS1 := "111";
+					  var_RS1 := Instruction(11 downto 9);
+					  var_RS2 := "111";
 					   if(Instruction(0) = '1') then
 							var_Mem_wr := '1';
 					  end if;
@@ -288,8 +290,8 @@ end component adder;
 					  counter_in <= "0010";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0101";
-					  var_RS2 := Instruction(11 downto 9);
-					  var_RS1 := "110";
+					  var_RS1 := Instruction(11 downto 9);
+					  var_RS2 := "110";
 					  if(Instruction(1) = '1') then
 							var_Mem_wr := '1';
 					  end if;
@@ -300,8 +302,8 @@ end component adder;
 					  counter_in <= "0011";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0101";
-					  var_RS2 := Instruction(11 downto 9);
-					  var_RS1 := "101";
+					  var_RS1 := Instruction(11 downto 9);
+					  var_RS2 := "101";
 					  if(Instruction(2) = '1') then
 							var_Mem_wr := '1';
 					  end if;
@@ -311,8 +313,8 @@ end component adder;
 					  counter_in <= "0100";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0101";
-					  var_RS2 := Instruction(11 downto 9);
-					  var_RS1 := "100";
+					  var_RS1 := Instruction(11 downto 9);
+					  var_RS2 := "100";
 					  if(Instruction(3) = '1') then
 							var_Mem_wr := '1';
 					  end if;
@@ -320,8 +322,8 @@ end component adder;
 					  counter_in <= "0101";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0101";
-					  var_RS2 := Instruction(11 downto 9);
-					  var_RS1 := "100";
+					  var_RS1 := Instruction(11 downto 9);
+					  var_RS2 := "011";
 				     if(Instruction(4) = '1') then
 							var_Mem_wr := '1';
 					  end if;
@@ -329,8 +331,8 @@ end component adder;
 					  counter_in <= "0110";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0101";
-					  var_RS2 := Instruction(11 downto 9);
-					  var_RS1 := "011";
+					  var_RS1 := Instruction(11 downto 9);
+					  var_RS2 := "010";
 					  if(Instruction(5) = '1') then
 							var_Mem_wr := '1';
 					  end if;
@@ -339,8 +341,8 @@ end component adder;
 					  counter_in <= "0111";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0101";
-					  var_RS2 := Instruction(11 downto 9);
-					  var_RS1 := "010";
+					  var_RS1 := Instruction(11 downto 9);
+					  var_RS2 := "001";
 					  if(Instruction(6) = '1') then
 							var_Mem_wr := '1';
 					  end if;
@@ -349,8 +351,8 @@ end component adder;
 					  counter_in <= "0000";
 					  var_LM_SM_hazard := '0';
 					  var_OP := "0101";
-					  var_RS2 := Instruction(11 downto 9);
-					  var_RS1 := "010";
+					  var_RS1 := Instruction(11 downto 9);
+					  var_RS2 := "000";
 				     if(Instruction(7) = '1') then
 							var_Mem_wr := '1';
 					  end if;
