@@ -401,7 +401,7 @@ end component;
     signal CZ_EX: std_logic_vector(1 downto 0);
     signal ALU3_MUX_EX:  std_logic_vector(1 downto 0);
     signal Alu1C_EX,Alu3C_EX : std_logic_vector(15 downto 0);
-    signal carry1,zero1,carry2,zero2 : std_logic;  
+    signal carry1,zero1,carry2,zero2 : std_logic:= '0';  
 
     --Signals for MEM:
     signal OP_MEM: std_logic_vector(3 downto 0);
