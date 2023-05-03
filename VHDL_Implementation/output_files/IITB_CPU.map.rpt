@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IITB_CPU
-Wed May 03 14:21:38 2023
+Wed May 03 14:33:33 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed May 03 14:21:38 2023           ;
+; Analysis & Synthesis Status        ; Failed - Wed May 03 14:33:33 2023           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_CPU                                    ;
 ; Top-level Entity Name              ; Datapath                                    ;
@@ -164,7 +164,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 03 14:21:30 2023
+    Info: Processing started: Wed May 03 14:33:26 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -274,11 +274,15 @@ Info (12021): Found 2 design units, including 1 entities, in source file instr_d
 Info (12021): Found 2 design units, including 1 entities, in source file register_2bits.vhd
     Info (12022): Found design unit 1: Register_2bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd Line: 11
     Info (12023): Found entity 1: Register_2bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd Line: 5
-Error (10482): VHDL error at Datapath.vhdl(541): object "Regsiter_file" is used but not declared File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 541
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
+Error (10476): VHDL error at Datapath.vhdl(655): type of identifier "Mem_wr_MEM" does not agree with its usage as "std_logic_vector" type File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 655
+Error (10476): VHDL error at Datapath.vhdl(655): type of identifier "CN_MEM" does not agree with its usage as "std_logic_vector" type File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 655
+Error (10558): VHDL error at Datapath.vhdl(655): cannot associate formal port "Mem_Data_Out" of mode "out" with an expression File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 655
+Error (10589): VHDL Port Map Aspect error at Datapath.vhdl(655): too many actuals for block "Memory" with only 5 formals File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 655
+Error (10784): HDL error at Datapath.vhdl(272): see declaration for object "Memory" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 272
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 5 errors, 2 warnings
     Error: Peak virtual memory: 4779 megabytes
-    Error: Processing ended: Wed May 03 14:21:38 2023
-    Error: Elapsed time: 00:00:08
+    Error: Processing ended: Wed May 03 14:33:33 2023
+    Error: Elapsed time: 00:00:07
     Error: Total CPU time (on all processors): 00:00:09
 
 

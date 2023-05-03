@@ -11,15 +11,17 @@ end Datapath;
 
 architecture Struct of Datapath is
     --1. ALU
-    component ALU_pipeline is
-        port( sel: in std_logic_vector(2 downto 0); 
-                ALU_A: in std_logic_vector(15 downto 0);
-                ALU_B: in std_logic_vector(15 downto 0);
-                ALU_c: out std_logic_vector(15 downto 0);
-                C_F: out std_logic;
-                Z_F: out std_logic
-            );
-    end component;
+    component ALU is
+		port( sel: in std_logic_vector(1 downto 0); 
+				ALU_A: in std_logic_vector(15 downto 0);
+				ALU_B: in std_logic_vector(15 downto 0);
+				C_in: in std_logic;
+				Carry_sel: in std_logic;
+				ALU_c: out std_logic_vector(15 downto 0);
+				C_F: out std_logic;
+				Z_F: out std_logic
+			);
+	end component;
 
     --2. 16 bit 2x1 Mux
     component Mux16_2x1 is
@@ -182,7 +184,6 @@ architecture Struct of Datapath is
             ALU3_C_in: in std_logic_vector(15 downto 0);
             WB_MUX_in: in std_logic;
             CZ_in: in std_logic_vector(1 downto 0);
-            ALU3_MUX_in: in std_logic_vector(1 downto 0);
             OP_out: out std_logic_vector(3 downto 0);
             RS1_out: out std_logic_vector(2 downto 0);
             RS2_out: out std_logic_vector(2 downto 0);
@@ -538,7 +539,7 @@ ID_RR_pipeline : IDRR port map
    -- ALU3_MUX_out=>ALU3_MUX_RR  
 );  
 ---------------RR-------------
-RF : Regsiter_file port map(A1=>RS1_RR1, A2=>RS2_RR1, A3=>RD_WB,
+RF : Register_file port map(A1=>RS1_RR, A2=>RS2_RR, A3=>RD_WB,
                             D3=>rf_d3,
                             RF_D_PC_WR=> PC_next,
 
@@ -547,11 +548,11 @@ RF : Regsiter_file port map(A1=>RS1_RR1, A2=>RS2_RR1, A3=>RD_WB,
                             RF_D_PC_R=> PC_New,
                             D1=>rf_d1_RR1 , D2=>rf_d2_RR1);
 
-MuxA: Mux16_4x1 port map(rf_d1_RR1,Alu1C_EX,Data_out_MEM,D3,Fwd_Mux_selA,rf_d1_RR2);
-MuxB: Mux16_4x1 port map(rf_d2_RR1,Alu1C_EX,Data_out_MEM,D3,Fwd_Mux_selB,rf_d2_RR2);
-Adder_RR : adder port map(PC_RR1,rf_d1_RR,PC_RR2);
+MuxA1: Mux16_4x1 port map(rf_d1_RR1,Alu1C_EX,Data_out_MEM,D3,Fwd_Mux_selA,rf_d1_RR2);
+MuxB1: Mux16_4x1 port map(rf_d2_RR1,Alu1C_EX,Data_out_MEM,D3,Fwd_Mux_selB,rf_d2_RR2);
+Adder_RR : adder port map(PC_RR1,rf_d1_RR1,PC_RR2);
 --------------RR_EX pipeline---------------
-RR_EX_pipeline : RR_EX port map(
+RR_EX_pipeline : RREX port map(
     clk => clock,
     WR_EN => WREN_RREX,
     OP_in=>OP_RR,
@@ -596,10 +597,10 @@ RR_EX_pipeline : RR_EX port map(
     --ALU3_MUX_out=>ALU3_MUX_EX 
 );
 ---------------Execution---------------------
-ALU1_EX :ALU_pipeline port map(ALU_sel_EX,rf_d1_EX,rf_d2_EX,carry2,Alu1C_EX,carry1,zero1);
+ALU1_EX :ALU port map(ALU_sel_EX,rf_d1_EX,rf_d2_EX,C_modified_EX,carry2,Alu1C_EX,carry1,zero1);
 ALU3_EX : adder port map(rf_d1_EX,Imm_EX,ALU3C_EX);
 D_ff1 : dff_en port map(clock,reset,(C_modified_EX and (not(CN_EX))),carry1,carry2);
-D_ff2 : dff_en port map(clock,reset,(Z_modified_EXand and (not(CN_EX))),zero1,zero2);
+D_ff2 : dff_en port map(clock,reset,(Z_modified_EX and (not(CN_EX))),zero1,zero2);
 
 -----------------EX_MEM pipeline----------
 EX_MEM_pipeline : EXMEM port map(
