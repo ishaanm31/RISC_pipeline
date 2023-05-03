@@ -102,5 +102,4 @@ begin
     CN: Register_1bit port map(CN_in,clk,WR_EN,CN_out);
     WB_MUX: Register_1bit port map(WB_MUX_in,clk,WR_EN,WB_MUX_out);
     CZ2: Register_2bit port map(CZ_in,clk,WR_EN,CZ_out);
-    ALU3_MUX: Register_1bit port map(ALU3_MUX_in,clk,WR_EN,ALU3_MUX_out);
 end architecture;

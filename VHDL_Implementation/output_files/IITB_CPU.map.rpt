@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IITB_CPU
-Wed May 03 13:10:53 2023
+Wed May 03 14:21:38 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed May 03 13:10:53 2023           ;
+; Analysis & Synthesis Status        ; Failed - Wed May 03 14:21:38 2023           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_CPU                                    ;
 ; Top-level Entity Name              ; Datapath                                    ;
@@ -164,7 +164,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 03 13:10:45 2023
+    Info: Processing started: Wed May 03 14:21:30 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -202,9 +202,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux3_8x
 Info (12021): Found 2 design units, including 1 entities, in source file mux3_2x1.vhd
     Info (12022): Found design unit 1: Mux3_4x1-Dataflow1 File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux3_2x1.vhd Line: 12
     Info (12023): Found entity 1: Mux3_4x1 File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux3_2x1.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file mux1_4x1.vhd
-    Info (12022): Found design unit 1: Mux1_4x1-Dataflow File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd Line: 9
-    Info (12023): Found entity 1: Mux1_4x1 File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file memwb_jainesh.vhd
     Info (12022): Found design unit 1: MEMWB-MEMWB_arch File: C:/SEM4/RISC_pipeline/VHDL_Implementation/MEMWB_jainesh.vhd Line: 32
     Info (12023): Found entity 1: MEMWB File: C:/SEM4/RISC_pipeline/VHDL_Implementation/MEMWB_jainesh.vhd Line: 5
@@ -235,14 +232,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file exmem_j
 Info (12021): Found 2 design units, including 1 entities, in source file dff_en.vhd
     Info (12022): Found design unit 1: dff_en-behave File: C:/SEM4/RISC_pipeline/VHDL_Implementation/dff_en.vhd Line: 13
     Info (12023): Found entity 1: dff_en File: C:/SEM4/RISC_pipeline/VHDL_Implementation/dff_en.vhd Line: 3
-Error (10500): VHDL syntax error at Datapath.vhdl(9) near text ")";  expecting an identifier, or "constant", or "file", or "signal", or "variable" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 9
-Error (10500): VHDL syntax error at Datapath.vhdl(22) near text "component";  expecting ";", or an identifier ("component" is a reserved keyword), or "entity" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 22
-Error (10500): VHDL syntax error at Datapath.vhdl(515) near text ":";  expecting ")", or "," File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 515
-Error (10500): VHDL syntax error at Datapath.vhdl(610) near text ")";  expecting "(", or an identifier, or  unary operator File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 610
-Error (10500): VHDL syntax error at Datapath.vhdl(612) near text "port";  expecting "(", or an identifier ("port" is a reserved keyword), or a sequential statement File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 612
-Error (10396): VHDL syntax error at Datapath.vhdl(740): name used in construct must match previously specified name "Datapath" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 740
-Error (10523): Ignored construct Datapath at Datapath.vhdl(5) due to previous errors File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 5
-Info (12021): Found 0 design units, including 0 entities, in source file datapath.vhdl
+Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhdl
+    Info (12022): Found design unit 1: Datapath-Struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 12
+    Info (12023): Found entity 1: Datapath File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file complementor.vhd
     Info (12022): Found design unit 1: test-behave File: C:/SEM4/RISC_pipeline/VHDL_Implementation/complementor.vhd Line: 11
     Info (12023): Found entity 1: test File: C:/SEM4/RISC_pipeline/VHDL_Implementation/complementor.vhd Line: 5
@@ -282,10 +274,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file instr_d
 Info (12021): Found 2 design units, including 1 entities, in source file register_2bits.vhd
     Info (12022): Found design unit 1: Register_2bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd Line: 11
     Info (12023): Found entity 1: Register_2bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd Line: 5
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 7 errors, 2 warnings
+Error (10482): VHDL error at Datapath.vhdl(541): object "Regsiter_file" is used but not declared File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 541
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
     Error: Peak virtual memory: 4779 megabytes
-    Error: Processing ended: Wed May 03 13:10:53 2023
+    Error: Processing ended: Wed May 03 14:21:38 2023
     Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:10
+    Error: Total CPU time (on all processors): 00:00:09
 
 

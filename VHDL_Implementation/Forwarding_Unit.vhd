@@ -14,23 +14,23 @@ architecture struct of Forwarding_Unit is
     
 begin
 ----------------------Register of 16 bits----------------------------------------------
-forwarding : process(RegC_EX,RegC_Mem,RegC_WB,RegA_RR, RegB_RR,ID_RR_OpCode)
+forwarding : process(RegC_EX,RegC_Mem,RegC_WB,RegA_RR, RegB_RR)
     begin
-        if((RegA_RR=RegC_EX)and (RF_WR_EX="1")) then
+        if((RegA_RR=RegC_EX)and (RF_WR_EX='1')) then
             MuxA<="01";
-        elsif((RegA_RR=RegC_Mem) and (RF_WR_Mem="1"))  then
+        elsif((RegA_RR=RegC_Mem) and (RF_WR_Mem='1'))  then
             MuxA<="10";
-        elsif((RegA_RR=RegC_WB) and (RF_WR_WB="1"))  then
+        elsif((RegA_RR=RegC_WB) and (RF_WR_WB='1'))  then
             MuxA<="11";
         else
             MuxA<="00";
         end if;
 
-        if((RegB_RR=RegC_EX) and (RF_WR_EX="1"))  then
+        if((RegB_RR=RegC_EX) and (RF_WR_EX='1'))  then
             MuxB<="01";
-        elsif((RegB_RR=RegC_Mem) and (RF_WR_Mem="1"))  then
+        elsif((RegB_RR=RegC_Mem) and (RF_WR_Mem='1'))  then
             MuxB<="10";
-        elsif((RegB_RR=RegC_WB) and (RF_WR_WB="1"))  then
+        elsif((RegB_RR=RegC_WB) and (RF_WR_WB='1'))  then
             MuxB<="11";
         else 
             MuxB<="00";

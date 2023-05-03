@@ -70,7 +70,6 @@ set_global_assignment -name VHDL_FILE Mux16_4x1.vhd
 set_global_assignment -name VHDL_FILE Mux16_2x1.vhd
 set_global_assignment -name VHDL_FILE Mux3_8x1.vhd
 set_global_assignment -name VHDL_FILE Mux3_2x1.vhd
-set_global_assignment -name VHDL_FILE Mux1_4x1.vhd
 set_global_assignment -name VHDL_FILE MEMWB_jainesh.vhd
 set_global_assignment -name VHDL_FILE IF_ID.vhd
 set_global_assignment -name VHDL_FILE ID_RR_final.vhdl
