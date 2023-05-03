@@ -448,7 +448,7 @@ architecture Struct of Datapath is
         signal index_EX: integer;
     
         signal Instruc_op_ID,Instruc_op_EX, Instruc_op_RR, 
-        PC_New_ID, PC_New_EX, PC_RR: std_logic_vector(15 downto 0 );
+        PC_New_ID, PC_New_EX: std_logic_vector(15 downto 0 );
    
         signal JAL_Haz, JRI_Haz, JLR_Haz, BEQ_Haz, BLT_Haz, BLE_Haz:  std_logic;
 
@@ -458,7 +458,7 @@ architecture Struct of Datapath is
     --Cancel Signals for each stage
     --Signals with Haz and Branch Controller
     signal PC_New,PC_next: std_logic_vector(15 downto 0);
-    signal LMSM_Haz,H_jal,H_jlr,H_bex,PC_WR:std_logic;
+    signal LMSM_Haz,H_jal,H_jlr,H_bex,PC_WR,Ram_wr, RegF_wr,CFwr,ZFwr, Can_ID,Can_rr:std_logic;
     signal Fwd_Mux_selA,Fwd_Mux_selB, Htype:std_logic_vector(1 downto 0);
 
     
@@ -495,6 +495,7 @@ begin
         LM_SM_hazard=>LMSM_Haz,
         clk=>clock
     );
+	 Can_ID<=(CNpass1 or CN_IDRR);
 
 ---------------------ID_RR_pipeline------------------
 ID_RR_pipeline : IDRR port map
@@ -515,7 +516,7 @@ ID_RR_pipeline : IDRR port map
     PC_in=>PC_1,
     D3_MUX_in=>D3_MUX_ID,
     CPL_in=>CPL_ID,
-    CN_in=>(CNpass1 or CN_IDRR),
+    CN_in=>Can_ID,
     WB_MUX_in=>WB_MUX_ID,
     CZ_in=>CZ_ID,
     OP_out => OP_RR,
@@ -543,14 +544,16 @@ RF : Register_file port map(A1=>RS1_RR, A2=>RS2_RR, A3=>RD_WB,
                             D3=>rf_d3,
                             RF_D_PC_WR=> PC_next,
 
-                            clock=>clock,Write_Enable => (RF_wr_WB and(not(CN_WB))),PC_WR=> PC_WR ,
+                            clock=>clock,Write_Enable =>RegF_wr ,PC_WR=> PC_WR ,
 
                             RF_D_PC_R=> PC_New,
                             D1=>rf_d1_RR1 , D2=>rf_d2_RR1);
 
-MuxA1: Mux16_4x1 port map(rf_d1_RR1,Alu1C_EX,Data_out_MEM,D3,Fwd_Mux_selA,rf_d1_RR2);
-MuxB1: Mux16_4x1 port map(rf_d2_RR1,Alu1C_EX,Data_out_MEM,D3,Fwd_Mux_selB,rf_d2_RR2);
+MuxA1: Mux16_4x1 port map(rf_d1_RR1,Alu1C_EX,Data_out_MEM,rf_d3,Fwd_Mux_selA,rf_d1_RR2);
+MuxB1: Mux16_4x1 port map(rf_d2_RR1,Alu1C_EX,Data_out_MEM,rf_d3,Fwd_Mux_selB,rf_d2_RR2);
 Adder_RR : adder port map(PC_RR1,rf_d1_RR1,PC_RR2);
+RegF_wr<=(RF_wr_WB and(not(CN_WB)));
+Can_rr<=(CNpass2 or CN_RREX);
 --------------RR_EX pipeline---------------
 RR_EX_pipeline : RREX port map(
     clk => clock,
@@ -568,10 +571,10 @@ RR_EX_pipeline : RREX port map(
     Z_modified_in =>Z_modified_RR,
     Mem_wr_in=>Mem_wr_RR,
     Imm_in=>Imm_RR,
-    PC_in=>PC_RR,
+    PC_in=>PC_RR1,
     D3_MUX_in=>D3_MUX_RR,
     CPL_in=>CPL_RR,
-    CN_in=>(CNpass2 or CN_RREX),
+    CN_in=>Can_rr,
     WB_MUX_in=>WB_MUX_RR,
     CZ_in=>CZ_RR,
     OP_out => OP_EX,
@@ -599,9 +602,10 @@ RR_EX_pipeline : RREX port map(
 ---------------Execution---------------------
 ALU1_EX :ALU port map(ALU_sel_EX,rf_d1_EX,rf_d2_EX,C_modified_EX,carry2,Alu1C_EX,carry1,zero1);
 ALU3_EX : adder port map(rf_d1_EX,Imm_EX,ALU3C_EX);
-D_ff1 : dff_en port map(clock,reset,(C_modified_EX and (not(CN_EX))),carry1,carry2);
-D_ff2 : dff_en port map(clock,reset,(Z_modified_EX and (not(CN_EX))),zero1,zero2);
-
+D_ff1 : dff_en port map(clock,reset,CFwr,carry1,carry2);
+D_ff2 : dff_en port map(clock,reset,ZFwr,zero1,zero2);
+CFwr<=(C_modified_EX and (not(CN_EX)));
+ZFwr<=(Z_modified_EX and (not(CN_EX)));
 -----------------EX_MEM pipeline----------
 EX_MEM_pipeline : EXMEM port map(
     clk => clock,
@@ -652,10 +656,10 @@ EX_MEM_pipeline : EXMEM port map(
     --ALU3_MUX_out=>ALU3_MUX_MEM 
 );
 --------------MEM--------------------------
-RAM_MEM : Memory port map(Alu1C_MEM,rf_d1_MEM,clock,(Mem_wr_MEM and (not(CN_MEM))),Data_out);
+RAM_MEM : Memory port map(Alu1C_MEM,rf_d1_MEM,clock,RAM_wr,Data_out);
 WB_MUX_MEM1 : Mux16_2x1 port map(Alu1C_MEM,Data_out,WB_MUX_MEM,Data_out_MEM);
 
-
+Ram_wr<=(Mem_wr_MEM and (not(CN_MEM)));
 -----------MEM_WB pipeline-------------------------
 MEM_WB_pipeline : MEMWB port map(
     clk => clock,
@@ -685,7 +689,7 @@ MEM_WB_pipeline : MEMWB port map(
 );
 
 -----------WB--------------
-RF_WR_MUX : Mux16_4x1 port map(Data_out_WB,Imm_WB,Alu3C_WB,(PC_WB+"0000000000000010"),D3_MUX_WB,rf_d3);
+RF_WR_MUX : Mux16_4x1 port map(Data_out_WB,Imm_WB,Alu3C_WB,PC_WB,D3_MUX_WB,rf_d3);
 
 --------------------branch predictor-----------
 --------------------------Forwarding Unit-------------------------------

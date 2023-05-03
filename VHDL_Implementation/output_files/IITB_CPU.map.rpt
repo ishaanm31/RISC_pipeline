@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IITB_CPU
-Wed May 03 14:44:16 2023
+Wed May 03 15:29:49 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -16,14 +16,13 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   8. General Register Statistics
   9. Port Connectivity Checks: "Haz_BEX:BEX"
  10. Port Connectivity Checks: "MEMWB:MEM_WB_pipeline"
- 11. Port Connectivity Checks: "Memory:RAM_MEM"
- 12. Port Connectivity Checks: "EXMEM:EX_MEM_pipeline"
- 13. Port Connectivity Checks: "instr_decode:Jainesh_instruc|Register_4bit:counter"
- 14. Port Connectivity Checks: "instr_decode:Jainesh_instruc"
- 15. Port Connectivity Checks: "adder:IF_add"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+ 11. Port Connectivity Checks: "EXMEM:EX_MEM_pipeline"
+ 12. Port Connectivity Checks: "instr_decode:Jainesh_instruc|Register_4bit:counter"
+ 13. Port Connectivity Checks: "instr_decode:Jainesh_instruc"
+ 14. Port Connectivity Checks: "adder:IF_add"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -50,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 03 14:44:16 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 03 15:29:49 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_CPU                                    ;
 ; Top-level Entity Name              ; Datapath                                    ;
@@ -179,6 +178,7 @@ https://fpgasoftware.intel.com/eula.
 ; RR_EX.vhd                        ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/RR_EX.vhd             ;         ;
 ; ROM.vhd                          ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/ROM.vhd               ;         ;
 ; Register_file.vhd                ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_file.vhd     ;         ;
+; Register_2bit.vhd                ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd     ;         ;
 ; RAM.vhdl                         ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/RAM.vhdl              ;         ;
 ; Mux16_4x1.vhd                    ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd         ;         ;
 ; Mux16_2x1.vhd                    ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd         ;         ;
@@ -202,7 +202,6 @@ https://fpgasoftware.intel.com/eula.
 ; Register_3bit.vhd                ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd     ;         ;
 ; Register_1bit.vhd                ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd     ;         ;
 ; Instr_decode.vhd                 ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd      ;         ;
-; Register_2bits.vhd               ; yes             ; User VHDL File  ; C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd    ;         ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
 
 
@@ -282,15 +281,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Memory:RAM_MEM"                                                                                                                               ;
-+--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                                                                                                                      ;
-+--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pc_add ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +--------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "EXMEM:EX_MEM_pipeline"                                                                        ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -363,7 +353,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 03 14:44:07 2023
+    Info: Processing started: Wed May 03 15:29:40 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -382,9 +372,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file registe
 Info (12021): Found 2 design units, including 1 entities, in source file register_file.vhd
     Info (12022): Found design unit 1: Register_File-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_file.vhd Line: 18
     Info (12023): Found entity 1: Register_file File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_file.vhd Line: 5
-Warning (12019): Can't analyze file -- file Register_2bit.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file register_2bit.vhd
+    Info (12022): Found design unit 1: Register_2bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd Line: 11
+    Info (12023): Found entity 1: Register_2bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ram.vhdl
-    Info (12022): Found design unit 1: Memory-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/RAM.vhdl Line: 14
+    Info (12022): Found design unit 1: Memory-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/RAM.vhdl Line: 13
     Info (12023): Found entity 1: Memory File: C:/SEM4/RISC_pipeline/VHDL_Implementation/RAM.vhdl Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux16_8x1.vhd
     Info (12022): Found design unit 1: Mux16_8x1-Dataflow File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux16_8x1.vhd Line: 17
@@ -470,9 +462,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file registe
 Info (12021): Found 2 design units, including 1 entities, in source file instr_decode.vhd
     Info (12022): Found design unit 1: instr_decode-instr_decode_arch File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 21
     Info (12023): Found entity 1: instr_decode File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file register_2bits.vhd
-    Info (12022): Found design unit 1: Register_2bit-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd Line: 11
-    Info (12023): Found entity 1: Register_2bit File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bits.vhd Line: 5
 Info (12127): Elaborating entity "Datapath" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(361): object "ALU3_MUX_ID" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 361
 Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(407): object "ALU_sel_MEM" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 407
@@ -485,11 +474,8 @@ Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(418): object "CZ_M
 Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(424): object "OP_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 424
 Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(425): object "RS1_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 425
 Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(425): object "RS2_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 425
-Warning (10541): VHDL Signal Declaration warning at Datapath.vhdl(442): used implicit default value for signal "D3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 442
-Warning (10541): VHDL Signal Declaration warning at Datapath.vhdl(450): used implicit default value for signal "PC_RR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 450
 Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(462): object "Htype" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 462
 Info (12128): Elaborating entity "ROM" for hierarchy "ROM:MyROM" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 467
-Warning (10492): VHDL Process Statement warning at ROM.vhd(19): signal "Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM4/RISC_pipeline/VHDL_Implementation/ROM.vhd Line: 19
 Info (12128): Elaborating entity "adder" for hierarchy "adder:IF_add" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 468
 Info (12128): Elaborating entity "IF_ID" for hierarchy "IF_ID:IF_ID_Pipepline_Reg" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 470
 Info (12128): Elaborating entity "Register_16bit" for hierarchy "IF_ID:IF_ID_Pipepline_Reg|Register_16bit:Instruction" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/IF_ID.vhd Line: 49
@@ -498,34 +484,23 @@ Info (12128): Elaborating entity "instr_decode" for hierarchy "instr_decode:Jain
 Info (12128): Elaborating entity "SE10" for hierarchy "instr_decode:Jainesh_instruc|SE10:Sign_6" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 72
 Info (12128): Elaborating entity "SE7" for hierarchy "instr_decode:Jainesh_instruc|SE7:Sign_9" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 73
 Info (12128): Elaborating entity "Register_4bit" for hierarchy "instr_decode:Jainesh_instruc|Register_4bit:counter" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 75
-Info (12128): Elaborating entity "IDRR" for hierarchy "IDRR:ID_RR_pipeline" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 500
+Info (12128): Elaborating entity "IDRR" for hierarchy "IDRR:ID_RR_pipeline" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 501
 Info (12128): Elaborating entity "Register_3bit" for hierarchy "IDRR:ID_RR_pipeline|Register_3bit:RS1" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_RR_final.vhdl Line: 89
 Info (12128): Elaborating entity "Register_2bit" for hierarchy "IDRR:ID_RR_pipeline|Register_2bit:ALU_sel" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_RR_final.vhdl Line: 93
-Info (12128): Elaborating entity "Register_file" for hierarchy "Register_file:RF" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 542
-Warning (10492): VHDL Process Statement warning at Register_file.vhd(40): signal "Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_file.vhd Line: 40
-Warning (10492): VHDL Process Statement warning at Register_file.vhd(41): signal "Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_file.vhd Line: 41
-Warning (10492): VHDL Process Statement warning at Register_file.vhd(42): signal "Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_file.vhd Line: 42
-Info (12128): Elaborating entity "Mux16_4x1" for hierarchy "Mux16_4x1:MuxA1" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 551
-Info (12128): Elaborating entity "RREX" for hierarchy "RREX:RR_EX_pipeline" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 555
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1_EX" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 600
-Info (12128): Elaborating entity "dff_en" for hierarchy "dff_en:D_ff1" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 602
-Info (12128): Elaborating entity "EXMEM" for hierarchy "EXMEM:EX_MEM_pipeline" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 606
-Info (12128): Elaborating entity "Memory" for hierarchy "Memory:RAM_MEM" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 655
-Warning (10492): VHDL Process Statement warning at RAM.vhdl(34): signal "Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM4/RISC_pipeline/VHDL_Implementation/RAM.vhdl Line: 34
-Info (12128): Elaborating entity "Mux16_2x1" for hierarchy "Mux16_2x1:WB_MUX_MEM1" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 656
-Info (12128): Elaborating entity "MEMWB" for hierarchy "MEMWB:MEM_WB_pipeline" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 660
-Info (12128): Elaborating entity "Forwarding_Unit" for hierarchy "Forwarding_Unit:MovingFWD" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 692
-Warning (10492): VHDL Process Statement warning at Forwarding_Unit.vhd(19): signal "RF_WR_EX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd Line: 19
-Warning (10492): VHDL Process Statement warning at Forwarding_Unit.vhd(21): signal "RF_WR_Mem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd Line: 21
-Warning (10492): VHDL Process Statement warning at Forwarding_Unit.vhd(23): signal "RF_WR_WB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at Forwarding_Unit.vhd(29): signal "RF_WR_EX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd Line: 29
-Warning (10492): VHDL Process Statement warning at Forwarding_Unit.vhd(31): signal "RF_WR_Mem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd Line: 31
-Warning (10492): VHDL Process Statement warning at Forwarding_Unit.vhd(33): signal "RF_WR_WB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd Line: 33
-Info (12128): Elaborating entity "Haz_JLR" for hierarchy "Haz_JLR:JLR" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 699
-Info (12128): Elaborating entity "Haz_JAL" for hierarchy "Haz_JAL:Jal" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 703
-Info (12128): Elaborating entity "Haz_BEX" for hierarchy "Haz_BEX:BEX" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 707
-Info (12128): Elaborating entity "Haz_PC_controller" for hierarchy "Haz_PC_controller:Branch_Pred" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 718
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "Register_file" for hierarchy "Register_file:RF" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 543
+Info (12128): Elaborating entity "Mux16_4x1" for hierarchy "Mux16_4x1:MuxA1" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 552
+Info (12128): Elaborating entity "RREX" for hierarchy "RREX:RR_EX_pipeline" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 558
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1_EX" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 603
+Info (12128): Elaborating entity "dff_en" for hierarchy "dff_en:D_ff1" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 605
+Info (12128): Elaborating entity "EXMEM" for hierarchy "EXMEM:EX_MEM_pipeline" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 610
+Info (12128): Elaborating entity "Memory" for hierarchy "Memory:RAM_MEM" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 659
+Info (12128): Elaborating entity "Mux16_2x1" for hierarchy "Mux16_2x1:WB_MUX_MEM1" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 660
+Info (12128): Elaborating entity "MEMWB" for hierarchy "MEMWB:MEM_WB_pipeline" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 664
+Info (12128): Elaborating entity "Forwarding_Unit" for hierarchy "Forwarding_Unit:MovingFWD" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 696
+Info (12128): Elaborating entity "Haz_JLR" for hierarchy "Haz_JLR:JLR" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 703
+Info (12128): Elaborating entity "Haz_JAL" for hierarchy "Haz_JAL:Jal" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 707
+Info (12128): Elaborating entity "Haz_BEX" for hierarchy "Haz_BEX:BEX" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 711
+Info (12128): Elaborating entity "Haz_PC_controller" for hierarchy "Haz_PC_controller:Branch_Pred" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 722
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
@@ -534,10 +509,10 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 4793 megabytes
-    Info: Processing ended: Wed May 03 14:44:16 2023
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4790 megabytes
+    Info: Processing ended: Wed May 03 15:29:49 2023
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Total CPU time (on all processors): 00:00:10
 
 

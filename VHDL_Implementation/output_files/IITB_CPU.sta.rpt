@@ -1,5 +1,5 @@
 Timing Analyzer report for IITB_CPU
-Tue Nov 29 00:34:51 2022
+Wed May 03 15:21:21 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -86,7 +86,7 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.05        ;
+; Average used               ; 1.07        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -245,41 +245,8 @@ No synchronizer chains to report.
 +---------------------+-----------------------+-----------------+-----------------+
 ; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+-----------------------+-----------------+-----------------+
-; Mem_Ext_Add[10]     ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Add[11]     ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Add[12]     ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Add[13]     ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Add[14]     ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Add[15]     ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_WR          ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Data_in[0]  ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Data_in[1]  ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Data_in[2]  ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Data_in[3]  ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Data_in[4]  ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Data_in[5]  ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Data_in[6]  ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Data_in[7]  ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Data_in[8]  ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Data_in[9]  ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Data_in[10] ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Data_in[11] ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Data_in[12] ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Data_in[13] ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Data_in[14] ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Data_in[15] ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Add[0]      ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Add[1]      ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Add[2]      ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Add[3]      ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Add[4]      ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Add[5]      ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Add[6]      ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Add[7]      ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Add[8]      ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Mem_Ext_Add[9]      ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; clock               ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; Reset               ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; reset               ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TCK~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TDI~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -355,7 +322,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 29 00:34:48 2022
+    Info: Processing started: Wed May 03 15:21:20 2023
 Info: Command: quartus_sta IITB_CPU -c IITB_CPU
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -404,9 +371,9 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4934 megabytes
-    Info: Processing ended: Tue Nov 29 00:34:51 2022
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 4935 megabytes
+    Info: Processing ended: Wed May 03 15:21:21 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

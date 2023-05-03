@@ -17,7 +17,7 @@ end entity Register_file;
 
 architecture struct of Register_File is
     type mem_word   is array (0 to 7) of std_logic_vector(15 downto 0);
-    signal Data : mem_word :=((others=>'0'),(others=>'0'),(others=>'0'),"0000000000000101",others=>(others=>'0'));
+    signal Data : mem_word :=((others=>'0'),(others=>'0'),"0000000000000101","0000000000010101",others=>(others=>'0'));
 
 begin
 ---Instruction
@@ -35,7 +35,7 @@ write_process : process(A3,D3,clock)
   end if;
 end process;
 ------------------------------------- Read A1 D1---------------------------
-read_process : process(A1, A2)
+read_process : process(A1, A2, Data)
   begin
     RF_D_PC_R(15 downto 0) <=Data(0);
     D1 <= Data(To_integer(unsigned(A1)));

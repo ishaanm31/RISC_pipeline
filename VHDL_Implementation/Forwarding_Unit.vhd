@@ -14,7 +14,7 @@ architecture struct of Forwarding_Unit is
     
 begin
 ----------------------Register of 16 bits----------------------------------------------
-forwarding : process(RegC_EX,RegC_Mem,RegC_WB,RegA_RR, RegB_RR)
+forwarding : process(RegC_EX,RegC_Mem,RegC_WB,RegA_RR, RegB_RR,RF_WR_EX , RF_WR_Mem, RF_WR_WB)
     begin
         if((RegA_RR=RegC_EX)and (RF_WR_EX='1')) then
             MuxA<="01";
