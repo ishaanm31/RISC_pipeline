@@ -1,5 +1,5 @@
 Fitter report for IITB_CPU
-Wed May 03 15:21:13 2023
+Wed May 03 15:46:42 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -61,7 +61,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed May 03 15:21:13 2023       ;
+; Fitter Status                      ; Successful - Wed May 03 15:46:42 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_CPU                                    ;
 ; Top-level Entity Name              ; Datapath                                    ;
@@ -145,14 +145,14 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.04        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.3%      ;
+;     Processors 2-12        ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -194,7 +194,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/SEM4/RISC_pipeline/VHDL_Implementation/output_files/IITB_CPU.pin.
+The pin-out file can be found in C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/output_files/IITB_CPU.pin.
 
 
 +--------------------------------------------------------------------+
@@ -728,7 +728,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (119006): Selected device 10M25SAE144C8G for design "IITB_CPU"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -793,23 +793,23 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.02 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file C:/SEM4/RISC_pipeline/VHDL_Implementation/output_files/IITB_CPU.fit.smsg
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (144001): Generated suppressed messages file C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/output_files/IITB_CPU.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 6531 megabytes
-    Info: Processing ended: Wed May 03 15:21:14 2023
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 6144 megabytes
+    Info: Processing ended: Wed May 03 15:46:43 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/SEM4/RISC_pipeline/VHDL_Implementation/output_files/IITB_CPU.fit.smsg.
+The suppressed messages can be found in C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/output_files/IITB_CPU.fit.smsg.
 
 

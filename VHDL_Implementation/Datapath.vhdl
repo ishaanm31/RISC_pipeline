@@ -22,7 +22,11 @@ architecture Struct of Datapath is
 				Z_F: out std_logic
 			);
 	end component;
-
+		component Mux1_4x1 is
+    port(A,B,C,D: in std_logic;
+         Sel: in std_logic_vector(1 downto 0);
+         F:out std_logic);
+end component;
     --2. 16 bit 2x1 Mux
     component Mux16_2x1 is
         port(A0: in std_logic_vector(15 downto 0);
@@ -382,11 +386,11 @@ architecture Struct of Datapath is
     signal OP_EX: std_logic_vector(3 downto 0);
     signal RS1_EX,RS2_EX:std_logic_vector(2 downto 0);
     signal RD_EX: std_logic_vector(2 downto 0);
-    signal RF_wr_EX:std_logic;
+    signal RF_wr_EX1,RF_wr_EX:std_logic;
     signal ALU_sel_EX: std_logic_vector(1 downto 0);
     signal Carry_sel_EX: std_logic;
-    signal C_modified_EX: std_logic;
-    signal Z_modified_EX: std_logic;
+    signal C_modified,C_modified_EX: std_logic;
+    signal Z_modified,Z_modified_EX: std_logic;
     signal Mem_wr_EX: std_logic;
     signal Imm_EX,rf_d1_EX,rf_d2_EX: std_logic_vector(15 downto 0);
     signal PC_EX: std_logic_vector(15 downto 0);
@@ -583,7 +587,7 @@ RR_EX_pipeline : RREX port map(
     RD_out=>RD_EX,
     RF_D1_out => rf_d1_EX,
     RF_D2_out => rf_d2_EX,
-    RF_wr_out=>RF_wr_EX,
+    RF_wr_out=>RF_wr_EX1,
     ALU_sel_out=>ALU_sel_EX,
     Carry_sel_out=>Carry_sel_EX,
     --ALU3_MUX_out=>ALU3_MUX_EX,
@@ -600,12 +604,16 @@ RR_EX_pipeline : RREX port map(
     --ALU3_MUX_out=>ALU3_MUX_EX 
 );
 ---------------Execution---------------------
-ALU1_EX :ALU port map(ALU_sel_EX,rf_d1_EX,rf_d2_EX,C_modified_EX,carry2,Alu1C_EX,carry1,zero1);
+ALU1_EX :ALU port map(ALU_sel_EX,rf_d1_EX,rf_d2_EX,Carry_sel_EX,carry2,Alu1C_EX,carry1,zero1);
 ALU3_EX : adder port map(rf_d1_EX,Imm_EX,ALU3C_EX);
 D_ff1 : dff_en port map(clock,reset,CFwr,carry1,carry2);
 D_ff2 : dff_en port map(clock,reset,ZFwr,zero1,zero2);
-CFwr<=(C_modified_EX and (not(CN_EX)));
-ZFwr<=(Z_modified_EX and (not(CN_EX)));
+MUX_C : Mux1_4x1 port map(C_modified_EX,zero2,carry2,'0',CZ_EX,C_modified);
+MUX_Z : Mux1_4x1 port map(Z_modified_EX,zero2,carry2,'0',CZ_EX,Z_modified);
+MUX_rfwr : Mux1_4x1 port map(RF_wr_EX1,zero2,carry2,'0',CZ_EX,RF_wr_EX);
+CFwr<=(C_modified and (not(CN_EX)));
+ZFwr<=(Z_modified and (not(CN_EX)));
+
 -----------------EX_MEM pipeline----------
 EX_MEM_pipeline : EXMEM port map(
     clk => clock,

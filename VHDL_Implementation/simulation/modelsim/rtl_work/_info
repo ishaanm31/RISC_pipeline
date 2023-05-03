@@ -8,29 +8,29 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/SEM4/RISC_pipeline/VHDL_Implementation/simulation/modelsim
+Z0 dC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/simulation/modelsim
 Eadder
-Z1 w1682967783
+Z1 w1683013841
 Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z4 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 20
+!i122 21
 R0
-Z7 8C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_adder.vhd
-Z8 FC:/SEM4/RISC_pipeline/VHDL_Implementation/ID_adder.vhd
+Z7 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ID_adder.vhd
+Z8 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ID_adder.vhd
 l0
 L5 1
 VQ8;BAm]`zTmQ9?bP=>2cN1
 !s100 LHgCagbNbgW]9A:3TIE8[1
 Z9 OV;C;2020.1;71
 31
-Z10 !s110 1683108005
+Z10 !s110 1683114463
 !i10b 1
-Z11 !s108 1683108005.000000
-Z12 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_adder.vhd|
-Z13 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_adder.vhd|
+Z11 !s108 1683114463.000000
+Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ID_adder.vhd|
+Z13 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ID_adder.vhd|
 !i113 1
 Z14 o-93 -work work
 Z15 tExplicit 1 CvgOpt 0
@@ -41,7 +41,7 @@ R4
 R5
 R6
 DEx4 work 5 adder 0 22 Q8;BAm]`zTmQ9?bP=>2cN1
-!i122 20
+!i122 21
 l13
 L12 8
 VziF^5TYLF[kSkSWe]5Ri>3
@@ -57,25 +57,25 @@ R13
 R14
 R15
 Ealu
-Z16 w1682966918
+R1
 R4
 R5
 R6
-!i122 18
+!i122 19
 R0
-Z17 8C:/SEM4/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd
-Z18 FC:/SEM4/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd
+Z16 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd
+Z17 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd
 l0
 L5 1
 VZ]JDm0[WBoi@D7JR_UJDH0
 !s100 8_3kjPEIbkTDiA_K]6IM;0
 R9
 31
-R10
+Z18 !s110 1683114462
 !i10b 1
-R11
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd|
-Z20 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd|
+Z19 !s108 1683114462.000000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd|
+Z21 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd|
 !i113 1
 R14
 R15
@@ -84,43 +84,43 @@ R4
 R5
 R6
 DEx4 work 3 alu 0 22 Z]JDm0[WBoi@D7JR_UJDH0
-!i122 18
+!i122 19
 l51
 L17 74
 V_[;1LI?i0zG@NcWEdH>XV1
 !s100 WYOPkZ1QD=Cm5<_LgdOhM3
 R9
 31
-R10
+R18
 !i10b 1
-R11
 R19
 R20
+R21
 !i113 1
 R14
 R15
 Edatapath
-Z21 w1683107787
+Z22 w1683114382
 R2
 R3
 R4
 R5
 R6
-!i122 17
+!i122 18
 R0
-Z22 8C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl
-Z23 FC:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl
+Z23 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Datapath.vhdl
+Z24 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Datapath.vhdl
 l0
 L5 1
 V7Xgd=NY_]:[F^?M`<Pez<1
 !s100 kHHXF1>e<_A0R<3XgQ16B2
 R9
 31
-R10
+R18
 !i10b 1
-R11
-Z24 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl|
-Z25 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl|
+R19
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Datapath.vhdl|
+Z26 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Datapath.vhdl|
 !i113 1
 R14
 R15
@@ -131,40 +131,40 @@ R4
 R5
 R6
 DEx4 work 8 datapath 0 22 7Xgd=NY_]:[F^?M`<Pez<1
-!i122 17
-l465
-L12 721
-V67N^O7N5iOQ?KC5lM3AiE3
-!s100 UBPblzT7`OH>I2e^H8oS]0
+!i122 18
+l469
+L12 729
+VMN8nzfmcJQ`oL[FO76M670
+!s100 AN930AQU12>Ec@S^cJbN?0
 R9
 31
-R10
+R18
 !i10b 1
-R11
-R24
+R19
 R25
+R26
 !i113 1
 R14
 R15
 Edff_en
-Z26 w1670248019
+Z27 w1682776832
 R5
 R6
-!i122 16
+!i122 17
 R0
-Z27 8C:/SEM4/RISC_pipeline/VHDL_Implementation/dff_en.vhd
-Z28 FC:/SEM4/RISC_pipeline/VHDL_Implementation/dff_en.vhd
+Z28 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/dff_en.vhd
+Z29 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/dff_en.vhd
 l0
 L3 1
 VS@FnW7bH9P2HbV3;ZXCmI3
 !s100 l9gC@LIoi_n83HaDMd>o93
 R9
 31
-R10
+Z30 !s110 1683114461
 !i10b 1
-R11
-Z29 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/dff_en.vhd|
-Z30 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/dff_en.vhd|
+Z31 !s108 1683114461.000000
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/dff_en.vhd|
+Z33 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/dff_en.vhd|
 !i113 1
 R14
 R15
@@ -172,41 +172,41 @@ Abehave
 R5
 R6
 DEx4 work 6 dff_en 0 22 S@FnW7bH9P2HbV3;ZXCmI3
-!i122 16
+!i122 17
 l16
 L13 19
 VkecbAB3SBD0^jzm5YEo6J1
 !s100 _jKBL9M[ElY>901m5?]kT3
 R9
 31
-R10
-!i10b 1
-R11
-R29
 R30
+!i10b 1
+R31
+R32
+R33
 !i113 1
 R14
 R15
 Eexmem
-Z31 w1683095699
+Z34 w1683104715
 R4
 R5
 R6
-!i122 15
+!i122 16
 R0
-Z32 8C:/SEM4/RISC_pipeline/VHDL_Implementation/EXMEM_jainesh.vhd
-Z33 FC:/SEM4/RISC_pipeline/VHDL_Implementation/EXMEM_jainesh.vhd
+Z35 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/EXMEM_jainesh.vhd
+Z36 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/EXMEM_jainesh.vhd
 l0
 L5 1
 Ve4Pjgh8CHHQN=]iRm>3nj2
 !s100 n?gJcI_EMT2>O2P1RIX]B3
 R9
 31
-R10
+R30
 !i10b 1
-R11
-Z34 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/EXMEM_jainesh.vhd|
-Z35 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/EXMEM_jainesh.vhd|
+R31
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/EXMEM_jainesh.vhd|
+Z38 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/EXMEM_jainesh.vhd|
 !i113 1
 R14
 R15
@@ -215,41 +215,41 @@ R4
 R5
 R6
 DEx4 work 5 exmem 0 22 e4Pjgh8CHHQN=]iRm>3nj2
-!i122 15
+!i122 16
 l94
 L55 62
 VW9EZeX[9aED81EnJliIK53
 !s100 NO]Ube1c16TQkDked;]ij0
 R9
 31
-R10
+R30
 !i10b 1
-R11
-R34
-R35
+R31
+R37
+R38
 !i113 1
 R14
 R15
 Eforwarding_unit
-Z36 w1683106211
+Z39 w1683108785
 R4
 R5
 R6
-!i122 14
+!i122 15
 R0
-Z37 8C:/SEM4/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd
-Z38 FC:/SEM4/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd
+Z40 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd
+Z41 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd
 l0
 L5 1
 V3j6`;O=<N@:diSTF[^7Oj3
 !s100 0GXKkZm4zTg:zo@o:O8<a2
 R9
 31
-R10
+R30
 !i10b 1
-R11
-Z39 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd|
-Z40 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd|
+Z42 !s108 1683114460.000000
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd|
+Z44 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd|
 !i113 1
 R14
 R15
@@ -258,41 +258,41 @@ R4
 R5
 R6
 DEx4 work 15 forwarding_unit 0 22 3j6`;O=<N@:diSTF[^7Oj3
-!i122 14
+!i122 15
 l15
 L13 27
 VJRSS?I3QL>1@J^MXj8TC12
 !s100 EdJRndgG3O2CL9I_1D9P]1
 R9
 31
-R10
+R30
 !i10b 1
-R11
-R39
-R40
+R42
+R43
+R44
 !i113 1
 R14
 R15
 Ehaz_bex
-Z41 w1683069097
+Z45 w1683086839
 R4
 R5
 R6
-!i122 13
+!i122 14
 R0
-Z42 8C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd
-Z43 FC:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd
+Z46 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd
+Z47 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd
 l0
 L5 1
 Vb=DDn[b<EENPZWJ5PhLP[2
 !s100 aE_bd>f6OoBhkXKH`_85R1
 R9
 31
-Z44 !s110 1683108004
+Z48 !s110 1683114460
 !i10b 1
-Z45 !s108 1683108004.000000
-Z46 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd|
-Z47 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd|
+R42
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd|
+Z50 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd|
 !i113 1
 R14
 R15
@@ -301,41 +301,41 @@ R4
 R5
 R6
 DEx4 work 7 haz_bex 0 22 b=DDn[b<EENPZWJ5PhLP[2
-!i122 13
+!i122 14
 l20
 L19 29
 V<K<NX7n6ijHU@5aP_2`nL1
 !s100 [iQkTWz>zeX3;L<FSnEh30
 R9
 31
-R44
+R48
 !i10b 1
-R45
-R46
-R47
+R42
+R49
+R50
 !i113 1
 R14
 R15
 Ehaz_jal
-Z48 w1683069070
+R45
 R4
 R5
 R6
-!i122 12
+!i122 13
 R0
-Z49 8C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd
-Z50 FC:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd
+Z51 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd
+Z52 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd
 l0
 L5 1
 VJ]FB_^7hUNSE6=D7o^n3Y3
 !s100 G_U[__NAd?MV1dia23JVz2
 R9
 31
-R44
+R48
 !i10b 1
-R45
-Z51 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd|
-Z52 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd|
+R42
+Z53 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd|
+Z54 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd|
 !i113 1
 R14
 R15
@@ -344,41 +344,41 @@ R4
 R5
 R6
 DEx4 work 7 haz_jal 0 22 J]FB_^7hUNSE6=D7o^n3Y3
-!i122 12
+!i122 13
 l13
-Z53 L12 12
+Z55 L12 12
 Vn[ikR=HOiT4jTF0U;eK]m3
 !s100 k<^hnlac0<`e@2Td<6WGf2
 R9
 31
-R44
+R48
 !i10b 1
-R45
-R51
-R52
+R42
+R53
+R54
 !i113 1
 R14
 R15
 Ehaz_jlr
-Z54 w1683069117
+R45
 R4
 R5
 R6
-!i122 11
+!i122 12
 R0
-Z55 8C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd
-Z56 FC:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd
+Z56 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd
+Z57 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd
 l0
 L5 1
 Vg;HLBl9V<Sffeh9TQM;e21
 !s100 jGIHk>WeFN7b`=_cVk7LP0
 R9
 31
-R44
+R48
 !i10b 1
-R45
-Z57 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd|
-Z58 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd|
+R42
+Z58 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd|
+Z59 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd|
 !i113 1
 R14
 R15
@@ -387,41 +387,41 @@ R4
 R5
 R6
 DEx4 work 7 haz_jlr 0 22 g;HLBl9V<Sffeh9TQM;e21
-!i122 11
+!i122 12
 l13
-R53
+R55
 VSQ0MjOW0]>G:Ic?n1RX`i3
 !s100 cQojBD3HbC1cUTHJTlPD`2
 R9
 31
-R44
+R48
 !i10b 1
-R45
-R57
+R42
 R58
+R59
 !i113 1
 R14
 R15
 Ehaz_pc_controller
-Z59 w1683102319
+R34
 R4
 R5
 R6
-!i122 10
+!i122 11
 R0
-Z60 8C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd
-Z61 FC:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd
+Z60 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd
+Z61 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd
 l0
 L5 1
 VE6K]_AW6b@=V7>D1Ezjha1
 !s100 b:NCf8<`VaJSe;giPZlC=2
 R9
 31
-R44
+Z62 !s110 1683114459
 !i10b 1
-R45
-Z62 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd|
-Z63 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd|
+Z63 !s108 1683114459.000000
+Z64 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd|
+Z65 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd|
 !i113 1
 R14
 R15
@@ -430,41 +430,41 @@ R4
 R5
 R6
 DEx4 work 17 haz_pc_controller 0 22 E6K]_AW6b@=V7>D1Ezjha1
-!i122 10
+!i122 11
 l18
 L16 50
 VM@g4`3FBXVJVjHg?iFj<H1
 !s100 Lm>Kl8@3?VYQDZ;Rb1;zD2
 R9
 31
-R44
-!i10b 1
-R45
 R62
+!i10b 1
 R63
+R64
+R65
 !i113 1
 R14
 R15
 Eidrr
-Z64 w1683105029
+Z66 w1683105465
 R4
 R5
 R6
-!i122 9
+!i122 10
 R0
-Z65 8C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_RR_final.vhdl
-Z66 FC:/SEM4/RISC_pipeline/VHDL_Implementation/ID_RR_final.vhdl
+Z67 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ID_RR_final.vhdl
+Z68 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ID_RR_final.vhdl
 l0
 L5 1
 Va<eA]L1<mlQ`BG]iVkFB72
 !s100 jiUVVNZ0knAXXYZbzPA7X1
 R9
 31
-R44
+R62
 !i10b 1
-R45
-Z67 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_RR_final.vhdl|
-Z68 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_RR_final.vhdl|
+R63
+Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ID_RR_final.vhdl|
+Z70 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ID_RR_final.vhdl|
 !i113 1
 R14
 R15
@@ -473,41 +473,41 @@ R4
 R5
 R6
 DEx4 work 4 idrr 0 22 a<eA]L1<mlQ`BG]iVkFB72
-!i122 9
+!i122 10
 l87
 L48 58
 VGE_@Q8gZLIRCib4]i_WTa0
 !s100 DcKFP;Agd?CMnPlC=VGOW3
 R9
 31
-R44
+R62
 !i10b 1
-R45
-R67
-R68
+R63
+R69
+R70
 !i113 1
 R14
 R15
 Eif_id
-Z69 w1683065382
+R45
 R4
 R5
 R6
-!i122 8
+!i122 9
 R0
-Z70 8C:/SEM4/RISC_pipeline/VHDL_Implementation/IF_ID.vhd
-Z71 FC:/SEM4/RISC_pipeline/VHDL_Implementation/IF_ID.vhd
+Z71 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/IF_ID.vhd
+Z72 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/IF_ID.vhd
 l0
 L5 1
 VKPdc5_JMZ@Nc[LSLJOK8^3
 !s100 IVf08lEQ?SzLNh1LJ1HoH0
 R9
 31
-R44
+R62
 !i10b 1
-R45
-Z72 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/IF_ID.vhd|
-Z73 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/IF_ID.vhd|
+Z73 !s108 1683114458.000000
+Z74 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/IF_ID.vhd|
+Z75 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/IF_ID.vhd|
 !i113 1
 R14
 R15
@@ -516,41 +516,41 @@ R4
 R5
 R6
 DEx4 work 5 if_id 0 22 KPdc5_JMZ@Nc[LSLJOK8^3
-!i122 8
+!i122 9
 l47
 L19 37
 V:WIDL0iCcSX@_fn_oLl?C3
 !s100 XAMEUQC?BKD0]1^b3FM>L3
 R9
 31
-R44
+R62
 !i10b 1
-R45
-R72
 R73
+R74
+R75
 !i113 1
 R14
 R15
 Einstr_decode
-Z74 w1683094460
+R34
 R4
 R5
 R6
-!i122 26
+!i122 27
 R0
-Z75 8C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd
-Z76 FC:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd
+Z76 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd
+Z77 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd
 l0
 L5 1
 Va:`HTJIhmZakfL>?F]Zi42
 !s100 lVoH]bJ[6cRYdQ]2^S^Nj1
 R9
 31
-Z77 !s110 1683108006
+Z78 !s110 1683114465
 !i10b 1
-Z78 !s108 1683108006.000000
-Z79 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd|
-!s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd|
+Z79 !s108 1683114464.000000
+Z80 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd|
+!s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd|
 !i113 1
 R14
 R15
@@ -559,41 +559,41 @@ R4
 R5
 R6
 DEx4 work 12 instr_decode 0 22 a:`HTJIhmZakfL>?F]Zi42
-!i122 26
+!i122 27
 l70
 L21 412
 V@0g4?N3lz?USM=5:AZQe<1
 !s100 GHET>I^i?:8]Lc1XW:W[V3
 R9
 31
-R77
-!i10b 1
 R78
+!i10b 1
 R79
-Z80 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd|
+R80
+Z81 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd|
 !i113 1
 R14
 R15
 Ememory
-Z81 w1683107980
+R39
 R4
 R5
 R6
-!i122 4
+!i122 5
 R0
-Z82 8C:/SEM4/RISC_pipeline/VHDL_Implementation/RAM.vhdl
-Z83 FC:/SEM4/RISC_pipeline/VHDL_Implementation/RAM.vhdl
+Z82 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/RAM.vhdl
+Z83 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/RAM.vhdl
 l0
 L5 1
 V83kS4cV4B^BHIA1ofN3PP0
 !s100 D2M>7SkVDR`OoILTjBUW<1
 R9
 31
-R44
+Z84 !s110 1683114457
 !i10b 1
-Z84 !s108 1683108003.000000
-Z85 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/RAM.vhdl|
-Z86 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/RAM.vhdl|
+Z85 !s108 1683114457.000000
+Z86 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/RAM.vhdl|
+Z87 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/RAM.vhdl|
 !i113 1
 R14
 R15
@@ -602,41 +602,41 @@ R4
 R5
 R6
 DEx4 work 6 memory 0 22 83kS4cV4B^BHIA1ofN3PP0
-!i122 4
+!i122 5
 l17
 L13 24
 VGboPjVXdQVa81eJKe[3Kc3
 !s100 ^f]1oUoUKiORVOc;zLYMB1
 R9
 31
-R44
-!i10b 1
 R84
+!i10b 1
 R85
 R86
+R87
 !i113 1
 R14
 R15
 Ememwb
-Z87 w1683063706
+R45
 R4
 R5
 R6
-!i122 7
+!i122 8
 R0
-Z88 8C:/SEM4/RISC_pipeline/VHDL_Implementation/MEMWB_jainesh.vhd
-Z89 FC:/SEM4/RISC_pipeline/VHDL_Implementation/MEMWB_jainesh.vhd
+Z88 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/MEMWB_jainesh.vhd
+Z89 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/MEMWB_jainesh.vhd
 l0
 L5 1
 Vb85`QSo>0H:Y2c2065UFF2
 !s100 _Gm5A;1H@`4^9GSnXcS?L1
 R9
 31
-R44
+Z90 !s110 1683114458
 !i10b 1
-R45
-Z90 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/MEMWB_jainesh.vhd|
-Z91 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/MEMWB_jainesh.vhd|
+R73
+Z91 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/MEMWB_jainesh.vhd|
+Z92 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/MEMWB_jainesh.vhd|
 !i113 1
 R14
 R15
@@ -645,41 +645,41 @@ R4
 R5
 R6
 DEx4 work 5 memwb 0 22 b85`QSo>0H:Y2c2065UFF2
-!i122 7
+!i122 8
 l71
 L32 52
 VhRT[;IRI?8fR@OG]15nSZ1
 !s100 kKF^7<7WD69:jFACo7^113
 R9
 31
-R44
-!i10b 1
-R45
 R90
+!i10b 1
+R73
 R91
+R92
 !i113 1
 R14
 R15
 Emux16_2x1
-R26
+R27
 R4
 R5
 R6
-!i122 6
+!i122 7
 R0
-Z92 8C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd
-Z93 FC:/SEM4/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd
+Z93 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd
+Z94 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd
 l0
 L4 1
 VTB=3g4HKPzGZ5SF:SKXjX2
 !s100 =Pg7@AgI^A=cHCO2`aUnm3
 R9
 31
-R44
+R90
 !i10b 1
-R45
-Z94 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd|
-Z95 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd|
+R73
+Z95 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd|
+Z96 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd|
 !i113 1
 R14
 R15
@@ -688,41 +688,41 @@ R4
 R5
 R6
 DEx4 work 9 mux16_2x1 0 22 TB=3g4HKPzGZ5SF:SKXjX2
-!i122 6
+!i122 7
 l11
 L10 14
 V6Um0]=QgXzleHJjmIzo4g0
 !s100 1O7I5cn<:MVBHI[^X=Q6W0
 R9
 31
-R44
+R90
 !i10b 1
-R45
-R94
+R73
 R95
+R96
 !i113 1
 R14
 R15
 Emux16_4x1
-R26
+R27
 R4
 R5
 R6
-!i122 5
+!i122 6
 R0
-Z96 8C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd
-Z97 FC:/SEM4/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd
+Z97 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd
+Z98 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd
 l0
 L4 1
 VIJgA;^`XegWCTCHTS<>E22
 !s100 PKWFk_40AAE@MTon[k8ED2
 R9
 31
-R44
+R90
 !i10b 1
-R45
-Z98 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd|
-Z99 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd|
+R73
+Z99 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd|
+Z100 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd|
 !i113 1
 R14
 R15
@@ -731,41 +731,84 @@ R4
 R5
 R6
 DEx4 work 9 mux16_4x1 0 22 IJgA;^`XegWCTCHTS<>E22
-!i122 5
+!i122 6
 l13
 L12 18
 Vo9X4RRliOcn:m4c42mN9J2
 !s100 RWTk0Q7MA1:Bbn3i5NKPg0
 R9
 31
-R44
+R90
 !i10b 1
-R45
-R98
+R73
 R99
+R100
+!i113 1
+R14
+R15
+Emux1_4x1
+Z101 w1683114220
+R4
+R5
+R6
+!i122 0
+R0
+Z102 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd
+Z103 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd
+l0
+L4 1
+VkLPTC?>UmY?0Bi_=^FDTz1
+!s100 X0c`7D8W0GV689e@AWZo00
+R9
+31
+Z104 !s110 1683114456
+!i10b 1
+Z105 !s108 1683114456.000000
+Z106 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd|
+Z107 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd|
+!i113 1
+R14
+R15
+Adataflow
+R4
+R5
+R6
+DEx4 work 8 mux1_4x1 0 22 kLPTC?>UmY?0Bi_=^FDTz1
+!i122 0
+l10
+L9 18
+V:<O8EMj]Ho[=?cJM>_l]g0
+!s100 OiW@OdeaEnG=2cZ4jGzf[2
+R9
+31
+R104
+!i10b 1
+R105
+R106
+R107
 !i113 1
 R14
 R15
 Eregister_16bit
-R26
+R27
 R4
 R5
 R6
-!i122 23
+!i122 24
 R0
-Z100 8C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd
-Z101 FC:/SEM4/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd
+Z108 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd
+Z109 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd
 l0
 L5 1
 VXR:<iM=D`Q9k3jdd9VShW1
 !s100 R80AB<[K6bIUYGWNze_Cb1
 R9
 31
-R10
+Z110 !s110 1683114464
 !i10b 1
-R11
-Z102 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd|
-Z103 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd|
+R79
+Z111 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd|
+Z112 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd|
 !i113 1
 R14
 R15
@@ -774,41 +817,41 @@ R4
 R5
 R6
 DEx4 work 14 register_16bit 0 22 XR:<iM=D`Q9k3jdd9VShW1
-!i122 23
+!i122 24
 l13
 L11 20
 V=MV3?WLcYgUna=?67Gf<E2
 !s100 @zR?HQ8JA^_2e?HPTbAAn3
 R9
 31
-R10
+R110
 !i10b 1
-R11
-R102
-R103
+R79
+R111
+R112
 !i113 1
 R14
 R15
 Eregister_1bit
-Z104 w1682838668
+Z113 w1682860421
 R4
 R5
 R6
-!i122 25
+!i122 26
 R0
-Z105 8C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd
-Z106 FC:/SEM4/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd
+Z114 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd
+Z115 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd
 l0
 L4 1
 VTGNbT?MdM_?^f9kM_ob@H0
 !s100 ;k;V:Y]0mIHzI37b7c]7M2
 R9
 31
-R77
+R110
 !i10b 1
-R78
-Z107 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd|
-Z108 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd|
+R79
+Z116 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd|
+Z117 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd|
 !i113 1
 R14
 R15
@@ -817,41 +860,41 @@ R4
 R5
 R6
 DEx4 work 13 register_1bit 0 22 TGNbT?MdM_?^f9kM_ob@H0
-!i122 25
+!i122 26
 l12
 L10 21
 V@69^VQX6LBGzQI_3ld5bz0
 !s100 _gg7k@n;zQ=bDzAkUaXfK2
 R9
 31
-R77
+R110
 !i10b 1
-R78
-R107
-R108
+R79
+R116
+R117
 !i113 1
 R14
 R15
 Eregister_2bit
-Z109 w1683106315
+R39
 R4
 R5
 R6
-!i122 3
+!i122 4
 R0
-Z110 8C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd
-Z111 FC:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd
+Z118 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd
+Z119 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd
 l0
 L5 1
 V;bnXW7eI>PZXmhQ1[IeNf0
 !s100 E@PN[Y^9eekfCOIdBAR`>0
 R9
 31
-Z112 !s110 1683108003
-!i10b 1
 R84
-Z113 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd|
-Z114 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd|
+!i10b 1
+R85
+Z120 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd|
+Z121 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd|
 !i113 1
 R14
 R15
@@ -860,41 +903,41 @@ R4
 R5
 R6
 DEx4 work 13 register_2bit 0 22 ;bnXW7eI>PZXmhQ1[IeNf0
-!i122 3
+!i122 4
 l13
 L11 22
 V`>m583k7JzBRnX8V6T`Og2
 !s100 FabL^:@Gah1RgFY0:I16D0
 R9
 31
-R112
-!i10b 1
 R84
-R113
-R114
+!i10b 1
+R85
+R120
+R121
 !i113 1
 R14
 R15
 Eregister_3bit
-Z115 w1682966914
+R1
 R4
 R5
 R6
-!i122 24
+!i122 25
 R0
-Z116 8C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd
-Z117 FC:/SEM4/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd
+Z122 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd
+Z123 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd
 l0
 L4 1
 VE>5Y7<glzDoKcP<C0T@;z3
 !s100 9fakXVj3En[h^ON<MK6KR3
 R9
 31
-R77
+R110
 !i10b 1
-R78
-Z118 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd|
-Z119 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd|
+R79
+Z124 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd|
+Z125 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd|
 !i113 1
 R14
 R15
@@ -903,41 +946,41 @@ R4
 R5
 R6
 DEx4 work 13 register_3bit 0 22 E>5Y7<glzDoKcP<C0T@;z3
-!i122 24
+!i122 25
 l12
-Z120 L10 22
+Z126 L10 22
 V;OFicmNoBD0XoS=2ZQeGZ3
 !s100 J<IQ8a:1d5ZoICnePe5J80
 R9
 31
-R77
+R110
 !i10b 1
-R78
-R118
-R119
+R79
+R124
+R125
 !i113 1
 R14
 R15
 Eregister_4bit
-Z121 w1683016255
+Z127 w1683027812
 R4
 R5
 R6
-!i122 19
+!i122 20
 R0
-Z122 8C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd
-Z123 FC:/SEM4/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd
+Z128 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd
+Z129 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd
 l0
 L4 1
 V>az5>fEVFZ<VoemXcXzTI1
 !s100 WSzTK>U2REDEG@aR3ZimG0
 R9
 31
-R10
+R18
 !i10b 1
-R11
-Z124 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd|
-Z125 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd|
+R19
+Z130 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd|
+Z131 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd|
 !i113 1
 R14
 R15
@@ -946,41 +989,41 @@ R4
 R5
 R6
 DEx4 work 13 register_4bit 0 22 >az5>fEVFZ<VoemXcXzTI1
-!i122 19
+!i122 20
 l12
-R120
+R126
 VnBez6XV[4=l4nGF2:S8of3
 !s100 <7fi]Af3S]=80Ui=5L7_>1
 R9
 31
-R10
+R18
 !i10b 1
-R11
-R124
-R125
+R19
+R130
+R131
 !i113 1
 R14
 R15
 Eregister_file
-Z126 w1683106614
+R39
 R4
 R5
 R6
-!i122 2
+!i122 3
 R0
-Z127 8C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_file.vhd
-Z128 FC:/SEM4/RISC_pipeline/VHDL_Implementation/Register_file.vhd
+Z132 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_file.vhd
+Z133 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_file.vhd
 l0
 L5 1
 Va]iF0`ho6^CiBk]MhB0XS0
 !s100 67AF5jUKz`L1NI4L9;10b2
 R9
 31
-Z129 !s110 1683108002
+R84
 !i10b 1
-Z130 !s108 1683108002.000000
-Z131 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_file.vhd|
-Z132 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_file.vhd|
+R105
+Z134 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_file.vhd|
+Z135 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/Register_file.vhd|
 !i113 1
 R14
 R15
@@ -989,41 +1032,41 @@ R4
 R5
 R6
 DEx4 work 13 register_file 0 22 a]iF0`ho6^CiBk]MhB0XS0
-!i122 2
+!i122 3
 l22
 L18 28
 VoZ43EHeUIg2IMH7@4]a6Y0
 !s100 =2ZY>b=0GHN7<Pgo;26[h1
 R9
 31
-R129
+R84
 !i10b 1
-R130
-R131
-R132
+R105
+R134
+R135
 !i113 1
 R14
 R15
 Erom
-Z133 w1683106634
+R39
 R4
 R5
 R6
-!i122 1
+!i122 2
 R0
-Z134 8C:/SEM4/RISC_pipeline/VHDL_Implementation/ROM.vhd
-Z135 FC:/SEM4/RISC_pipeline/VHDL_Implementation/ROM.vhd
+Z136 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ROM.vhd
+Z137 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ROM.vhd
 l0
 L5 1
 VI[I0O?l:cPLU<[U>gU[Vo0
 !s100 e><RoFC_D4=W3_K]ACUlQ0
 R9
 31
-R129
+R104
 !i10b 1
-R130
-Z136 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/ROM.vhd|
-Z137 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/ROM.vhd|
+R105
+Z138 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ROM.vhd|
+Z139 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/ROM.vhd|
 !i113 1
 R14
 R15
@@ -1032,41 +1075,41 @@ R4
 R5
 R6
 DEx4 work 3 rom 0 22 I[I0O?l:cPLU<[U>gU[Vo0
-!i122 1
+!i122 2
 l15
 L11 12
 VGX`hdiXRe03h5V]LQgHMQ0
 !s100 ULeO7A@okFgb=deMWYbZJ3
 R9
 31
-R129
+R104
 !i10b 1
-R130
-R136
-R137
+R105
+R138
+R139
 !i113 1
 R14
 R15
 Errex
-Z138 w1683105143
+R66
 R4
 R5
 R6
-!i122 0
+!i122 1
 R0
-Z139 8C:/SEM4/RISC_pipeline/VHDL_Implementation/RR_EX.vhd
-Z140 FC:/SEM4/RISC_pipeline/VHDL_Implementation/RR_EX.vhd
+Z140 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/RR_EX.vhd
+Z141 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/RR_EX.vhd
 l0
 L5 1
 V0DY<ELVe6R1m]hHoU?SFz1
 !s100 ?J>aQ0Qi14?^5nLSEVTY32
 R9
 31
-R129
+R104
 !i10b 1
-R130
-Z141 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/RR_EX.vhd|
-Z142 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/RR_EX.vhd|
+R105
+Z142 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/RR_EX.vhd|
+Z143 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/RR_EX.vhd|
 !i113 1
 R14
 R15
@@ -1075,30 +1118,30 @@ R4
 R5
 R6
 DEx4 work 4 rrex 0 22 0DY<ELVe6R1m]hHoU?SFz1
-!i122 0
+!i122 1
 l91
 L52 60
 V8Thz7bUXYFf9_=Zk<nk?h1
 !s100 V=<Wbf9Q=ifDl5o2n74Fz2
 R9
 31
-R129
+R104
 !i10b 1
-R130
-R141
+R105
 R142
+R143
 !i113 1
 R14
 R15
 Ese10
-R26
+R27
 R4
 R5
 R6
-!i122 21
+!i122 22
 R0
-Z143 8C:/SEM4/RISC_pipeline/VHDL_Implementation/SE10.vhd
-Z144 FC:/SEM4/RISC_pipeline/VHDL_Implementation/SE10.vhd
+Z144 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/SE10.vhd
+Z145 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/SE10.vhd
 l0
 L4 1
 V?BobD5;=:<iQAKi:k5k[53
@@ -1108,8 +1151,8 @@ R9
 R10
 !i10b 1
 R11
-Z145 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/SE10.vhd|
-Z146 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/SE10.vhd|
+Z146 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/SE10.vhd|
+Z147 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/SE10.vhd|
 !i113 1
 R14
 R15
@@ -1118,7 +1161,7 @@ R4
 R5
 R6
 DEx4 work 4 se10 0 22 ?BobD5;=:<iQAKi:k5k[53
-!i122 21
+!i122 22
 l10
 L9 8
 VW_LR3Lz8<2hMWLU_ZQEbY3
@@ -1128,31 +1171,31 @@ R9
 R10
 !i10b 1
 R11
-R145
 R146
+R147
 !i113 1
 R14
 R15
 Ese7
-R26
+R27
 R4
 R5
 R6
-!i122 22
+!i122 23
 R0
-Z147 8C:/SEM4/RISC_pipeline/VHDL_Implementation/SE7.vhd
-Z148 FC:/SEM4/RISC_pipeline/VHDL_Implementation/SE7.vhd
+Z148 8C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/SE7.vhd
+Z149 FC:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/SE7.vhd
 l0
 L5 1
 V]6`e`;5Q[F_Eda9a=Pbl[3
 !s100 ;VBd0TKHQe2mB0o@MEl[W1
 R9
 31
-R10
+R110
 !i10b 1
-R11
-Z149 !s90 -reportprogress|300|-93|-work|work|C:/SEM4/RISC_pipeline/VHDL_Implementation/SE7.vhd|
-Z150 !s107 C:/SEM4/RISC_pipeline/VHDL_Implementation/SE7.vhd|
+R79
+Z150 !s90 -reportprogress|300|-93|-work|work|C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/SE7.vhd|
+Z151 !s107 C:/Users/jaine/OneDrive/Desktop/iitb/4th_SEM/ee309/project/RISC_pipeline/VHDL_Implementation/SE7.vhd|
 !i113 1
 R14
 R15
@@ -1161,18 +1204,18 @@ R4
 R5
 R6
 DEx4 work 3 se7 0 22 ]6`e`;5Q[F_Eda9a=Pbl[3
-!i122 22
+!i122 23
 l11
 L10 8
 V[92@=hEE3N4Gi1jiT3Dzo1
 !s100 o6H92A2AXXAWJ=7PTbE_z3
 R9
 31
-R10
+R110
 !i10b 1
-R11
-R149
+R79
 R150
+R151
 !i113 1
 R14
 R15

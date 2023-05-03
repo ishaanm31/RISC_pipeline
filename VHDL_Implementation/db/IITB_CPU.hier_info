@@ -3030,6 +3030,36 @@ d => q_reg.DATAIN
 q <= q_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|Datapath|Mux1_4x1:MUX_C
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+Sel[0] => Mux0.IN5
+Sel[1] => Mux0.IN4
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Datapath|Mux1_4x1:MUX_Z
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+Sel[0] => Mux0.IN5
+Sel[1] => Mux0.IN4
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Datapath|Mux1_4x1:MUX_rfwr
+A => Mux0.IN0
+B => Mux0.IN1
+C => Mux0.IN2
+D => Mux0.IN3
+Sel[0] => Mux0.IN5
+Sel[1] => Mux0.IN4
+F <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |Datapath|EXMEM:EX_MEM_pipeline
 clk => Register_4bit:OP.clock
 clk => Register_3bit:RS1.clock

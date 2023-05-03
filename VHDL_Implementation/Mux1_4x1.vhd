@@ -8,7 +8,7 @@ entity Mux1_4x1 is
 end Mux1_4x1;
 architecture Dataflow of Mux1_4x1 is
 begin
-Mux1 :process(A0,A1,A2,A3,A4,A5,A6,A7,sel)
+Mux1 :process(A,B,C,D,Sel)
 begin
 
    case Sel is
