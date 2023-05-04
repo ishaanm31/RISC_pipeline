@@ -2,13 +2,13 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity test is
+entity complementor is
 	port( Cpl: in std_logic; 
 			Inp: in std_logic_vector(15 downto 0);
 			Outp: out std_logic_vector(15 downto 0));
-end test;
+end complementor;
 
-architecture behave of test is
+architecture behave of complementor is
 -------COMPLEMENT-----------------------------------------------------	
 	function bit_cpl(a: in std_logic_vector(15 downto 0))
 		return std_logic_vector is

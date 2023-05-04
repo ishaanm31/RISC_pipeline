@@ -9,9 +9,9 @@ entity instr_decode is
         Instruction : in std_logic_vector(15 downto 0);
 		PC_in: in std_logic_vector(15 downto 0);
         RS1,RS2,RD : out std_logic_vector(2 downto 0);
-		ALU_sel,D3_MUX,CZ,ALU3_MUX : out std_logic_vector(1 downto 0);
+		ALU_sel,D3_MUX,CZ: out std_logic_vector(1 downto 0);
         Imm : out std_logic_vector(15 downto 0);
-        RF_wr, C_modified, Z_modified, Mem_wr,Carry_sel,CPL,WB_MUX : out std_logic;
+        RF_wr, C_modified, Z_modified, Mem_wr,Carry_sel,CPL,WB_MUX,ALUA_MUX,ALUB_MUX : out std_logic;
         OP : out std_logic_vector(3 downto 0);
         PC_ID : out std_logic_vector(15 downto 0);
         LM_SM_hazard : out std_logic;
@@ -79,9 +79,9 @@ end component adder;
 		variable var_RS1 : std_logic_vector(2 downto 0);
 		variable var_RS2 : std_logic_vector(2 downto 0);
 		variable var_RD : std_logic_vector(2 downto 0);
-		variable var_ALU_sel,var_CZ,var_ALU3_MUX, var_D3_MUX : std_logic_vector(1 downto 0);
+		variable var_ALU_sel,var_CZ, var_D3_MUX : std_logic_vector(1 downto 0);
         variable var_Imm : std_logic_vector(15 downto 0);
-    	variable var_RF_wr, var_C_modified, var_Z_modified, var_Mem_wr,var_Carry_sel,var_CPL,var_WB_MUX: std_logic;
+    	variable var_RF_wr, var_C_modified, var_Z_modified, var_Mem_wr,var_Carry_sel,var_CPL,var_WB_MUX,var_ALUA_MUX,var_ALUB_MUX: std_logic;
         variable var_OP : std_logic_vector(3 downto 0);
         variable var_LM_SM_hazard : std_logic;
 		  begin
@@ -101,11 +101,13 @@ end component adder;
 			var_ALU_sel := "00";
 			var_Imm := "0000000000000000";
 			var_LM_SM_hazard := '0';
-			var_ALU3_MUX := "00";
+			var_ALUA_MUX := '0';
+			var_ALUB_MUX := '0';
 			counter_in<="0000";
 -----------------ADI--------------------------------
 			if(Instruction(15 downto 12) = "0000") then   
 				var_RF_wr := '1';
+				var_ALUB_MUX := '1';
 				var_C_modified := '1';
 				var_Z_modified := '1';
 				var_RS2 := Instruction(8 downto 6);
@@ -137,24 +139,25 @@ end component adder;
 				var_RD := Instruction(11 downto 9);
 				if ((Instruction(15 downto 12) = "0011")) then
 					var_Imm := Imm9_out;
-					var_WB_MUX := '1';
+					var_D3_MUX := "01";
 				else 
 					var_Imm := Imm6_out;
+					var_WB_MUX := '1';
+					var_ALUB_MUX := '1';
 				end if;
 
 ----------------SW--------------------------
 			elsif(Instruction(15 downto 12) = "0101") then
 				var_Imm := Imm6_out;
-				var_RF_wr := '1';
 				var_Mem_wr := '1';
-				var_ALU3_MUX := "01";
-				var_RD:=Instruction(11 downto 9);
-				var_RS1:=Instruction(8 downto 6);
+				var_ALUA_MUX := '1';
+				var_ALUB_MUX := '1';
+				var_RS1:=Instruction(11 downto 9);
 
-
+----------LM------------
 			elsif(Instruction(15 downto 12) = "0110") then
-				 var_rf_wr := '0';
-				
+				 var_ALUB_MUX := '1';
+				 var_WB_MUX := '1';
 				
 				 if  (counter_out= "0000") then
 					  counter_in <= "0001";
@@ -274,15 +277,16 @@ end component adder;
 						
 
 			elsif (Instruction(15 downto 12) = "0111") then
-				 var_Mem_wr := '0';
+				 var_ALUB_MUX := '1';
+				 var_ALUA_MUX := '1';
 				
 				
 				 if (counter_out = "0000") then
 					  counter_in <= "0001";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0101";
-					  var_RS1 := Instruction(11 downto 9);
-					  var_RS2 := "111";
+					  var_RS2 := Instruction(11 downto 9);
+					  var_RS1 := "111";
 					   if(Instruction(0) = '1') then
 							var_Mem_wr := '1';
 					  end if;
@@ -291,8 +295,8 @@ end component adder;
 					  counter_in <= "0010";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0101";
-					  var_RS1 := Instruction(11 downto 9);
-					  var_RS2 := "110";
+					  var_RS2 := Instruction(11 downto 9);
+					  var_RS1 := "110";
 					  if(Instruction(1) = '1') then
 							var_Mem_wr := '1';
 					  end if;
@@ -303,8 +307,8 @@ end component adder;
 					  counter_in <= "0011";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0101";
-					  var_RS1 := Instruction(11 downto 9);
-					  var_RS2 := "101";
+					  var_RS2 := Instruction(11 downto 9);
+					  var_RS1 := "101";
 					  if(Instruction(2) = '1') then
 							var_Mem_wr := '1';
 					  end if;
@@ -314,8 +318,8 @@ end component adder;
 					  counter_in <= "0100";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0101";
-					  var_RS1 := Instruction(11 downto 9);
-					  var_RS2 := "100";
+					  var_RS2 := Instruction(11 downto 9);
+					  var_RS1 := "100";
 					  if(Instruction(3) = '1') then
 							var_Mem_wr := '1';
 					  end if;
@@ -323,8 +327,8 @@ end component adder;
 					  counter_in <= "0101";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0101";
-					  var_RS1 := Instruction(11 downto 9);
-					  var_RS2 := "011";
+					  var_RS2 := Instruction(11 downto 9);
+					  var_RS1 := "011";
 				     if(Instruction(4) = '1') then
 							var_Mem_wr := '1';
 					  end if;
@@ -332,8 +336,8 @@ end component adder;
 					  counter_in <= "0110";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0101";
-					  var_RS1 := Instruction(11 downto 9);
-					  var_RS2 := "010";
+					  var_RS2 := Instruction(11 downto 9);
+					  var_RS1 := "010";
 					  if(Instruction(5) = '1') then
 							var_Mem_wr := '1';
 					  end if;
@@ -342,8 +346,8 @@ end component adder;
 					  counter_in <= "0111";
 					  var_LM_SM_hazard := '1';
 					  var_OP := "0101";
-					  var_RS1 := Instruction(11 downto 9);
-					  var_RS2 := "001";
+					  var_RS2 := Instruction(11 downto 9);
+					  var_RS1 := "001";
 					  if(Instruction(6) = '1') then
 							var_Mem_wr := '1';
 					  end if;
@@ -352,8 +356,8 @@ end component adder;
 					  counter_in <= "0000";
 					  var_LM_SM_hazard := '0';
 					  var_OP := "0101";
-					  var_RS1 := Instruction(11 downto 9);
-					  var_RS2 := "000";
+					  var_RS2 := Instruction(11 downto 9);
+					  var_RS1 := "000";
 				     if(Instruction(7) = '1') then
 							var_Mem_wr := '1';
 					  end if;
@@ -389,21 +393,18 @@ end component adder;
 
 			elsif((Instruction(15 downto 12) = "1000") or (Instruction(15 downto 12) = "1001") or (Instruction(15 downto 12) = "1010")) then
 				var_Imm := Imm6_out + Imm6_out;
-				var_ALU3_MUX := "10";
 				var_ALU_sel := "01";
 			
 
 			elsif(Instruction(15 downto 12) = "1100") then
 				var_Imm := Imm9_out + Imm9_out;
 				var_RF_wr := '1';
-				var_ALU3_MUX := "10";
 				var_RD := Instruction(11 downto 9);
 				var_D3_MUX := "11";
 				
 
 			elsif(Instruction(15 downto 12) = "1101") then
 				var_RF_wr := '1';
-				var_ALU3_MUX := "10";
 				var_RD := Instruction(11 downto 9);
 				var_D3_MUX := "11";
 
@@ -427,7 +428,8 @@ end component adder;
 			ALU_sel <= var_ALU_sel;
 			Imm <= var_Imm;
 			LM_SM_hazard <= var_LM_SM_hazard;
-			ALU3_MUX <= var_ALU3_MUX;
+			ALUA_MUX <= var_ALUA_MUX;
+			ALUB_MUX <= var_ALUB_MUX;
 			D3_MUX <= var_D3_MUX;
 			end process;
 end architecture;

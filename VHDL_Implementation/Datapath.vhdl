@@ -67,9 +67,9 @@ end component;
             Instruction : in std_logic_vector(15 downto 0);
             PC_in: in std_logic_vector(15 downto 0);
             RS1,RS2,RD : out std_logic_vector(2 downto 0);
-            ALU_sel,D3_MUX,CZ,ALU3_MUX : out std_logic_vector(1 downto 0);
+            ALU_sel,D3_MUX,CZ : out std_logic_vector(1 downto 0);
             Imm : out std_logic_vector(15 downto 0);
-            RF_wr, C_modified, Z_modified, Mem_wr,Carry_sel,CPL,WB_MUX: out std_logic;
+            RF_wr, C_modified, Z_modified, Mem_wr,Carry_sel,CPL,WB_MUX,ALUA_MUX,ALUB_MUX: out std_logic;
             OP : out std_logic_vector(3 downto 0);
             PC_ID : out std_logic_vector(15 downto 0);
             LM_SM_hazard : out std_logic;
@@ -97,6 +97,8 @@ end component;
             CPL_in: in std_logic;
             CN_in: in std_logic;
             WB_MUX_in: in std_logic;
+				ALUA_MUX_in: in std_logic;
+				ALUB_MUX_in: in std_logic;
             CZ_in: in std_logic_vector(1 downto 0);
             OP_out: out std_logic_vector(3 downto 0);
             RS1_out: out std_logic_vector(2 downto 0);
@@ -114,6 +116,8 @@ end component;
             CPL_out: out std_logic;
             CN_out: out std_logic;
             WB_MUX_out: out std_logic;
+				ALUA_MUX_out: out std_logic;
+				ALUB_MUX_out: out std_logic;
             CZ_out: out std_logic_vector(1 downto 0));
         end component;
 
@@ -140,6 +144,8 @@ end component;
             CPL_in: in std_logic;
             CN_in: in std_logic;
             WB_MUX_in: in std_logic;
+				ALUA_MUX_in: in std_logic;
+				ALUB_MUX_in: in std_logic;
             CZ_in: in std_logic_vector(1 downto 0);
             OP_out: out std_logic_vector(3 downto 0);
             RS1_out: out std_logic_vector(2 downto 0);
@@ -159,6 +165,8 @@ end component;
             CPL_out: out std_logic;
             CN_out: out std_logic;
             WB_MUX_out: out std_logic;
+				ALUA_MUX_out: out std_logic;
+				ALUB_MUX_out: out std_logic;
             CZ_out: out std_logic_vector(1 downto 0)
             );
         end component;
@@ -287,6 +295,13 @@ end component;
             Outp: out std_logic_vector(15 downto 0)
             );
     end component;
+	 --13. complementor
+	 component complementor is
+		  port( 
+		      Cpl: in std_logic; 
+			   Inp: in std_logic_vector(15 downto 0);
+			   Outp: out std_logic_vector(15 downto 0));
+	 end component; 
 
     component Haz_PC_controller is
         port (
@@ -361,8 +376,9 @@ end component;
     signal D3_MUX_ID: std_logic_vector(1 downto 0);
     signal CPL_ID: std_logic;
     signal WB_MUX_ID: std_logic;
+	 signal ALUA_MUX_ID: std_logic;
+	 signal ALUB_MUX_ID: std_logic;
     signal CZ_ID: std_logic_vector(1 downto 0);
-    signal ALU3_MUX_ID: std_logic_vector(1 downto 0);
     -----Signals for RR
     signal muxA,muxB : std_logic_vector(2 downto 0);
     signal OP_RR: std_logic_vector(3 downto 0);
@@ -380,8 +396,9 @@ end component;
     signal CPL_RR:  std_logic;
     signal CNpass2,CN_RREX:  std_logic;
     signal WB_MUX_RR:  std_logic;
-    signal CZ_RR: std_logic_vector(1 downto 0);
-    signal ALU3_MUX_RR:  std_logic_vector(1 downto 0);  
+	 signal ALUA_MUX_RR: std_logic;
+	 signal ALUB_MUX_RR: std_logic;
+    signal CZ_RR: std_logic_vector(1 downto 0); 
     --Signals for EX
     signal OP_EX: std_logic_vector(3 downto 0);
     signal RS1_EX,RS2_EX:std_logic_vector(2 downto 0);
@@ -392,14 +409,15 @@ end component;
     signal C_modified,C_modified_EX: std_logic;
     signal Z_modified,Z_modified_EX: std_logic;
     signal Mem_wr_EX: std_logic;
-    signal Imm_EX,rf_d1_EX,rf_d2_EX: std_logic_vector(15 downto 0);
+    signal Imm_EX,rf_d1_EX,rf_d2_EX,rf_d2_CPL,ALUA,ALUB: std_logic_vector(15 downto 0);
     signal PC_EX: std_logic_vector(15 downto 0);
     signal D3_MUX_EX:  std_logic_vector(1 downto 0);
     signal CPL_EX:  std_logic;
     signal CN_EX:  std_logic;
     signal WB_MUX_EX:  std_logic;
+	 signal ALUA_MUX_EX: std_logic;
+	 signal ALUB_MUX_EX: std_logic;
     signal CZ_EX: std_logic_vector(1 downto 0);
-    signal ALU3_MUX_EX:  std_logic_vector(1 downto 0);
     signal Alu1C_EX,Alu3C_EX : std_logic_vector(15 downto 0);
     signal carry1,zero1,carry2,zero2 : std_logic:= '0';  
 
@@ -490,10 +508,11 @@ begin
         RS2=>RS2_ID,
         RD =>RD_ID ,
         ALU_sel=>ALU_sel_ID ,
-        D3_MUX=> D3_MUX_ID,CZ=> CZ_ID,ALU3_MUX=>ALU3_MUX_ID ,
+        D3_MUX=> D3_MUX_ID,CZ=> CZ_ID,
         Imm => Imm_ID,
         RF_wr=>RF_wr_ID, C_modified=>C_modified_ID, Z_modified=>Z_modified_ID ,
         Mem_wr=>Mem_wr_ID,Carry_sel=>Carry_sel_ID,CPL=>CPL_ID,WB_MUX=>WB_MUX_ID,
+		  ALUA_MUX=>ALUA_MUX_ID,ALUB_MUX=>ALUB_MUX_ID,
         OP=>OP_ID,
         PC_ID=> PC_ID,
         LM_SM_hazard=>LMSM_Haz,
@@ -522,6 +541,7 @@ ID_RR_pipeline : IDRR port map
     CPL_in=>CPL_ID,
     CN_in=>Can_ID,
     WB_MUX_in=>WB_MUX_ID,
+	 ALUA_MUX_in=>ALUA_MUX_ID,ALUB_MUX_in=>ALUB_MUX_ID,
     CZ_in=>CZ_ID,
     OP_out => OP_RR,
     RS1_out=>RS1_RR,
@@ -530,7 +550,6 @@ ID_RR_pipeline : IDRR port map
     RF_wr_out=>RF_wr_RR,
     ALU_sel_out=>ALU_sel_RR,
     Carry_sel_out=>Carry_sel_RR,
-    --ALU3_MUX_out=>ALU3_MUX_RR,
     C_modified_out=>C_modified_RR,
     Z_modified_out=> Z_modified_RR,
     Mem_wr_out=>Mem_wr_RR,
@@ -540,8 +559,8 @@ ID_RR_pipeline : IDRR port map
     CPL_out=>CPL_RR,
     CN_out=>CNpass2,
     WB_MUX_out=>WB_MUX_RR,
+	 ALUA_MUX_out=>ALUA_MUX_RR,ALUB_MUX_out=>ALUB_MUX_RR,
     CZ_out=>CZ_RR
-   -- ALU3_MUX_out=>ALU3_MUX_RR  
 );  
 ---------------RR-------------
 RF : Register_file port map(A1=>RS1_RR, A2=>RS2_RR, A3=>RD_WB,
@@ -580,6 +599,7 @@ RR_EX_pipeline : RREX port map(
     CPL_in=>CPL_RR,
     CN_in=>Can_rr,
     WB_MUX_in=>WB_MUX_RR,
+	 ALUA_MUX_in=>ALUA_MUX_RR,ALUB_MUX_in=>ALUB_MUX_RR,
     CZ_in=>CZ_RR,
     OP_out => OP_EX,
     RS1_out=>RS1_EX,
@@ -590,7 +610,6 @@ RR_EX_pipeline : RREX port map(
     RF_wr_out=>RF_wr_EX1,
     ALU_sel_out=>ALU_sel_EX,
     Carry_sel_out=>Carry_sel_EX,
-    --ALU3_MUX_out=>ALU3_MUX_EX,
     C_modified_out=>C_modified_EX,
     Z_modified_out=> Z_modified_EX,
     Mem_wr_out=>Mem_wr_EX,
@@ -600,17 +619,20 @@ RR_EX_pipeline : RREX port map(
     CPL_out=>CPL_EX,
     CN_out=>CN_EX,
     WB_MUX_out=>WB_MUX_EX,
+	 ALUA_MUX_out=>ALUA_MUX_EX,ALUB_MUX_out=>ALUB_MUX_EX,
     CZ_out=>CZ_EX
-    --ALU3_MUX_out=>ALU3_MUX_EX 
 );
 ---------------Execution---------------------
-ALU1_EX :ALU port map(ALU_sel_EX,rf_d1_EX,rf_d2_EX,Carry_sel_EX,carry2,Alu1C_EX,carry1,zero1);
-ALU3_EX : adder port map(rf_d1_EX,Imm_EX,ALU3C_EX);
+COMPL : complementor port map(CPL_EX,rf_d2_EX,rf_d2_CPL);
+MUX_ALUA : Mux16_2x1 port map(rf_d1_EX,rf_d2_EX,ALUA_MUX_EX,ALUA);
+MUX_ALUB : Mux16_2x1 port map(rf_d2_EX,Imm_EX,ALUB_MUX_EX,ALUB);
+ALU1_EX :ALU port map(ALU_sel_EX,ALUA,ALUB,Carry_sel_EX,carry2,Alu1C_EX,carry1,zero1);
+ALU3_EX : adder port map(PC_EX,Imm_EX,ALU3C_EX);
 D_ff1 : dff_en port map(clock,reset,CFwr,carry1,carry2);
 D_ff2 : dff_en port map(clock,reset,ZFwr,zero1,zero2);
 MUX_C : Mux1_4x1 port map(C_modified_EX,zero2,carry2,'0',CZ_EX,C_modified);
 MUX_Z : Mux1_4x1 port map(Z_modified_EX,zero2,carry2,'0',CZ_EX,Z_modified);
-MUX_rfwr : Mux1_4x1 port map(RF_wr_EX1,zero2,carry2,'0',CZ_EX,RF_wr_EX);
+MUX_rfwr : Mux1_4x1 port map(RF_wr_EX1,zero2,carry2,'1',CZ_EX,RF_wr_EX);
 CFwr<=(C_modified and (not(CN_EX)));
 ZFwr<=(Z_modified and (not(CN_EX)));
 
@@ -648,7 +670,6 @@ EX_MEM_pipeline : EXMEM port map(
     RF_wr_out=>RF_wr_MEM,
     ALU_sel_out=>ALU_sel_MEM,
     Carry_sel_out=>Carry_sel_MEM,
-    --ALU3_MUX_out=>ALU3_MUX_MEM,
     C_modified_out=>C_modified_MEM,
     Z_modified_out=> Z_modified_MEM,
     Mem_wr_out=>Mem_wr_MEM,
@@ -661,7 +682,6 @@ EX_MEM_pipeline : EXMEM port map(
     CZ_out=>CZ_MEM,
     ALU1_C_out => Alu1C_MEM,
     Alu3_C_out => Alu3C_MEM
-    --ALU3_MUX_out=>ALU3_MUX_MEM 
 );
 --------------MEM--------------------------
 RAM_MEM : Memory port map(Alu1C_MEM,rf_d1_MEM,clock,RAM_wr,Data_out);

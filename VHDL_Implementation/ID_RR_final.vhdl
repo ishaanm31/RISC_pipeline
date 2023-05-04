@@ -22,8 +22,9 @@ port (
     CPL_in: in std_logic;
     CN_in: in std_logic;
     WB_MUX_in: in std_logic;
+	 ALUA_MUX_in: in std_logic;
+	 ALUB_MUX_in: in std_logic;
     CZ_in: in std_logic_vector(1 downto 0);
-    --ALU3_MUX_in: in std_logic_vector(1 downto 0);
     OP_out: out std_logic_vector(3 downto 0);
     RS1_out: out std_logic_vector(2 downto 0);
     RS2_out: out std_logic_vector(2 downto 0);
@@ -40,8 +41,9 @@ port (
     CPL_out: out std_logic;
     CN_out: out std_logic;
     WB_MUX_out: out std_logic;
+	 ALUA_MUX_out: out std_logic;
+	 ALUB_MUX_out: out std_logic;
     CZ_out: out std_logic_vector(1 downto 0)
-    --ALU3_MUX_out: out std_logic_vector(1 downto 0);
 );
 end entity;
 
@@ -101,5 +103,7 @@ begin
     CPL: Register_1bit port map(CPL_in,clk,WR_EN,CPL_out);
     CN: Register_1bit port map(CN_in,clk,WR_EN,CN_out);
     WB_MUX: Register_1bit port map(WB_MUX_in,clk,WR_EN,WB_MUX_out);
+	 ALUA_MUX: Register_1bit port map(ALUA_MUX_in,clk,WR_EN,ALUA_MUX_out);
+	 ALUB_MUX: Register_1bit port map(ALUB_MUX_in,clk,WR_EN,ALUB_MUX_out);
     CZ2: Register_2bit port map(CZ_in,clk,WR_EN,CZ_out);
 end architecture;
