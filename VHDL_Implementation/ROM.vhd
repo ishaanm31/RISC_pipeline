@@ -11,7 +11,7 @@ end entity ROM;
 
 architecture struct of ROM is
     type mem_word   is array (0 to 65535) of std_logic_vector(7 downto 0);
-	 signal Data : mem_word:=("01110010","01001001",others=>(others=>'1'));
+	 signal Data : mem_word:=("10000010","10000010","00000010","11000110","01010110","01000000","11110010","00000010","00000010","11000110",others=>(others=>'1'));
 
 begin
 ------------------------------------- Read Instruction---------------------------

@@ -23,12 +23,9 @@ begin
         begin
             H_BEX<= '0';
 			HType<="00";
-            ---------JRI
-            if((Instruc_OPCode_EX = "1111")) then
-                H_BEX<= '1';
-                HType<= "11";
+        
             ---BEQ
-            elsif(((Instruc_OPCode_EX  = "1000") and (ZFlag = '1')))    then
+            if(((Instruc_OPCode_EX  = "1000") and (ZFlag = '1')))    then
                 H_BEX<= '1';
                 HType<= "00";
             -----BLE

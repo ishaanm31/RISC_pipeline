@@ -14,7 +14,9 @@ begin
     process(Instruc_OPCode_RR)
 
         begin
-            if((Instruc_OPCode_RR="1101")) then
+				if((Instruc_OPCode_RR = "1111")) then
+                H_JLR<= '1';
+            elsif((Instruc_OPCode_RR="1101")) then
                 H_JLR<='1';
             else    
                 H_JLR<='0';

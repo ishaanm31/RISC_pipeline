@@ -1,5 +1,5 @@
 Analysis & Elaboration report for IITB_CPU
-Thu May 04 18:37:05 2023
+Fri May 05 01:38:15 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -16,10 +16,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   8. Port Connectivity Checks: "Mux1_4x1:MUX_rfwr"
   9. Port Connectivity Checks: "Mux1_4x1:MUX_Z"
  10. Port Connectivity Checks: "Mux1_4x1:MUX_C"
- 11. Port Connectivity Checks: "complementor:COMPL"
- 12. Port Connectivity Checks: "instr_decode:Jainesh_instruc|Register_4bit:counter"
- 13. Port Connectivity Checks: "adder:IF_add"
- 14. Analysis & Elaboration Messages
+ 11. Port Connectivity Checks: "Mux16_2x1:MUX_ALUB"
+ 12. Port Connectivity Checks: "complementor:COMPL"
+ 13. Port Connectivity Checks: "adder:Adder_RR"
+ 14. Port Connectivity Checks: "instr_decode:Jainesh_instruc|Register_4bit:counter"
+ 15. Port Connectivity Checks: "adder:IF_add"
+ 16. Analysis & Elaboration Messages
 
 
 
@@ -46,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Thu May 04 18:37:05 2023       ;
+; Analysis & Elaboration Status      ; Successful - Fri May 05 01:38:15 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_CPU                                    ;
 ; Top-level Entity Name              ; Datapath                                    ;
@@ -229,6 +231,15 @@ https://fpgasoftware.intel.com/eula.
 +------+-------+----------+------------------+
 
 
++------------------------------------------------+
+; Port Connectivity Checks: "Mux16_2x1:MUX_ALUB" ;
++-------+-------+----------+---------------------+
+; Port  ; Type  ; Severity ; Details             ;
++-------+-------+----------+---------------------+
+; a1[0] ; Input ; Info     ; Stuck at GND        ;
++-------+-------+----------+---------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "complementor:COMPL"                                                                 ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -236,6 +247,15 @@ https://fpgasoftware.intel.com/eula.
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; outp ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "adder:Adder_RR" ;
++---------+-------+----------+---------------+
+; Port    ; Type  ; Severity ; Details       ;
++---------+-------+----------+---------------+
+; inp1[0] ; Input ; Info     ; Stuck at GND  ;
++---------+-------+----------+---------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -265,7 +285,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu May 04 18:36:29 2023
+    Info: Processing started: Fri May 05 01:37:12 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -398,13 +418,13 @@ Info (12128): Elaborating entity "Register_1bit" for hierarchy "IF_ID:IF_ID_Pipe
 Info (12128): Elaborating entity "instr_decode" for hierarchy "instr_decode:Jainesh_instruc" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 503
 Info (12128): Elaborating entity "SE10" for hierarchy "instr_decode:Jainesh_instruc|SE10:Sign_6" File: D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 73
 Info (12128): Elaborating entity "SE7" for hierarchy "instr_decode:Jainesh_instruc|SE7:Sign_9" File: D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 74
-Info (12128): Elaborating entity "Register_4bit" for hierarchy "instr_decode:Jainesh_instruc|Register_4bit:counter" File: D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 76
-Info (12128): Elaborating entity "IDRR" for hierarchy "IDRR:ID_RR_pipeline" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 524
+Info (12128): Elaborating entity "Register_4bit" for hierarchy "instr_decode:Jainesh_instruc|Register_4bit:counter" File: D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 77
+Info (12128): Elaborating entity "IDRR" for hierarchy "IDRR:ID_RR_pipeline" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 523
 Info (12128): Elaborating entity "Register_3bit" for hierarchy "IDRR:ID_RR_pipeline|Register_3bit:RS1" File: D:/github/RISC_pipeline/VHDL_Implementation/ID_RR_final.vhdl Line: 91
 Info (12128): Elaborating entity "Register_2bit" for hierarchy "IDRR:ID_RR_pipeline|Register_2bit:ALU_sel" File: D:/github/RISC_pipeline/VHDL_Implementation/ID_RR_final.vhdl Line: 95
-Info (12128): Elaborating entity "Register_file" for hierarchy "Register_file:RF" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 566
-Info (12128): Elaborating entity "Mux16_4x1" for hierarchy "Mux16_4x1:MuxA1" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 575
-Info (12128): Elaborating entity "RREX" for hierarchy "RREX:RR_EX_pipeline" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 581
+Info (12128): Elaborating entity "Register_file" for hierarchy "Register_file:RF" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 565
+Info (12128): Elaborating entity "Mux16_4x1" for hierarchy "Mux16_4x1:MuxA1" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 574
+Info (12128): Elaborating entity "RREX" for hierarchy "RREX:RR_EX_pipeline" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 580
 Info (12128): Elaborating entity "complementor" for hierarchy "complementor:COMPL" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 626
 Info (12128): Elaborating entity "Mux16_2x1" for hierarchy "Mux16_2x1:MUX_ALUA" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 627
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1_EX" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 629
@@ -419,9 +439,9 @@ Info (12128): Elaborating entity "Haz_JAL" for hierarchy "Haz_JAL:Jal" File: D:/
 Info (12128): Elaborating entity "Haz_BEX" for hierarchy "Haz_BEX:BEX" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 739
 Info (12128): Elaborating entity "Haz_PC_controller" for hierarchy "Haz_PC_controller:Branch_Pred" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 750
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 6124 megabytes
-    Info: Processing ended: Thu May 04 18:37:05 2023
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Peak virtual memory: 6123 megabytes
+    Info: Processing ended: Fri May 05 01:38:15 2023
+    Info: Elapsed time: 00:01:03
+    Info: Total CPU time (on all processors): 00:00:38
 
 

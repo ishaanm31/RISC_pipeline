@@ -13,7 +13,7 @@
 # 
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:16 on May 04,2023
+# Start time: 01:38:56 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -21,11 +21,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Mux1_4x1
 # -- Compiling architecture Dataflow of Mux1_4x1
-# End time: 18:37:16 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:56 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/RR_EX.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:16 on May 04,2023
+# Start time: 01:38:56 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/RR_EX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -33,11 +33,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RREX
 # -- Compiling architecture RREX_arch of RREX
-# End time: 18:37:16 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:56 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/ROM.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:16 on May 04,2023
+# Start time: 01:38:56 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/ROM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -47,11 +47,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity ROM
 # -- Compiling architecture struct of ROM
-# End time: 18:37:16 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:56 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_file.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:16 on May 04,2023
+# Start time: 01:38:56 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_file.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -59,11 +59,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_file
 # -- Compiling architecture struct of Register_File
-# End time: 18:37:16 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:56 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:16 on May 04,2023
+# Start time: 01:38:56 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -71,11 +71,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_2bit
 # -- Compiling architecture struct of Register_2bit
-# End time: 18:37:16 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:56 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/RAM.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:16 on May 04,2023
+# Start time: 01:38:56 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/RAM.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -83,11 +83,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Memory
 # -- Compiling architecture struct of Memory
-# End time: 18:37:16 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:56 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:16 on May 04,2023
+# Start time: 01:38:56 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -95,11 +95,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Mux16_4x1
 # -- Compiling architecture Dataflow of Mux16_4x1
-# End time: 18:37:16 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:57 on May 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:16 on May 04,2023
+# Start time: 01:38:57 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -107,11 +107,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Mux16_2x1
 # -- Compiling architecture Dataflow of Mux16_2x1
-# End time: 18:37:17 on May 04,2023, Elapsed time: 0:00:01
+# End time: 01:38:57 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/MEMWB_jainesh.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:17 on May 04,2023
+# Start time: 01:38:57 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/MEMWB_jainesh.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -119,11 +119,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity MEMWB
 # -- Compiling architecture MEMWB_arch of MEMWB
-# End time: 18:37:17 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:57 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/IF_ID.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:17 on May 04,2023
+# Start time: 01:38:57 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/IF_ID.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -131,11 +131,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity IF_ID
 # -- Compiling architecture struct of IF_ID
-# End time: 18:37:17 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:57 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/ID_RR_final.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:17 on May 04,2023
+# Start time: 01:38:57 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/ID_RR_final.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -143,11 +143,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity IDRR
 # -- Compiling architecture IDRR_arch of IDRR
-# End time: 18:37:17 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:57 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:17 on May 04,2023
+# Start time: 01:38:57 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -155,11 +155,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Haz_PC_controller
 # -- Compiling architecture struct of Haz_PC_controller
-# End time: 18:37:17 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:57 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:17 on May 04,2023
+# Start time: 01:38:57 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -167,11 +167,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Haz_JLR
 # -- Compiling architecture struct of Haz_JLR
-# End time: 18:37:17 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:57 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:17 on May 04,2023
+# Start time: 01:38:57 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -179,11 +179,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Haz_JAL
 # -- Compiling architecture struct of Haz_JAL
-# End time: 18:37:17 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:58 on May 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:17 on May 04,2023
+# Start time: 01:38:58 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -191,11 +191,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Haz_BEX
 # -- Compiling architecture struct of Haz_BEX
-# End time: 18:37:17 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:58 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:17 on May 04,2023
+# Start time: 01:38:58 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -203,11 +203,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Forwarding_Unit
 # -- Compiling architecture struct of Forwarding_Unit
-# End time: 18:37:17 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:58 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/EXMEM_jainesh.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:17 on May 04,2023
+# Start time: 01:38:58 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/EXMEM_jainesh.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -215,22 +215,22 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity EXMEM
 # -- Compiling architecture EXMEM_arch of EXMEM
-# End time: 18:37:17 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:58 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/dff_en.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:17 on May 04,2023
+# Start time: 01:38:58 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/dff_en.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity dff_en
 # -- Compiling architecture behave of dff_en
-# End time: 18:37:17 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:58 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:18 on May 04,2023
+# Start time: 01:38:58 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -240,11 +240,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity Datapath
 # -- Compiling architecture Struct of Datapath
-# End time: 18:37:18 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:59 on May 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/complementor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:18 on May 04,2023
+# Start time: 01:38:59 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/complementor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -252,11 +252,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity complementor
 # -- Compiling architecture behave of complementor
-# End time: 18:37:18 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:59 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:18 on May 04,2023
+# Start time: 01:38:59 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -264,11 +264,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ALU
 # -- Compiling architecture behave of ALU
-# End time: 18:37:18 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:59 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:18 on May 04,2023
+# Start time: 01:38:59 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -276,11 +276,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_4bit
 # -- Compiling architecture struct of Register_4bit
-# End time: 18:37:18 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:59 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/ID_adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:18 on May 04,2023
+# Start time: 01:38:59 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/ID_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -290,11 +290,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity adder
 # -- Compiling architecture behave of adder
-# End time: 18:37:18 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:38:59 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:18 on May 04,2023
+# Start time: 01:38:59 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -302,11 +302,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity SE10
 # -- Compiling architecture struct of SE10
-# End time: 18:37:18 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:39:00 on May 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:18 on May 04,2023
+# Start time: 01:39:00 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -314,11 +314,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity SE7
 # -- Compiling architecture struct of SE7
-# End time: 18:37:18 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:39:00 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:18 on May 04,2023
+# Start time: 01:39:00 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -326,11 +326,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_16bit
 # -- Compiling architecture struct of Register_16bit
-# End time: 18:37:18 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:39:00 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:18 on May 04,2023
+# Start time: 01:39:00 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -338,11 +338,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_3bit
 # -- Compiling architecture struct of Register_3bit
-# End time: 18:37:19 on May 04,2023, Elapsed time: 0:00:01
+# End time: 01:39:00 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:19 on May 04,2023
+# Start time: 01:39:00 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -350,11 +350,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_1bit
 # -- Compiling architecture struct of Register_1bit
-# End time: 18:37:19 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:39:01 on May 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:19 on May 04,2023
+# Start time: 01:39:01 on May 05,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -364,12 +364,12 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity instr_decode
 # -- Compiling architecture instr_decode_arch of instr_decode
-# End time: 18:37:19 on May 04,2023, Elapsed time: 0:00:00
+# End time: 01:39:01 on May 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.datapath
 # vsim work.datapath 
-# Start time: 18:37:35 on May 04,2023
+# Start time: 01:39:48 on May 05,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -417,9 +417,9 @@ sim:/datapath/RAM_MEM/Mem_Add \
 sim:/datapath/RAM_MEM/Data
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Harsh Raj  Hostname: LAPTOP-DQHRK4AS  ProcessID: 41980
-#           Attempting to use alternate WLF file "./wlftr67e2n".
+#           Attempting to use alternate WLF file "./wlftr4raxg".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftr67e2n
+#           Using alternate file: ./wlftr4raxg
 # (vsim-4077) Logging very large object: /datapath/RAM_MEM/Data
 # (vsim-4077) Logging very large object: /datapath/RAM_MEM/Data
 add wave -position insertpoint  \
@@ -432,59 +432,16 @@ add wave -position insertpoint sim:/datapath/MEM_WB_pipeline/*
 add wave -position insertpoint  \
 sim:/datapath/ALU1_EX/Z_F \
 sim:/datapath/ALU1_EX/C_F
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/RAM_MEM
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/RAM_MEM
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/ALU3_EX
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/ALU3_EX
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Adder_RR
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Adder_RR
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/RF
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/RF
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc/ad
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /datapath/Jainesh_instruc/ad
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+add wave -position insertpoint  \
+sim:/datapath/Branch_Pred/PC_RR \
+sim:/datapath/Branch_Pred/PC_New \
+sim:/datapath/Branch_Pred/PC_IF \
+sim:/datapath/Branch_Pred/PC_ID \
+sim:/datapath/Branch_Pred/PC_EX
 force -freeze sim:/datapath/clock 1 0, 0 {50 ps} -r 100
 run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/RAM_MEM
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -494,9 +451,17 @@ run
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/ALU3_EX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/Adder_RR
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/Adder_RR
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/RF
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -529,26 +494,121 @@ run
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc/ad2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc/ad
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /datapath/Adder_RR
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /datapath/Jainesh_instruc/ad2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /datapath/Jainesh_instruc/ad2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 1  Instance: /datapath/Jainesh_instruc/ad
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /datapath/Jainesh_instruc/ad2
 run
 run
 run
 run
-run
-run
-run
-run
-run
-run
-run
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-force -freeze sim:/datapath/RF/Data(7) 1101010101011111 0
+vsim work.datapath
+# End time: 01:41:52 on May 05,2023, Elapsed time: 0:02:04
+# Errors: 0, Warnings: 36
+# vsim work.datapath 
+# Start time: 01:41:52 on May 05,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.datapath(struct)
+# Loading work.rom(struct)
+# Loading work.adder(behave)
+# Loading work.if_id(struct)
+# Loading work.register_16bit(struct)
+# Loading work.register_1bit(struct)
+# Loading work.instr_decode(instr_decode_arch)
+# Loading work.se10(struct)
+# Loading work.se7(struct)
+# Loading work.register_4bit(struct)
+# Loading work.idrr(idrr_arch)
+# Loading work.register_3bit(struct)
+# Loading work.register_2bit(struct)
+# Loading work.register_file(struct)
+# Loading work.mux16_4x1(dataflow)
+# Loading work.rrex(rrex_arch)
+# Loading work.complementor(behave)
+# Loading work.mux16_2x1(dataflow)
+# Loading work.alu(behave)
+# Loading work.dff_en(behave)
+# Loading work.mux1_4x1(dataflow)
+# Loading work.exmem(exmem_arch)
+# Loading work.memory(struct)
+# Loading work.memwb(memwb_arch)
+# Loading work.forwarding_unit(struct)
+# Loading work.haz_jlr(struct)
+# Loading work.haz_jal(struct)
+# Loading work.haz_bex(struct)
+# Loading work.haz_pc_controller(struct)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint  \
+sim:/datapath/clock
+add wave -position insertpoint  \
+sim:/datapath/MyROM/Mem_Add \
+sim:/datapath/MyROM/Mem_Data_Out
+add wave -position insertpoint  \
+sim:/datapath/RAM_MEM/Mem_Data_Out \
+sim:/datapath/RAM_MEM/Mem_Data_In \
+sim:/datapath/RAM_MEM/Mem_Add \
+sim:/datapath/RAM_MEM/Data
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Harsh Raj  Hostname: LAPTOP-DQHRK4AS  ProcessID: 41980
+#           Attempting to use alternate WLF file "./wlfte8rwhc".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfte8rwhc
+# (vsim-4077) Logging very large object: /datapath/RAM_MEM/Data
+# (vsim-4077) Logging very large object: /datapath/RAM_MEM/Data
+add wave -position insertpoint  \
+sim:/datapath/RF/Data
+add wave -position insertpoint sim:/datapath/IF_ID_Pipepline_Reg/*
+add wave -position insertpoint sim:/datapath/ID_RR_pipeline/*
+add wave -position insertpoint sim:/datapath/RR_EX_pipeline/*
+add wave -position insertpoint sim:/datapath/EX_MEM_pipeline/*
+add wave -position insertpoint sim:/datapath/MEM_WB_pipeline/*
+add wave -position insertpoint  \
+sim:/datapath/ALU1_EX/Z_F \
+sim:/datapath/ALU1_EX/C_F
+add wave -position insertpoint  \
+sim:/datapath/Branch_Pred/PC_RR \
+sim:/datapath/Branch_Pred/PC_New \
+sim:/datapath/Branch_Pred/PC_IF \
+sim:/datapath/Branch_Pred/PC_ID \
+sim:/datapath/Branch_Pred/PC_EX
+add wave -position insertpoint  \
+sim:/datapath/Branch_Pred/RR_EX_WR \
+sim:/datapath/Branch_Pred/RR_EX_flush \
+sim:/datapath/Branch_Pred/PC_WR \
+sim:/datapath/Branch_Pred/PC_RR \
+sim:/datapath/Branch_Pred/PC_New \
+sim:/datapath/Branch_Pred/PC_IF \
+sim:/datapath/Branch_Pred/PC_ID \
+sim:/datapath/Branch_Pred/PC_EX \
+sim:/datapath/Branch_Pred/MEM_WB_WR \
+sim:/datapath/Branch_Pred/LMSM_Haz \
+sim:/datapath/Branch_Pred/IF_ID_WR \
+sim:/datapath/Branch_Pred/IF_ID_flush \
+sim:/datapath/Branch_Pred/ID_RR_WR \
+sim:/datapath/Branch_Pred/ID_RR_flush \
+sim:/datapath/Branch_Pred/H_JLR \
+sim:/datapath/Branch_Pred/H_JAL \
+sim:/datapath/Branch_Pred/H_BEX \
+sim:/datapath/Branch_Pred/EX_MEM_WR
 force -freeze sim:/datapath/clock 1 0, 0 {50 ps} -r 100
 run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/RAM_MEM
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -558,9 +618,17 @@ run
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/ALU3_EX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/Adder_RR
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/Adder_RR
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/RF
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -593,10 +661,20 @@ run
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc/ad2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc/ad
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /datapath/Adder_RR
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /datapath/Jainesh_instruc/ad2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /datapath/Jainesh_instruc/ad2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 1  Instance: /datapath/Jainesh_instruc/ad
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /datapath/Jainesh_instruc/ad2
 run
 run
 run
@@ -604,3 +682,157 @@ run
 run
 run
 run
+run
+run
+run
+run
+vsim work.datapath
+# End time: 01:46:40 on May 05,2023, Elapsed time: 0:04:48
+# Errors: 0, Warnings: 36
+# vsim work.datapath 
+# Start time: 01:46:40 on May 05,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.datapath(struct)
+# Loading work.rom(struct)
+# Loading work.adder(behave)
+# Loading work.if_id(struct)
+# Loading work.register_16bit(struct)
+# Loading work.register_1bit(struct)
+# Loading work.instr_decode(instr_decode_arch)
+# Loading work.se10(struct)
+# Loading work.se7(struct)
+# Loading work.register_4bit(struct)
+# Loading work.idrr(idrr_arch)
+# Loading work.register_3bit(struct)
+# Loading work.register_2bit(struct)
+# Loading work.register_file(struct)
+# Loading work.mux16_4x1(dataflow)
+# Loading work.rrex(rrex_arch)
+# Loading work.complementor(behave)
+# Loading work.mux16_2x1(dataflow)
+# Loading work.alu(behave)
+# Loading work.dff_en(behave)
+# Loading work.mux1_4x1(dataflow)
+# Loading work.exmem(exmem_arch)
+# Loading work.memory(struct)
+# Loading work.memwb(memwb_arch)
+# Loading work.forwarding_unit(struct)
+# Loading work.haz_jlr(struct)
+# Loading work.haz_jal(struct)
+# Loading work.haz_bex(struct)
+# Loading work.haz_pc_controller(struct)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint  \
+sim:/datapath/clock
+add wave -position insertpoint  \
+sim:/datapath/MyROM/Mem_Add \
+sim:/datapath/MyROM/Mem_Data_Out
+add wave -position insertpoint  \
+sim:/datapath/RAM_MEM/Mem_Data_Out \
+sim:/datapath/RAM_MEM/Mem_Data_In \
+sim:/datapath/RAM_MEM/Mem_Add \
+sim:/datapath/RAM_MEM/Data
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Harsh Raj  Hostname: LAPTOP-DQHRK4AS  ProcessID: 41980
+#           Attempting to use alternate WLF file "./wlftrfnaaq".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftrfnaaq
+# (vsim-4077) Logging very large object: /datapath/RAM_MEM/Data
+# (vsim-4077) Logging very large object: /datapath/RAM_MEM/Data
+add wave -position insertpoint  \
+sim:/datapath/RF/Data
+add wave -position insertpoint sim:/datapath/IF_ID_Pipepline_Reg/*
+add wave -position insertpoint sim:/datapath/ID_RR_pipeline/*
+add wave -position insertpoint sim:/datapath/RR_EX_pipeline/*
+add wave -position insertpoint sim:/datapath/EX_MEM_pipeline/*
+force -freeze sim:/datapath/clock 1 0, 0 {50 ps} -r 100
+add wave -position insertpoint sim:/datapath/MEM_WB_pipeline/*
+add wave -position insertpoint  \
+sim:/datapath/ALU1_EX/Z_F \
+sim:/datapath/ALU1_EX/C_F
+add wave -position insertpoint  \
+sim:/datapath/Branch_Pred/PC_RR \
+sim:/datapath/Branch_Pred/PC_New \
+sim:/datapath/Branch_Pred/PC_IF \
+sim:/datapath/Branch_Pred/PC_ID \
+sim:/datapath/Branch_Pred/PC_EX
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/RAM_MEM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/RAM_MEM
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/ALU3_EX
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/ALU3_EX
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Adder_RR
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Adder_RR
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/RF
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/RF
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc/ad2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /datapath/Jainesh_instruc/ad
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /datapath/Adder_RR
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /datapath/Jainesh_instruc/ad2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /datapath/Jainesh_instruc/ad2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /datapath/Jainesh_instruc/ad
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /datapath/Jainesh_instruc/ad2
+run
+run
+run
+run
+# End time: 01:50:18 on May 05,2023, Elapsed time: 0:03:38
+# Errors: 0, Warnings: 36

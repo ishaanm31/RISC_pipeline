@@ -390,7 +390,7 @@ end component;
     signal C_modified_RR: std_logic;
     signal Z_modified_RR: std_logic;
     signal Mem_wr_RR: std_logic;
-    signal Imm_RR,rf_d1_RR1,rf_d2_RR1,rf_d1_RR2,rf_d2_RR2: std_logic_vector(15 downto 0);
+    signal Imm_RR,Imm2,rf_d1_RR1,rf_d2_RR1,rf_d1_RR2,rf_d2_RR2: std_logic_vector(15 downto 0);
     signal PC_RR1,PC_RR2: std_logic_vector(15 downto 0);
     signal D3_MUX_RR:  std_logic_vector(1 downto 0);
     signal CPL_RR:  std_logic;
@@ -409,7 +409,7 @@ end component;
     signal C_modified,C_modified_EX: std_logic;
     signal Z_modified,Z_modified_EX: std_logic;
     signal Mem_wr_EX: std_logic;
-    signal Imm_EX,rf_d1_EX,rf_d2_EX,rf_d2_CPL,ALUA,ALUB: std_logic_vector(15 downto 0);
+    signal Imm_EX,Imm3,rf_d1_EX,rf_d2_EX,rf_d2_CPL,ALUA,ALUB: std_logic_vector(15 downto 0);
     signal PC_EX: std_logic_vector(15 downto 0);
     signal D3_MUX_EX:  std_logic_vector(1 downto 0);
     signal CPL_EX:  std_logic;
@@ -452,7 +452,7 @@ end component;
     signal C_modified_WB: std_logic;
     signal Z_modified_WB: std_logic;
     signal WB_wr_WB: std_logic;
-    signal Imm_WB,rf_d1_WB,rf_d2_WB: std_logic_vector(15 downto 0);
+    signal Imm_WB,rf_d1_WB,rf_d2_WB,PCp2_WB: std_logic_vector(15 downto 0);
     signal PC_WB: std_logic_vector(15 downto 0);
     signal D3_MUX_WB:  std_logic_vector(1 downto 0);
     signal CPL_WB:  std_logic;
@@ -519,7 +519,6 @@ begin
         clk=>clock
     );
 	 Can_ID<=(CNpass1 or CN_IDRR);
-
 ---------------------ID_RR_pipeline------------------
 ID_RR_pipeline : IDRR port map
 (
@@ -571,10 +570,10 @@ RF : Register_file port map(A1=>RS1_RR, A2=>RS2_RR, A3=>RD_WB,
 
                             RF_D_PC_R=> PC_New,
                             D1=>rf_d1_RR1 , D2=>rf_d2_RR1);
-
+Imm2 <= Imm_RR + Imm_RR;
 MuxA1: Mux16_4x1 port map(rf_d1_RR1,Alu1C_EX,Data_out_MEM,rf_d3,Fwd_Mux_selA,rf_d1_RR2);
 MuxB1: Mux16_4x1 port map(rf_d2_RR1,Alu1C_EX,Data_out_MEM,rf_d3,Fwd_Mux_selB,rf_d2_RR2);
-Adder_RR : adder port map(PC_RR1,rf_d1_RR1,PC_RR2);
+Adder_RR : adder port map(Imm2,rf_d1_RR1,PC_RR2);
 RegF_wr<=(RF_wr_WB and(not(CN_WB)));
 Can_rr<=(CNpass2 or CN_RREX);
 --------------RR_EX pipeline---------------
@@ -623,9 +622,10 @@ RR_EX_pipeline : RREX port map(
     CZ_out=>CZ_EX
 );
 ---------------Execution---------------------
+Imm3 <= Imm_EX + Imm_EX;
 COMPL : complementor port map(CPL_EX,rf_d2_EX,rf_d2_CPL);
 MUX_ALUA : Mux16_2x1 port map(rf_d1_EX,rf_d2_EX,ALUA_MUX_EX,ALUA);
-MUX_ALUB : Mux16_2x1 port map(rf_d2_EX,Imm_EX,ALUB_MUX_EX,ALUB);
+MUX_ALUB : Mux16_2x1 port map(rf_d2_EX,Imm3,ALUB_MUX_EX,ALUB);
 ALU1_EX :ALU port map(ALU_sel_EX,ALUA,ALUB,Carry_sel_EX,carry2,Alu1C_EX,carry1,zero1);
 ALU3_EX : adder port map(PC_EX,Imm_EX,ALU3C_EX);
 D_ff1 : dff_en port map(clock,reset,CFwr,carry1,carry2);
@@ -717,8 +717,8 @@ MEM_WB_pipeline : MEMWB port map(
 );
 
 -----------WB--------------
-RF_WR_MUX : Mux16_4x1 port map(Data_out_WB,Imm_WB,Alu3C_WB,PC_WB,D3_MUX_WB,rf_d3);
-
+RF_WR_MUX : Mux16_4x1 port map(Data_out_WB,Imm_WB,Alu3C_WB,PCp2_WB,D3_MUX_WB,rf_d3);
+PCp2_WB<=PC_WB+"0000000000000010";
 --------------------branch predictor-----------
 --------------------------Forwarding Unit-------------------------------
 MovingFWD: Forwarding_Unit port map (
@@ -738,7 +738,7 @@ Jal: Haz_JAL port map (
 
 BEX: Haz_BEX port map (
         Instruc_OPCode_EX=>OP_EX,
-        ZFlag=>zero2,CFlag=>carry2,
+        ZFlag=>zero1,CFlag=>carry1,
     
         H_BEX=>H_bex,
         HType=>Htype

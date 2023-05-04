@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 -- write the Flipflops packege declaration
 entity IF_ID is
 port (
-    Instruc_in,PC_in: in std_logic_vector(15 downto 0 );
+    Instruc_in,PC_in: in std_logic_vector(15 downto 0 ):="1011101010010101";
     CN_in: in std_logic;
 
     clk: in std_logic;

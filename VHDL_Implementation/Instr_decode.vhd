@@ -65,14 +65,15 @@ end component adder;
 	end component;
 
 
-		signal Imm6_out,Imm9_out : std_logic_vector(15 downto 0) := "0000000000000000";
+		signal Imm6_out,Imm9_out,sig_imm : std_logic_vector(15 downto 0) := "0000000000000000";
 		signal counter_in,counter_out : std_logic_vector(3 downto 0);
 		
 	begin 
 
 		Sign_6 : SE10 port map(Instruction(5 downto 0),Imm6_out);
 		Sign_9 : SE7 port map(Instruction(8 downto 0),Imm9_out);
-		ad: adder port map(PC_in,Imm9_out,PC_ID);
+		ad: adder port map(PC_in,Imm9_out,sig_imm);
+		ad2: adder port map(sig_imm,Imm9_out,PC_ID);
 		counter: Register_4bit port map(counter_in,clk,'1',counter_out);
 		
 		Decode : process(clk,Instruction,Imm6_out,Imm9_out,counter_out) 
@@ -392,12 +393,12 @@ end component adder;
 					end case;
 
 			elsif((Instruction(15 downto 12) = "1000") or (Instruction(15 downto 12) = "1001") or (Instruction(15 downto 12) = "1010")) then
-				var_Imm := Imm6_out + Imm6_out;
+				var_Imm := Imm6_out;
 				var_ALU_sel := "01";
 			
 
 			elsif(Instruction(15 downto 12) = "1100") then
-				var_Imm := Imm9_out + Imm9_out;
+				var_Imm := Imm9_out;
 				var_RF_wr := '1';
 				var_RD := Instruction(11 downto 9);
 				var_D3_MUX := "11";
@@ -406,10 +407,13 @@ end component adder;
 			elsif(Instruction(15 downto 12) = "1101") then
 				var_RF_wr := '1';
 				var_RD := Instruction(11 downto 9);
+				var_RS1 := Instruction(8 downto 6);
 				var_D3_MUX := "11";
 
 			elsif(Instruction(15 downto 12) = "1111") then
-				var_Imm := Imm9_out + Imm9_out;
+				var_Imm := Imm9_out;
+				
+			else null;
 				
 				 
 			end if;
