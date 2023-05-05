@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
--- write the Flipflops packege declaration
+-- Detects Harards due to BEX
 entity Haz_BEX is
 port (
     Instruc_OPCode_EX:in std_logic_vector(3 downto 0);
@@ -12,7 +12,6 @@ port (
     --0->BEQ
     --1->BLT
     --2->BLE
-    --3->JRI
 );
 end entity Haz_BEX;
 

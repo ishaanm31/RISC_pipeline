@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
--- write the Flipflops packege declaration
+-- This component Detects harzards that appears when R0 is the destination
 entity Haz_R0 is
 port (
     Rd_Mem:in std_logic_vector(2 downto 0);

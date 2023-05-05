@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
--- write the Flipflops packege declaration
+-- Detects Harazrds due to JAL
 entity Haz_JAL is
 port (
     Instruc_OPCode_ID:in std_logic_vector(3 downto 0);

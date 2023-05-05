@@ -1,12 +1,11 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
--- write the Flipflops packege declaration
+-- Main Controller responsible for flushing and branched PC
 entity Haz_PC_controller is
 port (
     PC_IF,PC_ID,PC_RR,PC_EX: in std_logic_vector(15 downto 0);
     H_JLR,H_JAL, H_BEX, LMSM_Haz,H_Load_Imm,H_R0: in std_logic;
-
     PC_New: out std_logic_vector(15 downto 0);
     PC_WR,IF_ID_flush,ID_RR_flush,RR_EX_flush,EX_MEM_flush, IF_ID_WR,ID_RR_WR,RR_EX_WR, EX_MEM_WR, MEM_WB_WR : out std_logic
     
