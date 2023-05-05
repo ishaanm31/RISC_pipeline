@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity Haz_PC_controller is
 port (
     PC_IF,PC_ID,PC_RR,PC_EX: in std_logic_vector(15 downto 0);
-    H_JLR,H_JAL, H_BEX, LMSM_Haz: in std_logic;
+    H_JLR,H_JAL, H_BEX, LMSM_Haz,H_Load_Imm: in std_logic;
 
     PC_New: out std_logic_vector(15 downto 0);
     PC_WR,IF_ID_flush,ID_RR_flush,RR_EX_flush, IF_ID_WR,ID_RR_WR,RR_EX_WR, EX_MEM_WR, MEM_WB_WR : out std_logic
@@ -18,7 +18,7 @@ architecture struct of Haz_PC_controller is
 begin
 
 Maalvika_KI_MAA_KI_CHUTTTT : process( PC_IF,PC_ID,PC_RR,PC_EX,
-                                     H_JLR,H_JAL, H_BEX, LMSM_Haz)
+                                     H_JLR,H_JAL, H_BEX, LMSM_Haz,H_Load_Imm)
 
         variable f_ifid,f_idrr,f_rrex,w_ifid,w_idrr,w_rrex,w_exmem, w_memwb,w_PC:std_logic;
         variable PC_naya:std_logic_vector(15 downto 0);
@@ -33,7 +33,12 @@ Maalvika_KI_MAA_KI_CHUTTTT : process( PC_IF,PC_ID,PC_RR,PC_EX,
             w_memwb:='1';
             PC_naya:=PC_IF;
             w_PC:='1';
-            if(H_BEX='1') then  
+            if(H_Load_Imm='1') then
+                w_PC:='0';
+                w_ifid:='0';
+                w_idrr:='0';
+                w_rrex:='0';
+            elsif(H_BEX='1') then  
                 PC_naya:=PC_EX;
                 f_ifid:='1';
                 f_idrr:='1';

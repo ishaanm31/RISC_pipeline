@@ -302,11 +302,11 @@ end component;
 			   Inp: in std_logic_vector(15 downto 0);
 			   Outp: out std_logic_vector(15 downto 0));
 	 end component; 
-
+-----Hazard Units
     component Haz_PC_controller is
         port (
             PC_IF,PC_ID,PC_RR,PC_EX: in std_logic_vector(15 downto 0);
-            H_JLR,H_JAL, H_BEX, LMSM_Haz: in std_logic;
+            H_JLR,H_JAL, H_BEX, LMSM_Haz,H_Load_Imm: in std_logic;
         
             PC_New: out std_logic_vector(15 downto 0);
             PC_WR,IF_ID_flush,ID_RR_flush,RR_EX_flush, IF_ID_WR,ID_RR_WR,RR_EX_WR, EX_MEM_WR, MEM_WB_WR : out std_logic
@@ -341,12 +341,20 @@ end component;
             --3->JRI
         );
     end component Haz_BEX;
+    component Haz_load is
+        port (
+            Instruc_OPCode_EX,Instruc_OPCode_Mem:in std_logic_vector(3 downto 0);
+            Ra_RR,Rb_RR,Rc_Ex: in std_logic_vector(2 downto 0);
+            Load_Imm:out std_logic
+        );
+    end component Haz_load;
     ---Forwarding Unit
     component Forwarding_Unit is
         port (
             RegC_EX,RegC_Mem,RegC_WB,RegA_RR, RegB_RR: in std_logic_vector(2 downto 0);
             RF_WR_EX, RF_WR_Mem, RF_WR_WB:in std_logic;    
-            MuxA,MuxB: out std_logic_vector(1 downto 0)
+            MuxA,MuxB: out std_logic_vector(1 downto 0);
+				Opcode_Ex: in std_logic_vector(3 downto 0)
         );
     end component Forwarding_Unit;
     
@@ -472,7 +480,8 @@ end component;
         signal Instruc_op_ID,Instruc_op_EX, Instruc_op_RR, 
         PC_New_ID, PC_New_EX: std_logic_vector(15 downto 0 );
    
-        signal JAL_Haz, JRI_Haz, JLR_Haz, BEQ_Haz, BLT_Haz, BLE_Haz:  std_logic;
+        signal JAL_Haz, JRI_Haz, JLR_Haz, BEQ_Haz, BLT_Haz, BLE_Haz, Load_Imm:  std_logic;
+        
 
     --All Write Enables----
     --signal IF_ID_WR,ID_RR_WR, RR_EX_WR, EX_MEM_WR, MEM_WB_WR: std_logic;
@@ -725,7 +734,7 @@ MEM_WB_pipeline : MEMWB port map(
 MovingFWD: Forwarding_Unit port map (
         RegC_EX=> RD_EX ,RegC_Mem=> RD_MEM ,RegC_WB=> RD_WB ,RegA_RR=>  RS1_RR, RegB_RR=> RS2_RR,
         RF_WR_EX=>RF_wr_EX , RF_WR_Mem=>RF_wr_MEM  , RF_WR_WB=>RF_wr_WB ,    
-        MuxA=>Fwd_Mux_selA ,MuxB=>Fwd_Mux_selB
+        MuxA=>Fwd_Mux_selA ,MuxB=>Fwd_Mux_selB,Opcode_Ex=>OP_EX
     );
 ----------------Hazard detection Units--------------------
 
@@ -748,9 +757,14 @@ BEX: Haz_BEX port map (
         --2->BLE
         --3->JRI
     );
+Load: Haz_load port map(
+            Instruc_OPCode_EX=>OP_EX,Instruc_OPCode_Mem=>OP_Mem,
+            Ra_RR=>RS1_RR ,Rb_RR=>RS2_RR,Rc_Ex=>RD_EX,
+            Load_Imm=>Load_Imm
+        );
 Branch_Pred:  Haz_PC_controller port map (
         PC_IF=>PC_IF ,PC_ID => PC_ID ,PC_RR=>PC_RR2 ,PC_EX=>ALU3C_EX ,
-        H_JLR=>H_jlr,H_JAL => H_jal, H_BEX =>H_bex , LMSM_Haz=> LMSM_Haz,
+        H_JLR=>H_jlr,H_JAL => H_jal, H_BEX =>H_bex , LMSM_Haz=> LMSM_Haz, H_Load_Imm=> Load_Imm,
     
         PC_New=>PC_Next ,
         PC_WR=>PC_WR ,IF_ID_flush=>CN_IFID ,ID_RR_flush=>CN_IDRR ,RR_EX_flush=>CN_RREX , 
