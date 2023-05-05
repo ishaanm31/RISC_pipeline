@@ -317,6 +317,7 @@ end component;
     component Haz_JLR is
         port (
             Instruc_OPCode_RR:in std_logic_vector(3 downto 0);
+				cancel:in std_logic;
             H_JLR:out std_logic
         );
     end component Haz_JLR;
@@ -324,6 +325,7 @@ end component;
     component Haz_JAL is
         port (
             Instruc_OPCode_ID:in std_logic_vector(3 downto 0);
+				cancel:in std_logic;
             H_Jal:out std_logic
         );
     end component Haz_JAL;
@@ -332,7 +334,7 @@ end component;
         port (
             Instruc_OPCode_EX:in std_logic_vector(3 downto 0);
             ZFlag,CFlag:in std_logic;
-        
+				cancel:in std_logic;        
             H_BEX:out std_logic;
             HType:out std_logic_vector(1 downto 0)
             --0->BEQ
@@ -345,12 +347,15 @@ end component;
         port (
             Instruc_OPCode_EX,Instruc_OPCode_Mem:in std_logic_vector(3 downto 0);
             Ra_RR,Rb_RR,Rc_Ex: in std_logic_vector(2 downto 0);
+				cancel:in std_logic;
             Load_Imm:out std_logic
         );
     end component Haz_load;
     component Haz_R0 is
         port (
             Rd_Mem:in std_logic_vector(2 downto 0);
+				RF_WR_Mem:in std_logic;
+				cancel:in std_logic;
             H_R0:out std_logic
         );
     end component Haz_R0;
@@ -746,16 +751,18 @@ MovingFWD: Forwarding_Unit port map (
 
 JLR: Haz_JLR port map (
         Instruc_OPCode_RR=>OP_RR,
+		  cancel=>Can_rr,
         H_JLR=>H_jlr);
 
 Jal: Haz_JAL port map (
         Instruc_OPCode_ID=>OP_ID,
+		  cancel=>Can_ID,
         H_Jal=>H_jal);
 
 BEX: Haz_BEX port map (
         Instruc_OPCode_EX=>OP_EX,
         ZFlag=>zero1,CFlag=>carry1,
-    
+		  cancel=>CN_EX1,
         H_BEX=>H_bex,
         HType=>Htype
         --0->BEQ
@@ -765,11 +772,11 @@ BEX: Haz_BEX port map (
     );
 Load: Haz_load port map(
             Instruc_OPCode_EX=>OP_EX,Instruc_OPCode_Mem=>OP_Mem,
-            Ra_RR=>RS1_RR ,Rb_RR=>RS2_RR,Rc_Ex=>RD_EX,
+            Ra_RR=>RS1_RR ,Rb_RR=>RS2_RR,Rc_Ex=>RD_EX,cancel=>CN_EX1,
             Load_Imm=>Load_Imm
         );
 R0_bkl: Haz_R0 port map (
-        Rd_Mem=>RD_MEM,
+        Rd_Mem=>RD_MEM,RF_WR_Mem=>RF_wr_MEM,cancel=>CN_MEM,
         H_R0=>H_R0
     );
 Branch_Pred:  Haz_PC_controller port map (

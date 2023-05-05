@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IITB_CPU
-Fri May 05 20:04:38 2023
+Fri May 05 21:06:41 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 05 20:04:38 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri May 05 21:06:41 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_CPU                                    ;
 ; Top-level Entity Name              ; Datapath                                    ;
@@ -401,15 +401,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri May 05 20:03:52 2023
+    Info: Processing started: Fri May 05 21:05:52 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file r0_hazard.vhd
-    Info (12022): Found design unit 1: Haz_R0-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd Line: 12
+    Info (12022): Found design unit 1: Haz_R0-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd Line: 14
     Info (12023): Found entity 1: Haz_R0 File: C:/SEM4/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file load_imm_dep.vhd
-    Info (12022): Found design unit 1: Haz_load-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd Line: 13
+    Info (12022): Found design unit 1: Haz_load-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd Line: 14
     Info (12023): Found entity 1: Haz_load File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux1_4x1.vhd
     Info (12022): Found design unit 1: Mux1_4x1-Dataflow File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd Line: 9
@@ -463,10 +463,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file haz_pc_
     Info (12022): Found design unit 1: Haz_PC_controller-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd Line: 16
     Info (12023): Found entity 1: Haz_PC_controller File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file haz_jlr.vhd
-    Info (12022): Found design unit 1: Haz_JLR-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd Line: 12
+    Info (12022): Found design unit 1: Haz_JLR-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd Line: 13
     Info (12023): Found entity 1: Haz_JLR File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file haz_jal.vhd
-    Info (12022): Found design unit 1: Haz_JAL-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd Line: 12
+    Info (12022): Found design unit 1: Haz_JAL-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd Line: 13
     Info (12023): Found entity 1: Haz_JAL File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file haz_bex.vhd
     Info (12022): Found design unit 1: Haz_BEX-struct File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd Line: 19
@@ -520,51 +520,51 @@ Info (12021): Found 2 design units, including 1 entities, in source file instr_d
     Info (12022): Found design unit 1: instr_decode-instr_decode_arch File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 22
     Info (12023): Found entity 1: instr_decode File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 6
 Info (12127): Elaborating entity "Datapath" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(443): object "ALU_sel_MEM" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 443
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(444): object "Carry_sel_MEM" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 444
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(445): object "C_modified_MEM" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 445
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(446): object "Z_modified_MEM" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 446
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(448): object "rf_d2_MEM" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 448
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(451): object "CPL_MEM" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 451
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(454): object "CZ_MEM" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 454
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(460): object "OP_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 460
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(461): object "RS1_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 461
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(461): object "RS2_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 461
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(469): object "Imm_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 469
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(470): object "PC_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 470
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(471): object "D3_MUX_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 471
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(476): object "Alu3C_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 476
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(499): object "Htype" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 499
-Info (12128): Elaborating entity "ROM" for hierarchy "ROM:MyROM" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 504
-Info (12128): Elaborating entity "adder" for hierarchy "adder:IF_add" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 505
-Info (12128): Elaborating entity "IF_ID" for hierarchy "IF_ID:IF_ID_Pipepline_Reg" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 507
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(448): object "ALU_sel_MEM" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 448
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(449): object "Carry_sel_MEM" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 449
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(450): object "C_modified_MEM" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 450
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(451): object "Z_modified_MEM" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 451
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(453): object "rf_d2_MEM" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 453
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(456): object "CPL_MEM" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 456
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(459): object "CZ_MEM" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 459
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(465): object "OP_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 465
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(466): object "RS1_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 466
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(466): object "RS2_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 466
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(474): object "Imm_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 474
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(475): object "PC_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 475
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(476): object "D3_MUX_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 476
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(481): object "Alu3C_WB" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 481
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(504): object "Htype" assigned a value but never read File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 504
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:MyROM" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 509
+Info (12128): Elaborating entity "adder" for hierarchy "adder:IF_add" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 510
+Info (12128): Elaborating entity "IF_ID" for hierarchy "IF_ID:IF_ID_Pipepline_Reg" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 512
 Info (12128): Elaborating entity "Register_16bit" for hierarchy "IF_ID:IF_ID_Pipepline_Reg|Register_16bit:Instruction" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/IF_ID.vhd Line: 49
 Info (12128): Elaborating entity "Register_1bit" for hierarchy "IF_ID:IF_ID_Pipepline_Reg|Register_1bit:Canc" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/IF_ID.vhd Line: 52
-Info (12128): Elaborating entity "instr_decode" for hierarchy "instr_decode:Jainesh_instruc" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 518
+Info (12128): Elaborating entity "instr_decode" for hierarchy "instr_decode:Jainesh_instruc" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 523
 Info (12128): Elaborating entity "SE10" for hierarchy "instr_decode:Jainesh_instruc|SE10:Sign_6" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 73
 Info (12128): Elaborating entity "SE7" for hierarchy "instr_decode:Jainesh_instruc|SE7:Sign_9" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 74
 Info (12128): Elaborating entity "Register_4bit" for hierarchy "instr_decode:Jainesh_instruc|Register_4bit:counter" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 77
-Info (12128): Elaborating entity "IDRR" for hierarchy "IDRR:ID_RR_pipeline" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 538
+Info (12128): Elaborating entity "IDRR" for hierarchy "IDRR:ID_RR_pipeline" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 543
 Info (12128): Elaborating entity "Register_3bit" for hierarchy "IDRR:ID_RR_pipeline|Register_3bit:RS1" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_RR_final.vhdl Line: 91
 Info (12128): Elaborating entity "Register_2bit" for hierarchy "IDRR:ID_RR_pipeline|Register_2bit:ALU_sel" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_RR_final.vhdl Line: 95
-Info (12128): Elaborating entity "Register_file" for hierarchy "Register_file:RF" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 580
-Info (12128): Elaborating entity "Mux16_2x1" for hierarchy "Mux16_2x1:MuxRF_D1" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 589
-Info (12128): Elaborating entity "Mux16_4x1" for hierarchy "Mux16_4x1:MuxA1" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 591
-Info (12128): Elaborating entity "RREX" for hierarchy "RREX:RR_EX_pipeline" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 597
-Info (12128): Elaborating entity "complementor" for hierarchy "complementor:COMPL" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 645
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1_EX" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 648
-Info (12128): Elaborating entity "dff_en" for hierarchy "dff_en:D_ff1" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 650
-Info (12128): Elaborating entity "Mux1_4x1" for hierarchy "Mux1_4x1:MUX_C" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 652
-Info (12128): Elaborating entity "EXMEM" for hierarchy "EXMEM:EX_MEM_pipeline" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 659
-Info (12128): Elaborating entity "Memory" for hierarchy "Memory:RAM_MEM" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 706
-Info (12128): Elaborating entity "MEMWB" for hierarchy "MEMWB:MEM_WB_pipeline" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 710
-Info (12128): Elaborating entity "Forwarding_Unit" for hierarchy "Forwarding_Unit:MovingFWD" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 740
-Info (12128): Elaborating entity "Haz_JLR" for hierarchy "Haz_JLR:JLR" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 747
-Info (12128): Elaborating entity "Haz_JAL" for hierarchy "Haz_JAL:Jal" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 751
-Info (12128): Elaborating entity "Haz_BEX" for hierarchy "Haz_BEX:BEX" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 755
-Info (12128): Elaborating entity "Haz_load" for hierarchy "Haz_load:Load" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 766
-Info (12128): Elaborating entity "Haz_R0" for hierarchy "Haz_R0:R0_bkl" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 771
-Info (12128): Elaborating entity "Haz_PC_controller" for hierarchy "Haz_PC_controller:Branch_Pred" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 775
+Info (12128): Elaborating entity "Register_file" for hierarchy "Register_file:RF" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 585
+Info (12128): Elaborating entity "Mux16_2x1" for hierarchy "Mux16_2x1:MuxRF_D1" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 594
+Info (12128): Elaborating entity "Mux16_4x1" for hierarchy "Mux16_4x1:MuxA1" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 596
+Info (12128): Elaborating entity "RREX" for hierarchy "RREX:RR_EX_pipeline" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 602
+Info (12128): Elaborating entity "complementor" for hierarchy "complementor:COMPL" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 650
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1_EX" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 653
+Info (12128): Elaborating entity "dff_en" for hierarchy "dff_en:D_ff1" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 655
+Info (12128): Elaborating entity "Mux1_4x1" for hierarchy "Mux1_4x1:MUX_C" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 657
+Info (12128): Elaborating entity "EXMEM" for hierarchy "EXMEM:EX_MEM_pipeline" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 664
+Info (12128): Elaborating entity "Memory" for hierarchy "Memory:RAM_MEM" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 711
+Info (12128): Elaborating entity "MEMWB" for hierarchy "MEMWB:MEM_WB_pipeline" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 715
+Info (12128): Elaborating entity "Forwarding_Unit" for hierarchy "Forwarding_Unit:MovingFWD" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 745
+Info (12128): Elaborating entity "Haz_JLR" for hierarchy "Haz_JLR:JLR" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 752
+Info (12128): Elaborating entity "Haz_JAL" for hierarchy "Haz_JAL:Jal" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 757
+Info (12128): Elaborating entity "Haz_BEX" for hierarchy "Haz_BEX:BEX" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 762
+Info (12128): Elaborating entity "Haz_load" for hierarchy "Haz_load:Load" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 773
+Info (12128): Elaborating entity "Haz_R0" for hierarchy "Haz_R0:R0_bkl" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 778
+Info (12128): Elaborating entity "Haz_PC_controller" for hierarchy "Haz_PC_controller:Branch_Pred" File: C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 782
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
@@ -574,9 +574,9 @@ Info (21057): Implemented 2 device resources after synthesis - the final resourc
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 6123 megabytes
-    Info: Processing ended: Fri May 05 20:04:38 2023
-    Info: Elapsed time: 00:00:46
-    Info: Total CPU time (on all processors): 00:00:42
+    Info: Peak virtual memory: 6124 megabytes
+    Info: Processing ended: Fri May 05 21:06:42 2023
+    Info: Elapsed time: 00:00:50
+    Info: Total CPU time (on all processors): 00:00:45
 
 
