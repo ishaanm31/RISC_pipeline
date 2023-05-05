@@ -644,7 +644,7 @@ PCp2_EX<=PC_EX+"0000000000000010";
 EX_MUX : Mux16_4x1 port map(Alu1C_EX,Imm_EX,Alu3C_EX,PCp2_EX,D3_MUX_EX,Alu1C_fw);
 COMPL : complementor port map(CPL_EX,rf_d2_EX,rf_d2_CPL);
 MUX_ALUA : Mux16_2x1 port map(rf_d1_EX,rf_d2_CPL,ALUA_MUX_EX,ALUA);
-MUX_ALUB : Mux16_2x1 port map(rf_d2_CPL,Imm_EX,ALUB_MUX_EX,ALUB);
+MUX_ALUB : Mux16_2x1 port map(rf_d2_CPL,Imm3,ALUB_MUX_EX,ALUB);
 ALU1_EX :ALU port map(ALU_sel_EX,ALUA,ALUB,Carry_sel_EX,carry2,Alu1C_EX,carry1,zero1);
 ALU3_EX : adder port map(PC_EX,Imm3,ALU3C_EX);
 D_ff1 : dff_en port map(clock,reset,CFwr,carry1,carry2);
