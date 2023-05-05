@@ -106,7 +106,10 @@ end component adder;
 			var_ALUB_MUX := '0';
 			counter_in<="0000";
 -----------------ADI--------------------------------
-			if(Instruction(15 downto 12) = "0000") then   
+			if( Instruction="0000000000000000") then
+				var_RF_wr := '0';
+				
+			elsif(Instruction(15 downto 12) = "0000") then   
 				var_RF_wr := '1';
 				var_ALUB_MUX := '1';
 				var_C_modified := '1';
@@ -412,6 +415,8 @@ end component adder;
 
 			elsif(Instruction(15 downto 12) = "1111") then
 				var_Imm := Imm9_out;
+			elsif( Instruction="0000000000000000") then
+				var_RF_wr := '0';
 				
 			else null;
 				

@@ -384,13 +384,13 @@ end component;
     signal OP_RR: std_logic_vector(3 downto 0);
     signal RS1_RR,RS2_RR:std_logic_vector(2 downto 0);
     signal RD_RR: std_logic_vector(2 downto 0);
-    signal RF_wr_RR:std_logic;
+    signal RF_wr_RR,MUXRF_D1_sel,MUXRF_D2_sel:std_logic;
     signal ALU_sel_RR: std_logic_vector(1 downto 0);
     signal Carry_sel_RR: std_logic;
     signal C_modified_RR: std_logic;
     signal Z_modified_RR: std_logic;
     signal Mem_wr_RR: std_logic;
-    signal Imm_RR,Imm2,rf_d1_RR1,rf_d2_RR1,rf_d1_RR2,rf_d2_RR2: std_logic_vector(15 downto 0);
+    signal Imm_RR,Imm2,rf_d1_RR1,rf_d2_RR1,rf_d1_RR2,rf_d2_RR2,rf_d1_RR3,rf_d2_RR3: std_logic_vector(15 downto 0);
     signal PC_RR1,PC_RR2: std_logic_vector(15 downto 0);
     signal D3_MUX_RR:  std_logic_vector(1 downto 0);
     signal CPL_RR:  std_logic;
@@ -409,8 +409,8 @@ end component;
     signal C_modified,C_modified_EX: std_logic;
     signal Z_modified,Z_modified_EX: std_logic;
     signal Mem_wr_EX: std_logic;
-    signal Imm_EX,Imm3,rf_d1_EX,rf_d2_EX,rf_d2_CPL,ALUA,ALUB: std_logic_vector(15 downto 0);
-    signal PC_EX: std_logic_vector(15 downto 0);
+    signal Imm_EX,Imm3,rf_d1_EX,rf_d2_EX,rf_d2_CPL,ALUA,ALUB,Alu1C_fw: std_logic_vector(15 downto 0);
+    signal PC_EX,PCp2_EX: std_logic_vector(15 downto 0);
     signal D3_MUX_EX:  std_logic_vector(1 downto 0);
     signal CPL_EX:  std_logic;
     signal CN_EX:  std_logic;
@@ -452,7 +452,7 @@ end component;
     signal C_modified_WB: std_logic;
     signal Z_modified_WB: std_logic;
     signal WB_wr_WB: std_logic;
-    signal Imm_WB,rf_d1_WB,rf_d2_WB,PCp2_WB: std_logic_vector(15 downto 0);
+    signal Imm_WB,rf_d1_WB,rf_d2_WB: std_logic_vector(15 downto 0);
     signal PC_WB: std_logic_vector(15 downto 0);
     signal D3_MUX_WB:  std_logic_vector(1 downto 0);
     signal CPL_WB:  std_logic;
@@ -565,14 +565,16 @@ ID_RR_pipeline : IDRR port map
 RF : Register_file port map(A1=>RS1_RR, A2=>RS2_RR, A3=>RD_WB,
                             D3=>rf_d3,
                             RF_D_PC_WR=> PC_next,
-
                             clock=>clock,Write_Enable =>RegF_wr ,PC_WR=> PC_WR ,
-
                             RF_D_PC_R=> PC_New,
                             D1=>rf_d1_RR1 , D2=>rf_d2_RR1);
 Imm2 <= Imm_RR + Imm_RR;
-MuxA1: Mux16_4x1 port map(rf_d1_RR1,Alu1C_EX,Data_out_MEM,rf_d3,Fwd_Mux_selA,rf_d1_RR2);
-MuxB1: Mux16_4x1 port map(rf_d2_RR1,Alu1C_EX,Data_out_MEM,rf_d3,Fwd_Mux_selB,rf_d2_RR2);
+MUXRF_D1_sel <= RS1_RR(2) or RS1_RR(1) or RS1_RR(0);
+MUXRF_D2_sel <= RS2_RR(2) or RS2_RR(1) or RS2_RR(0);
+MuxRF_D1 : Mux16_2x1 port map(PC_RR1,rf_d1_RR1,MUXRF_D1_sel,rf_d1_RR2);
+MuxRF_D2 : Mux16_2x1 port map(PC_RR1,rf_d2_RR1,MUXRF_D2_sel,rf_d2_RR2);
+MuxA1: Mux16_4x1 port map(rf_d1_RR2,Alu1C_fw,Data_out_MEM,rf_d3,Fwd_Mux_selA,rf_d1_RR3);
+MuxB1: Mux16_4x1 port map(rf_d2_RR2,Alu1C_fw,Data_out_MEM,rf_d3,Fwd_Mux_selB,rf_d2_RR3);
 Adder_RR : adder port map(Imm2,rf_d1_RR1,PC_RR2);
 RegF_wr<=(RF_wr_WB and(not(CN_WB)));
 Can_rr<=(CNpass2 or CN_RREX);
@@ -584,8 +586,8 @@ RR_EX_pipeline : RREX port map(
     RS1_in=>RS1_RR,
     RS2_in=>RS2_RR,
     RD_in=>RD_RR,
-    RF_D1_in => rf_d1_RR2,
-    RF_D2_in => rf_d2_RR2,
+    RF_D1_in => rf_d1_RR3,
+    RF_D2_in => rf_d2_RR3,
     RF_wr_in=>RF_wr_RR,
     ALU_sel_in => ALU_sel_RR,
     Carry_sel_in =>Carry_sel_RR,
@@ -623,9 +625,11 @@ RR_EX_pipeline : RREX port map(
 );
 ---------------Execution---------------------
 Imm3 <= Imm_EX + Imm_EX;
+PCp2_EX<=PC_EX+"0000000000000010";
+EX_MUX : Mux16_4x1 port map(Alu1C_EX,Imm_EX,Alu3C_EX,PCp2_EX,D3_MUX_WB,Alu1C_fw);
 COMPL : complementor port map(CPL_EX,rf_d2_EX,rf_d2_CPL);
-MUX_ALUA : Mux16_2x1 port map(rf_d1_EX,rf_d2_EX,ALUA_MUX_EX,ALUA);
-MUX_ALUB : Mux16_2x1 port map(rf_d2_EX,Imm3,ALUB_MUX_EX,ALUB);
+MUX_ALUA : Mux16_2x1 port map(rf_d1_EX,rf_d2_CPL,ALUA_MUX_EX,ALUA);
+MUX_ALUB : Mux16_2x1 port map(rf_d2_CPL,Imm3,ALUB_MUX_EX,ALUB);
 ALU1_EX :ALU port map(ALU_sel_EX,ALUA,ALUB,Carry_sel_EX,carry2,Alu1C_EX,carry1,zero1);
 ALU3_EX : adder port map(PC_EX,Imm_EX,ALU3C_EX);
 D_ff1 : dff_en port map(clock,reset,CFwr,carry1,carry2);
@@ -686,7 +690,6 @@ EX_MEM_pipeline : EXMEM port map(
 --------------MEM--------------------------
 RAM_MEM : Memory port map(Alu1C_MEM,rf_d1_MEM,clock,RAM_wr,Data_out);
 WB_MUX_MEM1 : Mux16_2x1 port map(Alu1C_MEM,Data_out,WB_MUX_MEM,Data_out_MEM);
-
 Ram_wr<=(Mem_wr_MEM and (not(CN_MEM)));
 -----------MEM_WB pipeline-------------------------
 MEM_WB_pipeline : MEMWB port map(
@@ -708,7 +711,7 @@ MEM_WB_pipeline : MEMWB port map(
     RS2_out=>RS2_WB,
     RD_out=>RD_WB,
     RF_wr_out=>RF_wr_WB,
-    Data_out_WB_out => Data_out_WB,
+    Data_out_WB_out => rf_d3,
     Imm_out=>Imm_WB,
     PC_out =>PC_WB,
     D3_MUX_out=>D3_MUX_WB,
@@ -717,8 +720,6 @@ MEM_WB_pipeline : MEMWB port map(
 );
 
 -----------WB--------------
-RF_WR_MUX : Mux16_4x1 port map(Data_out_WB,Imm_WB,Alu3C_WB,PCp2_WB,D3_MUX_WB,rf_d3);
-PCp2_WB<=PC_WB+"0000000000000010";
 --------------------branch predictor-----------
 --------------------------Forwarding Unit-------------------------------
 MovingFWD: Forwarding_Unit port map (
