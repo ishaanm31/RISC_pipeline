@@ -635,16 +635,16 @@ RR_EX_pipeline : RREX port map(
 ---------------Execution---------------------
 Imm3 <= Imm_EX + Imm_EX;
 PCp2_EX<=PC_EX+"0000000000000010";
-EX_MUX : Mux16_4x1 port map(Alu1C_EX,Imm_EX,Alu3C_EX,PCp2_EX,D3_MUX_WB,Alu1C_fw);
+EX_MUX : Mux16_4x1 port map(Alu1C_EX,Imm_EX,Alu3C_EX,PCp2_EX,D3_MUX_EX,Alu1C_fw);
 COMPL : complementor port map(CPL_EX,rf_d2_EX,rf_d2_CPL);
 MUX_ALUA : Mux16_2x1 port map(rf_d1_EX,rf_d2_CPL,ALUA_MUX_EX,ALUA);
-MUX_ALUB : Mux16_2x1 port map(rf_d2_CPL,Imm3,ALUB_MUX_EX,ALUB);
+MUX_ALUB : Mux16_2x1 port map(rf_d2_CPL,Imm_EX,ALUB_MUX_EX,ALUB);
 ALU1_EX :ALU port map(ALU_sel_EX,ALUA,ALUB,Carry_sel_EX,carry2,Alu1C_EX,carry1,zero1);
-ALU3_EX : adder port map(PC_EX,Imm_EX,ALU3C_EX);
+ALU3_EX : adder port map(PC_EX,Imm3,ALU3C_EX);
 D_ff1 : dff_en port map(clock,reset,CFwr,carry1,carry2);
 D_ff2 : dff_en port map(clock,reset,ZFwr,zero1,zero2);
-MUX_C : Mux1_4x1 port map(C_modified_EX,zero2,carry2,'0',CZ_EX,C_modified);
-MUX_Z : Mux1_4x1 port map(Z_modified_EX,zero2,carry2,'0',CZ_EX,Z_modified);
+MUX_C : Mux1_4x1 port map(C_modified_EX,carry2,zero2,'0',CZ_EX,C_modified);
+MUX_Z : Mux1_4x1 port map(Z_modified_EX,carry2,zero2,'0',CZ_EX,Z_modified);
 MUX_rfwr : Mux1_4x1 port map(RF_wr_EX1,zero2,carry2,'1',CZ_EX,RF_wr_EX);
 CFwr<=(C_modified and (not(CN_EX)));
 ZFwr<=(Z_modified and (not(CN_EX)));
@@ -672,7 +672,7 @@ EX_MEM_pipeline : EXMEM port map(
     CN_in=> CN_EX,
     WB_MUX_in=>WB_MUX_EX,
     CZ_in=>CZ_EX,
-    ALU1_C_in => Alu1C_EX,
+    ALU1_C_in => Alu1C_fw,
     Alu3_C_in => Alu3C_EX,
     OP_out => OP_MEM,
     RS1_out=>RS1_MEM,
