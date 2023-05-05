@@ -306,10 +306,10 @@ end component;
     component Haz_PC_controller is
         port (
             PC_IF,PC_ID,PC_RR,PC_EX: in std_logic_vector(15 downto 0);
-            H_JLR,H_JAL, H_BEX, LMSM_Haz,H_Load_Imm: in std_logic;
+            H_JLR,H_JAL, H_BEX, LMSM_Haz,H_Load_Imm,H_R0: in std_logic;
         
             PC_New: out std_logic_vector(15 downto 0);
-            PC_WR,IF_ID_flush,ID_RR_flush,RR_EX_flush, IF_ID_WR,ID_RR_WR,RR_EX_WR, EX_MEM_WR, MEM_WB_WR : out std_logic
+            PC_WR,IF_ID_flush,ID_RR_flush,RR_EX_flush,EX_Mem_flush, IF_ID_WR,ID_RR_WR,RR_EX_WR, EX_MEM_WR, MEM_WB_WR : out std_logic
             
         );
     end component Haz_PC_controller;
@@ -348,6 +348,12 @@ end component;
             Load_Imm:out std_logic
         );
     end component Haz_load;
+    component Haz_R0 is
+        port (
+            Rd_Mem:in std_logic_vector(2 downto 0);
+            H_R0:out std_logic
+        );
+    end component Haz_R0;
     ---Forwarding Unit
     component Forwarding_Unit is
         port (
@@ -421,7 +427,7 @@ end component;
     signal PC_EX,PCp2_EX: std_logic_vector(15 downto 0);
     signal D3_MUX_EX:  std_logic_vector(1 downto 0);
     signal CPL_EX:  std_logic;
-    signal CN_EX:  std_logic;
+    signal CN_EX,CN_EX1:  std_logic;
     signal WB_MUX_EX:  std_logic;
 	 signal ALUA_MUX_EX: std_logic;
 	 signal ALUB_MUX_EX: std_logic;
@@ -480,7 +486,7 @@ end component;
         signal Instruc_op_ID,Instruc_op_EX, Instruc_op_RR, 
         PC_New_ID, PC_New_EX: std_logic_vector(15 downto 0 );
    
-        signal JAL_Haz, JRI_Haz, JLR_Haz, BEQ_Haz, BLT_Haz, BLE_Haz, Load_Imm:  std_logic;
+        signal JAL_Haz, JRI_Haz, JLR_Haz, BEQ_Haz, BLT_Haz, BLE_Haz, Load_Imm,H_R0:  std_logic;
         
 
     --All Write Enables----
@@ -648,7 +654,7 @@ MUX_Z : Mux1_4x1 port map(Z_modified_EX,carry2,zero2,'0',CZ_EX,Z_modified);
 MUX_rfwr : Mux1_4x1 port map(RF_wr_EX1,zero2,carry2,'1',CZ_EX,RF_wr_EX);
 CFwr<=(C_modified and (not(CN_EX)));
 ZFwr<=(Z_modified and (not(CN_EX)));
-
+CN_EX1<=CN_EX or CN_EXMEM;
 -----------------EX_MEM pipeline----------
 EX_MEM_pipeline : EXMEM port map(
     clk => clock,
@@ -669,7 +675,7 @@ EX_MEM_pipeline : EXMEM port map(
     PC_in=>PC_EX,
     D3_MUX_in=>D3_MUX_EX,
     CPL_in=>CPL_EX,
-    CN_in=> CN_EX,
+    CN_in=> CN_EX1,
     WB_MUX_in=>WB_MUX_EX,
     CZ_in=>CZ_EX,
     ALU1_C_in => Alu1C_fw,
@@ -762,12 +768,16 @@ Load: Haz_load port map(
             Ra_RR=>RS1_RR ,Rb_RR=>RS2_RR,Rc_Ex=>RD_EX,
             Load_Imm=>Load_Imm
         );
+R0_bkl: Haz_R0 port map (
+        Rd_Mem=>RD_MEM,
+        H_R0=>H_R0
+    );
 Branch_Pred:  Haz_PC_controller port map (
         PC_IF=>PC_IF ,PC_ID => PC_ID ,PC_RR=>PC_RR2 ,PC_EX=>ALU3C_EX ,
-        H_JLR=>H_jlr,H_JAL => H_jal, H_BEX =>H_bex , LMSM_Haz=> LMSM_Haz, H_Load_Imm=> Load_Imm,
+        H_JLR=>H_jlr,H_JAL => H_jal, H_BEX =>H_bex , LMSM_Haz=> LMSM_Haz, H_Load_Imm=> Load_Imm, H_R0=>H_R0,
     
         PC_New=>PC_Next ,
-        PC_WR=>PC_WR ,IF_ID_flush=>CN_IFID ,ID_RR_flush=>CN_IDRR ,RR_EX_flush=>CN_RREX , 
+        PC_WR=>PC_WR ,IF_ID_flush=>CN_IFID ,ID_RR_flush=>CN_IDRR ,RR_EX_flush=>CN_RREX , EX_MEM_flush=>CN_EXMEM,
         IF_ID_WR=> WREN_IFID,ID_RR_WR=>WREN_IDRR ,RR_EX_WR=> WREN_RREX , EX_MEM_WR=> WREN_EXMEM , 
         MEM_WB_WR =>WREN_MEMWB
         
