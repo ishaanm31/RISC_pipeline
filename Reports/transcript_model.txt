@@ -1,0 +1,31 @@
+vsim work.datapath
+add wave -position insertpoint  \
+sim:/datapath/clock
+add wave -position insertpoint  \
+sim:/datapath/reset
+add wave -position insertpoint  \
+sim:/datapath/MyROM/Mem_Add \
+sim:/datapath/MyROM/Mem_Data_Out
+add wave -position insertpoint  \
+sim:/datapath/RAM_MEM/Mem_Data_Out \
+sim:/datapath/RAM_MEM/Mem_Data_In \
+sim:/datapath/RAM_MEM/Mem_Add 
+# (vsim-4077) Logging very large object: /datapath/RAM_MEM/Data
+add wave -position insertpoint  \
+sim:/datapath/RF/Data
+add wave -position insertpoint sim:/datapath/IF_ID_Pipepline_Reg/*
+add wave -position insertpoint sim:/datapath/ID_RR_pipeline/*
+add wave -position insertpoint sim:/datapath/RR_EX_pipeline/*
+add wave -position insertpoint sim:/datapath/EX_MEM_pipeline/*
+add wave -position insertpoint sim:/datapath/MEM_WB_pipeline/*
+add wave -position insertpoint  \
+sim:/datapath/ALU1_EX/Z_F \
+sim:/datapath/ALU1_EX/C_F
+add wave -position insertpoint  \
+sim:/datapath/RAM_MEM/Data
+add wave -position insertpoint  \
+sim:/datapath/RAM_MEM/Write_Enable
+add wave -position insertpoint sim:/datapath/MovingFWD/*
+add wave -position insertpoint sim:/datapath/MuxA1/*
+add wave -position insertpoint sim:/datapath/MuxB1/*
+add wave -position insertpoint sim:/datapath/RF/*
