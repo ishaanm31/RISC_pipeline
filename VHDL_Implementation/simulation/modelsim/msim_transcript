@@ -11,58 +11,58 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:09 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd 
+# Start time: 14:15:08 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Haz_R0
 # -- Compiling architecture struct of Haz_R0
-# End time: 14:01:09 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:08 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:09 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd 
+# Start time: 14:15:08 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Haz_load
 # -- Compiling architecture struct of Haz_load
-# End time: 14:01:09 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:08 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:09 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd 
+# Start time: 14:15:08 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Mux1_4x1
 # -- Compiling architecture Dataflow of Mux1_4x1
-# End time: 14:01:09 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:08 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/RR_EX.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/RR_EX.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:09 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/RR_EX.vhd 
+# Start time: 14:15:08 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/RR_EX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RREX
 # -- Compiling architecture RREX_arch of RREX
-# End time: 14:01:09 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:08 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/ROM.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/ROM.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:09 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/ROM.vhd 
+# Start time: 14:15:08 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/ROM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -71,155 +71,155 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity ROM
 # -- Compiling architecture struct of ROM
-# End time: 14:01:09 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:09 on May 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_file.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_file.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:09 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_file.vhd 
+# Start time: 14:15:09 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_file.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_file
 # -- Compiling architecture struct of Register_File
-# End time: 14:01:09 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:09 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:09 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd 
+# Start time: 14:15:09 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_2bit
 # -- Compiling architecture struct of Register_2bit
-# End time: 14:01:09 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:09 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/RAM.vhdl}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/RAM.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:09 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/RAM.vhdl 
+# Start time: 14:15:09 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/RAM.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Memory
 # -- Compiling architecture struct of Memory
-# End time: 14:01:09 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:09 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:10 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd 
+# Start time: 14:15:09 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Mux16_4x1
 # -- Compiling architecture Dataflow of Mux16_4x1
-# End time: 14:01:10 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:09 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:10 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd 
+# Start time: 14:15:09 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Mux16_2x1
 # -- Compiling architecture Dataflow of Mux16_2x1
-# End time: 14:01:10 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:09 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/IF_ID.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/IF_ID.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:10 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/IF_ID.vhd 
+# Start time: 14:15:09 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/IF_ID.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity IF_ID
 # -- Compiling architecture struct of IF_ID
-# End time: 14:01:10 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:10 on May 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:10 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd 
+# Start time: 14:15:10 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Haz_PC_controller
 # -- Compiling architecture struct of Haz_PC_controller
-# End time: 14:01:10 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:10 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:10 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd 
+# Start time: 14:15:10 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Haz_JLR
 # -- Compiling architecture struct of Haz_JLR
-# End time: 14:01:10 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:10 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:10 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd 
+# Start time: 14:15:10 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Haz_JAL
 # -- Compiling architecture struct of Haz_JAL
-# End time: 14:01:10 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:10 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:10 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd 
+# Start time: 14:15:10 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Haz_BEX
 # -- Compiling architecture struct of Haz_BEX
-# End time: 14:01:10 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:11 on May 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:10 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd 
+# Start time: 14:15:11 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Forwarding_Unit
 # -- Compiling architecture struct of Forwarding_Unit
-# End time: 14:01:10 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:11 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/dff_en.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/dff_en.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:10 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/dff_en.vhd 
+# Start time: 14:15:11 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/dff_en.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity dff_en
 # -- Compiling architecture behave of dff_en
-# End time: 14:01:10 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:11 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:10 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Datapath.vhdl 
+# Start time: 14:15:11 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -228,48 +228,48 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity Datapath
 # -- Compiling architecture Struct of Datapath
-# End time: 14:01:10 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:12 on May 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/complementor.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/complementor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:10 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/complementor.vhd 
+# Start time: 14:15:12 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/complementor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity complementor
 # -- Compiling architecture behave of complementor
-# End time: 14:01:11 on May 06,2023, Elapsed time: 0:00:01
+# End time: 14:15:12 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:11 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd 
+# Start time: 14:15:12 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ALU
 # -- Compiling architecture behave of ALU
-# End time: 14:01:11 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:12 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:11 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd 
+# Start time: 14:15:12 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_4bit
 # -- Compiling architecture struct of Register_4bit
-# End time: 14:01:11 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:12 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_adder.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/ID_adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:11 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_adder.vhd 
+# Start time: 14:15:12 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/ID_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -278,72 +278,72 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity adder
 # -- Compiling architecture behave of adder
-# End time: 14:01:11 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:13 on May 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/SE10.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:11 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/SE10.vhd 
+# Start time: 14:15:13 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity SE10
 # -- Compiling architecture struct of SE10
-# End time: 14:01:11 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:13 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/SE7.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:11 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/SE7.vhd 
+# Start time: 14:15:13 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity SE7
 # -- Compiling architecture struct of SE7
-# End time: 14:01:11 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:13 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:11 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd 
+# Start time: 14:15:13 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_16bit
 # -- Compiling architecture struct of Register_16bit
-# End time: 14:01:11 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:13 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:11 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd 
+# Start time: 14:15:13 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_3bit
 # -- Compiling architecture struct of Register_3bit
-# End time: 14:01:11 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:14 on May 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:11 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd 
+# Start time: 14:15:14 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_1bit
 # -- Compiling architecture struct of Register_1bit
-# End time: 14:01:11 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:14 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:11 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd 
+# Start time: 14:15:14 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -352,48 +352,48 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity instr_decode
 # -- Compiling architecture instr_decode_arch of instr_decode
-# End time: 14:01:11 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:14 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/EX_MEM.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/EX_MEM.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:12 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/EX_MEM.vhd 
+# Start time: 14:15:14 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/EX_MEM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity EXMEM
 # -- Compiling architecture EXMEM_arch of EXMEM
-# End time: 14:01:12 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:15 on May 06,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_RR.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/ID_RR.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:12 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/ID_RR.vhd 
+# Start time: 14:15:15 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/ID_RR.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity IDRR
 # -- Compiling architecture IDRR_arch of IDRR
-# End time: 14:01:12 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:15 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/SEM4/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd}
+# vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:01:12 on May 06,2023
-# vcom -reportprogress 300 -93 -work work C:/SEM4/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd 
+# Start time: 14:15:15 on May 06,2023
+# vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity MEMWB
 # -- Compiling architecture MEMWB_arch of MEMWB
-# End time: 14:01:12 on May 06,2023, Elapsed time: 0:00:00
+# End time: 14:15:15 on May 06,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.datapath
 # vsim work.datapath 
-# Start time: 14:01:43 on May 06,2023
+# Start time: 14:15:21 on May 06,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -434,53 +434,41 @@ vsim work.datapath
 add wave -position insertpoint  \
 sim:/datapath/clock
 add wave -position insertpoint  \
+sim:/datapath/reset
+add wave -position insertpoint  \
 sim:/datapath/MyROM/Mem_Add \
 sim:/datapath/MyROM/Mem_Data_Out
 add wave -position insertpoint  \
 sim:/datapath/RAM_MEM/Mem_Data_Out \
 sim:/datapath/RAM_MEM/Mem_Data_In \
-sim:/datapath/RAM_MEM/Mem_Add \
-sim:/datapath/RAM_MEM/Data
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Harsh Raj  Hostname: LAPTOP-DQHRK4AS  ProcessID: 41980
-#           Attempting to use alternate WLF file "./wlftmyv1ca".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftmyv1ca
-# (vsim-4077) Logging very large object: /datapath/RAM_MEM/Data
+sim:/datapath/RAM_MEM/Mem_Add 
 # (vsim-4077) Logging very large object: /datapath/RAM_MEM/Data
 add wave -position insertpoint  \
 sim:/datapath/RF/Data
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Harsh Raj  Hostname: LAPTOP-DQHRK4AS  ProcessID: 41980
+#           Attempting to use alternate WLF file "./wlftghe6zh".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftghe6zh
 add wave -position insertpoint sim:/datapath/IF_ID_Pipepline_Reg/*
 add wave -position insertpoint sim:/datapath/ID_RR_pipeline/*
 add wave -position insertpoint sim:/datapath/RR_EX_pipeline/*
 add wave -position insertpoint sim:/datapath/EX_MEM_pipeline/*
 add wave -position insertpoint sim:/datapath/MEM_WB_pipeline/*
-force -freeze sim:/datapath/clock 1 0, 0 {50 ps} -r 100
 add wave -position insertpoint  \
 sim:/datapath/ALU1_EX/Z_F \
 sim:/datapath/ALU1_EX/C_F
 add wave -position insertpoint  \
-sim:/datapath/PC_hazard_ctrl/PC_IF \
-sim:/datapath/PC_hazard_ctrl/PC_ID \
-sim:/datapath/PC_hazard_ctrl/PC_RR \
-sim:/datapath/PC_hazard_ctrl/PC_EX \
-sim:/datapath/PC_hazard_ctrl/H_JLR \
-sim:/datapath/PC_hazard_ctrl/H_JAL \
-sim:/datapath/PC_hazard_ctrl/H_BEX \
-sim:/datapath/PC_hazard_ctrl/LMSM_Haz \
-sim:/datapath/PC_hazard_ctrl/H_Load_Imm \
-sim:/datapath/PC_hazard_ctrl/H_R0 \
-sim:/datapath/PC_hazard_ctrl/PC_New \
-sim:/datapath/PC_hazard_ctrl/PC_WR \
-sim:/datapath/PC_hazard_ctrl/IF_ID_flush \
-sim:/datapath/PC_hazard_ctrl/ID_RR_flush \
-sim:/datapath/PC_hazard_ctrl/RR_EX_flush \
-sim:/datapath/PC_hazard_ctrl/EX_MEM_flush \
-sim:/datapath/PC_hazard_ctrl/IF_ID_WR \
-sim:/datapath/PC_hazard_ctrl/ID_RR_WR \
-sim:/datapath/PC_hazard_ctrl/RR_EX_WR \
-sim:/datapath/PC_hazard_ctrl/EX_MEM_WR \
-sim:/datapath/PC_hazard_ctrl/MEM_WB_WR
+sim:/datapath/RAM_MEM/Data
+# (vsim-4077) Logging very large object: /datapath/RAM_MEM/Data
+add wave -position insertpoint  \
+sim:/datapath/RAM_MEM/Write_Enable
+add wave -position insertpoint sim:/datapath/MovingFWD/*
+add wave -position insertpoint sim:/datapath/MuxA1/*
+add wave -position insertpoint sim:/datapath/MuxB1/*
+add wave -position insertpoint sim:/datapath/RF/*
+force -freeze sim:/datapath/clock 1 0, 0 {50 ps} -r 100
+force -freeze sim:/datapath/reset 0 0
 run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/RAM_MEM
@@ -591,5 +579,20 @@ run
 run
 run
 run
-# End time: 14:03:51 on May 06,2023, Elapsed time: 0:02:08
-# Errors: 0, Warnings: 39
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -all
