@@ -1,5 +1,5 @@
 Analysis & Elaboration report for IITB_CPU
-Fri May 05 22:02:02 2023
+Sat May 06 13:04:35 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Fri May 05 22:02:02 2023       ;
+; Analysis & Elaboration Status      ; Successful - Sat May 06 13:04:35 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_CPU                                    ;
 ; Top-level Entity Name              ; Datapath                                    ;
@@ -289,7 +289,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri May 05 21:59:54 2023
+    Info: Processing started: Sat May 06 13:03:30 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -454,9 +454,9 @@ Info (12128): Elaborating entity "Haz_load" for hierarchy "Haz_load:Load" File: 
 Info (12128): Elaborating entity "Haz_R0" for hierarchy "Haz_R0:R0_bkl" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 789
 Info (12128): Elaborating entity "Haz_PC_controller" for hierarchy "Haz_PC_controller:PC_hazard_ctrl" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 793
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 6117 megabytes
-    Info: Processing ended: Fri May 05 22:02:02 2023
-    Info: Elapsed time: 00:02:08
-    Info: Total CPU time (on all processors): 00:00:55
+    Info: Peak virtual memory: 6122 megabytes
+    Info: Processing ended: Sat May 06 13:04:35 2023
+    Info: Elapsed time: 00:01:05
+    Info: Total CPU time (on all processors): 00:00:40
 
 
