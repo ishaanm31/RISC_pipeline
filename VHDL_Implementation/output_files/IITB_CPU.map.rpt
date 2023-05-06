@@ -1,5 +1,5 @@
 Analysis & Synthesis report for IITB_CPU
-Sat May 06 14:00:27 2023
+Sat May 06 14:09:00 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -54,7 +54,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 06 14:00:27 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sat May 06 14:09:00 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_CPU                                    ;
 ; Top-level Entity Name              ; Datapath                                    ;
@@ -411,7 +411,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat May 06 13:59:40 2023
+    Info: Processing started: Sat May 06 14:08:15 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -584,9 +584,9 @@ Info (21057): Implemented 2 device resources after synthesis - the final resourc
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 6124 megabytes
-    Info: Processing ended: Sat May 06 14:00:27 2023
-    Info: Elapsed time: 00:00:47
-    Info: Total CPU time (on all processors): 00:00:47
+    Info: Peak virtual memory: 6125 megabytes
+    Info: Processing ended: Sat May 06 14:09:00 2023
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:00:45
 
 

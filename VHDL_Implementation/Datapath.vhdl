@@ -313,7 +313,7 @@ architecture Struct of Datapath is
 
     component Haz_PC_controller is
         port (
-            PC_IF,PC_ID,PC_RR,PC_EX: in std_logic_vector(15 downto 0);
+            PC_IF,PC_ID,PC_RR,PC_EX,PC_Mem: in std_logic_vector(15 downto 0);
             H_JLR,H_JAL, H_BEX, LMSM_Haz,H_Load_Imm,H_R0: in std_logic;        
             PC_New: out std_logic_vector(15 downto 0);
             PC_WR,IF_ID_flush,ID_RR_flush,RR_EX_flush,EX_Mem_flush, IF_ID_WR,ID_RR_WR,RR_EX_WR, EX_MEM_WR, MEM_WB_WR : out std_logic
@@ -791,7 +791,7 @@ begin
 			  H_R0=>H_R0
 		 );
 	PC_hazard_ctrl:  Haz_PC_controller port map (
-			  PC_IF=>PC_IF ,PC_ID => PC_ID ,PC_RR=>PC_RR2 ,PC_EX=>ALU3C_EX ,
+			  PC_IF=>PC_IF ,PC_ID => PC_ID ,PC_RR=>PC_RR2 ,PC_EX=>ALU3C_EX ,PC_Mem=>Data_out_MEM  ,
 			  H_JLR=>H_jlr,H_JAL => H_jal, H_BEX =>H_bex , LMSM_Haz=> LMSM_Haz, H_Load_Imm=> Load_Imm, H_R0=>H_R0,
 		 
 			  PC_New=>PC_Next ,
