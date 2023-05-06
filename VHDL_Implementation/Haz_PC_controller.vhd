@@ -16,7 +16,7 @@ architecture struct of Haz_PC_controller is
     
 begin
 
-Maalvika_KI_MAA_KI_CHUTTTT : process( PC_IF,PC_ID,PC_RR,PC_EX,
+PC_ctrl : process( PC_IF,PC_ID,PC_RR,PC_EX,
                                      H_JLR,H_JAL, H_BEX, LMSM_Haz,H_Load_Imm,H_R0,PC_Mem)
 
         variable f_ifid,f_idrr,f_rrex,f_exmem,w_ifid,w_idrr,w_rrex,w_exmem, w_memwb,w_PC:std_logic;
