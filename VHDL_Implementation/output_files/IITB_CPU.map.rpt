@@ -1,5 +1,5 @@
 Analysis & Elaboration report for IITB_CPU
-Sat May 06 15:24:02 2023
+Thu May 11 18:55:38 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sat May 06 15:24:02 2023       ;
+; Analysis & Elaboration Status      ; Successful - Thu May 11 18:55:38 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; IITB_CPU                                    ;
 ; Top-level Entity Name              ; Datapath                                    ;
@@ -289,10 +289,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat May 06 15:22:56 2023
+    Info: Processing started: Thu May 11 18:55:23 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_CPU -c IITB_CPU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhdl
+    Info (12022): Found design unit 1: Testbench-Behave File: D:/github/RISC_pipeline/VHDL_Implementation/Testbench.vhdl Line: 9
+    Info (12023): Found entity 1: Testbench File: D:/github/RISC_pipeline/VHDL_Implementation/Testbench.vhdl Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file r0_hazard.vhd
     Info (12022): Found design unit 1: Haz_R0-struct File: D:/github/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd Line: 14
     Info (12023): Found entity 1: Haz_R0 File: D:/github/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd Line: 5
@@ -302,9 +305,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file load_im
 Info (12021): Found 2 design units, including 1 entities, in source file mux1_4x1.vhd
     Info (12022): Found design unit 1: Mux1_4x1-Dataflow File: D:/github/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd Line: 9
     Info (12023): Found entity 1: Mux1_4x1 File: D:/github/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhdl
-    Info (12022): Found design unit 1: Testbench-Behave File: D:/github/RISC_pipeline/VHDL_Implementation/Testbench.vhdl Line: 9
-    Info (12023): Found entity 1: Testbench File: D:/github/RISC_pipeline/VHDL_Implementation/Testbench.vhdl Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file rr_ex.vhd
     Info (12022): Found design unit 1: RREX-RREX_arch File: D:/github/RISC_pipeline/VHDL_Implementation/RR_EX.vhd Line: 56
     Info (12023): Found entity 1: RREX File: D:/github/RISC_pipeline/VHDL_Implementation/RR_EX.vhd Line: 5
@@ -360,7 +360,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file dff_en.
     Info (12022): Found design unit 1: dff_en-behave File: D:/github/RISC_pipeline/VHDL_Implementation/dff_en.vhd Line: 13
     Info (12023): Found entity 1: dff_en File: D:/github/RISC_pipeline/VHDL_Implementation/dff_en.vhd Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhdl
-    Info (12022): Found design unit 1: Datapath-Struct File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 12
+    Info (12022): Found design unit 1: Datapath-Struct File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 14
     Info (12023): Found entity 1: Datapath File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file complementor.vhd
     Info (12022): Found design unit 1: complementor-behave File: D:/github/RISC_pipeline/VHDL_Implementation/complementor.vhd Line: 11
@@ -408,55 +408,55 @@ Info (12021): Found 2 design units, including 1 entities, in source file mem_wb.
     Info (12022): Found design unit 1: MEMWB-MEMWB_arch File: D:/github/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd Line: 32
     Info (12023): Found entity 1: MEMWB File: D:/github/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd Line: 5
 Info (12127): Elaborating entity "Datapath" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(464): object "ALU_sel_MEM" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 464
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(465): object "Carry_sel_MEM" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 465
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(466): object "C_modified_MEM" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 466
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(467): object "Z_modified_MEM" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 467
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(469): object "rf_d2_MEM" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 469
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(472): object "CPL_MEM" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 472
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(475): object "CZ_MEM" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 475
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(480): object "OP_WB" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 480
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(481): object "RS1_WB" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 481
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(481): object "RS2_WB" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 481
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(489): object "Imm_WB" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 489
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(490): object "PC_WB" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 490
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(491): object "D3_MUX_WB" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 491
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(496): object "Alu3C_WB" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 496
-Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(516): object "Htype" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 516
-Info (12128): Elaborating entity "ROM" for hierarchy "ROM:MyROM" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 521
-Info (12128): Elaborating entity "adder" for hierarchy "adder:IF_add" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 522
-Info (12128): Elaborating entity "IF_ID" for hierarchy "IF_ID:IF_ID_Pipepline_Reg" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 524
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(468): object "ALU_sel_MEM" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 468
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(469): object "Carry_sel_MEM" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 469
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(470): object "C_modified_MEM" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 470
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(471): object "Z_modified_MEM" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 471
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(473): object "rf_d2_MEM" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 473
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(476): object "CPL_MEM" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 476
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(479): object "CZ_MEM" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 479
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(484): object "OP_WB" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 484
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(485): object "RS1_WB" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 485
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(485): object "RS2_WB" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 485
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(493): object "Imm_WB" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 493
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(494): object "PC_WB" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 494
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(495): object "D3_MUX_WB" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 495
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(500): object "Alu3C_WB" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 500
+Warning (10036): Verilog HDL or VHDL warning at Datapath.vhdl(520): object "Htype" assigned a value but never read File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 520
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:MyROM" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 525
+Info (12128): Elaborating entity "adder" for hierarchy "adder:IF_add" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 526
+Info (12128): Elaborating entity "IF_ID" for hierarchy "IF_ID:IF_ID_Pipepline_Reg" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 528
 Info (12128): Elaborating entity "Register_16bit" for hierarchy "IF_ID:IF_ID_Pipepline_Reg|Register_16bit:Instruction" File: D:/github/RISC_pipeline/VHDL_Implementation/IF_ID.vhd Line: 49
 Info (12128): Elaborating entity "Register_1bit" for hierarchy "IF_ID:IF_ID_Pipepline_Reg|Register_1bit:Canc" File: D:/github/RISC_pipeline/VHDL_Implementation/IF_ID.vhd Line: 52
-Info (12128): Elaborating entity "instr_decode" for hierarchy "instr_decode:instruc_decode" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 535
+Info (12128): Elaborating entity "instr_decode" for hierarchy "instr_decode:instruc_decode" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 539
 Info (12128): Elaborating entity "SE10" for hierarchy "instr_decode:instruc_decode|SE10:Sign_6" File: D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 73
 Info (12128): Elaborating entity "SE7" for hierarchy "instr_decode:instruc_decode|SE7:Sign_9" File: D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 74
 Info (12128): Elaborating entity "Register_4bit" for hierarchy "instr_decode:instruc_decode|Register_4bit:counter" File: D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd Line: 77
-Info (12128): Elaborating entity "IDRR" for hierarchy "IDRR:ID_RR_pipeline" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 554
+Info (12128): Elaborating entity "IDRR" for hierarchy "IDRR:ID_RR_pipeline" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 558
 Info (12128): Elaborating entity "Register_3bit" for hierarchy "IDRR:ID_RR_pipeline|Register_3bit:RS1" File: D:/github/RISC_pipeline/VHDL_Implementation/ID_RR.vhd Line: 91
 Info (12128): Elaborating entity "Register_2bit" for hierarchy "IDRR:ID_RR_pipeline|Register_2bit:ALU_sel" File: D:/github/RISC_pipeline/VHDL_Implementation/ID_RR.vhd Line: 95
-Info (12128): Elaborating entity "Register_file" for hierarchy "Register_file:RF" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 596
-Info (12128): Elaborating entity "Mux16_2x1" for hierarchy "Mux16_2x1:MuxRF_D1" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 605
-Info (12128): Elaborating entity "Mux16_4x1" for hierarchy "Mux16_4x1:MuxA1" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 607
-Info (12128): Elaborating entity "RREX" for hierarchy "RREX:RR_EX_pipeline" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 613
-Info (12128): Elaborating entity "complementor" for hierarchy "complementor:COMPL" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 661
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1_EX" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 664
-Info (12128): Elaborating entity "dff_en" for hierarchy "dff_en:D_ff1" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 666
-Info (12128): Elaborating entity "Mux1_4x1" for hierarchy "Mux1_4x1:MUX_C" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 668
-Info (12128): Elaborating entity "EXMEM" for hierarchy "EXMEM:EX_MEM_pipeline" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 675
-Info (12128): Elaborating entity "Memory" for hierarchy "Memory:RAM_MEM" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 722
-Info (12128): Elaborating entity "MEMWB" for hierarchy "MEMWB:MEM_WB_pipeline" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 726
-Info (12128): Elaborating entity "Forwarding_Unit" for hierarchy "Forwarding_Unit:MovingFWD" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 756
-Info (12128): Elaborating entity "Haz_JLR" for hierarchy "Haz_JLR:JLR" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 763
-Info (12128): Elaborating entity "Haz_JAL" for hierarchy "Haz_JAL:Jal" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 768
-Info (12128): Elaborating entity "Haz_BEX" for hierarchy "Haz_BEX:BEX" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 773
-Info (12128): Elaborating entity "Haz_load" for hierarchy "Haz_load:Load" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 784
-Info (12128): Elaborating entity "Haz_R0" for hierarchy "Haz_R0:R0_bkl" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 789
-Info (12128): Elaborating entity "Haz_PC_controller" for hierarchy "Haz_PC_controller:PC_hazard_ctrl" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 793
+Info (12128): Elaborating entity "Register_file" for hierarchy "Register_file:RF" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 600
+Info (12128): Elaborating entity "Mux16_2x1" for hierarchy "Mux16_2x1:MuxRF_D1" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 611
+Info (12128): Elaborating entity "Mux16_4x1" for hierarchy "Mux16_4x1:MuxA1" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 613
+Info (12128): Elaborating entity "RREX" for hierarchy "RREX:RR_EX_pipeline" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 619
+Info (12128): Elaborating entity "complementor" for hierarchy "complementor:COMPL" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 667
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1_EX" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 670
+Info (12128): Elaborating entity "dff_en" for hierarchy "dff_en:D_ff1" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 672
+Info (12128): Elaborating entity "Mux1_4x1" for hierarchy "Mux1_4x1:MUX_C" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 674
+Info (12128): Elaborating entity "EXMEM" for hierarchy "EXMEM:EX_MEM_pipeline" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 681
+Info (12128): Elaborating entity "Memory" for hierarchy "Memory:RAM_MEM" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 728
+Info (12128): Elaborating entity "MEMWB" for hierarchy "MEMWB:MEM_WB_pipeline" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 732
+Info (12128): Elaborating entity "Forwarding_Unit" for hierarchy "Forwarding_Unit:MovingFWD" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 762
+Info (12128): Elaborating entity "Haz_JLR" for hierarchy "Haz_JLR:JLR" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 769
+Info (12128): Elaborating entity "Haz_JAL" for hierarchy "Haz_JAL:Jal" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 774
+Info (12128): Elaborating entity "Haz_BEX" for hierarchy "Haz_BEX:BEX" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 779
+Info (12128): Elaborating entity "Haz_load" for hierarchy "Haz_load:Load" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 790
+Info (12128): Elaborating entity "Haz_R0" for hierarchy "Haz_R0:R0_bkl" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 795
+Info (12128): Elaborating entity "Haz_PC_controller" for hierarchy "Haz_PC_controller:PC_hazard_ctrl" File: D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl Line: 799
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 6126 megabytes
-    Info: Processing ended: Sat May 06 15:24:02 2023
-    Info: Elapsed time: 00:01:06
-    Info: Total CPU time (on all processors): 00:00:37
+    Info: Peak virtual memory: 4833 megabytes
+    Info: Processing ended: Thu May 11 18:55:38 2023
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:11
 
 

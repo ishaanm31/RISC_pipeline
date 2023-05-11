@@ -26,9 +26,9 @@ VQ8;BAm]`zTmQ9?bP=>2cN1
 !s100 LHgCagbNbgW]9A:3TIE8[1
 Z9 OV;C;2020.1;71
 31
-Z10 !s110 1683362713
+Z10 !s110 1683811622
 !i10b 1
-Z11 !s108 1683362712.000000
+Z11 !s108 1683811622.000000
 Z12 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/ID_adder.vhd|
 Z13 !s107 D:/github/RISC_pipeline/VHDL_Implementation/ID_adder.vhd|
 !i113 1
@@ -57,25 +57,25 @@ R13
 R14
 R15
 Ealu
-R1
+Z16 w1683633381
 R4
 R5
 R6
 !i122 19
 R0
-Z16 8D:/github/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd
-Z17 FD:/github/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd
+Z17 8D:/github/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd
+Z18 FD:/github/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd
 l0
 L5 1
 VZ]JDm0[WBoi@D7JR_UJDH0
 !s100 8_3kjPEIbkTDiA_K]6IM;0
 R9
 31
-Z18 !s110 1683362712
+Z19 !s110 1683811621
 !i10b 1
-R11
-Z19 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd|
-Z20 !s107 D:/github/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd|
+Z20 !s108 1683811621.000000
+Z21 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd|
+Z22 !s107 D:/github/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd|
 !i113 1
 R14
 R15
@@ -91,34 +91,34 @@ V_[;1LI?i0zG@NcWEdH>XV1
 !s100 WYOPkZ1QD=Cm5<_LgdOhM3
 R9
 31
-R18
-!i10b 1
-R11
 R19
+!i10b 1
 R20
+R21
+R22
 !i113 1
 R14
 R15
 Ecomplementor
-Z21 w1683187080
+Z23 w1683187080
 R4
 R5
 R6
 !i122 18
 R0
-Z22 8D:/github/RISC_pipeline/VHDL_Implementation/complementor.vhd
-Z23 FD:/github/RISC_pipeline/VHDL_Implementation/complementor.vhd
+Z24 8D:/github/RISC_pipeline/VHDL_Implementation/complementor.vhd
+Z25 FD:/github/RISC_pipeline/VHDL_Implementation/complementor.vhd
 l0
 L5 1
 V9[[bje=M6RF5IA>hjcSYz1
 !s100 Mh_gcSX2gLeai6Ucno<5F2
 R9
 31
-R18
+R19
 !i10b 1
-R11
-Z24 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/complementor.vhd|
-Z25 !s107 D:/github/RISC_pipeline/VHDL_Implementation/complementor.vhd|
+Z26 !s108 1683811620.000000
+Z27 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/complementor.vhd|
+Z28 !s107 D:/github/RISC_pipeline/VHDL_Implementation/complementor.vhd|
 !i113 1
 R14
 R15
@@ -134,16 +134,16 @@ V8NoD1=40mMNJM9TD>14fn3
 !s100 S>CS>;6[hoCO62SbYe[d]2
 R9
 31
-R18
+R19
 !i10b 1
-R11
-R24
-R25
+R26
+R27
+R28
 !i113 1
 R14
 R15
 Edatapath
-Z26 w1683362489
+Z29 w1683787427
 R2
 R3
 R4
@@ -151,19 +151,19 @@ R5
 R6
 !i122 17
 R0
-Z27 8D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl
-Z28 FD:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl
+Z30 8D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl
+Z31 FD:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl
 l0
 L5 1
-V7Xgd=NY_]:[F^?M`<Pez<1
-!s100 kHHXF1>e<_A0R<3XgQ16B2
+V;^aKf<j4<=@YI4_iH6AU?1
+!s100 lMaCfPHM^o@SnoklOoQ9J1
 R9
 31
-Z29 !s110 1683362711
+Z32 !s110 1683811620
 !i10b 1
-Z30 !s108 1683362711.000000
-Z31 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl|
-Z32 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl|
+R26
+Z33 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl|
+Z34 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl|
 !i113 1
 R14
 R15
@@ -173,41 +173,41 @@ R3
 R4
 R5
 R6
-DEx4 work 8 datapath 0 22 7Xgd=NY_]:[F^?M`<Pez<1
+DEx4 work 8 datapath 0 22 ;^aKf<j4<=@YI4_iH6AU?1
 !i122 17
-l519
-L12 792
-VRF_g?z77^YheZaX@V:C;z3
-!s100 B<2jhzAgH^:QVg@<g9h6e1
+l523
+L14 796
+V:VQ;f7lI3DQhP3ePdN:OA0
+!s100 Nd87lROg[<l@F=_zCo8MJ2
 R9
 31
-R29
-!i10b 1
-R30
-R31
 R32
+!i10b 1
+R26
+R33
+R34
 !i113 1
 R14
 R15
 Edff_en
-Z33 w1682929476
+Z35 w1682929476
 R5
 R6
 !i122 16
 R0
-Z34 8D:/github/RISC_pipeline/VHDL_Implementation/dff_en.vhd
-Z35 FD:/github/RISC_pipeline/VHDL_Implementation/dff_en.vhd
+Z36 8D:/github/RISC_pipeline/VHDL_Implementation/dff_en.vhd
+Z37 FD:/github/RISC_pipeline/VHDL_Implementation/dff_en.vhd
 l0
 L3 1
 VS@FnW7bH9P2HbV3;ZXCmI3
 !s100 l9gC@LIoi_n83HaDMd>o93
 R9
 31
-R29
+Z38 !s110 1683811619
 !i10b 1
-R30
-Z36 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/dff_en.vhd|
-Z37 !s107 D:/github/RISC_pipeline/VHDL_Implementation/dff_en.vhd|
+Z39 !s108 1683811619.000000
+Z40 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/dff_en.vhd|
+Z41 !s107 D:/github/RISC_pipeline/VHDL_Implementation/dff_en.vhd|
 !i113 1
 R14
 R15
@@ -222,34 +222,34 @@ VkecbAB3SBD0^jzm5YEo6J1
 !s100 _jKBL9M[ElY>901m5?]kT3
 R9
 31
-R29
+R38
 !i10b 1
-R30
-R36
-R37
+R39
+R40
+R41
 !i113 1
 R14
 R15
 Eexmem
-Z38 w1683302474
+Z42 w1683302474
 R4
 R5
 R6
 !i122 28
 R0
-Z39 8D:/github/RISC_pipeline/VHDL_Implementation/EX_MEM.vhd
-Z40 FD:/github/RISC_pipeline/VHDL_Implementation/EX_MEM.vhd
+Z43 8D:/github/RISC_pipeline/VHDL_Implementation/EX_MEM.vhd
+Z44 FD:/github/RISC_pipeline/VHDL_Implementation/EX_MEM.vhd
 l0
 L5 1
 Ve4Pjgh8CHHQN=]iRm>3nj2
 !s100 n?gJcI_EMT2>O2P1RIX]B3
 R9
 31
-Z41 !s110 1683362715
+Z45 !s110 1683811625
 !i10b 1
-Z42 !s108 1683362714.000000
-Z43 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/EX_MEM.vhd|
-Z44 !s107 D:/github/RISC_pipeline/VHDL_Implementation/EX_MEM.vhd|
+Z46 !s108 1683811625.000000
+Z47 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/EX_MEM.vhd|
+Z48 !s107 D:/github/RISC_pipeline/VHDL_Implementation/EX_MEM.vhd|
 !i113 1
 R14
 R15
@@ -265,34 +265,34 @@ VW9EZeX[9aED81EnJliIK53
 !s100 NO]Ube1c16TQkDked;]ij0
 R9
 31
-R41
+R45
 !i10b 1
-R42
-R43
-R44
+R46
+R47
+R48
 !i113 1
 R14
 R15
 Eforwarding_unit
-Z45 w1683286639
+Z49 w1683286639
 R4
 R5
 R6
 !i122 15
 R0
-Z46 8D:/github/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd
-Z47 FD:/github/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd
+Z50 8D:/github/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd
+Z51 FD:/github/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd
 l0
 L5 1
 VDhXG5NUo@UAfASDXCC6og3
 !s100 CDD^loUY@RnM89LIhc?`S1
 R9
 31
-R29
+R38
 !i10b 1
-R30
-Z48 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd|
-Z49 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd|
+R39
+Z52 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd|
+Z53 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd|
 !i113 1
 R14
 R15
@@ -308,34 +308,34 @@ Vc;cVXa[?LoB0HT80oed7@3
 !s100 1SlLGecWUToGLV7?B34d22
 R9
 31
-R29
+R38
 !i10b 1
-R30
-R48
-R49
+R39
+R52
+R53
 !i113 1
 R14
 R15
 Ehaz_bex
-Z50 w1683304193
+Z54 w1683304193
 R4
 R5
 R6
 !i122 14
 R0
-Z51 8D:/github/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd
-Z52 FD:/github/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd
+Z55 8D:/github/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd
+Z56 FD:/github/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd
 l0
 L5 1
 VZYIl]=;U8V92h08c37mca2
 !s100 :0cmo6@]dKMK<TZK?J>R<3
 R9
 31
-R29
+R38
 !i10b 1
-Z53 !s108 1683362710.000000
-Z54 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd|
-Z55 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd|
+Z57 !s108 1683811618.000000
+Z58 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd|
+Z59 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd|
 !i113 1
 R14
 R15
@@ -351,34 +351,34 @@ V`A`5UAB5ClBb^k<lR=jL<1
 !s100 Bm]DNAJL]IBlT`^T[P7>`1
 R9
 31
-R29
+R38
 !i10b 1
-R53
-R54
-R55
+R57
+R58
+R59
 !i113 1
 R14
 R15
 Ehaz_jal
-Z56 w1683304143
+Z60 w1683304143
 R4
 R5
 R6
 !i122 13
 R0
-Z57 8D:/github/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd
-Z58 FD:/github/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd
+Z61 8D:/github/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd
+Z62 FD:/github/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd
 l0
 L5 1
 V1mgTT3kEW:n7o?e]ggF?23
 !s100 ^o_6^GVhdWV;mLHj7E6jY1
 R9
 31
-Z59 !s110 1683362710
+Z63 !s110 1683811618
 !i10b 1
-R53
-Z60 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd|
-Z61 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd|
+R57
+Z64 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd|
+Z65 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd|
 !i113 1
 R14
 R15
@@ -394,34 +394,34 @@ V;QmKO1Uoa8CFT3Z^4C_mf1
 !s100 UQ^^Rc]d[IA]8b:TU1]iK3
 R9
 31
-R59
+R63
 !i10b 1
-R53
-R60
-R61
+R57
+R64
+R65
 !i113 1
 R14
 R15
 Ehaz_jlr
-Z62 w1683304116
+Z66 w1683304116
 R4
 R5
 R6
 !i122 12
 R0
-Z63 8D:/github/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd
-Z64 FD:/github/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd
+Z67 8D:/github/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd
+Z68 FD:/github/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd
 l0
 L5 1
 VA>197=NV6Ij;]^8O3hJAR1
 !s100 FB:ol`GiJY;Aho;QbPFiX2
 R9
 31
-R59
+R63
 !i10b 1
-R53
-Z65 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd|
-Z66 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd|
+Z69 !s108 1683811617.000000
+Z70 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd|
+Z71 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd|
 !i113 1
 R14
 R15
@@ -437,34 +437,34 @@ VzHMQRiSn?_5>XhZjaM4Di3
 !s100 W;:QWE[DO9kd6h3>:Ui=<2
 R9
 31
-R59
+R63
 !i10b 1
-R53
-R65
-R66
+R69
+R70
+R71
 !i113 1
 R14
 R15
 Ehaz_load
-Z67 w1683304031
+Z72 w1683304031
 R4
 R5
 R6
 !i122 1
 R0
-Z68 8D:/github/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd
-Z69 FD:/github/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd
+Z73 8D:/github/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd
+Z74 FD:/github/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd
 l0
 L5 1
 V@BF@0dVW@:;GmgheImK`;0
 !s100 Ko621LNQZUaHXJHTi@75@1
 R9
 31
-Z70 !s110 1683362708
+Z75 !s110 1683811613
 !i10b 1
-Z71 !s108 1683362708.000000
-Z72 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd|
-Z73 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd|
+Z76 !s108 1683811613.000000
+Z77 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd|
+Z78 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd|
 !i113 1
 R14
 R15
@@ -480,34 +480,34 @@ ViQJ<V?Oe6IL92?bP=iD<j1
 !s100 ML6G[?;NPlb4D7dJC7@j91
 R9
 31
-R70
+R75
 !i10b 1
-R71
-R72
-R73
+R76
+R77
+R78
 !i113 1
 R14
 R15
 Ehaz_pc_controller
-R26
+Z79 w1683366775
 R4
 R5
 R6
 !i122 11
 R0
-Z74 8D:/github/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd
-Z75 FD:/github/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd
+Z80 8D:/github/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd
+Z81 FD:/github/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd
 l0
 L5 1
 V]OMlEgUJL[Zj0fOJP9_Wj1
 !s100 ^9];@EeYgNKE79<1V>l>V2
 R9
 31
-R59
+Z82 !s110 1683811617
 !i10b 1
-R53
-Z76 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd|
-Z77 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd|
+R69
+Z83 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd|
+Z84 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd|
 !i113 1
 R14
 R15
@@ -519,38 +519,38 @@ DEx4 work 17 haz_pc_controller 0 22 ]OMlEgUJL[Zj0fOJP9_Wj1
 !i122 11
 l17
 L15 63
-VbDZTZT6ZTAX??@Lo?9_X_0
-!s100 EA<gg@2Z4Qk>Fo;;ElJB12
+VL7IZ2C06:2e_PfR[Kl@hi1
+!s100 nk@:0zNb]1HhgKHFdnbQf2
 R9
 31
-R59
+R82
 !i10b 1
-R53
-R76
-R77
+R69
+R83
+R84
 !i113 1
 R14
 R15
 Ehaz_r0
-Z78 w1683304192
+Z85 w1683304192
 R4
 R5
 R6
 !i122 0
 R0
-Z79 8D:/github/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd
-Z80 FD:/github/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd
+Z86 8D:/github/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd
+Z87 FD:/github/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd
 l0
 L5 1
 V5l;?Pn`Pn@IVHnMBYj5HW1
 !s100 ]?6nRb]SYBZCQ:3i0`>nG0
 R9
 31
-R70
+R75
 !i10b 1
-R71
-Z81 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd|
-Z82 !s107 D:/github/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd|
+R76
+Z88 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd|
+Z89 !s107 D:/github/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd|
 !i113 1
 R14
 R15
@@ -566,34 +566,34 @@ V@Ulih;2P4`3izBmg0]3RV3
 !s100 3_HB2l[l>DGFRRNJXE0o^2
 R9
 31
-R70
+R75
 !i10b 1
-R71
-R81
-R82
+R76
+R88
+R89
 !i113 1
 R14
 R15
 Eidrr
-Z83 w1683302547
+Z90 w1683302547
 R4
 R5
 R6
 !i122 29
 R0
-Z84 8D:/github/RISC_pipeline/VHDL_Implementation/ID_RR.vhd
-Z85 FD:/github/RISC_pipeline/VHDL_Implementation/ID_RR.vhd
+Z91 8D:/github/RISC_pipeline/VHDL_Implementation/ID_RR.vhd
+Z92 FD:/github/RISC_pipeline/VHDL_Implementation/ID_RR.vhd
 l0
 L5 1
 VMdYeM>aa?DD3PAD_KGFeh3
 !s100 TBk6g[c5cg4N]LlohnKM?2
 R9
 31
-R41
+Z93 !s110 1683811626
 !i10b 1
-Z86 !s108 1683362715.000000
-Z87 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/ID_RR.vhd|
-Z88 !s107 D:/github/RISC_pipeline/VHDL_Implementation/ID_RR.vhd|
+R46
+Z94 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/ID_RR.vhd|
+Z95 !s107 D:/github/RISC_pipeline/VHDL_Implementation/ID_RR.vhd|
 !i113 1
 R14
 R15
@@ -609,34 +609,34 @@ V=MjGHBiY=6USUM`leVB7R1
 !s100 EjT@X7^E:bll4>jTYHO6O3
 R9
 31
-R41
+R93
 !i10b 1
-R86
-R87
-R88
+R46
+R94
+R95
 !i113 1
 R14
 R15
 Eif_id
-Z89 w1683227868
+Z96 w1683227868
 R4
 R5
 R6
 !i122 10
 R0
-Z90 8D:/github/RISC_pipeline/VHDL_Implementation/IF_ID.vhd
-Z91 FD:/github/RISC_pipeline/VHDL_Implementation/IF_ID.vhd
+Z97 8D:/github/RISC_pipeline/VHDL_Implementation/IF_ID.vhd
+Z98 FD:/github/RISC_pipeline/VHDL_Implementation/IF_ID.vhd
 l0
 L5 1
 V61::AGLAm8nQgdOB3dLB33
 !s100 WJ@i80R4o^ij3ojMgQ2C13
 R9
 31
-R59
+Z99 !s110 1683811615
 !i10b 1
-Z92 !s108 1683362709.000000
-Z93 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/IF_ID.vhd|
-Z94 !s107 D:/github/RISC_pipeline/VHDL_Implementation/IF_ID.vhd|
+Z100 !s108 1683811615.000000
+Z101 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/IF_ID.vhd|
+Z102 !s107 D:/github/RISC_pipeline/VHDL_Implementation/IF_ID.vhd|
 !i113 1
 R14
 R15
@@ -652,16 +652,16 @@ V:WIDL0iCcSX@_fn_oLl?C3
 !s100 XAMEUQC?BKD0]1^b3FM>L3
 R9
 31
-R59
+R99
 !i10b 1
-R92
-R93
-R94
+R100
+R101
+R102
 !i113 1
 R14
 R15
 Einstr_decode
-Z95 w1683362181
+Z103 w1683362181
 R2
 R3
 R4
@@ -669,19 +669,19 @@ R5
 R6
 !i122 27
 R0
-Z96 8D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd
-Z97 FD:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd
+Z104 8D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd
+Z105 FD:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd
 l0
 L6 1
 V2i95V4;S`5o<bMTQJG3Xi2
 !s100 SHh[d59SXI618fgRMM>>43
 R9
 31
-Z98 !s110 1683362714
+R45
 !i10b 1
-R42
-Z99 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd|
-Z100 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd|
+R46
+Z106 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd|
+Z107 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd|
 !i113 1
 R14
 R15
@@ -699,34 +699,34 @@ VMFoc>Ii<T2Tf1^3[CQ0hf1
 !s100 0Y;V`T^mIWBV^dRgKmjga1
 R9
 31
-R98
+R45
 !i10b 1
-R42
-R99
-R100
+R46
+R106
+R107
 !i113 1
 R14
 R15
 Ememory
-Z101 w1683350788
+Z108 w1683797254
 R4
 R5
 R6
 !i122 7
 R0
-Z102 8D:/github/RISC_pipeline/VHDL_Implementation/RAM.vhdl
-Z103 FD:/github/RISC_pipeline/VHDL_Implementation/RAM.vhdl
+Z109 8D:/github/RISC_pipeline/VHDL_Implementation/RAM.vhdl
+Z110 FD:/github/RISC_pipeline/VHDL_Implementation/RAM.vhdl
 l0
 L5 1
 V83kS4cV4B^BHIA1ofN3PP0
 !s100 D2M>7SkVDR`OoILTjBUW<1
 R9
 31
-Z104 !s110 1683362709
+R99
 !i10b 1
-R92
-Z105 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/RAM.vhdl|
-Z106 !s107 D:/github/RISC_pipeline/VHDL_Implementation/RAM.vhdl|
+Z111 !s108 1683811614.000000
+Z112 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/RAM.vhdl|
+Z113 !s107 D:/github/RISC_pipeline/VHDL_Implementation/RAM.vhdl|
 !i113 1
 R14
 R15
@@ -738,37 +738,37 @@ DEx4 work 6 memory 0 22 83kS4cV4B^BHIA1ofN3PP0
 !i122 7
 l17
 L13 25
-VMa62kfDKzJ:1`WJdBN1Tk0
-!s100 @bTbi`Nja4dRB[7@m0ZjL1
+VhokXe1cQO`0D5J@T=o@E=3
+!s100 GDd6:IHAd8LoP3LYY:0gX0
 R9
 31
-R104
+R99
 !i10b 1
-R92
-R105
-R106
+R111
+R112
+R113
 !i113 1
 R14
 R15
 Ememwb
-Z107 w1683302589
+Z114 w1683302589
 R4
 R5
 R6
 !i122 30
 R0
-Z108 8D:/github/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd
-Z109 FD:/github/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd
+Z115 8D:/github/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd
+Z116 FD:/github/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd
 l0
 L5 1
 Vb85`QSo>0H:Y2c2065UFF2
 !s100 _Gm5A;1H@`4^9GSnXcS?L1
 R9
 31
-R41
+R93
 !i10b 1
-R86
-Z110 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd|
+Z117 !s108 1683811626.000000
+Z118 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd|
 !s107 D:/github/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd|
 !i113 1
 R14
@@ -785,34 +785,34 @@ VhRT[;IRI?8fR@OG]15nSZ1
 !s100 kKF^7<7WD69:jFACo7^113
 R9
 31
-R41
+R93
 !i10b 1
-R86
-R110
-Z111 !s107 D:/github/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd|
+R117
+R118
+Z119 !s107 D:/github/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd|
 !i113 1
 R14
 R15
 Emux16_2x1
-R33
+R35
 R4
 R5
 R6
 !i122 9
 R0
-Z112 8D:/github/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd
-Z113 FD:/github/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd
+Z120 8D:/github/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd
+Z121 FD:/github/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd
 l0
 L4 1
 VTB=3g4HKPzGZ5SF:SKXjX2
 !s100 =Pg7@AgI^A=cHCO2`aUnm3
 R9
 31
-R104
+R99
 !i10b 1
-R92
-Z114 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd|
-Z115 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd|
+R100
+Z122 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd|
+Z123 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd|
 !i113 1
 R14
 R15
@@ -828,34 +828,34 @@ V6Um0]=QgXzleHJjmIzo4g0
 !s100 1O7I5cn<:MVBHI[^X=Q6W0
 R9
 31
-R104
+R99
 !i10b 1
-R92
-R114
-R115
+R100
+R122
+R123
 !i113 1
 R14
 R15
 Emux16_4x1
-R33
+R35
 R4
 R5
 R6
 !i122 8
 R0
-Z116 8D:/github/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd
-Z117 FD:/github/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd
+Z124 8D:/github/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd
+Z125 FD:/github/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd
 l0
 L4 1
 VIJgA;^`XegWCTCHTS<>E22
 !s100 PKWFk_40AAE@MTon[k8ED2
 R9
 31
-R104
+R99
 !i10b 1
-R92
-Z118 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd|
-Z119 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd|
+R100
+Z126 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd|
+Z127 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd|
 !i113 1
 R14
 R15
@@ -871,34 +871,34 @@ Vo9X4RRliOcn:m4c42mN9J2
 !s100 RWTk0Q7MA1:Bbn3i5NKPg0
 R9
 31
-R104
+R99
 !i10b 1
-R92
-R118
-R119
+R100
+R126
+R127
 !i113 1
 R14
 R15
 Emux1_4x1
-Z120 w1683119253
+Z128 w1683119253
 R4
 R5
 R6
 !i122 2
 R0
-Z121 8D:/github/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd
-Z122 FD:/github/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd
+Z129 8D:/github/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd
+Z130 FD:/github/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd
 l0
 L4 1
 VkLPTC?>UmY?0Bi_=^FDTz1
 !s100 X0c`7D8W0GV689e@AWZo00
 R9
 31
-R70
+R75
 !i10b 1
-R71
-Z123 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd|
-Z124 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd|
+R76
+Z131 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd|
+Z132 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd|
 !i113 1
 R14
 R15
@@ -914,34 +914,34 @@ V:<O8EMj]Ho[=?cJM>_l]g0
 !s100 OiW@OdeaEnG=2cZ4jGzf[2
 R9
 31
-R70
+R75
 !i10b 1
-R71
-R123
-R124
+R76
+R131
+R132
 !i113 1
 R14
 R15
 Eregister_16bit
-R33
+R35
 R4
 R5
 R6
 !i122 24
 R0
-Z125 8D:/github/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd
-Z126 FD:/github/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd
+Z133 8D:/github/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd
+Z134 FD:/github/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd
 l0
 L5 1
 VXR:<iM=D`Q9k3jdd9VShW1
 !s100 R80AB<[K6bIUYGWNze_Cb1
 R9
 31
-R10
+Z135 !s110 1683811623
 !i10b 1
-Z127 !s108 1683362713.000000
-Z128 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd|
-Z129 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd|
+Z136 !s108 1683811623.000000
+Z137 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd|
+Z138 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd|
 !i113 1
 R14
 R15
@@ -957,34 +957,34 @@ V=MV3?WLcYgUna=?67Gf<E2
 !s100 @zR?HQ8JA^_2e?HPTbAAn3
 R9
 31
-R10
+R135
 !i10b 1
-R127
-R128
-R129
+R136
+R137
+R138
 !i113 1
 R14
 R15
 Eregister_1bit
-R33
+R35
 R4
 R5
 R6
 !i122 26
 R0
-Z130 8D:/github/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd
-Z131 FD:/github/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd
+Z139 8D:/github/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd
+Z140 FD:/github/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd
 l0
 L4 1
 VTGNbT?MdM_?^f9kM_ob@H0
 !s100 ;k;V:Y]0mIHzI37b7c]7M2
 R9
 31
-R98
+Z141 !s110 1683811624
 !i10b 1
-R42
-Z132 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd|
-Z133 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd|
+Z142 !s108 1683811624.000000
+Z143 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd|
+Z144 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd|
 !i113 1
 R14
 R15
@@ -1000,34 +1000,34 @@ V@69^VQX6LBGzQI_3ld5bz0
 !s100 _gg7k@n;zQ=bDzAkUaXfK2
 R9
 31
-R98
+R141
 !i10b 1
-R42
-R132
-R133
+R142
+R143
+R144
 !i113 1
 R14
 R15
 Eregister_2bit
-R120
+R128
 R4
 R5
 R6
 !i122 6
 R0
-Z134 8D:/github/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd
-Z135 FD:/github/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd
+Z145 8D:/github/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd
+Z146 FD:/github/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd
 l0
 L5 1
 V;bnXW7eI>PZXmhQ1[IeNf0
 !s100 E@PN[Y^9eekfCOIdBAR`>0
 R9
 31
-R104
+Z147 !s110 1683811614
 !i10b 1
-R92
-Z136 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd|
-Z137 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd|
+R111
+Z148 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd|
+Z149 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd|
 !i113 1
 R14
 R15
@@ -1043,11 +1043,11 @@ V`>m583k7JzBRnX8V6T`Og2
 !s100 FabL^:@Gah1RgFY0:I16D0
 R9
 31
-R104
+R147
 !i10b 1
-R92
-R136
-R137
+R111
+R148
+R149
 !i113 1
 R14
 R15
@@ -1058,19 +1058,19 @@ R5
 R6
 !i122 25
 R0
-Z138 8D:/github/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd
-Z139 FD:/github/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd
+Z150 8D:/github/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd
+Z151 FD:/github/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd
 l0
 L4 1
 VE>5Y7<glzDoKcP<C0T@;z3
 !s100 9fakXVj3En[h^ON<MK6KR3
 R9
 31
-R98
+R141
 !i10b 1
-R127
-Z140 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd|
-Z141 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd|
+R136
+Z152 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd|
+Z153 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd|
 !i113 1
 R14
 R15
@@ -1081,39 +1081,39 @@ R6
 DEx4 work 13 register_3bit 0 22 E>5Y7<glzDoKcP<C0T@;z3
 !i122 25
 l12
-Z142 L10 22
+Z154 L10 22
 V;OFicmNoBD0XoS=2ZQeGZ3
 !s100 J<IQ8a:1d5ZoICnePe5J80
 R9
 31
-R98
-!i10b 1
-R127
-R140
 R141
+!i10b 1
+R136
+R152
+R153
 !i113 1
 R14
 R15
 Eregister_4bit
-Z143 w1683027739
+Z155 w1683027739
 R4
 R5
 R6
 !i122 20
 R0
-Z144 8D:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd
-Z145 FD:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd
+Z156 8D:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd
+Z157 FD:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd
 l0
 L4 1
 V>az5>fEVFZ<VoemXcXzTI1
 !s100 WSzTK>U2REDEG@aR3ZimG0
 R9
 31
-R18
+R10
 !i10b 1
-R11
-Z146 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd|
-Z147 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd|
+R20
+Z158 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd|
+Z159 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd|
 !i113 1
 R14
 R15
@@ -1124,39 +1124,39 @@ R6
 DEx4 work 13 register_4bit 0 22 >az5>fEVFZ<VoemXcXzTI1
 !i122 20
 l12
-R142
+R154
 VnBez6XV[4=l4nGF2:S8of3
 !s100 <7fi]Af3S]=80Ui=5L7_>1
 R9
 31
-R18
+R10
 !i10b 1
-R11
-R146
-R147
+R20
+R158
+R159
 !i113 1
 R14
 R15
 Eregister_file
-R95
+Z160 w1683786611
 R4
 R5
 R6
 !i122 5
 R0
-Z148 8D:/github/RISC_pipeline/VHDL_Implementation/Register_file.vhd
-Z149 FD:/github/RISC_pipeline/VHDL_Implementation/Register_file.vhd
+Z161 8D:/github/RISC_pipeline/VHDL_Implementation/Register_file.vhd
+Z162 FD:/github/RISC_pipeline/VHDL_Implementation/Register_file.vhd
 l0
 L5 1
-Va]iF0`ho6^CiBk]MhB0XS0
-!s100 67AF5jUKz`L1NI4L9;10b2
+VOIf>NeAAlWC_4i_BFPK?X0
+!s100 XCe;mI<E@[dEn7FF>WXUh1
 R9
 31
-R104
+R147
 !i10b 1
-R92
-Z150 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Register_file.vhd|
-Z151 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Register_file.vhd|
+R111
+Z163 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/Register_file.vhd|
+Z164 !s107 D:/github/RISC_pipeline/VHDL_Implementation/Register_file.vhd|
 !i113 1
 R14
 R15
@@ -1164,24 +1164,24 @@ Astruct
 R4
 R5
 R6
-DEx4 work 13 register_file 0 22 a]iF0`ho6^CiBk]MhB0XS0
+DEx4 work 13 register_file 0 22 OIf>NeAAlWC_4i_BFPK?X0
 !i122 5
-l22
-L18 34
-Vd<Jg^4ZSm2zWV>IV>RVY32
-!s100 g6lYNeRBHSRjYFd]fbVSb0
+l21
+L18 45
+V@kT]an_?7e_OzZ;:^F`DK2
+!s100 ^L:4jTg1V5Y0:nmVX3]=W3
 R9
 31
-R104
+R147
 !i10b 1
-R92
-R150
-R151
+R111
+R163
+R164
 !i113 1
 R14
 R15
 Erom
-Z152 w1683362584
+Z165 w1683797221
 R2
 R3
 R4
@@ -1189,19 +1189,19 @@ R5
 R6
 !i122 4
 R0
-Z153 8D:/github/RISC_pipeline/VHDL_Implementation/ROM.vhd
-Z154 FD:/github/RISC_pipeline/VHDL_Implementation/ROM.vhd
+Z166 8D:/github/RISC_pipeline/VHDL_Implementation/ROM.vhd
+Z167 FD:/github/RISC_pipeline/VHDL_Implementation/ROM.vhd
 l0
 L6 1
 Ve0lem^3i1C<O3D0Bj]PFL3
 !s100 Bl<CABCanGo>bCAiTJ2Jm0
 R9
 31
-R104
+R147
 !i10b 1
-R71
-Z155 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/ROM.vhd|
-Z156 !s107 D:/github/RISC_pipeline/VHDL_Implementation/ROM.vhd|
+R111
+Z168 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/ROM.vhd|
+Z169 !s107 D:/github/RISC_pipeline/VHDL_Implementation/ROM.vhd|
 !i113 1
 R14
 R15
@@ -1215,38 +1215,38 @@ DEx4 work 3 rom 0 22 e0lem^3i1C<O3D0Bj]PFL3
 !i122 4
 l16
 L12 12
-Vm044i:51;GI;AGJjJTCoB3
-!s100 04GLn3m1PHV<0@?5T^L_]1
+V_FQDKIaX8HdaGeQ99Rk7g3
+!s100 K0mQEjAb0V>H8c[M@Vlzl3
 R9
 31
-R104
+R147
 !i10b 1
-R71
-R155
-R156
+R111
+R168
+R169
 !i113 1
 R14
 R15
 Errex
-Z157 w1683192843
+Z170 w1683192843
 R4
 R5
 R6
 !i122 3
 R0
-Z158 8D:/github/RISC_pipeline/VHDL_Implementation/RR_EX.vhd
-Z159 FD:/github/RISC_pipeline/VHDL_Implementation/RR_EX.vhd
+Z171 8D:/github/RISC_pipeline/VHDL_Implementation/RR_EX.vhd
+Z172 FD:/github/RISC_pipeline/VHDL_Implementation/RR_EX.vhd
 l0
 L5 1
 VOP^TKa46_TLK?493^2BB13
 !s100 iVOe?iU^_IjZ4mb]U@E[z3
 R9
 31
-R70
+R147
 !i10b 1
-R71
-Z160 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/RR_EX.vhd|
-Z161 !s107 D:/github/RISC_pipeline/VHDL_Implementation/RR_EX.vhd|
+R111
+Z173 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/RR_EX.vhd|
+Z174 !s107 D:/github/RISC_pipeline/VHDL_Implementation/RR_EX.vhd|
 !i113 1
 R14
 R15
@@ -1262,23 +1262,23 @@ VA@n4zfVTm@[602LR]al1l2
 !s100 _jI[zOo@SMRO_YLSc0lbn1
 R9
 31
-R70
+R147
 !i10b 1
-R71
-R160
-R161
+R111
+R173
+R174
 !i113 1
 R14
 R15
 Ese10
-R33
+R35
 R4
 R5
 R6
 !i122 22
 R0
-Z162 8D:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd
-Z163 FD:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd
+Z175 8D:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd
+Z176 FD:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd
 l0
 L4 1
 V?BobD5;=:<iQAKi:k5k[53
@@ -1287,9 +1287,9 @@ R9
 31
 R10
 !i10b 1
-R127
-Z164 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd|
-Z165 !s107 D:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd|
+R11
+Z177 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd|
+Z178 !s107 D:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd|
 !i113 1
 R14
 R15
@@ -1307,21 +1307,21 @@ R9
 31
 R10
 !i10b 1
-R127
-R164
-R165
+R11
+R177
+R178
 !i113 1
 R14
 R15
 Ese7
-R33
+R35
 R4
 R5
 R6
 !i122 23
 R0
-Z166 8D:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd
-Z167 FD:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd
+Z179 8D:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd
+Z180 FD:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd
 l0
 L5 1
 V]6`e`;5Q[F_Eda9a=Pbl[3
@@ -1330,9 +1330,9 @@ R9
 31
 R10
 !i10b 1
-R127
-Z168 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd|
-Z169 !s107 D:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd|
+R11
+Z181 !s90 -reportprogress|300|-93|-work|work|D:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd|
+Z182 !s107 D:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd|
 !i113 1
 R14
 R15
@@ -1350,9 +1350,9 @@ R9
 31
 R10
 !i10b 1
-R127
-R168
-R169
+R11
+R181
+R182
 !i113 1
 R14
 R15

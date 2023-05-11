@@ -5,7 +5,9 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity Datapath is
 	port(
         --Inputs
-        clock, reset:in std_logic
+        clock, reset:in std_logic;
+		  Reg_sel : in std_logic_vector(3 downto 0);
+		  output_Reg : out std_logic_vector(7 downto 0) 
 		);
 end Datapath;
 
@@ -254,13 +256,15 @@ architecture Struct of Datapath is
     --10. Register_File
     component Register_file is
         port (
-				A1, A2, A3: in std_logic_vector(2 downto 0 );
-				D3:in std_logic_vector(15 downto 0);
-				RF_D_PC_WR: in std_logic_vector(15 downto 0);      
-				clock,Write_Enable,PC_WR:in std_logic;      
-				RF_D_PC_R:out std_logic_vector(15 downto 0):=(others=>'0');
-				D1, D2:out std_logic_vector(15 downto 0)
-        );
+			  A1, A2, A3: in std_logic_vector(2 downto 0 );
+			  D3:in std_logic_vector(15 downto 0);
+			  RF_D_PC_WR: in std_logic_vector(15 downto 0);
+			  Reg_data: out std_logic_vector(7 downto 0);
+			  clock,Write_Enable,PC_WR:in std_logic;
+			  Reg_sel: in std_logic_vector(3 downto 0);
+			  RF_D_PC_R:out std_logic_vector(15 downto 0):=(others=>'0');
+			  D1, D2:out std_logic_vector(15 downto 0)
+		  );
     end component Register_file;
     
     --11. D-flipflop with enable
@@ -550,7 +554,7 @@ begin
         clk=>clock
     );
 	 Can_ID<=(CNpass1 or CN_IDRR);
----------------------ID_RR_pipeline------------------
+---------------------ID_RR_pipeline----------------------------------------------------
 	ID_RR_pipeline : IDRR port map
 	(
 		 clk => clock,
@@ -592,12 +596,14 @@ begin
 		 ALUA_MUX_out=>ALUA_MUX_RR,ALUB_MUX_out=>ALUB_MUX_RR,
 		 CZ_out=>CZ_RR
 	);  
-	---------------RR-------------
+	---------------RR-----------------------------------------------------------------------------------
 	RF : Register_file port map(A1=>RS1_RR, A2=>RS2_RR, A3=>RD_WB,
 										 D3=>rf_d3,
 										 RF_D_PC_WR=> PC_next,
+										 Reg_sel => Reg_sel,
 										 clock=>clock,Write_Enable =>RegF_wr ,PC_WR=> PC_WR ,
 										 RF_D_PC_R=> PC_New,
+										 Reg_data => output_Reg,
 										 D1=>rf_d1_RR1 , D2=>rf_d2_RR1);
 	Imm2 <= Imm_RR + Imm_RR;
 	MUXRF_D1_sel <= RS1_RR(2) or RS1_RR(1) or RS1_RR(0);
@@ -609,7 +615,7 @@ begin
 	Adder_RR : adder port map(Imm2,rf_d1_RR1,PC_RR2);
 	RegF_wr<=(RF_wr_WB and(not(CN_WB)));
 	Can_rr<=(CNpass2 or CN_RREX);
-	--------------RR_EX pipeline---------------
+	--------------RR_EX pipeline------------------------------------------------------------------------
 	RR_EX_pipeline : RREX port map(
 		 clk => clock,
 		 WR_EN => WREN_RREX,

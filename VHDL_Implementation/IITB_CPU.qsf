@@ -58,13 +58,12 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER ON
 set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "12.5 %"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name FLOW_ENABLE_RTL_VIEWER OFF
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name VHDL_FILE Testbench.vhdl
 set_global_assignment -name VHDL_FILE R0_hazard.vhd
 set_global_assignment -name VHDL_FILE Load_Imm_dep.vhd
 set_global_assignment -name VHDL_FILE Mux1_4x1.vhd
-set_global_assignment -name VHDL_FILE Testbench.vhdl
 set_global_assignment -name VHDL_FILE RR_EX.vhd
 set_global_assignment -name VHDL_FILE ROM.vhd
 set_global_assignment -name VHDL_FILE Register_int.vhdl
@@ -99,6 +98,21 @@ set_global_assignment -name VHDL_FILE Instr_decode.vhd
 set_global_assignment -name VHDL_FILE EX_MEM.vhd
 set_global_assignment -name VHDL_FILE ID_RR.vhd
 set_global_assignment -name VHDL_FILE MEM_WB.vhd
-set_global_assignment -name FLOW_ENABLE_RTL_VIEWER OFF
-set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_location_assignment PIN_47 -to reset
+set_location_assignment PIN_46 -to Reg_sel[0]
+set_location_assignment PIN_45 -to Reg_sel[1]
+set_location_assignment PIN_44 -to Reg_sel[2]
+set_location_assignment PIN_43 -to Reg_sel[3]
+set_location_assignment PIN_50 -to output_Reg[0]
+set_location_assignment PIN_52 -to output_Reg[1]
+set_location_assignment PIN_54 -to output_Reg[2]
+set_location_assignment PIN_56 -to output_Reg[3]
+set_location_assignment PIN_57 -to output_Reg[4]
+set_location_assignment PIN_58 -to output_Reg[5]
+set_location_assignment PIN_59 -to output_Reg[6]
+set_location_assignment PIN_60 -to output_Reg[7]
+set_location_assignment PIN_55 -to clock
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

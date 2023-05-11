@@ -5,29 +5,28 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity DUT is
-    port(input_vector: in std_logic_vector(34 downto 0));
+    port(input_vector: in std_logic_vector(5 downto 0);
+       	output_vector: out std_logic_vector(7 downto 0));
 end entity;
 
 architecture DutWrap of DUT is
-component IITB_CPU is
-    port (
-        --Clock and reset
-        clock,Reset: in std_logic;
-        --Input for External Memory Update
-        Mem_Ext_WR:in std_logic;
-        Mem_Ext_Data_in,Mem_Ext_Add : in std_logic_vector(15 downto 0)
-    );
-end component;
+   component Datapath is
+     port(
+        --Inputs
+        clock, reset:in std_logic;
+		  Reg_sel : in std_logic_vector(3 downto 0);
+		  output_Reg : out std_logic_vector(7 downto 0) 
+		);
+   end component;
 begin
 
    -- input/output vector element ordering is critical,
    -- and must match the ordering in the trace file!
-   add_instance: IITB_CPU
-
-					port map(
-					clock=>input_vector(0) ,Reset=>input_vector(1),
-        --Input for External Memory Update
-        Mem_Ext_WR=>input_vector(2),
-        Mem_Ext_Data_in=>input_vector(18 downto 3) ,Mem_Ext_Add=> input_vector(34 downto 19) 
-		  );
+   add_instance: Datapath 
+			port map (
+					-- order of inputs clock reset
+					clock   => input_vector(1),
+					reset   => input_vector(0),
+               -- order of output OUTPUT
+					output_Reg => output_vector(7 downto 0));
 end DutWrap;

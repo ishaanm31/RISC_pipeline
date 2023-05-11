@@ -1,5 +1,5 @@
 Power Analyzer report for IITB_CPU
-Fri May 05 21:06:54 2023
+Thu May 11 18:49:48 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -15,12 +15,13 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   7. Thermal Power Dissipation by Block
   8. Thermal Power Dissipation by Block Type
   9. Thermal Power Dissipation by Hierarchy
- 10. Current Drawn from Voltage Supplies Summary
- 11. VCCIO Supply Current Drawn by I/O Bank
- 12. VCCIO Supply Current Drawn by Voltage
- 13. Confidence Metric Details
- 14. Signal Activities
- 15. Power Analyzer Messages
+ 10. Core Dynamic Thermal Power Dissipation by Clock Domain
+ 11. Current Drawn from Voltage Supplies Summary
+ 12. VCCIO Supply Current Drawn by I/O Bank
+ 13. VCCIO Supply Current Drawn by Voltage
+ 14. Confidence Metric Details
+ 15. Signal Activities
+ 16. Power Analyzer Messages
 
 
 
@@ -49,32 +50,32 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.12        ;
-; Maximum used               ; 16          ;
+; Average used               ; 2.29        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.8%      ;
+;     Processors 2-4         ;  43.0%      ;
 +----------------------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------+
 ; Power Analyzer Summary                                                                    ;
 +----------------------------------------+--------------------------------------------------+
-; Power Analyzer Status                  ; Successful - Fri May 05 21:06:54 2023            ;
+; Power Analyzer Status                  ; Successful - Thu May 11 18:49:48 2023            ;
 ; Quartus Prime Version                  ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition      ;
 ; Revision Name                          ; IITB_CPU                                         ;
 ; Top-level Entity Name                  ; Datapath                                         ;
 ; Family                                 ; MAX 10                                           ;
 ; Device                                 ; 10M25SAE144C8G                                   ;
 ; Power Models                           ; Final                                            ;
-; Total Thermal Power Dissipation        ; 229.80 mW                                        ;
+; Total Thermal Power Dissipation        ; 229.85 mW                                        ;
 ; Core Dynamic Thermal Power Dissipation ; 0.00 mW                                          ;
 ; Core Static Thermal Power Dissipation  ; 223.00 mW                                        ;
-; I/O Thermal Power Dissipation          ; 6.80 mW                                          ;
+; I/O Thermal Power Dissipation          ; 6.85 mW                                          ;
 ; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
 +----------------------------------------+--------------------------------------------------+
 
@@ -105,14 +106,19 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+---------------------------------------+---------------+
 
 
-+-------------------------------------+
-; Indeterminate Toggle Rates          ;
-+-------+-----------------------------+
-; Node  ; Reason                      ;
-+-------+-----------------------------+
-; clock ; No valid clock domain found ;
-; reset ; No valid clock domain found ;
-+-------+-----------------------------+
++--------------------------------------------------+
+; Indeterminate Toggle Rates                       ;
++--------------------+-----------------------------+
+; Node               ; Reason                      ;
++--------------------+-----------------------------+
+; Reg_sel[2]         ; No valid clock domain found ;
+; Reg_sel[1]         ; No valid clock domain found ;
+; Reg_sel[0]         ; No valid clock domain found ;
+; Reg_sel[3]         ; No valid clock domain found ;
+; clock              ; No valid clock domain found ;
+; reset              ; No valid clock domain found ;
+; clock~inputclkctrl ; No valid clock domain found ;
++--------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -146,33 +152,125 @@ https://fpgasoftware.intel.com/eula.
 (1) The "Thermal Power Dissipation by Block" Table has been hidden. To show this table, please select the "Write power dissipation by block to report file" option under "PowerPlay Power Analyzer Settings".
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Thermal Power Dissipation by Block Type                                                                                                                                                                   ;
-+------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
-; Block Type ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ; Block Average Toggle Rate (millions of transitions / sec) ;
-+------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
-; I/O        ; 0.04 mW                           ; 0.00 mW                     ; 0.04 mW                        ; 0.00 mW                       ;    0.000                                                  ;
-+------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Block Type                                                                                                                                                                           ;
++--------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; Block Type         ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ; Block Average Toggle Rate (millions of transitions / sec) ;
++--------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; Combinational cell ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
+; Register cell      ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
+; I/O                ; 0.09 mW                           ; 0.00 mW                     ; 0.09 mW                        ; 0.00 mW                       ;    0.000                                                  ;
+; Voltage Regulator  ; 0.00 mW                           ; 0.00 mW                     ; 0.00 mW                        ; --                            ; --                                                        ;
++--------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
 (1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                          ;
-+-------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+------------------------------------------+
-; Compilation Hierarchy Node          ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                      ;
-+-------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+------------------------------------------+
-; |Datapath                           ; 0.04 mW (0.04 mW)                    ; 0.00 mW (0.00 mW)               ; 0.04 mW (0.04 mW)                 ; 0.00 mW (0.00 mW)                 ; |Datapath                                ;
-;     |hard_block:auto_generated_inst ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|hard_block:auto_generated_inst ;
-;     |EXMEM:EX_MEM_pipeline          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|EXMEM:EX_MEM_pipeline          ;
-;     |IDRR:ID_RR_pipeline            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline            ;
-;     |IF_ID:IF_ID_Pipepline_Reg      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IF_ID:IF_ID_Pipepline_Reg      ;
-;     |instr_decode:Jainesh_instruc   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|instr_decode:Jainesh_instruc   ;
-;     |MEMWB:MEM_WB_pipeline          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|MEMWB:MEM_WB_pipeline          ;
-;     |RREX:RR_EX_pipeline            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline            ;
-+-------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                  ;
++---------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------+
+; Compilation Hierarchy Node            ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                            ;
++---------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------+
+; |Datapath                             ; 0.09 mW (0.09 mW)                    ; 0.00 mW (0.00 mW)               ; 0.09 mW (0.09 mW)                 ; 0.00 mW (0.00 mW)                 ; |Datapath                                                      ;
+;     |adder:Adder_RR                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|adder:Adder_RR                                       ;
+;     |ALU:ALU1_EX                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|ALU:ALU1_EX                                          ;
+;     |adder:ALU3_EX                    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|adder:ALU3_EX                                        ;
+;     |hard_block:auto_generated_inst   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|hard_block:auto_generated_inst                       ;
+;     |Haz_BEX:BEX                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|Haz_BEX:BEX                                          ;
+;     |complementor:COMPL               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|complementor:COMPL                                   ;
+;     |dff_en:D_ff1                     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|dff_en:D_ff1                                         ;
+;     |dff_en:D_ff2                     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|dff_en:D_ff2                                         ;
+;     |EXMEM:EX_MEM_pipeline            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|EXMEM:EX_MEM_pipeline                                ;
+;         |Register_16bit:ALU1_C        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|EXMEM:EX_MEM_pipeline|Register_16bit:ALU1_C          ;
+;         |Register_1bit:CN             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|EXMEM:EX_MEM_pipeline|Register_1bit:CN               ;
+;         |Register_1bit:Mem_wr         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|EXMEM:EX_MEM_pipeline|Register_1bit:Mem_wr           ;
+;         |Register_4bit:OP             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|EXMEM:EX_MEM_pipeline|Register_4bit:OP               ;
+;         |Register_3bit:RD             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|EXMEM:EX_MEM_pipeline|Register_3bit:RD               ;
+;         |Register_16bit:RF_D1         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|EXMEM:EX_MEM_pipeline|Register_16bit:RF_D1           ;
+;         |Register_1bit:RF_wr          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|EXMEM:EX_MEM_pipeline|Register_1bit:RF_wr            ;
+;         |Register_1bit:WB_MUX         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|EXMEM:EX_MEM_pipeline|Register_1bit:WB_MUX           ;
+;     |Mux16_4x1:EX_MUX                 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|Mux16_4x1:EX_MUX                                     ;
+;     |IDRR:ID_RR_pipeline              ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline                                  ;
+;         |Register_2bit:ALU_sel        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_2bit:ALU_sel            ;
+;         |Register_1bit:ALUA_MUX       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_1bit:ALUA_MUX           ;
+;         |Register_1bit:ALUB_MUX       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_1bit:ALUB_MUX           ;
+;         |Register_1bit:C_modified     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_1bit:C_modified         ;
+;         |Register_1bit:Carry_sel      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_1bit:Carry_sel          ;
+;         |Register_1bit:CN             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_1bit:CN                 ;
+;         |Register_1bit:CPL            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_1bit:CPL                ;
+;         |Register_2bit:CZ2            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_2bit:CZ2                ;
+;         |Register_2bit:D3_MUX         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_2bit:D3_MUX             ;
+;         |Register_16bit:Imm           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_16bit:Imm               ;
+;         |Register_1bit:Mem_wr         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_1bit:Mem_wr             ;
+;         |Register_4bit:OP             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_4bit:OP                 ;
+;         |Register_16bit:PC            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_16bit:PC                ;
+;         |Register_3bit:RD             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_3bit:RD                 ;
+;         |Register_1bit:RF_wr          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_1bit:RF_wr              ;
+;         |Register_3bit:RS1            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_3bit:RS1                ;
+;         |Register_3bit:RS2            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_3bit:RS2                ;
+;         |Register_1bit:WB_MUX         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_1bit:WB_MUX             ;
+;         |Register_1bit:Z_modified     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IDRR:ID_RR_pipeline|Register_1bit:Z_modified         ;
+;     |adder:IF_add                     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|adder:IF_add                                         ;
+;     |IF_ID:IF_ID_Pipepline_Reg        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IF_ID:IF_ID_Pipepline_Reg                            ;
+;         |Register_1bit:Canc           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IF_ID:IF_ID_Pipepline_Reg|Register_1bit:Canc         ;
+;         |Register_16bit:Instruction   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IF_ID:IF_ID_Pipepline_Reg|Register_16bit:Instruction ;
+;         |Register_16bit:PC            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|IF_ID:IF_ID_Pipepline_Reg|Register_16bit:PC          ;
+;     |instr_decode:instruc_decode      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|instr_decode:instruc_decode                          ;
+;         |adder:ad                     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|instr_decode:instruc_decode|adder:ad                 ;
+;         |adder:ad2                    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|instr_decode:instruc_decode|adder:ad2                ;
+;         |Register_4bit:counter        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|instr_decode:instruc_decode|Register_4bit:counter    ;
+;     |Haz_JAL:Jal                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|Haz_JAL:Jal                                          ;
+;     |Haz_JLR:JLR                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|Haz_JLR:JLR                                          ;
+;     |Haz_load:Load                    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|Haz_load:Load                                        ;
+;     |MEMWB:MEM_WB_pipeline            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|MEMWB:MEM_WB_pipeline                                ;
+;         |Register_1bit:CN             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|MEMWB:MEM_WB_pipeline|Register_1bit:CN               ;
+;         |Register_16bit:Data_out_WB   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|MEMWB:MEM_WB_pipeline|Register_16bit:Data_out_WB     ;
+;         |Register_3bit:RD             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|MEMWB:MEM_WB_pipeline|Register_3bit:RD               ;
+;         |Register_1bit:RF_wr          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|MEMWB:MEM_WB_pipeline|Register_1bit:RF_wr            ;
+;     |Forwarding_Unit:MovingFWD        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|Forwarding_Unit:MovingFWD                            ;
+;     |Mux16_2x1:MUX_ALUA               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|Mux16_2x1:MUX_ALUA                                   ;
+;     |Mux16_2x1:MUX_ALUB               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|Mux16_2x1:MUX_ALUB                                   ;
+;     |Mux1_4x1:MUX_rfwr                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|Mux1_4x1:MUX_rfwr                                    ;
+;     |Mux16_4x1:MuxA1                  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|Mux16_4x1:MuxA1                                      ;
+;     |Mux16_4x1:MuxB1                  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|Mux16_4x1:MuxB1                                      ;
+;     |ROM:MyROM                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|ROM:MyROM                                            ;
+;     |Haz_PC_controller:PC_hazard_ctrl ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|Haz_PC_controller:PC_hazard_ctrl                     ;
+;     |Haz_R0:R0_bkl                    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|Haz_R0:R0_bkl                                        ;
+;     |Memory:RAM_MEM                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|Memory:RAM_MEM                                       ;
+;     |Register_file:RF                 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|Register_file:RF                                     ;
+;     |RREX:RR_EX_pipeline              ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline                                  ;
+;         |Register_2bit:ALU_sel        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_2bit:ALU_sel            ;
+;         |Register_1bit:ALUA_MUX       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_1bit:ALUA_MUX           ;
+;         |Register_1bit:ALUB_MUX       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_1bit:ALUB_MUX           ;
+;         |Register_1bit:C_modified     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_1bit:C_modified         ;
+;         |Register_1bit:Carry_sel      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_1bit:Carry_sel          ;
+;         |Register_1bit:CN             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_1bit:CN                 ;
+;         |Register_1bit:CPL            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_1bit:CPL                ;
+;         |Register_2bit:CZ2            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_2bit:CZ2                ;
+;         |Register_2bit:D3_MUX         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_2bit:D3_MUX             ;
+;         |Register_16bit:Imm           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_16bit:Imm               ;
+;         |Register_1bit:Mem_wr         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_1bit:Mem_wr             ;
+;         |Register_4bit:OP             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_4bit:OP                 ;
+;         |Register_16bit:PC            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_16bit:PC                ;
+;         |Register_3bit:RD             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_3bit:RD                 ;
+;         |Register_16bit:RF_D1         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_16bit:RF_D1             ;
+;         |Register_16bit:RF_D2         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_16bit:RF_D2             ;
+;         |Register_1bit:RF_wr          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_1bit:RF_wr              ;
+;         |Register_1bit:WB_MUX         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_1bit:WB_MUX             ;
+;         |Register_1bit:Z_modified     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|RREX:RR_EX_pipeline|Register_1bit:Z_modified         ;
+;     |Mux16_2x1:WB_MUX_MEM1            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |Datapath|Mux16_2x1:WB_MUX_MEM1                                ;
++---------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------+
 (1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
 
 (2) The "Block Thermal Static Power" for all levels of hierarchy except the top-level hierarchy is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
+
+
++--------------------------------------------------------------------+
+; Core Dynamic Thermal Power Dissipation by Clock Domain             ;
++-----------------+-----------------------+--------------------------+
+; Clock Domain    ; Clock Frequency (MHz) ; Total Core Dynamic Power ;
++-----------------+-----------------------+--------------------------+
+; No clock domain ; 0.00                  ; 0.00                     ;
++-----------------+-----------------------+--------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------+
@@ -180,7 +278,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; Voltage Supply ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; VCCIO          ; 2.73 mA                 ; 0.00 mA                   ; 2.73 mA                  ; 2.73 mA                          ;
+; VCCIO          ; 2.76 mA                 ; 0.00 mA                   ; 2.76 mA                  ; 2.76 mA                          ;
 ; VCCA           ; 0.00 mA                 ; 0.00 mA                   ; 0.00 mA                  ; 0.00 mA                          ;
 ; VCC_ONE        ; 74.33 mA                ; 0.00 mA                   ; 74.33 mA                 ; 74.33 mA                         ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
@@ -196,7 +294,7 @@ https://fpgasoftware.intel.com/eula.
 ; 1A       ; 2.5V          ; 0.30 mA             ; 0.00 mA               ; 0.30 mA              ;
 ; 1B       ; 2.5V          ; 0.31 mA             ; 0.00 mA               ; 0.31 mA              ;
 ; 2        ; 2.5V          ; 0.30 mA             ; 0.00 mA               ; 0.30 mA              ;
-; 3        ; 2.5V          ; 0.30 mA             ; 0.00 mA               ; 0.30 mA              ;
+; 3        ; 2.5V          ; 0.34 mA             ; 0.00 mA               ; 0.34 mA              ;
 ; 4        ; 2.5V          ; 0.30 mA             ; 0.00 mA               ; 0.30 mA              ;
 ; 5        ; 2.5V          ; 0.30 mA             ; 0.00 mA               ; 0.30 mA              ;
 ; 6        ; 2.5V          ; 0.30 mA             ; 0.00 mA               ; 0.30 mA              ;
@@ -210,37 +308,37 @@ https://fpgasoftware.intel.com/eula.
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; VCCIO Voltage ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; 2.5V          ; 2.73 mA                 ; 0.00 mA                   ; 2.73 mA                  ; 2.73 mA                          ;
+; 2.5V          ; 2.76 mA                 ; 0.00 mA                   ; 2.76 mA                  ; 2.76 mA                          ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 (1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
 (2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Confidence Metric Details                                                                                                                   ;
-+----------------------------------------------------------------------------------------+-----------+-----------+------------+---------------+
-; Data Source                                                                            ; Total     ; Pin       ; Registered ; Combinational ;
-+----------------------------------------------------------------------------------------+-----------+-----------+------------+---------------+
-; Simulation (from file)                                                                 ;           ;           ;            ;               ;
-;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)  ; 0 (0.0%)  ; 0 (100.0%) ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)  ; 0 (0.0%)  ; 0 (100.0%) ; 0 (0.0%)      ;
-;                                                                                        ;           ;           ;            ;               ;
-; Node, entity or clock assignment                                                       ;           ;           ;            ;               ;
-;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 0 (0.0%)  ; 0 (0.0%)  ; 0 (100.0%) ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 0 (0.0%)  ; 0 (0.0%)  ; 0 (100.0%) ; 0 (0.0%)      ;
-;                                                                                        ;           ;           ;            ;               ;
-; Vectorless estimation                                                                  ;           ;           ;            ;               ;
-;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 3 (25.0%) ; 1 (10.0%) ; 0 (100.0%) ; 2 (100.0%)    ;
-;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 3 (25.0%) ; 1 (10.0%) ; 0 (100.0%) ; 2 (100.0%)    ;
-;     -- Number of signals with Static Probability from Vectorless estimation            ; 3 (25.0%) ; 1 (10.0%) ; 0 (100.0%) ; 2 (100.0%)    ;
-;                                                                                        ;           ;           ;            ;               ;
-; Default assignment                                                                     ;           ;           ;            ;               ;
-;     -- Number of signals with Toggle Rate from Default assignment                      ; 0 (0.0%)  ; 0 (0.0%)  ; 0 (100.0%) ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Default assignment               ; 9 (75.0%) ; 9 (90.0%) ; 0 (100.0%) ; 0 (0.0%)      ;
-;                                                                                        ;           ;           ;            ;               ;
-; Assumed 0                                                                              ;           ;           ;            ;               ;
-;     -- Number of signals with Toggle Rate assumed 0                                    ; 9 (75.0%) ; 9 (90.0%) ; 0 (100.0%) ; 0 (0.0%)      ;
-+----------------------------------------------------------------------------------------+-----------+-----------+------------+---------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Confidence Metric Details                                                                                                                             ;
++----------------------------------------------------------------------------------------+----------------+------------+---------------+----------------+
+; Data Source                                                                            ; Total          ; Pin        ; Registered    ; Combinational  ;
++----------------------------------------------------------------------------------------+----------------+------------+---------------+----------------+
+; Simulation (from file)                                                                 ;                ;            ;               ;                ;
+;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)       ; 0 (0.0%)   ; 0 (0.0%)      ; 0 (0.0%)       ;
+;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)       ; 0 (0.0%)   ; 0 (0.0%)      ; 0 (0.0%)       ;
+;                                                                                        ;                ;            ;               ;                ;
+; Node, entity or clock assignment                                                       ;                ;            ;               ;                ;
+;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 0 (0.0%)       ; 0 (0.0%)   ; 0 (0.0%)      ; 0 (0.0%)       ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 1 (0.0%)       ; 0 (0.0%)   ; 0 (0.0%)      ; 1 (0.0%)       ;
+;                                                                                        ;                ;            ;               ;                ;
+; Vectorless estimation                                                                  ;                ;            ;               ;                ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 25331 (100.0%) ; 10 (45.5%) ; 8444 (100.0%) ; 16877 (100.0%) ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 9 (0.0%)       ; 1 (4.5%)   ; 0 (0.0%)      ; 8 (0.0%)       ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 25330 (99.9%)  ; 10 (45.5%) ; 8444 (100.0%) ; 16876 (100.0%) ;
+;                                                                                        ;                ;            ;               ;                ;
+; Default assignment                                                                     ;                ;            ;               ;                ;
+;     -- Number of signals with Toggle Rate from Default assignment                      ; 0 (0.0%)       ; 0 (0.0%)   ; 0 (0.0%)      ; 0 (0.0%)       ;
+;     -- Number of signals with Static Probability from Default assignment               ; 12 (0.0%)      ; 12 (54.5%) ; 0 (0.0%)      ; 0 (0.0%)       ;
+;                                                                                        ;                ;            ;               ;                ;
+; Assumed 0                                                                              ;                ;            ;               ;                ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 12 (0.0%)      ; 12 (54.5%) ; 0 (0.0%)      ; 0 (0.0%)       ;
++----------------------------------------------------------------------------------------+----------------+------------+---------------+----------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------+
@@ -257,12 +355,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Power Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri May 05 21:06:52 2023
+    Info: Processing started: Thu May 11 18:49:30 2023
 Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off IITB_CPU -c IITB_CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'IITB_CPU.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Warning (332060): Node: clock was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register Register_file:RF|Data[0][8] is being clocked by clock
 Warning (332068): No clocks defined in design.
 Info (223000): Starting Vectorless Power Activity Estimation
 Warning (222013): Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
@@ -271,11 +371,11 @@ Info (218000): Using Advanced I/O Power to simulate I/O buffers with the specifi
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (215049): Average toggle rate for this design is 0.000 millions of transitions / sec
-Info (215031): Total thermal power estimate for the design is 229.80 mW
-Info: Quartus Prime Power Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4982 megabytes
-    Info: Processing ended: Fri May 05 21:06:54 2023
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+Info (215031): Total thermal power estimate for the design is 229.85 mW
+Info: Quartus Prime Power Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4943 megabytes
+    Info: Processing ended: Thu May 11 18:49:48 2023
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:14
 
 

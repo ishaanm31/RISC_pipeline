@@ -1,15 +1,15 @@
-Fitter Status : Successful - Fri May 05 21:06:48 2023
+Fitter Status : Successful - Thu May 11 18:49:20 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : IITB_CPU
 Top-level Entity Name : Datapath
 Family : MAX 10
 Device : 10M25SAE144C8G
 Timing Models : Final
-Total logic elements : 1 / 24,960 ( < 1 % )
-    Total combinational functions : 1 / 24,960 ( < 1 % )
-    Dedicated logic registers : 0 / 24,960 ( 0 % )
-Total registers : 0
-Total pins : 2 / 101 ( 2 % )
+Total logic elements : 16,819 / 24,960 ( 67 % )
+    Total combinational functions : 16,660 / 24,960 ( 67 % )
+    Dedicated logic registers : 8,444 / 24,960 ( 34 % )
+Total registers : 8444
+Total pins : 14 / 101 ( 14 % )
 Total virtual pins : 0
 Total memory bits : 0 / 691,200 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 110 ( 0 % )

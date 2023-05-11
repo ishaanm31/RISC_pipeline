@@ -53,7 +53,7 @@ architecture behave of ALU is
 		variable temp : std_logic_vector(16 downto 0);
 
 			begin
-			----------ALU_C AND CARRY FLAG-----------
+------ALU_C AND CARRY FLAG-------------------------------------------------
 				if (sel = "00") then		
 						if ( Carry_sel = '1') then
 							temp := add_sum(ALU_A,ALU_B,'0');
@@ -78,7 +78,7 @@ architecture behave of ALU is
 							
 				end if;
 				
----------------------ZERO FLAG----------------------------.
+---------------------ZERO FLAG----------------------------------------------
 				if( temp(15 downto 0) = "0000000000000000") then
 					Z_F <= '1';
 				else 
