@@ -6,7 +6,6 @@ entity Datapath is
 	port(
         --Inputs
         clock, reset:in std_logic;
-		  Reg_sel : in std_logic_vector(3 downto 0);
 		  output_Reg : out std_logic_vector(7 downto 0) 
 		);
 end Datapath;
@@ -261,7 +260,6 @@ architecture Struct of Datapath is
 			  RF_D_PC_WR: in std_logic_vector(15 downto 0);
 			  Reg_data: out std_logic_vector(7 downto 0);
 			  clock,Write_Enable,PC_WR:in std_logic;
-			  Reg_sel: in std_logic_vector(3 downto 0);
 			  RF_D_PC_R:out std_logic_vector(15 downto 0):=(others=>'0');
 			  D1, D2:out std_logic_vector(15 downto 0)
 		  );
@@ -600,7 +598,6 @@ begin
 	RF : Register_file port map(A1=>RS1_RR, A2=>RS2_RR, A3=>RD_WB,
 										 D3=>rf_d3,
 										 RF_D_PC_WR=> PC_next,
-										 Reg_sel => Reg_sel,
 										 clock=>clock,Write_Enable =>RegF_wr ,PC_WR=> PC_WR ,
 										 RF_D_PC_R=> PC_New,
 										 Reg_data => output_Reg,
@@ -666,7 +663,7 @@ begin
 	EX_MUX : Mux16_4x1 port map(Alu1C_EX,Imm_EX,Alu3C_EX,PCp2_EX,D3_MUX_EX,Alu1C_fw);
 	COMPL : complementor port map(CPL_EX,rf_d2_EX,rf_d2_CPL);
 	MUX_ALUA : Mux16_2x1 port map(rf_d1_EX,rf_d2_CPL,ALUA_MUX_EX,ALUA);
-	MUX_ALUB : Mux16_2x1 port map(rf_d2_CPL,Imm3,ALUB_MUX_EX,ALUB);
+	MUX_ALUB : Mux16_2x1 port map(rf_d2_CPL,Imm_EX,ALUB_MUX_EX,ALUB);
 	ALU1_EX :ALU port map(ALU_sel_EX,ALUA,ALUB,Carry_sel_EX,carry2,Alu1C_EX,carry1,zero1);
 	ALU3_EX : adder port map(PC_EX,Imm3,ALU3C_EX);
 	D_ff1 : dff_en port map(clock,reset,CFwr,carry1,carry2);

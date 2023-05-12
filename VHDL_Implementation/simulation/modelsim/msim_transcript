@@ -13,7 +13,7 @@
 # 
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:53 on May 11,2023
+# Start time: 01:34:39 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/R0_hazard.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -21,11 +21,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Haz_R0
 # -- Compiling architecture struct of Haz_R0
-# End time: 18:56:53 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:39 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:53 on May 11,2023
+# Start time: 01:34:39 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Load_Imm_dep.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -33,11 +33,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Haz_load
 # -- Compiling architecture struct of Haz_load
-# End time: 18:56:53 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:39 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:53 on May 11,2023
+# Start time: 01:34:39 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Mux1_4x1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -45,11 +45,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Mux1_4x1
 # -- Compiling architecture Dataflow of Mux1_4x1
-# End time: 18:56:53 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:39 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/RR_EX.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:54 on May 11,2023
+# Start time: 01:34:40 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/RR_EX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -57,11 +57,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RREX
 # -- Compiling architecture RREX_arch of RREX
-# End time: 18:56:54 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:40 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/ROM.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:54 on May 11,2023
+# Start time: 01:34:40 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/ROM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -71,11 +71,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity ROM
 # -- Compiling architecture struct of ROM
-# End time: 18:56:54 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:40 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_file.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:54 on May 11,2023
+# Start time: 01:34:40 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_file.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -83,11 +83,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_file
 # -- Compiling architecture struct of Register_File
-# End time: 18:56:54 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:40 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:54 on May 11,2023
+# Start time: 01:34:40 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_2bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -95,11 +95,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_2bit
 # -- Compiling architecture struct of Register_2bit
-# End time: 18:56:54 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:40 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/RAM.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:54 on May 11,2023
+# Start time: 01:34:40 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/RAM.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -107,11 +107,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Memory
 # -- Compiling architecture struct of Memory
-# End time: 18:56:55 on May 11,2023, Elapsed time: 0:00:01
+# End time: 01:34:40 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:55 on May 11,2023
+# Start time: 01:34:40 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Mux16_4x1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -119,11 +119,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Mux16_4x1
 # -- Compiling architecture Dataflow of Mux16_4x1
-# End time: 18:56:55 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:40 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:55 on May 11,2023
+# Start time: 01:34:40 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Mux16_2x1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -131,11 +131,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Mux16_2x1
 # -- Compiling architecture Dataflow of Mux16_2x1
-# End time: 18:56:55 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:40 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/IF_ID.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:55 on May 11,2023
+# Start time: 01:34:40 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/IF_ID.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -143,11 +143,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity IF_ID
 # -- Compiling architecture struct of IF_ID
-# End time: 18:56:55 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:40 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:57 on May 11,2023
+# Start time: 01:34:40 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Haz_PC_controller.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -155,11 +155,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Haz_PC_controller
 # -- Compiling architecture struct of Haz_PC_controller
-# End time: 18:56:57 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:41 on May 12,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:57 on May 11,2023
+# Start time: 01:34:41 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Haz_JLR.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -167,11 +167,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Haz_JLR
 # -- Compiling architecture struct of Haz_JLR
-# End time: 18:56:58 on May 11,2023, Elapsed time: 0:00:01
+# End time: 01:34:41 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:58 on May 11,2023
+# Start time: 01:34:41 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Haz_JAL.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -179,11 +179,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Haz_JAL
 # -- Compiling architecture struct of Haz_JAL
-# End time: 18:56:58 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:41 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:58 on May 11,2023
+# Start time: 01:34:41 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Haz_BEX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -191,11 +191,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Haz_BEX
 # -- Compiling architecture struct of Haz_BEX
-# End time: 18:56:59 on May 11,2023, Elapsed time: 0:00:01
+# End time: 01:34:41 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:59 on May 11,2023
+# Start time: 01:34:41 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Forwarding_Unit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -203,22 +203,22 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Forwarding_Unit
 # -- Compiling architecture struct of Forwarding_Unit
-# End time: 18:56:59 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:41 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/dff_en.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:56:59 on May 11,2023
+# Start time: 01:34:41 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/dff_en.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity dff_en
 # -- Compiling architecture behave of dff_en
-# End time: 18:56:59 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:42 on May 12,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:57:00 on May 11,2023
+# Start time: 01:34:42 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Datapath.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -228,11 +228,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity Datapath
 # -- Compiling architecture Struct of Datapath
-# End time: 18:57:00 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:42 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/complementor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:57:00 on May 11,2023
+# Start time: 01:34:42 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/complementor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -240,11 +240,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity complementor
 # -- Compiling architecture behave of complementor
-# End time: 18:57:01 on May 11,2023, Elapsed time: 0:00:01
+# End time: 01:34:42 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:57:01 on May 11,2023
+# Start time: 01:34:42 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/ALU_pipeline.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -252,11 +252,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ALU
 # -- Compiling architecture behave of ALU
-# End time: 18:57:01 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:42 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:57:01 on May 11,2023
+# Start time: 01:34:42 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_4bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -264,11 +264,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_4bit
 # -- Compiling architecture struct of Register_4bit
-# End time: 18:57:02 on May 11,2023, Elapsed time: 0:00:01
+# End time: 01:34:42 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/ID_adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:57:02 on May 11,2023
+# Start time: 01:34:42 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/ID_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -278,11 +278,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity adder
 # -- Compiling architecture behave of adder
-# End time: 18:57:02 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:43 on May 12,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:57:02 on May 11,2023
+# Start time: 01:34:43 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/SE10.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -290,11 +290,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity SE10
 # -- Compiling architecture struct of SE10
-# End time: 18:57:02 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:43 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:57:02 on May 11,2023
+# Start time: 01:34:43 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/SE7.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -302,11 +302,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity SE7
 # -- Compiling architecture struct of SE7
-# End time: 18:57:02 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:43 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:57:03 on May 11,2023
+# Start time: 01:34:43 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_16bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -314,11 +314,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_16bit
 # -- Compiling architecture struct of Register_16bit
-# End time: 18:57:03 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:43 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:57:03 on May 11,2023
+# Start time: 01:34:43 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_3bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -326,11 +326,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_3bit
 # -- Compiling architecture struct of Register_3bit
-# End time: 18:57:04 on May 11,2023, Elapsed time: 0:00:01
+# End time: 01:34:43 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:57:04 on May 11,2023
+# Start time: 01:34:44 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Register_1bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -338,11 +338,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Register_1bit
 # -- Compiling architecture struct of Register_1bit
-# End time: 18:57:04 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:44 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:57:05 on May 11,2023
+# Start time: 01:34:44 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/Instr_decode.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -352,11 +352,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity instr_decode
 # -- Compiling architecture instr_decode_arch of instr_decode
-# End time: 18:57:05 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:44 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/EX_MEM.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:57:05 on May 11,2023
+# Start time: 01:34:44 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/EX_MEM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -364,11 +364,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity EXMEM
 # -- Compiling architecture EXMEM_arch of EXMEM
-# End time: 18:57:05 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:44 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/ID_RR.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:57:05 on May 11,2023
+# Start time: 01:34:44 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/ID_RR.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -376,11 +376,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity IDRR
 # -- Compiling architecture IDRR_arch of IDRR
-# End time: 18:57:06 on May 11,2023, Elapsed time: 0:00:01
+# End time: 01:34:45 on May 12,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/github/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:57:06 on May 11,2023
+# Start time: 01:34:45 on May 12,2023
 # vcom -reportprogress 300 -93 -work work D:/github/RISC_pipeline/VHDL_Implementation/MEM_WB.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -388,12 +388,12 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity MEMWB
 # -- Compiling architecture MEMWB_arch of MEMWB
-# End time: 18:57:06 on May 11,2023, Elapsed time: 0:00:00
+# End time: 01:34:45 on May 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.datapath
 # vsim work.datapath 
-# Start time: 18:57:09 on May 11,2023
+# Start time: 01:34:57 on May 12,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -434,18 +434,14 @@ vsim work.datapath
 add wave -position insertpoint  \
 sim:/datapath/clock \
 sim:/datapath/reset \
-sim:/datapath/Reg_sel \
 sim:/datapath/output_Reg
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Harsh Raj  Hostname: LAPTOP-DQHRK4AS  ProcessID: 41980
-#           Attempting to use alternate WLF file "./wlft02a5cy".
+#           Attempting to use alternate WLF file "./wlftdnji6n".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft02a5cy
-add wave -position insertpoint  \
-sim:/datapath/RF/Data
+#           Using alternate file: ./wlftdnji6n
 force -freeze sim:/datapath/clock 1 0, 0 {50 ps} -r 100
 force -freeze sim:/datapath/reset 0 0
-force -freeze sim:/datapath/Reg_sel 1110 0
 run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /datapath/RAM_MEM
@@ -521,8 +517,6 @@ run
 #    Time: 0 ps  Iteration: 1  Instance: /datapath/instruc_decode/ad
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 2  Instance: /datapath/instruc_decode/ad2
-run
-run
 run
 run
 run

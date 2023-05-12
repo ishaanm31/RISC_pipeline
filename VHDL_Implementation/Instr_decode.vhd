@@ -145,14 +145,14 @@ end component adder;
 					var_Imm := Imm9_out;
 					var_D3_MUX := "01";
 				else 
-					var_Imm := Imm6_out;
+					var_Imm := Imm6_out+Imm6_out;
 					var_WB_MUX := '1';
 					var_ALUB_MUX := '1';
 				end if;
 
 ----------------SW--------------------------
 			elsif(Instruction(15 downto 12) = "0101") then
-				var_Imm := Imm6_out;
+				var_Imm := Imm6_out+Imm6_out;
 				var_Mem_wr := '1';
 				var_ALUA_MUX := '1';
 				var_ALUB_MUX := '1';
@@ -262,19 +262,19 @@ end component adder;
 					when "0000" =>
 						var_Imm:="0000000000000000";
 					when "0001"=>
-						var_Imm:="0000000000000001";
-					when "0010"=>
 						var_Imm:="0000000000000010";
-					when "0011" =>
-						var_Imm:="0000000000000011";
-					when "0100"=>
+					when "0010"=>
 						var_Imm:="0000000000000100";
-					when "0101" =>
-						var_Imm:="0000000000000101";
-					when "0110" =>
+					when "0011" =>
 						var_Imm:="0000000000000110";
+					when "0100"=>
+						var_Imm:="0000000000001000";
+					when "0101" =>
+						var_Imm:="0000000000001010";
+					when "0110" =>
+						var_Imm:="0000000000001100";
 					when "0111" =>
-						var_Imm:="0000000000000111";
+						var_Imm:="0000000000001110";
 					when others=>
 						var_Imm:= Imm9_out;
 					end case;
@@ -378,30 +378,30 @@ end component adder;
 					when "0000" =>
 						var_Imm:="0000000000000000";
 					when "0001"=>
-						var_Imm:="0000000000000001";
-					when "0010"=>
 						var_Imm:="0000000000000010";
-					when "0011" =>
-						var_Imm:="0000000000000011";
-					when "0100"=>
+					when "0010"=>
 						var_Imm:="0000000000000100";
-					when "0101" =>
-						var_Imm:="0000000000000101";
-					when "0110" =>
+					when "0011" =>
 						var_Imm:="0000000000000110";
+					when "0100"=>
+						var_Imm:="0000000000001000";
+					when "0101" =>
+						var_Imm:="0000000000001010";
+					when "0110" =>
+						var_Imm:="0000000000001100";
 					when "0111" =>
-						var_Imm:="0000000000000111";
+						var_Imm:="0000000000001110";
 					when others=>
 						var_Imm:= Imm9_out;
 					end case;
 
 			elsif((Instruction(15 downto 12) = "1000") or (Instruction(15 downto 12) = "1001") or (Instruction(15 downto 12) = "1010")) then
-				var_Imm := Imm6_out;
+				var_Imm := Imm6_out+Imm6_out;
 				var_ALU_sel := "01";
 			
 
 			elsif(Instruction(15 downto 12) = "1100") then
-				var_Imm := Imm9_out;
+				var_Imm := Imm9_out+Imm9_out;
 				var_RF_wr := '1';
 				var_RD := Instruction(11 downto 9);
 				var_D3_MUX := "11";
@@ -414,7 +414,7 @@ end component adder;
 				var_D3_MUX := "11";
 
 			elsif(Instruction(15 downto 12) = "1111") then
-				var_Imm := Imm9_out;
+				var_Imm := Imm9_out+Imm9_out;
 			elsif( Instruction="0000000000000000") then
 				var_RF_wr := '0';
 				

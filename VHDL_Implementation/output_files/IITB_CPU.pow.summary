@@ -1,12 +1,12 @@
-Power Analyzer Status : Successful - Thu May 11 18:49:48 2023
+Power Analyzer Status : Successful - Fri May 12 01:30:42 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : IITB_CPU
 Top-level Entity Name : Datapath
 Family : MAX 10
 Device : 10M25SAE144C8G
 Power Models : Final
-Total Thermal Power Dissipation : 229.85 mW
+Total Thermal Power Dissipation : 229.84 mW
 Core Dynamic Thermal Power Dissipation : 0.00 mW
 Core Static Thermal Power Dissipation : 223.00 mW
-I/O Thermal Power Dissipation : 6.85 mW
+I/O Thermal Power Dissipation : 6.84 mW
 Power Estimation Confidence : Low: user provided insufficient toggle rate data

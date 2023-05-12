@@ -36,22 +36,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "Reg_sel[2]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg_sel[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg_sel[0]",
-					"strict" : false
-				},
-				{
-					"name" : "Reg_sel[3]",
-					"strict" : false
-				},
-				{
 					"name" : "clock",
 					"strict" : false
 				},

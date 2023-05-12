@@ -9,7 +9,6 @@ entity Register_file is
   RF_D_PC_WR: in std_logic_vector(15 downto 0);
   Reg_data: out std_logic_vector(7 downto 0);
   clock,Write_Enable,PC_WR:in std_logic;
-  Reg_sel: in std_logic_vector(3 downto 0);
   RF_D_PC_R:out std_logic_vector(15 downto 0):=(others=>'0');
   D1, D2:out std_logic_vector(15 downto 0)
   );
@@ -20,18 +19,11 @@ architecture struct of Register_File is
     signal Data : mem_word :=("0000000000000000","0000000000000000","0000000000000000","0000000000000000","0000000000000000",others=>(others=>'0'));
 begin
 ---Instruction
-output_process: process(Data,Reg_sel)
-variable temp : std_logic_vector(7 downto 0);
+output_process: process(Data)
 variable temp2 : std_logic_vector(15 downto 0);
-variable reg_id : std_logic_vector(2 downto 0);
 	begin
-	reg_id := Reg_sel(3 downto 1);
-	temp2 := Data(To_integer(unsigned(reg_id)));
-	if( Reg_sel(0) = '1') then
-		temp := temp2(15 downto 8);
-	else temp := temp2(7 downto 0);
-	end if;
-	Reg_data <= temp;
+	temp2 := Data(3);
+	Reg_data <= temp2(7 downto 0);
 	end process;
 -----------------------------------------ARRAY of Registers--------------------------------------
 write_process : process(A3,D3,clock) 
